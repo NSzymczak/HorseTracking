@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HorseTrackingMobile.Views.LoginPage"
+             x:Class="HorseTrackingMobile.Views.LoginView"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <Grid ColumnDefinitions="30,*,30" RowDefinitions="*,*,*" >

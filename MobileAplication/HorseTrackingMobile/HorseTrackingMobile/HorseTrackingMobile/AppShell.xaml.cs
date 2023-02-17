@@ -1,23 +1,33 @@
-﻿using HorseTrackingMobile.ViewModels;
+﻿using HorseTrackingMobile.Services;
+using HorseTrackingMobile.ViewModels;
 using HorseTrackingMobile.Views;
 using System;
 using System.Collections.Generic;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
+
+        public AppShellRoutingService RoutingServices { get; }
+        public static ShellContent Activity { get; set; }
+
+
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            RoutingServices=new AppShellRoutingService();
+            Activity = activity;
         }
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
+        public async void Logout(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            Preferences.Set(PreferencesKeys.IsLogged, false);
+            Preferences.Set(PreferencesKeys.UserID, 0);
+            RoutingServices.GoToLogin();
         }
+
     }
 }

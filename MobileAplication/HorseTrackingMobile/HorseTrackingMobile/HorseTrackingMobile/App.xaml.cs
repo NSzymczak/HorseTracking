@@ -14,7 +14,7 @@ namespace HorseTrackingMobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()

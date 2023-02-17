@@ -81,9 +81,7 @@ namespace HorseTrackingMobile.ViewModels
         {
             Preferences.Set(PreferencesKeys.IsLogged, true);
             Preferences.Set(PreferencesKeys.UserID, User.CurrentUser.Id);
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-
-            //App.Current.MainPage = new AppShell();
+            App.Current.MainPage = new AppShell();
         }
     }
 }

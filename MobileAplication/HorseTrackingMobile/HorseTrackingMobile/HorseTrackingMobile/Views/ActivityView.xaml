@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" x:DataType="viewmodels:ActivityViewModel"
+             xmlns:model="clr-namespace:HorseTrackingMobile.Models"
+             x:Class="HorseTrackingMobile.Views.ActivityView">
+    <ContentPage.Content>
+
+        <Grid ColumnDefinitions="30,*,30">
+            <CollectionView ItemsSource="{Binding DayOfActivities}" Grid.Column="1">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:DayOfActivity">
+
+                        <StackLayout HeightRequest="80">
+                            <Label Text="{Binding Label}"/>
+                            <BoxView HeightRequest="1" Color="{StaticResource Gray}"/>
+                            <CollectionView ItemsSource="{Binding ListOfActivity}">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="5"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate x:DataType="model:Activity">
+                                        <StackLayout>
+                                            <Button BackgroundColor="{Binding Type.Color}"
+                                                    HeightRequest="50" 
+                                                    WidthRequest="50"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                                <CollectionView.EmptyView>
+                                    <Label Text="Brak aktywności tego dnia..."
+                                           FontSize="15"
+                                           TextColor="LightGray"
+                                           VerticalTextAlignment="Center"/>
+                                </CollectionView.EmptyView>
+                            </CollectionView>
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

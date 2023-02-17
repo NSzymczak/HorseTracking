@@ -122,42 +122,42 @@ namespace HorseTrackingMobile.Database
         //    };
         //}
 
-        //public static List<Activity> AddActivity()
-        //{
-        //    return new List<Activity>()
-        //    {
-        //        new Activity()
-        //        {
-        //            ID= 1,
-        //            Date= DateTime.Now,
-        //            Type=ActivityType.Grass,
-        //        },
-        //        new Activity()
-        //        {
-        //            ID= 2,
-        //            Date= DateTime.Now.AddDays(1),
-        //            Type=ActivityType.Grass,
-        //        },
-        //        new Activity()
-        //        {
-        //            ID= 3,
-        //            Date= DateTime.Now.AddDays(2),
-        //            Type=ActivityType.Grass,
-        //        },
-        //        new Activity()
-        //        {
-        //            ID= 4,
-        //            Date= DateTime.Now.AddDays(3),
-        //            Type=ActivityType.Grass,
-        //        },
-        //        new Activity()
-        //        {
-        //            ID= 5,
-        //            Date= DateTime.Now.AddDays(4),
-        //            Type=ActivityType.Grass,
-        //        }
-        //    };
-        //}
-    
+        public static List<Activity> AddActivity()
+        {
+            return new List<Activity>()
+            {
+                new Activity()
+                {
+                    ID= 1,
+                    Date= DateTime.Now,
+                    Type=ActivityType.Grass,
+                },
+                new Activity()
+                {
+                    ID= 2,
+                    Date= DateTime.Now.AddDays(1),
+                    Type=ActivityType.Grass,
+                },
+                new Activity()
+                {
+                    ID= 3,
+                    Date= DateTime.Now.AddDays(2),
+                    Type=ActivityType.Grass,
+                },
+                new Activity()
+                {
+                    ID= 4,
+                    Date= DateTime.Now.AddDays(3),
+                    Type=ActivityType.Grass,
+                },
+                new Activity()
+                {
+                    ID= 5,
+                    Date= DateTime.Now.AddDays(4),
+                    Type=ActivityType.Grass,
+                }
+            };
+        }
+
     }
 }
