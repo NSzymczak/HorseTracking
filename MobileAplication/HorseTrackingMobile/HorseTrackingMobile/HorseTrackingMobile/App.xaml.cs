@@ -14,6 +14,7 @@ namespace HorseTrackingMobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+            DependencyService.Register<ActivityDataManagement>();
             MainPage = new LoginView();
         }
 

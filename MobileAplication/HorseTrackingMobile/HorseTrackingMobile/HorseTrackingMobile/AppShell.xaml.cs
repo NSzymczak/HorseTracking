@@ -26,6 +26,7 @@ namespace HorseTrackingMobile
         {
             Preferences.Set(PreferencesKeys.IsLogged, false);
             Preferences.Set(PreferencesKeys.UserID, 0);
+
             RoutingServices.GoToLogin();
         }
 

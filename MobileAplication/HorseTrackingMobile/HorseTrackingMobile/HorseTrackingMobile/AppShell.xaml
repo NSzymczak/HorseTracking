@@ -8,23 +8,22 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource MainGreen}" />      <!--Naglowek-->
-                <Setter Property="Shell.ForegroundColor" Value="{StaticResource Background}" />     <!--HamburgerColor-->
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Background}" />      <!--Naglowek-->
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource MainAppColor}" />     <!--HamburgerColor-->
                 <Setter Property="Shell.TitleColor" Value="{StaticResource Background}" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource Background}"/>
-                <Setter Property="Shell.UnselectedColor" Value="{StaticResource Background}" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource MainGreen}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Background}"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Background}"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Background}"/>
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource MainAppColor}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource TabbarColor}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource TabbarIconColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TabbarIconColor}"/>
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
 
     <FlyoutItem Title="Aplikacja" Icon="icon_about.png" Style="{StaticResource BaseStyle}">
-
+        
         <Tab Title="Aktywności"
-             Icon="icon_about.png">
+             Icon="Grass.png">
             <ShellContent x:Name="activity" 
                           ContentTemplate="{DataTemplate local:ActivityView}"/>
         </Tab>
@@ -55,9 +54,11 @@
     </FlyoutItem>
     
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:AddActivityView}" />
     </FlyoutItem>
 
     <MenuItem Text="Logout" Clicked="Logout">
     </MenuItem>
+    <TabBar>
+        <ShellContent Route="LoginView" ContentTemplate="{DataTemplate local:LoginView}" />    </TabBar>
 </Shell>

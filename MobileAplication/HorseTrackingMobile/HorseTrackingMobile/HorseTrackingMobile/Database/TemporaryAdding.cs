@@ -17,40 +17,51 @@ namespace HorseTrackingMobile.Database
                 {
                     Id= 1,
                     Login="Karo",
-                    Password="123",
-                    Email="karo@gmail.com",
-                    Name="Karolina",
-                    Surname="Nowak"
+                    Password="123"
                 }
             };
         }
 
-        //public static List<Horse> AddHorse()
-        //{
-        //    return new List<Horse>()
-        //    {
-        //        new Horse()
-        //        {
-        //            ID= 1,
-        //            Name="Kasztan",
-        //            Gender="Wałach",
-        //            User=new User()
-        //            {
-        //                Id= 1,
-        //                Login="Karo",
-        //                Password="123",
-        //                Email="karo@gmail.com",
-        //                Name="Karolina",
-        //                Surname="Nowak"
-        //            },
-        //            Status=new HorseStatus()
-        //            {
-        //                ID=1,
-        //                Name="Active",
-        //            }
-        //        }
-        //    };
-        //}
+        public static List<Horse> AddHorse()
+        {
+            return new List<Horse>()
+            {
+                new Horse()
+                {
+                    ID= 1,
+                    Name="Kasztan",
+                    Gender="Wałach",
+                    User=new User()
+                    {
+                        Id= 1,
+                        Login="Karo",
+                        Password="123"
+                    },
+                    Status=new HorseStatus()
+                    {
+                        ID=1,
+                        Name="Active",
+                    }
+                } ,
+                new Horse()
+                {
+                    ID= 2,
+                    Name="Kasztan",
+                    Gender="Wałach",
+                    User=new User()
+                    {
+                        Id= 1,
+                        Login="Karo",
+                        Password="123"
+                    },
+                    Status=new HorseStatus()
+                    {
+                        ID=1,
+                        Name="Active",
+                    }
+                }
+            };
+        }
 
         //public static List<Specialisation> AddDoctorSpecialisation()
         //{
@@ -129,30 +140,66 @@ namespace HorseTrackingMobile.Database
                 new Activity()
                 {
                     ID= 1,
-                    Date= DateTime.Now,
+                    Date= DateTime.Now.AddDays(-4),
                     Type=ActivityType.Grass,
-                },
+                },                
                 new Activity()
                 {
                     ID= 2,
+                    Date= DateTime.Now.AddDays(-3),
+                    Type=ActivityType.Grass,
+                },                
+                new Activity()
+                {
+                    ID= 3,
+                    Date= DateTime.Now.AddDays(-2),
+                    Type=ActivityType.Grass,
+                },                
+                new Activity()
+                {
+                    ID= 4,
+                    Date= DateTime.Now.AddDays(-1),
+                    Type=ActivityType.Grass,
+                },                
+                new Activity()
+                {
+                    ID= 5,
+                    Date= DateTime.Now.AddDays(0),
+                    Type=ActivityType.Grass,
+                },               
+                new Activity()
+                {
+                    ID= 6,
+                    Date= DateTime.Now.AddDays(0),
+                    Type=ActivityType.Ride,
+                },                
+                new Activity()
+                {
+                    ID= 7,
+                    Date= DateTime.Now.AddDays(1),
+                    Type=ActivityType.Jump,
+                },
+                new Activity()
+                {
+                    ID= 8,
                     Date= DateTime.Now.AddDays(1),
                     Type=ActivityType.Grass,
                 },
                 new Activity()
                 {
-                    ID= 3,
+                    ID= 9,
                     Date= DateTime.Now.AddDays(2),
                     Type=ActivityType.Grass,
                 },
                 new Activity()
                 {
-                    ID= 4,
+                    ID= 10,
                     Date= DateTime.Now.AddDays(3),
                     Type=ActivityType.Grass,
                 },
                 new Activity()
                 {
-                    ID= 5,
+                    ID= 11,
                     Date= DateTime.Now.AddDays(4),
                     Type=ActivityType.Grass,
                 }

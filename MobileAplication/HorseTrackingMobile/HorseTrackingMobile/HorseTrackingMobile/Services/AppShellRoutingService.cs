@@ -16,6 +16,10 @@ namespace HorseTrackingMobile.Services
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(LoginView), typeof(LoginView));
+            Routing.RegisterRoute(nameof(ActivityView), typeof(ActivityView));
+            Routing.RegisterRoute(nameof(ActivityDetailsView), typeof(ActivityDetailsView));
+            Routing.RegisterRoute(nameof(AddActivityView), typeof(AddActivityView));
+
         }
 
         public void GoToApplication()
@@ -30,7 +34,7 @@ namespace HorseTrackingMobile.Services
 
         public async void GoToLogin()
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            await Shell.Current.GoToAsync("//LoginView");
         }
 
         public async Task GoToAddActivity()

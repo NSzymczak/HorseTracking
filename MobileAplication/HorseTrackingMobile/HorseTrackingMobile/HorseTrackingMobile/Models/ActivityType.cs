@@ -19,17 +19,17 @@ namespace HorseTrackingMobile.Models
 
         static ActivityType()
         {
-            Ride = new ActivityType(0, "Jazda", Color.FromHex("#FBDE15"), "riding_icon.svg");
-            Walk = new ActivityType(1, "Spacer", Color.FromHex("#404E4D"), "walk_icon.svg");
-            Jump = new ActivityType(2, "Skoki", Color.FromHex("#FF9D2B"), "jumping_icon.svg");
-            Lounge = new ActivityType(3, "Lonża", Color.FromHex("#A02323"), "lounge_icon.svg");
-            HorsebackRiding = new ActivityType(4, "Teren", Color.FromHex("#228B22"), "horseback_riding_icon.svg");
-            Carousel = new ActivityType(5, "Karuzela", Color.FromHex("#3C8279"), "carusele_icon.svg");
-            Grass = new ActivityType(6, "Padok", Color.FromHex("#9BC53D"), "grass_icon.svg");
-            Competition = new ActivityType(7, "Zawody",Color.FromHex("#61304B"), "competition_icon.svg");
-            Cross = new ActivityType(8, "Kros", Color.FromHex("#C3423F"), "cross_icon.svg");
-            Dressage = new ActivityType(9, "Ujeżdżenie", Color.FromHex("#8B4513"), "dressage_icon.svg");
-            FreeJump = new ActivityType(10, "Skoki luzem", Color.FromHex("#FFC736"), "free_jump_icon.svg");
+            Ride = new ActivityType(0, "Jazda", Color.FromHex("#FBDE15"), "Riding.png");
+            Walk = new ActivityType(1, "Spacer", Color.FromHex("#404E4D"), "Walk.png");
+            Jump = new ActivityType(2, "Skoki", Color.FromHex("#FF9D2B"), "Jump.png");
+            Lounge = new ActivityType(3, "Lonża", Color.FromHex("#A02323"), "Lounge.png");
+            HorsebackRiding = new ActivityType(4, "Teren", Color.FromHex("#228B22"), "Horseback.png");
+            Carousel = new ActivityType(5, "Karuzela", Color.FromHex("#3C8279"), "Carusele.png");
+            Grass = new ActivityType(6, "Padok", Color.FromHex("#9BC53D"), "Grass.png");
+            Competition = new ActivityType(7, "Zawody",Color.FromHex("#61304B"), "Competition.png");
+            Cross = new ActivityType(8, "Kros", Color.FromHex("#C3423F"), "Cross.png");
+            Dressage = new ActivityType(9, "Ujeżdżenie", Color.FromHex("#8B4513"), "Dressage.png");
+            FreeJump = new ActivityType(10, "Skoki luzem", Color.FromHex("#FFC736"), "FreeJump.png");
 
             ListOfActivity = new List<ActivityType>
             {

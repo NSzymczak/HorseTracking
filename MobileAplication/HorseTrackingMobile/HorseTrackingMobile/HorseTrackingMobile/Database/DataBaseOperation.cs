@@ -20,9 +20,9 @@ namespace HorseTrackingMobile.Database
             return GetAllUsers().Where(x => x.Id == id).FirstOrDefault();
         }
 
-        //public static List<Horse> GetAllUserHorses()
-        //{
-        //    return TemporaryAdding.AddHorse().Where(x => x.User.Id == User.CurrentUser.Id).ToList();
-        //}
+        public static List<Horse> GetAllUserHorses()
+        {
+            return TemporaryAdding.AddHorse().Where(x => x.User.Id == User.CurrentUser.Id).ToList();
+        }
     }
 }

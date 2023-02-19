@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HorseTrackingMobile.Models
 {
@@ -7,8 +8,10 @@ namespace HorseTrackingMobile.Models
         public int ID { get; set; }
 
         public ActivityType Type { get; set; }
+        public Horse Horse { get; set; }
+        public User Trainer { get; set; }
 
-        public int TypeId { get; set; }
+        public User User { get; set; }
 
         public DateTime Date { get; set; }
 
@@ -18,9 +21,9 @@ namespace HorseTrackingMobile.Models
 
         public int Time { get; set; }
 
-        public string Trener { get; set; }
-
         public string Description { get; set; }
+
+        public static List<Activity> Activities { get; set; }
 
     }
 }

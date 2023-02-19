@@ -11,6 +11,7 @@ namespace HorseTrackingMobile.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStoreActivity<Activity> DataStoreActivity=> DependencyService.Get<IDataStoreActivity<Activity>>();
 
         bool isBusy = false;
         public bool IsBusy

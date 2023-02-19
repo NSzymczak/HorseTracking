@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
+             x:DataType="viewmodels:ActivityDetailsViewModel"
+             x:Class="HorseTrackingMobile.Views.AddActivityView"
+             xmlns:model="clr-namespace:HorseTrackingMobile.Models">
+    <ContentPage.Content>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,3*,*,6*"
+          Margin="40,20" 
+          RowSpacing="10">
+
+            <Frame Grid.Row="0" 
+                   Grid.ColumnSpan="2" 
+                   VerticalOptions="Center"
+                   BorderColor="{StaticResource TabbarColor}"
+                   CornerRadius="5"
+                   Padding="0">
+                <Picker Title="Wybierz rodzaj aktywności"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        ItemsSource="{Binding ListOfActivityType}"
+                        ItemDisplayBinding="{Binding Name}"/>
+            </Frame>
+            <Label Grid.Row="1"
+               Grid.Column="0"
+               Text="Data"
+               VerticalOptions="Center"/>
+            <Frame Grid.Row="1"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                BorderColor="{StaticResource TabbarColor}"
+                CornerRadius="5"
+                Padding="0">
+                <DatePicker HorizontalOptions="Center"
+                        x:Name="DatePicker"
+                        Format="dd.MM.yyyy"
+                        Date="{Binding Date}"/>
+            </Frame>
+
+            <Label Grid.Row="2" 
+               Grid.Column="0"
+               Text="Zadowolenie"
+               VerticalOptions="Center"/>
+            <StackLayout Grid.Row="2" 
+                         Grid.Column="1"
+                         Spacing="2"
+                         Orientation="Horizontal">
+                <Button x:Name="Satisfactionlvl1" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Satisfactionlvl2" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Satisfactionlvl3" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Satisfactionlvl4" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Satisfactionlvl5" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+            </StackLayout>
+
+            <Label Grid.Row="3" 
+               Grid.Column="0" 
+               Text="Intensywność"
+               VerticalOptions="Center"/>
+            <StackLayout Grid.Row="3" 
+                         Grid.Column="1"
+                         Spacing="2"
+                         Orientation="Horizontal">
+                <Button x:Name="Intensivitylv1" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Intensivitylv2" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Intensivitylv3" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Intensivitylv4" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                <Button x:Name="Intensivitylv5" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+            </StackLayout>
+            <Label Grid.Row="4" 
+               Grid.Column="0"
+               Text="Czas"
+               VerticalOptions="Center"/>
+            <Frame Grid.Row="4" 
+                Grid.Column="1"
+                HeightRequest="35"
+                BorderColor="{StaticResource TabbarColor}"
+                CornerRadius="5"
+                Padding="0">
+                <Entry Margin="10,0,0,0" 
+                       Placeholder="Ile trwała aktywność?"
+                       FontSize="12"
+                       Text="{Binding Time}"/>
+            </Frame>
+
+            <Label Grid.Row="5" 
+               Grid.Column="0"
+               Text="Trener"
+               VerticalOptions="Center"/>
+
+            <Frame Grid.Row="5" 
+                   Grid.Column="1"
+                   HeightRequest="35"
+                   BorderColor="{StaticResource TabbarColor}"
+                   CornerRadius="5"
+                   Padding="0">
+                <Picker Title="Wybierz Trenera"
+                        Margin="10,0,0,0"
+                        FontSize="10"/>
+            </Frame>
+
+            <Label Grid.Row="6" 
+               Grid.Column="0"
+               Text="Opis"
+               VerticalOptions="Start"/>
+
+            <Frame Grid.Row="6" Grid.Column="1"
+                   BorderColor="{StaticResource TabbarColor}"
+                   CornerRadius="5"
+                   Padding="0">
+                <Entry Margin="10" 
+                       Placeholder="Opis..."
+                       Text="{Binding Description}"
+                       FontSize="15"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       IsSpellCheckEnabled="True"/>
+            </Frame>
+
+            <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"
+                Text="Dodaj"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
