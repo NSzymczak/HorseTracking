@@ -21,7 +21,9 @@
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Center"
                         ItemsSource="{Binding ListOfActivityType}"
-                        ItemDisplayBinding="{Binding Name}"/>
+                        ItemDisplayBinding="{Binding Name}"
+                        FontSize="15"
+                        SelectedItem="{Binding Type}"/>
             </Frame>
             <Label Grid.Row="1"
                Grid.Column="0"
@@ -36,6 +38,7 @@
                 <DatePicker HorizontalOptions="Center"
                         x:Name="DatePicker"
                         Format="dd.MM.yyyy"
+                        FontSize="15"
                         Date="{Binding Date}"/>
             </Frame>
 
@@ -119,7 +122,8 @@
             </Frame>
 
             <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"
-                Text="Dodaj"/>
+                Text="Dodaj"
+                    Command="{Binding AddActivityCommand}"/>
             
         </Grid>
     </ContentPage.Content>

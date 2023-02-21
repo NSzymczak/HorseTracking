@@ -28,7 +28,7 @@
                 <Label Grid.Row="3" Grid.Column="0" Text="Czas trwania: " Style="{StaticResource CenterLabel}"/>
                 <Label Grid.Row="3" Grid.Column="1" Text="{Binding Time}" Style="{StaticResource CenterLabel}"/>
                 <Label Grid.Row="4" Grid.Column="0" Text="Trener: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Trener}" Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Trainer}" Style="{StaticResource CenterLabel}"/>
                 <Label Grid.Row="5" Grid.Column="0" Text="Opis: " Style="{StaticResource CenterLabel}"/>
                 <Label Grid.Row="5" Grid.Column="1" Text="{Binding Description}" Style="{StaticResource CenterLabel}"/>
 

@@ -34,7 +34,7 @@ namespace HorseTrackingMobile.Views
                 Satisfactionlvl5.BackgroundColor = Color.White;
                 viewmodel.Satisfaction = 1;
             }
-            if (((Button)sender) == Satisfactionlvl2)
+            else if (((Button)sender) == Satisfactionlvl2)
             {
                 Satisfactionlvl1.BackgroundColor = Color.FromHex("#BFE390");
                 Satisfactionlvl2.BackgroundColor = Color.FromHex("#BFE390");
@@ -43,7 +43,7 @@ namespace HorseTrackingMobile.Views
                 Satisfactionlvl5.BackgroundColor = Color.White;
                 viewmodel.Satisfaction = 2;
             }
-            if (((Button)sender) == Satisfactionlvl3)
+            else if (((Button)sender) == Satisfactionlvl3)
             {
                 Satisfactionlvl1.BackgroundColor = Color.FromHex("#BFE390");
                 Satisfactionlvl2.BackgroundColor = Color.FromHex("#BFE390");
@@ -52,7 +52,7 @@ namespace HorseTrackingMobile.Views
                 Satisfactionlvl5.BackgroundColor = Color.White;
                 viewmodel.Satisfaction = 3;
             }
-            if (((Button)sender) == Satisfactionlvl4)
+            else if (((Button)sender) == Satisfactionlvl4)
             {
                 Satisfactionlvl1.BackgroundColor = Color.FromHex("#BFE390");
                 Satisfactionlvl2.BackgroundColor = Color.FromHex("#BFE390");
@@ -61,7 +61,7 @@ namespace HorseTrackingMobile.Views
                 Satisfactionlvl5.BackgroundColor = Color.White;
                 viewmodel.Satisfaction = 4;
             }
-            if (((Button)sender) == Satisfactionlvl5)
+            else if (((Button)sender) == Satisfactionlvl5)
             {
                 Satisfactionlvl1.BackgroundColor = Color.FromHex("#BFE390");
                 Satisfactionlvl2.BackgroundColor = Color.FromHex("#BFE390");
@@ -87,7 +87,7 @@ namespace HorseTrackingMobile.Views
                 Intensivitylv5.BackgroundColor = Color.White;
                 viewmodel.Intensivity = 1;
             }
-            if (((Button)sender) == Intensivitylv2)
+            else if (((Button)sender) == Intensivitylv2)
             {
                 Intensivitylv1.BackgroundColor = Color.FromHex("#BFE390");
                 Intensivitylv2.BackgroundColor = Color.FromHex("#BFE390");
@@ -97,7 +97,7 @@ namespace HorseTrackingMobile.Views
                 viewmodel.Intensivity = 2;
 
             }
-            if (((Button)sender) == Intensivitylv3)
+            else if (((Button)sender) == Intensivitylv3)
             {
                 Intensivitylv1.BackgroundColor = Color.FromHex("#BFE390");
                 Intensivitylv2.BackgroundColor = Color.FromHex("#BFE390");
@@ -106,7 +106,7 @@ namespace HorseTrackingMobile.Views
                 Intensivitylv5.BackgroundColor = Color.White;
                 viewmodel.Intensivity = 3;
             }
-            if (((Button)sender) == Intensivitylv4)
+            else if (((Button)sender) == Intensivitylv4)
             {
                 Intensivitylv1.BackgroundColor = Color.FromHex("#BFE390");
                 Intensivitylv2.BackgroundColor = Color.FromHex("#BFE390");
@@ -115,7 +115,7 @@ namespace HorseTrackingMobile.Views
                 Intensivitylv5.BackgroundColor = Color.White;
                 viewmodel.Intensivity = 4;
             }
-            if (((Button)sender) == Intensivitylv5)
+            else if (((Button)sender) == Intensivitylv5)
             {
                 Intensivitylv1.BackgroundColor = Color.FromHex("#BFE390");
                 Intensivitylv2.BackgroundColor = Color.FromHex("#BFE390");

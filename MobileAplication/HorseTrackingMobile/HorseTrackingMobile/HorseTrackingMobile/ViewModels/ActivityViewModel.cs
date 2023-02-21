@@ -56,6 +56,7 @@ namespace HorseTrackingMobile.ViewModels
         }
         public void Load()
         {
+            Services.DataBaseConnection.DataBaseConn();
             LoadHorses();
             SetMainDate();
             LoadActivityUI();
@@ -106,6 +107,7 @@ namespace HorseTrackingMobile.ViewModels
 
         public void AsignActivityToDays()
         {
+            if(ListServices.IsAny(Activity.Activities))
             Activity.Activities = TemporaryAdding.AddActivity();
             ListOfActivity = Activity.Activities;
             ListOfActivity =ListOfActivity.Where(x=> x.Date>=MainDate && x.Date<=MainDate.AddDays(7)).ToList();
