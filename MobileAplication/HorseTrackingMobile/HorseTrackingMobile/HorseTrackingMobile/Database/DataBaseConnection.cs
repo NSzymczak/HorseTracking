@@ -1,24 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace HorseTrackingMobile.Database
 {
     public class DataBaseConnection
     {
-        public static void ConnectDataBase()
+        static string dbName = "HorseTracking";
+        static string serverName = "tcp:192.168.88.249,1433"; //ipv4 sieci serwera
+        static string serverUserName = "Natka";
+        static string serverPassword = "123456";
+        static string connectionString = $"Data Source={serverName}; Initial Catalog={dbName}; User id={serverUserName}; Password={serverPassword}; Connection Timeout = 10; MultipleActiveResultSets=true";
+        public static void Connect()
         {
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            try
+            {
+                sqlConnection.Open();
+                App.Current.MainPage.DisplayAlert("Działa", "OK", "OK");
 
-            //var connectionString = @"Data Source=MSI;Initial Catalog=HorseTracking;Integrated Security=True";
-            //var sq = new System.Data.SqlClient.SqlConnection(connectionString);
-            //try
-            //{
-            //    sq.Open();
-            //}
-            //catch (Exception ex)
-            //{
-            //    App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
-            //}
+            }
+            catch (Exception ex)
+            {
+                App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
+            }
         }
     }
 }

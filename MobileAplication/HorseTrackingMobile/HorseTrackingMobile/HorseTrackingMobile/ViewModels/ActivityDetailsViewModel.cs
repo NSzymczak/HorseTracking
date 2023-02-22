@@ -88,12 +88,15 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref description, value);
         }
 
+        Activity activity = new Activity();
+
         private async void LoadActivityId(int activityId)
         {
             try
             {
-                var list = Activity.Activities;
-                var item = Activity.Activities.Where(x => x.ID == activityId).FirstOrDefault();
+                var item = Activity.Activities.Select(x=>x).Where(x => x.ID == activityId).FirstOrDefault();
+                if (item == null) return;
+                activity = item;
                 Date = item.Date;
                 Time = item.Time;
                 Type = item.Type;
@@ -103,7 +106,7 @@ namespace HorseTrackingMobile.ViewModels
                 Description = item.Description;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
             }
@@ -113,24 +116,21 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var activity = new Activity()
-                {
-                    ID = ActivityID,
-                    Horse=Horse.CurrentHorse,
-                    User=User.CurrentUser,
-                    Date = Date,
-                    Time = Time,
-                    Type = Type,
-                    Trainer= Trainer,
-                    Satisfaction = Satisfaction,
-                    Intensivity = Intensivity,
-                    Description = Description
-                };
-                Activity.Activities.Add(activity);
+                var item = Activity.Activities.Select(x => x).Where(x => x.ID == ActivityID).FirstOrDefault();
+                Activity.Activities.Remove(item);
+                item.ID = ActivityID;
+                item.Date = Date;
+                item.Time = Time;
+                item.Type = Type;
+                item.Trainer = Trainer;
+                item.Satisfaction = Satisfaction;
+                item.Intensivity = Intensivity;
+                item.Description = Description;
+                Activity.Activities.Add(item);
                 Shell.Current.GoToAsync("..");
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się dodać aktywności", "Dobrze");
                 Shell.Current.GoToAsync("..");

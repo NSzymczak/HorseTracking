@@ -33,7 +33,7 @@
             
             <ShellContent x:Name="visits" 
                           Route="AboutPage"
-                          ContentTemplate="{DataTemplate local:AboutPage}"/>
+                          ContentTemplate="{DataTemplate local:VisitView}"/>
         </Tab>
         
         <Tab Title="Żywienie" 

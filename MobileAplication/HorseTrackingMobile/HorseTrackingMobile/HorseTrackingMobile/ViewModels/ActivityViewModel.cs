@@ -56,7 +56,7 @@ namespace HorseTrackingMobile.ViewModels
         }
         public void Load()
         {
-            Services.DataBaseConnection.DataBaseConn();
+            DataBaseConnection.Connect();
             LoadHorses();
             SetMainDate();
             LoadActivityUI();
@@ -134,7 +134,7 @@ namespace HorseTrackingMobile.ViewModels
 
         async void AddActivity()
         {
-            var ID= TemporaryAdding.AddActivity().Count+1;
+            var ID= Activity.Activities.Count+1;
             var activity = new Activity()
             { 
                 ID=ID,
@@ -143,9 +143,7 @@ namespace HorseTrackingMobile.ViewModels
                 Date = DateTime.Now,
             };
             Activity.Activities.Add(activity); 
-            await Shell.Current.GoToAsync($"{nameof(AddActivityView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
-
-
+            await Shell.Current.GoToAsync($"{nameof(AddActivityView)}?{nameof(ActivityDetailsViewModel.ActivityID)}");
         }
         public void ClearView()
         {
