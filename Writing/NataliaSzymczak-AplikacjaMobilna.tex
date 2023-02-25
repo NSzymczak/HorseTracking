@@ -1,0 +1,189 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage{indentfirst}
+
+
+\begin{document}
+	\begin{titlepage}
+		
+		\begin{center}
+			\begin{figure}[t]
+				\centering
+			%	\includegraphics[width=4.5cm,height=4.5cm]{LogoUO.jpg}
+			\end{figure}
+		\end{center}
+		
+		\begin{center}
+			{\LARGE  \bf \textsc{UNIWERSYTET OPOLSKI}}
+		\end{center}
+		\vspace{0.2cm}
+		\begin{center}
+			{\large \textsc{Wydział Matematyki, Fizyki i Informatyki}}
+		\end{center}
+		%\vspace{0.2cm}
+		\begin{center}
+			{\Large \textsc{Instytut Informatyki}}
+		\end{center}
+		\vspace{0.5cm}
+		\begin{center}
+			\large    \textsc{Praca iżynierska}
+		\end{center}
+		\vspace{0.4cm}
+		\begin{center}
+			\large \textbf{Natalia Szymczak}
+		\end{center}
+		
+		\vspace{0.4cm}
+		\begin{center}
+			\Large     \textbf{Aplikacja mobilna dla posiadaczy koni}
+		\end{center}
+		\vspace{0.1cm}
+		
+		\begin{center}
+			\large     \textsc{Mobile aplication for horse owner}
+		\end{center}
+		\vspace{1.3cm}
+		
+		\begin{flushright}
+			{\large Praca wykonana pod kierunkiem\bigskip
+				
+				{\bf }} 
+			dr Jacka Iwańskiego
+		\end{flushright}
+		\vspace{0.7cm}
+		\begin{center}
+			{\large OPOLE 2022}
+		\end{center}
+	\end{titlepage}
+
+	\thispagestyle{empty}
+	\mbox{}
+	
+	\begin{quote}{\small 
+			\noindent
+			
+			\bigskip
+			\noindent
+			\textbf{Streszczenie:} 
+			
+			
+			\noindent
+			\newline
+			\textbf{}
+			\vspace{5pt}
+			
+			\noindent
+			\newline
+			\textbf{Abstract:} 
+			\vspace{5pt}
+			
+			\vspace{5pt}
+			\noindent
+			\newline
+			\textbf{Keywords:} 
+			\vspace{5pt}
+			\bigskip
+			
+			\noindent 
+			\textbf{Klasyfikacja tematyczna wg  MSC 2020:}}
+	\end{quote}
+
+	\mbox{}
+	
+	\pagestyle{plain}
+	\tableofcontents
+	\thispagestyle{empty}
+	
+	
+	\newpage
+	\setcounter{page}{1}
+	\newpage
+\chapter*{Wstęp}
+\chapter{Wprowadzenie}
+\section{Geneza powstania pracy}
+\section{Przegląd istniejących rozwiązań}
+Na rynku dostępne jest wiele aplikacji dedykowanych właścicielom koni. Wiele aplikacji poświęconych jest monitoriwaniu treningów. Jest to funkcjonalność, której nie ma w stworzonej aplikacji, więc aplikacje tego typu nie będą analizowane. Przygotowane aplikacje zawierają podobne funkcjonalności do aplikacji "HorseApp". Oprócz opisu działania aplikacji oraz analizy podobieństw, przeanalizowane zostaną mocne i słabe strony każdej z aplikacji.
+
+FEI HorseApp
+Lician Horse
+Ridely
+The equestrian
+\section{Cel pracy}
+
+\chapter{Projekt aplikacji}
+\section{Wymagania funkcjonalne i niefunkcjonalne}
+Funkcjonalności aplikacji mobilnej oraz desktopowej nie są takie same mimo iż są podłączone do jednej bazy, więc czerpią z tego samego źródła informacji. Pomimo różnic niektóre funkcjonalności pokryją się w obu tych produktach.
+\\ \\
+Wymagania funkcjonalne które muszą spełniać obie aplikacje:
+\begin{itemize}
+	\item logowanie do aplikacji,
+	\item resetowanie hasła przez e-mail,
+\end{itemize}
+Aplikacja mobilna będzie służyć użytkownikom głównie do zapisu aktualnych wydarzeń z życia stajni. Jej głównym celem jest szybkie zapisanie informacji o aktywnościach koni i ich wizytach u lekarzy bądź kowali. Można w niej także szybko sprawdzić przygotowany plan żywienia, oraz daty zbliżających się zawodów.\\ \\
+Wymagania funkcjonalne dla aplikacji mobilnej:
+\begin{itemize}
+	\item zarządzanie aktywnościami (dodawanie, edytowanie, usuwanie)
+	\item wyświetlanie dodanych aktywności oraz ich szczegółowych informacji,
+	\item planowanie wizyt,
+	\item zarządzanie wizytami (dodawanie, edytowanie, usuwanie)
+	\item wyświetlanie szczegółów wizyt,
+	\item zapisywanie zdjęć z wizyt lekarzy,
+	\item przypomnienia o wizytach,
+	\item sprawdzenie/wybór planu żywienia,
+	\item sprawdzenie dat zawodów,
+	\item potwierdzanie udziału w zawodach,
+	\item udostępnianie swojego konia innym użytkownikom aplikacji
+\end{itemize}
+Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadających swoje konie jak i dla osób zarządzających klubem jeździeckim. W aplikacji desktop-owej posiadacze koni będą mogli obejrzeć zgromadzone informacje w przystępniejszej formie na dużym ekranie, stworzyć plan żywienia swojego konia, jak także przeanalizować statystki swoich koni. Osoby zarządzające klubem będą miały możliwość dodawania nowych użytkowników i koni jak także sprawdzania statystyk wszystkich koni klubowych.
+\\ \\
+Wymagania funkcjonalne dla aplikacji desktopowej:
+\begin{itemize}
+	\item zarządzanie kontami użytkowników,
+	\item tworzenie planów żywienia,
+	\item zarządzanie końmi,
+	\item tworzenie statystyk aktywności,
+	\item przeglądanie historii wizyt,
+	\item planowanie zawodów
+\end{itemize}
+Jakiś krótki tekst
+\\ \\
+Wymagania niefunkcjonalne:
+\newpage
+\section{Baza danych}
+\subsection{Model konceptualny}
+\subsection{Model logiczny}
+\subsection{Model fizyczny}
+\section{Przypadki użycia}
+\subsection{Diagram przypadków użycia}
+\subsection{Scenariusze przypadków użycia}
+\section{Diagramy stanów}
+\section{Diagramy aktywności}
+\section{Diagram klas}
+\section{Architektura aplikacji}
+Jaka baza jakie połączenie itp.
+\chapter{Implementacja}
+
+\section{Środowisko programistyczne}
+\section{Technologie użyte w pracy}
+\section{Wykorzystane wzorce projektowe}
+\section{Model architektoniczny MVVM}
+\section{Interfejs użytkownika}
+\section{Wybrane aspekty implementacyjne}
+jeden viewmodel obsługuje dwa widoki (dodawanie aktywności i szczegóły aktywności) \\
+kontrolki\\
+\chapter{Testy aplikacji}
+\section{Unit testy}
+\section{Test case}
+\section{Baza błędów}
+\chapter{Podsumowanie}
+\chapter{Bibliografia}
+\chapter{Spis rysunków}
+\chapter{Spis listingów}
+\chapter{Spis tabel}
+\chapter{Opis zawartości APD}
+
+
+\end{document}
