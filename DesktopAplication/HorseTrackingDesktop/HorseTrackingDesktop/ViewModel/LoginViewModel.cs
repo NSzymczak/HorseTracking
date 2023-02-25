@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseTrackingDesktop.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -41,9 +42,13 @@ namespace HorseTrackingDesktop.ViewModel
 
         public void LoggIn()
         {
-            if (_userLogin == null) { return; }
-            if(_userHash== null) { return; }
-
+            //if (_userLogin == null) { return; }
+            //if(_userHash== null) { return; }
+            //else
+            //{
+                var view = new MainView();
+                view.Show();
+            //}
 
         }
 

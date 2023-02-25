@@ -6,62 +6,118 @@
         xmlns:local="clr-namespace:HorseTrackingDesktop" 
         xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
         mc:Ignorable="d"
-        Title="NAZWAAPKI" Height="800" Width="1000"
-        WindowState="Maximized">
-
-    <Grid Width="400" Height="500">
+        Title="NAZWAAPKI" 
+        Height="900" 
+        Width="1600"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        SnapsToDevicePixels="True">
+    <Grid Background="{StaticResource LightGrey}">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition  Height="2*"/>
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="2*"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-
+        <Rectangle Grid.Column="1"
+                   Grid.Row="1"
+                   Fill="{StaticResource BackgroundBrush}"
+                   Margin="10"/>
         <Border Grid.Row="1" 
-                CornerRadius="10"  
-                Margin="10"
-                BorderBrush="{StaticResource MainGreenBrush}"
-                BorderThickness="2">
-            <TextBox BorderThickness="0"
-                     Padding="5"
-                     FontSize="20"
-                     Margin="15,10"
-                     Text="{Binding UserLogin}"/>
-        </Border>
-        <Label
-               Content="Login"
-               FontSize="18"
-               Foreground="{StaticResource MainGreenBrush}"
-               Background="{StaticResource BackgroundBrush}" Margin="27,159,319,56" Grid.RowSpan="2" RenderTransformOrigin="0.323,0.656"/>
-        <Border Grid.Row="2" 
-                CornerRadius="10"  
-                Margin="10"
-                BorderBrush="{StaticResource MainGreenBrush}"
-                BorderThickness="2">
-            <PasswordBox VerticalAlignment="Center"
-                         FontSize="20"
-                         Margin="15,0"
-                         BorderThickness="0" 
-                         BorderBrush="Transparent"/>
-        </Border>
-        <Label
-               Content="Hasło"
-               Height="30"
-               FontSize="18"
-               Foreground="{StaticResource MainGreenBrush}"
-               Background="{StaticResource BackgroundBrush}" Margin="27,73,319,63" Grid.RowSpan="2" RenderTransformOrigin="0.323,0.656" Grid.Row="1"/>
+                Grid.Column="1"
+                BorderThickness="10"
+                CornerRadius="10"
+                Margin="1"
+                BorderBrush="{StaticResource BackgroundBrush}">
+            <Border Grid.Row="1" 
+                    Grid.Column="1"
+                    BorderThickness="2"
+                    Margin="5"
+                    CornerRadius="10"
+                    BorderBrush="{StaticResource MainGreenBrush}">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="1" 
+                           Content="Logowanie"
+                           FontSize="40"
+                           Foreground="{StaticResource MainGreenBrush}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                    <Border Grid.Column="1" 
+                            Grid.Row="1" 
+                            CornerRadius="10"  
+                            Margin="10"
+                            BorderBrush="{StaticResource MainGreenBrush}"
+                            BorderThickness="2">
+                        <TextBox BorderThickness="0"
+                                 Padding="5"
+                                 FontSize="20"
+                                 Margin="15,10"
+                                 Text="{Binding UserLogin}"/>
+                    </Border>
+                    <Label Grid.Row="1"
+                            Grid.Column="1"
+                            Content="Login"
+                            FontSize="18"
+                            Width="60"
+                            Height="40"
+                            Margin="25,-10,0,0"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            VerticalContentAlignment="Top"
+                            HorizontalContentAlignment="Left"
+                            Foreground="{StaticResource MainGreenBrush}"
+                            Background="{StaticResource BackgroundBrush}"/>
+                    <Border Grid.Row="2" 
+                            Grid.Column="1"
+                            CornerRadius="10"  
+                            Margin="10"
+                            BorderBrush="{StaticResource MainGreenBrush}"
+                            BorderThickness="2">
+                        <PasswordBox VerticalAlignment="Center"
+                                     Grid.Column="1"
+                                     FontSize="20"
+                                     Margin="15,0"
+                                     BorderThickness="0" 
+                                     BorderBrush="Transparent"/>
+                    </Border>
+                    <Label Content="Hasło"
+                           Grid.Column="1"
+                           Grid.Row="2"
+                           FontSize="18"
+                           Width="60"
+                           Height="40"
+                           Margin="25,-10,0,0"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           VerticalContentAlignment="Top"
+                           HorizontalContentAlignment="Left"
+                           Foreground="{StaticResource MainGreenBrush}"
+                           Background="{StaticResource BackgroundBrush}"/>
 
-        <Button Grid.Row="3"
-                Margin="10"
-                Content="Logowanie"
-                Style="{StaticResource ImportantButton}"/>
-        <Button Grid.Row="4"
-                Margin="10"
-                Content="Rejestracja"
-                Style="{StaticResource NotImportantButton}"/>
+                    <Button Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="Logowanie"
+                            Style="{StaticResource ImportantButton}"/>
+                </Grid>
+            </Border>
+        </Border>
     </Grid>
 </Window>
