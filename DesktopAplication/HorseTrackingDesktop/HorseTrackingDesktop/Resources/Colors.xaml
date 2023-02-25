@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--CUSTOM COLORS-->
+    <Brush x:Key="MainGreenBrush">#BFE390</Brush>
+    <Brush x:Key="BackgroundBrush">White</Brush>
+</ResourceDictionary>

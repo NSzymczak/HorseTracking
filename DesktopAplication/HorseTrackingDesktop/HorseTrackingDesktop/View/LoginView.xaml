@@ -1,0 +1,67 @@
+﻿<Window x:Class="HorseTrackingDesktop.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HorseTrackingDesktop" 
+        xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
+        mc:Ignorable="d"
+        Title="NAZWAAPKI" Height="800" Width="1000"
+        WindowState="Maximized">
+
+    <Grid Width="400" Height="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="2*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" 
+                CornerRadius="10"  
+                Margin="10"
+                BorderBrush="{StaticResource MainGreenBrush}"
+                BorderThickness="2">
+            <TextBox BorderThickness="0"
+                     Padding="5"
+                     FontSize="20"
+                     Margin="15,10"
+                     Text="{Binding UserLogin}"/>
+        </Border>
+        <Label
+               Content="Login"
+               FontSize="18"
+               Foreground="{StaticResource MainGreenBrush}"
+               Background="{StaticResource BackgroundBrush}" Margin="27,159,319,56" Grid.RowSpan="2" RenderTransformOrigin="0.323,0.656"/>
+        <Border Grid.Row="2" 
+                CornerRadius="10"  
+                Margin="10"
+                BorderBrush="{StaticResource MainGreenBrush}"
+                BorderThickness="2">
+            <PasswordBox VerticalAlignment="Center"
+                         FontSize="20"
+                         Margin="15,0"
+                         BorderThickness="0" 
+                         BorderBrush="Transparent"/>
+        </Border>
+        <Label
+               Content="Hasło"
+               Height="30"
+               FontSize="18"
+               Foreground="{StaticResource MainGreenBrush}"
+               Background="{StaticResource BackgroundBrush}" Margin="27,73,319,63" Grid.RowSpan="2" RenderTransformOrigin="0.323,0.656" Grid.Row="1"/>
+
+        <Button Grid.Row="3"
+                Margin="10"
+                Content="Logowanie"
+                Style="{StaticResource ImportantButton}"/>
+        <Button Grid.Row="4"
+                Margin="10"
+                Content="Rejestracja"
+                Style="{StaticResource NotImportantButton}"/>
+    </Grid>
+</Window>
