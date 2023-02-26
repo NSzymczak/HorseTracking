@@ -13,7 +13,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
         SnapsToDevicePixels="True">
-    <Grid Background="{StaticResource LightGrey}">
+    <Grid Background="{StaticResource DarkWhite}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="1*"/>
@@ -115,7 +115,8 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="Logowanie"
-                            Style="{StaticResource ImportantButton}"/>
+                            Style="{StaticResource ImportantButton}"
+                            Command="{Binding LoggInCommand}"/>
                 </Grid>
             </Border>
         </Border>

@@ -17,10 +17,12 @@
     <None Remove="Resources\Image\CategoryImage\settings.png" />
     <None Remove="Resources\Image\CategoryImage\statistics.png" />
     <None Remove="Resources\Image\CategoryImage\visit.png" />
+    <None Remove="Resources\Image\VisitImage\healthcare.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.1.23111.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +55,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Image\CategoryImage\visit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\VisitImage\healthcare.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

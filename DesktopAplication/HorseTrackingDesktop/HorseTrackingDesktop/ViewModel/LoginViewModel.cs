@@ -1,4 +1,6 @@
-﻿using HorseTrackingDesktop.View;
+﻿using HorseTrackingDesktop.Services;
+using HorseTrackingDesktop.View;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,10 +8,12 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm;
+using CommunityToolkit.Mvvm.Input;
 
 namespace HorseTrackingDesktop.ViewModel
 {
-    public class LoginViewModel:INotifyPropertyChanged
+    public partial class LoginViewModel:INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -17,6 +21,7 @@ namespace HorseTrackingDesktop.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
 
         private string _userLogin;
         public string UserLogin
@@ -40,16 +45,11 @@ namespace HorseTrackingDesktop.ViewModel
             }
         }
 
+        [RelayCommand]
         public void LoggIn()
         {
-            //if (_userLogin == null) { return; }
-            //if(_userHash== null) { return; }
-            //else
-            //{
                 var view = new MainView();
                 view.Show();
-            //}
-
         }
 
     }
