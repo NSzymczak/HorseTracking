@@ -8,11 +8,58 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <None Remove="Resources\Image\CategoryImage\calendar.png" />
+    <None Remove="Resources\Image\CategoryImage\competition.png" />
+    <None Remove="Resources\Image\CategoryImage\group.png" />
+    <None Remove="Resources\Image\CategoryImage\horse.png" />
+    <None Remove="Resources\Image\CategoryImage\nutrition.png" />
+    <None Remove="Resources\Image\CategoryImage\profile.png" />
+    <None Remove="Resources\Image\CategoryImage\settings.png" />
+    <None Remove="Resources\Image\CategoryImage\statistics.png" />
+    <None Remove="Resources\Image\CategoryImage\visit.png" />
+    <None Remove="Resources\Image\VisitImage\healthcare.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.1.23111.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HorseDesktopLib\HorseDesktopLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Image\CategoryImage\calendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\competition.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\group.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\horse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\nutrition.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\statistics.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\CategoryImage\visit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Image\VisitImage\healthcare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

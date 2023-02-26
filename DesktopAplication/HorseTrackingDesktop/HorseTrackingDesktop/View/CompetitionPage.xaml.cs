@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HorseTrackingDesktop.View
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainPageView.xaml
+    /// Logika interakcji dla klasy CompetitionPage.xaml
     /// </summary>
-    public partial class MainPageView : Window
+    public partial class CompetitionPage : Page
     {
-        public MainPageView()
+        public CompetitionPage()
         {
             InitializeComponent();
         }
