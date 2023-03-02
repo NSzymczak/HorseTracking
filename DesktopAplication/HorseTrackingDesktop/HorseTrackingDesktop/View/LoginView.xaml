@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HorseTrackingDesktop" 
         xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
+        x:Name="LoginWindow"
         mc:Ignorable="d"
         Title="NAZWAAPKI" 
         Height="900" 
@@ -116,7 +117,8 @@
                             Margin="10"
                             Content="Logowanie"
                             Style="{StaticResource ImportantButton}"
-                            Command="{Binding LoggInCommand}"/>
+                            Command="{Binding LoggInCommand}"
+                            CommandParameter="{Binding ElementName=LoginWindow}"/>
                 </Grid>
             </Border>
         </Border>

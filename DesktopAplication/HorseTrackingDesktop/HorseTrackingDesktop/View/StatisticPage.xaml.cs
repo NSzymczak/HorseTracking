@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseTrackingDesktop.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,17 @@ namespace HorseTrackingDesktop.View
     /// </summary>
     public partial class StatisticPage : Page
     {
+        StatisticViewModel viewModel;
         public StatisticPage()
         {
             InitializeComponent();
+            viewModel = new StatisticViewModel();
+            DataContext = viewModel;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            viewModel.LoadData();
         }
     }
 }

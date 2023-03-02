@@ -10,18 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.Input;
+using System.Windows;
+using HorseTrackingDesktop.Models;
 
 namespace HorseTrackingDesktop.ViewModel
 {
-    public partial class LoginViewModel:INotifyPropertyChanged
+    public partial class LoginViewModel:BaseViewModel
     {
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
 
         private string _userLogin;
         public string UserLogin
@@ -46,10 +41,12 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         [RelayCommand]
-        public void LoggIn()
+        public void LoggIn(Window window)
         {
-                var view = new MainView();
-                view.Show();
+            UserAcount.CurrentUser.AcountLogin = "admin";
+            var view = new MainView();
+            view.Show();
+            window.Close();
         }
 
     }
