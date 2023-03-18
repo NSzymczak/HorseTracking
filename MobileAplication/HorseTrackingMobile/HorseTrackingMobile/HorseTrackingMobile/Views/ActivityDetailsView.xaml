@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
+             x:DataType="viewmodels:ActivityDetailsViewModel"
+             x:Class="HorseTrackingMobile.Views.ActivityDetailsView"
+             Shell.BackgroundColor="{Binding Type.Color}"
+             Shell.ForegroundColor="{StaticResource Background}"
+             Shell.NavBarHasShadow="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,3*">
+            <Rectangle BackgroundColor="{Binding Type.Color}"/>
+            <Label Text="{Binding Type.Name}" 
+                   TextColor="{StaticResource Background}" 
+                   FontSize="60" 
+                   VerticalTextAlignment="End"
+                   Margin="20"/>
+            <Grid Grid.Row="1"
+                  Margin="0,30,0,0"
+                  ColumnDefinitions="*,*"
+                  RowDefinitions="*,*,*,*,*,3*">
+                <Label Grid.Row="0" Grid.Column="0" Text="Data:" Style="{StaticResource CenterLabel}"/>
+                <DatePicker Grid.Row="0" Grid.Column="1" Date="{Binding Date}" Style="{StaticResource CenterLabel}" VerticalOptions="Start"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Satysfakcja: " Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Satisfaction}" Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Intensywność: " Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Intensivity}" Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Czas trwania: " Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="3" Grid.Column="1" Text="{Binding Time}" Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Trener: " Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Trainer}" Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Opis: " Style="{StaticResource CenterLabel}"/>
+                <Label Grid.Row="5" Grid.Column="1" Text="{Binding Description}" Style="{StaticResource CenterLabel}"/>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" x:DataType="viewmodels:ActivityViewModel"
+             xmlns:model="clr-namespace:HorseTrackingMobile.Models"
+             x:Class="HorseTrackingMobile.Views.ActivityView"
+             Title="{Binding SelectedHorse.Name}"
+             Shell.TitleColor="{StaticResource MainAppColor}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Change" Command="{Binding }"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="30,*,30" 
+              RowDefinitions="10,*,40"
+              Margin="0,20,0,0">
+
+            <!--List of activity-->
+            <CollectionView ItemsSource="{Binding DayOfActivities}" 
+                            Grid.Column="1"
+                            Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:DayOfActivity">
+
+                        <StackLayout HeightRequest="80">
+                            <Label Text="{Binding Label}" 
+                                   FontSize="12"
+                                   Margin="0.1"/>
+                            <BoxView HeightRequest="0.5" 
+                                     Margin="0.1"
+                                     Color="{StaticResource Gray}"/>
+                            <CollectionView ItemsSource="{Binding ListOfActivity}">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="5"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate x:DataType="model:Activity">
+                                        <StackLayout>
+                                            <Button BackgroundColor="{Binding Type.Color}"
+                                                    HeightRequest="50" 
+                                                    WidthRequest="50"
+                                                    CornerRadius="5"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ActivityViewModel}}, Path=ActivityTapped}"	
+                                                    CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                                <CollectionView.EmptyView>
+                                    <Label Text="Brak aktywności tego dnia..."
+                                           FontSize="15"
+                                           TextColor="LightGray"
+                                           VerticalTextAlignment="Center"/>
+                                </CollectionView.EmptyView>
+                            </CollectionView>
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!--Bottom buttons-->
+            <Grid Grid.Row="2" 
+                  Grid.ColumnSpan="3"
+                  ColumnDefinitions="*,2*,*" 
+                  Margin="0,-30,0,30">
+
+                <Button Grid.Column="0" 
+                        HeightRequest="35" 
+                        WidthRequest="60"
+                        HorizontalOptions="End"
+                        Command="{Binding PrevCommand}"
+                        FontSize="14"
+                        Text="L"/>
+
+                <Button Grid.Column="1"
+                        HeightRequest="40"
+                        WidthRequest="90"
+                        CornerRadius="10"
+                        FontSize="15"
+                        Command="{Binding AddCommand}"
+                        Text="Dodaj +"/>
+
+                <Button Grid.Column="2" 
+                        HeightRequest="35" 
+                        WidthRequest="60"
+                        HorizontalOptions="Start" 
+                        Command="{Binding NextCommand}"
+                        FontSize="14"
+                        Text="P"/>
+            </Grid>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

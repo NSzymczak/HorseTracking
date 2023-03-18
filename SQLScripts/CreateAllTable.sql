@@ -113,6 +113,15 @@ FOREIGN KEY (mealID)
 REFERENCES Meal(mealID)
 )
 
+CREATE TABLE HorseTracking.dbo.CompetitionResult (
+resultID INT NOT NULL PRIMARY KEY,
+competitionID int NOT NULL,
+level varchar(50) NULL,
+result varchar(50) NULL,
+place int NULL,
+FOREIGN KEY (competitionID)
+REFERENCES Competition(competitionID)
+)
 
 CREATE TABLE HorseTracking.dbo.UserAcount (
 userID INT NOT NULL PRIMARY KEY,
@@ -141,6 +150,7 @@ race varchar(50) NULL,
 breeder varchar(50) NULL,
 passport varchar(50) NULL,
 photo varchar(MAX),
+status bit NOT NULL,
 FOREIGN KEY (statusID)
 REFERENCES HorseStatus(statusID),
 FOREIGN KEY (genderID)
@@ -158,6 +168,7 @@ title varchar(50) NOT NULL,
 description varchar(50) NULL,
 sendDate date NOT NULL,
 createdDate date NOT NULL,
+turnOn bit NOT NULL,
 FOREIGN KEY (userID)
 REFERENCES UserAcount(userID),
 FOREIGN KEY (horseID)
@@ -218,6 +229,8 @@ intensivity int NOT NULL,
 satisfaction int  NOT NULL
 FOREIGN KEY (userID)
 REFERENCES UserAcount(userID),
+FOREIGN KEY (activityTypeID)
+REFERENCES ActivityType(activityTypeID),
 FOREIGN KEY (trainerID)
 REFERENCES UserAcount(userID),
 FOREIGN KEY (horseID)
