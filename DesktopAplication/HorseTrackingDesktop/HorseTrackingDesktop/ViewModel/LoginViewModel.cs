@@ -12,6 +12,7 @@ using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows;
 using HorseTrackingDesktop.Models;
+using HorseTrackingDesktop.Database;
 
 namespace HorseTrackingDesktop.ViewModel
 {
@@ -43,7 +44,12 @@ namespace HorseTrackingDesktop.ViewModel
         [RelayCommand]
         public void LoggIn(Window window)
         {
-            UserAcount.CurrentUser.AcountLogin = "admin";
+            UserAcount.CurrentUser = new UserAcount()
+            {
+                UserId=1,
+                AcountLogin="admin"
+            };
+            GetDataFromDatabase.GetHorses(UserAcount.CurrentUser);
             var view = new MainView();
             view.Show();
             window.Close();

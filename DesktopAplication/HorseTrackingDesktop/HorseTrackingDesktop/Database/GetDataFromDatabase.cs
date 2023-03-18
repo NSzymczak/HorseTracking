@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using Azure.Core;
 
 namespace HorseTrackingDesktop.Database
 {
@@ -36,7 +37,7 @@ namespace HorseTrackingDesktop.Database
             }
         }
 
-        private static async void GetHorses(UserAcount user)
+        public static async void GetHorses(UserAcount user)
         {
             using (var context = new HorseTrackingContext())
             {
@@ -44,5 +45,12 @@ namespace HorseTrackingDesktop.Database
             }
         }
 
+        public static async void GetVisit()
+        {
+            using( var context=new HorseTrackingContext())
+            {
+                Visit.AllVisit=await context.Visit.Where(x=> x.HorseId==Horse.CurrentHorse.HorseId).ToListAsync();
+            }
+        }
     }
 }

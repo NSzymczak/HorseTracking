@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseTrackingDesktop.PageModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace HorseTrackingDesktop.View
         public VisitPage()
         {
             InitializeComponent();
+            DataContext = new VisitPageModel();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

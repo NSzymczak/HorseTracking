@@ -41,5 +41,6 @@ namespace HorseTrackingDesktop.Models
         public virtual ICollection<Visit> Visit { get; set; }
 
         public static List<Horse> Horses { get; set; }
+        public static Horse CurrentHorse { get; set; }
     }
 }

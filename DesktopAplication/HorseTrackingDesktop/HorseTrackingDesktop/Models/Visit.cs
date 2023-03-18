@@ -17,5 +17,7 @@ namespace HorseTrackingDesktop.Models
 
         public virtual Doctor Doctor { get; set; }
         public virtual Horse Horse { get; set; }
+
+        public static List<Visit> AllVisit { get; set; } = new List<Visit>();
     }
 }
