@@ -1,0 +1,954 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage{indentfirst}
+\usepackage[shortlabels]{enumitem}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{float}
+\begin{document}
+	\begin{titlepage}
+		
+		\begin{center}
+			\begin{figure}[t]
+				\centering
+			%	\includegraphics[width=4.5cm,height=4.5cm]{LogoUO.jpg}
+			\end{figure}
+		\end{center}
+		
+		\begin{center}
+			{\LARGE  \bf \textsc{UNIWERSYTET OPOLSKI}}
+		\end{center}
+		\vspace{0.2cm}
+		\begin{center}
+			{\large \textsc{Wydział Matematyki, Fizyki i Informatyki}}
+		\end{center}
+		%\vspace{0.2cm}
+		\begin{center}
+			{\Large \textsc{Instytut Informatyki}}
+		\end{center}
+		\vspace{0.5cm}
+		\begin{center}
+			\large    \textsc{Praca iżynierska}
+		\end{center}
+		\vspace{0.4cm}
+		\begin{center}
+			\large \textbf{Natalia Szymczak}
+		\end{center}
+		
+		\vspace{0.4cm}
+		\begin{center}
+			\Large     \textbf{Aplikacja mobilna dla posiadaczy koni}
+		\end{center}
+		\vspace{0.1cm}
+		
+		\begin{center}
+			\large     \textsc{Mobile aplication for horse owner}
+		\end{center}
+		\vspace{1.3cm}
+		
+		\begin{flushright}
+			{\large Praca wykonana pod kierunkiem\bigskip
+				
+				{\bf }} 
+			dr Jacka Iwańskiego
+		\end{flushright}
+		\vspace{0.7cm}
+		\begin{center}
+			{\large OPOLE 2022}
+		\end{center}
+	\end{titlepage}
+
+	\thispagestyle{empty}
+	\mbox{}
+	
+	\begin{quote}{\small 
+			\noindent
+			
+			\bigskip
+			\noindent
+			\textbf{Streszczenie:} 
+			
+			
+			\noindent
+			\newline
+			\textbf{}
+			\vspace{5pt}
+			
+			\noindent
+			\newline
+			\textbf{Abstract:} 
+			\vspace{5pt}
+			
+			\vspace{5pt}
+			\noindent
+			\newline
+			\textbf{Keywords:} 
+			\vspace{5pt}
+			\bigskip
+			
+			\noindent 
+			\textbf{Klasyfikacja tematyczna wg  MSC 2020:}}
+	\end{quote}
+
+	\mbox{}
+	
+	\pagestyle{plain}
+	\tableofcontents
+	\thispagestyle{empty}
+	
+	
+	\newpage
+	\setcounter{page}{1}
+	\newpage
+\chapter{Wstęp}
+\chapter{Przegląd istniejących rozwiązań}
+\chapter{Technologie użyte w pracy}
+\section{Microsoft SQL Server 2019}
+\section{Microsoft SQL Server Managemnet Studio}
+\section{Microsoft Visual Studio 2022}
+\section{Windows Presentation Foundation}
+\section{Xamarin}
+\section{Android Device Menager}
+\section{NuGet}
+\section{Entity Framework}
+\section{Ten do wykresów}
+\section{MVVM Toolkit}
+\section{Xamarin Community Toolkit}
+\section{ZXing.Net.Mobile.Forms}
+\section{Structured Query Language}
+\chapter{Specyfikacja wymagań}
+\section{Opis wycinka rzeczywistości}
+Aplikacja przeznaczona jest dla klubów jeździeckich, czyli organizacji zrzeszających jeźdźców startujących w danej dziedzinie sportów konnych. Aplikacja nadaje się dla klubów, których zawodnicy startują w takich dziedzinach jak:
+\begin{itemize}
+	\item Skoki przez przeszkody,
+	\item WKKW (skrót od "Wszechstronny konkurs konia wierzchowego"),
+	\item Ujeżdżenie.
+\end{itemize}
+
+W celu jak najlepszego określenia wymagań funkcjonalnych, przed napisaniem aplikacji przeprowadzono rozmowy z kilkoma osobami zaangażowanymi w to środowisko: pracownikami stadnin państwowych, właścicielami klubów, jak także z osobami prywatnie trzymającymi konie w stadninach. Po przeprowadzonych rozmowach zdecydowano się na dwie wersje aplikacji: desctopową oraz mobilną, które będą różnić się funkcjonalnościami.
+
+Aplikacja ma na celu pomóc w gromadzeniu informacji o jeźdźcach przynależących do klubu oraz ich koniach. W aplikacji gromadzone są informacje o codziennych aktywnościach koni, ich chorobach, żywieniu oraz zawodach w których biorą udział. Naturalnie chcemy także zapisywać wyniki z tych zawodów, aby móc określić czy dany trening jest skuteczny. Z aplikacji będą korzystać zawodnicy, trenerzy, jaki i zarząd klubu.
+
+Aby skutecznie zbierać informacje o treningach i innych aktywnościach niezbędna jest aplikacja mobilna, ponieważ dane te muszą być wprowadzane na bieżąco. Informacje o wizytach różnorakich lekarz oraz kowala także muszą być zapisywane na bieżąco podczas danej wizyty. Dlatego funkcjonalności te dotyczą jedynie aplikacji mobilnej. W aplikacji mobilnej można również sprawdzić aktualny plan żywienia swojego konia. Do tej aplikacji będą mieć dostęp jedynie osoby posiadające konie. 
+
+W aplikacji desktopowej wyświetlane są statystyki aktywności koni danego użytkownika jak i szczegóły wizyt lekarzy i kowali. W tej aplikacji można zaplanować wyjazdy na zawody jak także szczegółowe plany żywienia swoich podopiecznych. W tej aplikacji tworzone  będą także konta użytkowników, oraz ich koni. Dostęp do funkcji tworzenia kont będzie ograniczony i posiadać go będzie jedynie administrator aplikacji.
+
+Każdy członek klubu będzie miał swoje konto z możliwością logowania zarówno do aplikacji mobilnej jak i desktopowej. Trenerzy, właściciele klubu i inne osoby związane z klubem będą miały dostęp jedynie do aplikacji desktopowej. 
+
+
+\section{Wymagania funkcjonalne}
+Funkcjonalności aplikacji mobilnej oraz desktopowej nie są takie same mimo iż są podłączone do jednej bazy, więc czerpią z tego samego źródła informacji. Pomimo znaczących różnic niektóre funkcjonalności pokrywają się w obu tych produktach. 
+Wymagania funkcjonalne, które muszą spełniać obie aplikacje przedstawia tabelka \ref{funkcjonalneObuApek}.
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h!]
+	\centering
+\begin{tabular}{|p{4.5cm}|p{4cm}|p{7cm}|}			
+	\hline
+	Wymaganie & Aktor & Opis wymagania\\
+	\hline
+	Logowanie do aplikacji& Trener, Członek klubu, Zarząd klubu & System pozwala na zalogowanie się po podaniu poprawnego loginu oraz hasła.\\
+	\hline
+	Resetowanie hasła przez email & Trener, Członek klubu, Zarząd klubu& System umożliwia resetowanie hasła przez adres e-mail. \\
+	\hline
+	
+\end{tabular}
+	\caption{Wymagania funkcjonalne obu aplikacji}
+	\label{funkcjonalneObuApek}
+\end{table}
+
+Aplikacja mobilna będzie służyć użytkownikom głównie do zapisu aktualnych wydarzeń z życia stajni. Jej głównym celem jest szybkie zapisanie informacji o aktywnościach koni i ich wizytach u lekarzy, bądź kowali. Można w niej także szybko sprawdzić przygotowany plan żywienia, oraz daty zbliżających się zawodów.
+Wymagania funkcjonalne dla aplikacji mobilnej zawierają poniższe tabele \ref{funkcjonalneMobilki1} i \ref{funkcjonalneMobilki2}.
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{6cm}|}			
+		\hline
+	   \multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
+		\hline
+		Zarządzanie aktywnościami & Dodawanie aktywności & Członek klubu &  System umożliwia zapis danych wprowadzonych przez zalogowanego użytkownika do bazy danych.\\	
+		\hline	
+		Zarządzanie aktywnościami & Edytowanie aktywności & Członek klubu & System umożliwia edytowanie dodanych wcześniej danych o aktywnościach. \\	
+		\hline	
+		Zarządzanie aktywnościami& Usuwanie aktywności & Członek klubu & System pozwala na usuwanie dodanych wcześniej aktywności. \\
+		\hline
+		Zarządzanie aktywnościami& Wyświetlanie aktywności & Trener, Członek klubu, Zarząd klubu& System umożliwia na przeglądanie wszystkich danych o aktywnościach danego konia zgromadzonych w bazie danych.\\
+		\hline
+		Zarządzanie wizytami & Dodawanie wizyt & Członek klubu& System pozwala na zapisanie danych z wizyty konia u lekarza/kowala do bazy danych.\\
+		\hline
+		Zarządzanie wizytami & Edytowanie wizyt & Członek klubu& System powinien umożliwić zapis zaktualizowanych danych o wizycie do bazy.\\
+		\hline
+		Zarządzanie wizytami & Usuwanie wizyt & Członek klubu & System powinien umożliwiać usuwanie danych o dodanych wcześniej wizytach.\\
+		\hline 
+		Zarządzanie wizytami & Wyświetlanie wizyt & Trener, Członek klubu, Zarząd klubu& System powinien umożliwić przeglądanie danych o wizytach zgromadzonych w bazie.\\
+		\hline
+		Zarządzanie wizytami & Planowanie wizyt & Członek klubu & System powinien pozawalać użytkownikom na dodanie do bazy danych o następnej wizycie, czyli umożliwić zapis wizyt jedynie z datą i opisem.\\
+		\hline
+		Zarządzanie wizytami & Zapisywanie zdjęcia z wizyty & Członek klubu&System powinien pozwalać na zapisywanie zdjęci z wizyt.\\
+		\hline
+	\end{tabular}
+	\caption{Wymagania funkcjonalne aplikacji mobilnej}
+	\label{funkcjonalneMobilki1}
+\end{table}
+
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+		\hline
+		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
+		\hline
+		Zarządzanie wizytami & Przypomnienia o wizytach& Członek klubu & System powinien wysłać powiadomienie o zbliżającej się wizycie\\
+		\hline
+		Zarządzanie żywieniem & Przeglądanie planów żywienia & Członek klubu & System powinien umożliwiać przeglądanie planów żywienia umieszczonych w bazie.\\
+		\hline
+		Zarządzanie żywieniem & Wybór planu żywienia & Członek klubu & System powinien umożliwiać wybór jednego z planów żywienia umieszczonych w bazie jako tego aktualnie używanego.\\
+		\hline
+		Zarządzanie zawodami & Wyświetlanie najbliższych zawodów & Członek klubu & System powinien umożliwić wyświetlanie dat najbliższych zawodów umieszczonych w bazie.\\
+		\hline
+		Zarządzanie zawodami & Potwierdzenie udziału w zawodach & Członek klubu & System powinien umożliwić użytkownikowi potwierdzenie swojego udziału w zawodach.\\
+		\hline
+		\multicolumn{2}{|l|}{Udostępnianie koni}&Członek klubu& System powinien umożliwić udostępnianie koni między użytkownikami.\\
+		\hline
+	\end{tabular}
+	\caption{Wymagania funkcjonalne aplikacji mobilnej}
+	\label{funkcjonalneMobilki2}
+\end{table}
+\newpage
+$\ $
+\newpage
+Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadających swoje konie jak i dla osób zarządzających klubem jeździeckim. W aplikacji desktop-owej posiadacze koni będą mogli obejrzeć zgromadzone informacje w przystępniejszej formie na dużym ekranie, stworzyć plan żywienia swojego konia, jak także przeanalizować statystki swoich koni. Osoby zarządzające klubem będą miały możliwość dodawania nowych użytkowników i koni jak także sprawdzania statystyk wszystkich koni klubowych. Szczególowe wymagania funkcjonalne dla aplikacji desktopowej zostały przedstawione w tabelach \ref{funkcjonalneDesktop1} oraz \ref{funkcjonalneDesktop2}.
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+		\hline
+		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
+		\hline
+		Zarządzanie planami żywienia & Tworzenie planów żywienia  & Członek klubu & System umożliwia użytkownikowi stworzenie planu żywienia i zapisanie go do bazy.\\		
+		\hline
+		Zarządzanie planami żywienia & Edytowanie planów żywienia  & Członek klubu & System pozwala aktualizować stworzone wcześniej plany żywienia.\\
+		\hline
+		Zarządzanie planami żywienia & Usuwanie planów żywienia  & Członek klubu & System umożliwia usuwanie danych o stworzonych wcześniej planach żywienia.\\
+		\hline
+		Zarządzanie końmi& Dodawanie koni & Zarząd klubu & System umożliwia wprowadzenie danych o koniach i dodanie ich do konkretnego użytkownika\\ 		
+		\hline
+		Zarządzanie końmi& Usuwanie koni & Zarząd klubu & System umożliwia usuwanie koni\\ 		
+		\hline
+		Zarządzanie końmi& Edytowanie koni & Zarząd klubu & System umożliwia edycję danych o koniach zgromadzonych już w bazie.\\ 
+		\hline
+		Zarządzanie użytkownikami & Dodawanie użytkowników & Zarząd klubu & System umożliwia dodawanie danych o użytkownikach i tworzenie ich kont.\\		
+		\hline
+		Zarządzanie użytkownikami & Edytowanie użytkowników & Zarząd klubu & System umożliwia edytowanie danych użytkownika\\		
+		\hline
+		Zarządzanie użytkownikami & Usuwanie użytkowników & Zarząd klubu & System umożliwia usuwanie użytkowników\\
+		\hline
+		Zarządzanie użytkownikami & Zmiana hasła & Zarząd klubu,Członek klubu, Trener& System umożliwia zmianę hasła przez użytkownika.\\
+		\hline
+		
+	\end{tabular}
+\caption{Wymagania funkcjonalne aplikacji desktopowej}
+\label{funkcjonalneDesktop1}
+\end{table}
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+		\hline
+		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
+		\hline
+		Zarządzanie zawodami & Dodawanie zawodów & Zarząd klubu& System pozwala na tworzenie zawodów, oraz zapraszanie do udziału w nich poszczególnych członków klubu\\	
+		\hline	
+		Zarządzanie zawodami & Edytowanie zawodów & Zarząd klubu& System pozwala na edycję danych o dodanych wcześniej zawodach\\
+		\hline
+		Zarządzanie zawodami & Usuwanie zawodów & Zarząd klubu& System pozwala na usuwanie danych o dodanych wcześniej zawodach.\\
+		\hline
+		\multicolumn{2}{|l|}{Przeglądanie histori wizyt}& Członek klubu, Trener, Zarząd klubu&\\
+		\hline
+		\multicolumn{2}{|l|}{Przeglądanie statystyk}&Członek klubu, Trener, Zarząd klubu&\\
+		\hline
+	\end{tabular}
+	\caption{Wymagania funkcjonalne aplikacji desktopowej}
+	\label{funkcjonalneDesktop2}
+\end{table}
+\newpage
+$\ $
+\newpage
+\subsubsection{Przypadki użycia}
+Wszystkie wymagania funkcjonalne zgromadzone w powyższych tabelach, możemy przedstawić na diagramie przypadków użycia.
+\\
+UML-
+\\
+Przypadek użycia - jest to 
+\\
+Diagram przypadków użycia - 
+\\
+\section{Wymagania niefunkcjonalne}
+Wymagania niefunkcjonalne:
+\newpage
+\chapter{Baza danych}
+\section{Model konceptualny}
+Proces tworzenia bazy danych zaczynamy od modelu konceptualnego. W pierwszej fazie tworzenia go ważne jest określenie słownika pojęć, które będą następnie używane w projekcie bazy danych.
+\subsubsection{Słownik pojęć}
+\begin{itemize}
+	\item \textbf{Użytkownik} - wszyscy członkowie klubu, trenerzy oraz zarząd klubu.
+	\item \textbf{Koń} - koń należący do któregoś z członków klubu jeździeckiego, lub dzierżawiony przez niego.
+	\item \textbf{Atywności} - są to czynności wykonywane przez konia w ciągu dnia, należą do nich jazdy, skoki przez przeszkody, kross, ujeżdżenie, lonża, wyjazd w teren, karuzela, padok, wyjazd na zawody, spacer, skoki luzem, padok.
+	\item \textbf{Wizyty} - to wizyty wszelkich lekarzy, jak także wizyty kowali.
+	\item \textbf{Udostępnianie konia} - jest to przekazanie możliwości wprowadzania danych o danym koniu przez jego właściciela innemu członkowi klubu.
+\end{itemize}
+Po określeniu definicji poszczególnych pojęć używanych w projekcie możemy przystąpić do tworzenia kategorii.
+\subsubsection{Kategorie}
+Po przeanalizowaniu wycinku rzeczywistości możemy określić jakie dane chcemy zbierać i zapisywać do bazy danych. Dane te możemy podzielić na kategorie i opisać językiem naturalnym ich cechy charakterystyczne.
+\begin{enumerate}[start=1,label={\bfseries KAT:\arabic*}]
+	\item 
+\end{enumerate}
+Po określeniu kategorii możemy określić reguły funkcjonowania naszej aplikacja.
+\subsubsection{Reguły funkcjonowania}
+Reguły funkcjonowania określają zasady, procedury i wytyczne jakie musi spełniać projektowana aplikacja. 
+\begin{enumerate}[start=1,label={\bfseries REG\textbackslash 00\arabic*}]
+	\item Konta użytkowników tworzy jedynie użytkownik "administrator".
+	\item Każdy użytkownik ma określony swój typ.
+	\item Każdy użytkownik może zmienić swoje hasło.
+	\item O każdym użytkowniku, jak także o lekarzu i kowalu zbieramy podstawowe dane personalne.
+	\item Tylko użytkownik "administrator" dodaje konie do kont użytkowników.
+	\item Każdy koń ma przypisaną płeć.
+	\item Każdy koń ma przypisany status.
+	\item Jeden użytkownik może posiadać wiele koni.
+	\item Aktywności konia może dodać jego właściciel lub osoba której właściciel udostępni konia.
+\end{enumerate}
+\begin{enumerate}[start=10,label={\bfseries REG\textbackslash 0\arabic*}]
+	\item Koń może mieć wiele aktywności każdego dnia.
+	\item Wizyty konia może dodawać tylko jego właściciel.
+	\item Na wizycie jest jeden koń i jedne lekarz/kowal.
+	\item Każdy lekarz ma określoną specjalizacje.
+	\item Plan żywienia konia może ustalać tylko właściciel. 
+	\item Koń może posiadać wiele planów żywienia, ale aktualnie może jeść tylko jeden.
+	\item Plan żywienia zawiera wiele żywień.
+	\item Żywienie dotyczy konkretnego typu jedzenia, podawanego o konkretnej porze (rano, południe, wieczór), który swoją jednostkę miary.
+	\item Użytkownicy, którym ktoś udostępnił konia mogą tylko wyświetlić plan żywienia.
+	\item Statystyki mają być tworzone na podstawie aktywności.
+	\item Użytkownik "członek klubu" może przeglądać statystyki tylko swoich koni.
+	\item Użytkownik "trener" lub "administrator" może przeglądać statystyki wszystkich koni.
+	\item Użytkownik "trener" lub "administrator" może dodawać wyjazd na zawody dla całego klubu i zapraszać poszczególnych użytkowników.
+	\item Użytkownik "członek klubu" może dodawać swoje wyjazdy na zawody.
+\end{enumerate}
+
+\subsubsection{Ograniczenia dziedzinowe}
+Ograniczenia dziedzinowe to ograniczenia, które nakładane są na atrybuty w powyższych kategoriach. Wynikają one z analizy wycinka rzeczywistości i należy je uwzględnić podczas projektowania bazy danych oraz implementacji systemu.
+\begin{enumerate}[start=1,label={\bfseries OGR\textbackslash 00\arabic*}]
+	\item Paszport konia składa się ze znaków i cyfr postaci xxx-aaa-bb-ccccc-dd, gdzie
+	\begin{itemize} 
+		\item xxx - określa kraj pochodzenia konia,  
+		\item aaa - oznacza kod hodowli konia, 
+		\item bb- oznacza rok urodzenia konia, 
+		\item ccccc - to numer paszportu konia, 
+		\item dd - to numer identyfikacyjny konia w ramach hodowli.
+		\end{itemize}
+	\item Data wizyty konia jest wcześniejsza niż data jego urodzenia.
+	\item 
+\end{enumerate}
+\subsubsection{Transakcje}
+Transakcje są to operacje, które możemy wykonywać na danych. Mają one cztery własności, które w skrócie nazywamy ACID (ang. Atomicity, Consistency, Isolation, Durability). Transakcje mają więc następujące własności:
+\begin{itemize}
+	\item atomowość, inaczej niepodzielność oznacza, że transakcje muszą być wykonywane na bazie w całości. Jeśli transakcja nie zostanie poprawnie przeprowadzona należny przywrócić stan bazy z przed jej wykonania.
+	\item spójność, po wykonaniu transakcji baza powinna być nadal spójna.
+	\item izloacja, oznacza że tranzakcje nie mogą być od siebie zależne.
+	\item trwałość, oznacza że dane po transakcji zostają zapisane w bazie i są zachowane na stałe.
+\end{itemize}	
+Transakcje występujące w aplikacji:
+\begin{enumerate}[start=1,label={\bfseries TRA\textbackslash00\arabic*}]
+	
+	\item \textbf{Dodanie aktywności }\\
+	\textit{Opis}: Zadaniem transakcji jest dodanie danych o aktywności konia. Aktywności konia może dodać jedynie członek klubu, który jest jego właścicielem lub osoba której został on udostępniony.\\
+	\textit{Uwarunkowania}: Aktywność musi zawierać dane o tym kto ją wprowadził, jakiego konia ona dotyczy, w jakim dniu została wykonana, oraz czas jej trwania.\\
+	\textit{Wejście}:
+		\begin{itemize}
+			\item U - Dane nowej aktywności
+			\item BD - Dane aktywności
+		\end{itemize} 
+	\textit{Wyjście}:
+		\begin{itemize}
+			\item U - Komunikat
+			\item BD - Dane aktywności
+		\end{itemize} 
+	
+	\item \textbf{Edycja aktywności }\\
+	\textit{Opis}: \\
+	\textit{Uwarunkowania}: \\
+	\textit{Wejście}:
+	\begin{itemize}
+		\item U - 
+		\item BD -
+	\end{itemize} 
+	\textit{Wyjście}:
+	\begin{itemize}
+		\item U - 
+		\item BD -
+	\end{itemize} 
+\end{enumerate}
+\newpage
+\renewcommand{\arraystretch}{1.5}
+\subsubsection{Encje}
+Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i transakcji należy przystąpić do tworzenia encji i relacji między nimi.
+Definicje??
+\\
+\begin{enumerate}[start=1,label={\bfseries ENC\textbackslash00\arabic*}]
+	
+	\item \textbf{Activity}
+	
+	\textit{Semantyka encji} - Encja zawierająca aktywności konia.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			activityID & Numer identyfikujący aktywności & Liczba naturalna & + \\
+			\hline
+			date & Data aktywności & Data & + \\
+			\hline
+			description & Opis aktywności & typ znakowy & - \\
+			\hline
+			time &  Czas trwania aktywności & Czas & + \\
+			\hline
+			intensivity & Intensywność aktywności & Liczba naturalna & + \\
+			\hline
+			satisfaction & Satysfakcja aktywności & Liczba naturalna & + \\
+			\hline
+			activityType &  Typ aktywności & Liczba naturalna & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Activity }
+	\end{table}
+	Klucze kandydujące: activityID \\
+	Klucz główny: activityID \\
+	Charakter encji: encja silna \\
+	
+
+	
+	
+	\item \textbf{Competition}\\ \\
+	\textit{Semantyka encji} - encja zawierająca dane o zawodach.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			competitionID & Numer identyfikujący zawody & Liczba naturalna & + \\
+			\hline
+			spot & Miejsce wizyty & max. znaków 50 & - \\
+			\hline
+			description & Opis zawodów & Typ znakowy & - \\
+			\hline
+			rank & Ranga zawodów &  max. znaków 50 & - \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Competition }
+	\end{table}
+	Klucze kandydujące: competitionID \\
+	Klucz główny: competitionID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{CustomNotification}
+	
+	\textit{Semantyka encji} - Encja zawierająca powiadomienia.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			notificationID & Numer identyfikujący powiadomienie& Liczba naturalna & + \\
+			\hline
+			title &  Tytuł powiadomienia & max. znaków 50 & + \\
+			\hline
+			description &  Data kończąca udostępnienie & typ znakowy & + \\
+			\hline
+			sendDate &  Data wysłania & Data & + \\
+			\hline
+			createdDate &  Data stworzenia & Data & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu CustomNotification }
+	\end{table}
+	Klucze kandydujące: notificationID \\
+	Klucz główny: notificationID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{Doctor}\\ \\
+	\textit{Semantyka encji} - encja opisująca lekarzy łącząca ich dane kontaktowe ze specjalizacją.
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			doctorID & Numer identyfikujący doktora & Liczba naturalna & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Doctor }
+	\end{table}\\
+	Klucze kandydujące: doctorID \\
+	Klucz główny: doctorID \\
+	Charakter encji: encja silna \\
+	
+	\item \textbf{DoctorSpecialisation}\\ \\
+	\textit{Semantyka encji} - encja słownikowa zawiera nazwy specjalizacji lekarzy jak także kowali.\\
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			specialisationID & Numer identyfikujący specjalizacje & Liczba naturalna & + \\
+			\hline
+			name & Nazwa specjalizacji & max. znaków 50 & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu DoctorSpecialization }
+	\end{table}
+	Klucze kandydujące: specializationID \\
+	Klucz główny: specializationID \\
+	Charakter encji: encja silna \\
+	
+	\item \textbf{Eat}
+	
+		\textit{Semantyka encji} - Encja zawierająca informacje o planach żywienia i ich przynależności do koni.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			eatID & Numer identyfikujący jedzenie & Liczba naturalna & + \\
+			\hline
+			isActive &  Czy obecny plan jest w użyciu? &  & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Feed }
+	\end{table}
+	Klucze kandydujące: eatID \\
+	Klucz główny: eatID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{Feed}
+	
+	\textit{Semantyka encji} - Encja zawierająca informacje o jedzeniu koni.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			feedID & Numer identyfikujący jedzenie & Liczba naturalna & + \\
+			\hline
+			amount &  Ilość jedzenia w porcji & Liczba zmiennoprzecinkowa & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Feed }
+	\end{table}
+	Klucze kandydujące: feedID \\
+	Klucz główny: feedID \\
+	Charakter encji: encja silna \\
+	
+	\item \textbf{Forage}
+	
+	\textit{Semantyka encji} - Encja zawierająca informacje o paszy dla koni.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			forageID & Numer identyfikujący paszy & Liczba naturalna & + \\
+			\hline
+			name &  Nazwa paszy & max. znaków 50 & + \\
+			\hline
+			producent &  & max. znaków 50 & - \\
+			\hline
+			capacity & Ilość paszy w jednym worku & Liczba naturalna & - \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Meal }
+	\end{table}
+	Klucze kandydujące: forageID \\
+	Klucz główny: forageID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{Horse}
+	
+	\textit{Semantyka encji} - Encja zawierająca informacje o koniach.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			horseID & Numer identyfikujący konia & Liczba naturalna & + \\
+			\hline
+			name &  Imie konia & max. znaków 50 & + \\
+			\hline
+			mother &  Imie klaczy & max. znaków 50 & + \\
+			\hline
+			father &  Imie ogiera & Max. znaków 50 & - \\
+			\hline
+			birthday & Data urodzenia konia & Datetime & - \\
+			\hline
+			race &  Rasa konia & Max. znaków 50 & - \\
+			\hline
+			breeder &  Hodowca koni & Max. znaków 50 & - \\
+			\hline
+			passport & Paszport konia & Max. znaków 50 & - \\
+			\hline
+			photo & Zdjęcie konia & Typ znakowy & - \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Horse }
+	\end{table}
+	Klucze kandydujące: horseID \\
+	Klucz główny: horseID \\
+	Charakter encji: encja silna \\
+	
+\end{enumerate}
+\begin{enumerate}[start=10,label={\bfseries ENC$\backslash$0\arabic*}]
+	
+	\item \textbf{HorseGender}
+	
+	\textit{Semantyka encji} - Encja słownikowa zawierająca płeć koni.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			genderID & Numer identyfikujący płeć konia & Liczba naturalna & + \\
+			\hline
+			gender &  Nazwa płci konia & max. znaków 50 & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu HorseGender }
+	\end{table}
+	Klucze kandydujące: genderID \\
+	Klucz główny: genderID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{HorseStatus}
+	
+	\textit{Semantyka encji} - Encja słownikowa zawierająca statusy koni.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			statusID & Numer identyfikujący status konia & Liczba naturalna & + \\
+			\hline
+			name &  Nazwa statusu konia & max. znaków 50 & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu HorseStatus }
+	\end{table}
+	Klucze kandydujące: statusID \\
+	Klucz główny: statusID \\
+	Charakter encji: encja silna \\
+	
+	
+	\item \textbf{Meal} \\
+	\textit{Semantyka encji} - Encja słownikowa zawierająca nazwy posiłków.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			& & &  OPC(-) \\
+			\hline
+			mealID & Numer identyfikujący posiłek & Liczba naturalna & + \\
+			\hline
+			mealName & Nazwa posiłku & max. znaków 50 & + \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu Meal }
+	\end{table}
+	Klucze kandydujące: mealID \\
+	Klucz główny: mealID \\
+	Charakter encji: encja silna \\
+
+\item \textbf{NutritionPlan}
+
+\textit{Semantyka encji} - Encja zawierająca informacje o planie żywienia koni.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		nutritionPlanID & Numer identyfikujący plan żywienia & Liczba naturalna & + \\
+		\hline
+		title &  Tytuł planu żywienia & max. znaków 50 & + \\
+		\hline
+		desctription &  Ilość jedzenia w porcji & Liczba zmiennoprzecinkowa & - \\
+		\hline
+		icon &  Ikona dołączona do planu żywienia & Liczba naturalna & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu Feed }
+\end{table}
+Klucze kandydujące: nutritionPlanID \\
+Klucz główny: nutritionPlanID \\
+Charakter encji: encja silna \\
+	\item \textbf{PeopleDetails}\\ \\
+	\textit{Semantyka encji} - encja zawiera szczegółowe dane użytkowników (członków klubu, trenerów i zarządu klubu) jak i lekarzy oraz kowali.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|c|}
+			\hline
+			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+			 & & &  OPC(-) \\
+			\hline
+			detailsID & Numer identyfikujący dane użytkowników & Liczba naturalna & + \\
+			\hline
+			name & Imie & max. znaków 50 & - \\
+			\hline
+			surname & Nazwisko & max. znaków 50 & + \\
+			\hline
+			phonNumber & Numer telefonu & max. znaków 50 & - \\
+			\hline
+			email & Adres e-mailowy & max. znaków 50 & - \\
+			\hline
+			city & Miasto zamieszkania & max. znaków 50 & - \\
+			\hline
+			street & Ulica zamieszkania & max. znaków 50 & - \\
+			\hline
+			number & Numer domu zamieszkania & max. znaków 50 & - \\
+			\hline
+		\end{tabular}
+		\caption{Wykaz atrybutów encji typu PeopleDetails }
+	\end{table}
+Klucze kandydujące: detailsID \\
+Klucz główny: detailsID \\
+Charakter encji: encja słaba \\
+
+\item \textbf{TakePart}\\ \\
+\textit{Semantyka encji} - encja zawierająca dane o zawodach.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		takePartID & Numer identyfikujący udział w zawodach & Liczba naturalna & + \\
+		\hline
+		level & Poziom konkursu & max. znaków 50 & + \\
+		\hline
+		result & Wynik zawodów & Typ znakowy & + \\
+		\hline
+		place & Zajęte miejsce &  Liczba naturalna & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu Competition }
+\end{table}
+Klucze kandydujące: competitionID \\
+Klucz główny: competitionID \\
+Charakter encji: encja silna \\
+
+\item \textbf{Shared}
+
+\textit{Semantyka encji} - Encja zawierająca wpisy o udostępnianiu koni.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		sharedID & Numer identyfikujący status konia & Liczba naturalna & + \\
+		\hline
+		code &  Kod z kodu QR & max. znaków 50 & + \\
+		\hline
+		endDate &  Data kończąca udostępnienie & max. znaków 50 & + \\
+		\hline
+		startDate &  Data udostępnienia & max. znaków 50 & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu Shared }
+\end{table}
+Klucze kandydujące: sharedID \\
+Klucz główny: sharedID \\
+Charakter encji: encja silna \\
+
+
+\item \textbf{UnitOfMeasure}
+
+\textit{Semantyka encji} - Encja słownikowa zawierająca nazwy jednostek miary.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		unitID & Numer identyfikujący jednostkę miary & Liczba naturalna & + \\
+		\hline
+		unitName & Nazwa jednostek miary & max. znaków 50 & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu Meal }
+\end{table}
+Klucze kandydujące: unitID \\
+Klucz główny: unitID \\
+Charakter encji: encja silna \\
+
+
+	\item \textbf{UserAcount}\\ \\
+\textit{Semantyka encji} - encja zawiera dane użytkownika (członków klubu, trenerów i zarządu klubu).
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		userID & Numer identyfikujący użytkownika & Liczba naturalna & + \\
+		\hline
+		acountLogin & Login użytkownika & max. znaków 50 & + \\
+		\hline
+		hash & ??? & max. znaków 50 & + \\
+		\hline
+		salt & ??? & max. znaków 50 & + \\
+		\hline
+		createdDateTime & Data utworzenia konta & Data & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu UserAcount }
+\end{table}
+Klucze kandydujące: userID \\
+Klucz główny: userID \\
+Charakter encji: encja słaba \\
+
+\item \textbf{UserType} \\ \\
+\textit{Semantyka encji} - encja zawiera typy użytkowników: zwykły użytkownik (standard), trener (trainer), zarząd klubu (admin).
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}			
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		userTypeID & Numer identyfikujący typ użytkownika & Liczba naturalna & + \\
+		\hline
+		typeName & Nazwa typu użytkownika & max. znaków 50 & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu UserType }
+\end{table}
+Klucze kandydujące: userTypeID \\
+Klucz główny: userTypeID \\
+Charakter encji: encja silna \\
+
+\item \textbf{Visit}\\ \\
+\textit{Semantyka encji} - encja zawierająca dane o wizytach. 
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		careID & Numer identyfikujący wizyte & Liczba naturalna & + \\
+		\hline
+		cost & Cena wizyty & Liczba rzeczywista dodatnia & + \\
+		\hline
+		summary & Opis podsumowujący wizytę & Typ znakowy & - \\
+		\hline
+		artefactImage & Zdjęcie z wizyty & Typ znakowy & - \\
+		\hline
+		visitDate & Data wizyty & Data & + \\
+		\hline
+	\end{tabular}
+	\caption{Wykaz atrybutów encji typu Visit }
+\end{table}
+Klucze kandydujące: careID \\
+Klucz główny: careID \\
+Charakter encji: encja silna \\
+
+
+\end{enumerate}
+Po zaprojektowaniu encji możemy zapisać predykatowe defincje typów encji.
+\begin{enumerate}[start=1,label={\bfseries ENC$\backslash$00\arabic*}]
+	\item 
+\end{enumerate}
+\section{Model logiczny}
+\section{Model fizyczny}
+\chapter{Projekt systemu}
+\section{Model projektowanego systemu}
+\subsubsection{Diagramy stanów}
+\subsubsection{Diagramy aktywności}
+\subsubsection{Diagram klas}
+\subsubsection{Architektura aplikacji}
+Jaka baza jakie połączenie itp.
+\subsubsection{Wykorzystane wzorce projektowe}
+\subsubsection{Model architektoniczny MVVM}
+\section{Wybrane aspekty implementacyjne}
+jeden viewmodel obsługuje dwa widoki (dodawanie aktywności i szczegóły aktywności) \\
+kontrolki\\
+\chapter{Testy aplikacji}
+\section{Unit testy}
+\section{Test case}
+\section{Baza błędów}
+\chapter{Dokumentacja użytkownika}
+\section{Aplikacja desktopowa}
+\section{Aplikacja mobilna}
+\chapter{Podsumowanie}
+\begin{thebibliography}{9}
+	
+	\bibitem{bazydanych}
+	Hanna Mazur, Zygmunt Mazur,
+	\emph{Projektowanie relacyjnych baz danych}.
+	Oficyna Wydawnicza Politechniki Wrocławskiej, Wrocław 2004.
+	
+\end{thebibliography}
+\listoffigures
+\chapter{Spis listingów}
+\listoftables
+\chapter{Opis zawartości APD}
+
+
+\end{document}

@@ -1,0 +1,50 @@
+\contentsline {chapter}{\numberline {1}Wstęp}{1}{}%
+\contentsline {chapter}{\numberline {2}Przegląd istniejących rozwiązań}{2}{}%
+\contentsline {chapter}{\numberline {3}Technologie użyte w pracy}{3}{}%
+\contentsline {section}{\numberline {3.1}Microsoft SQL Server 2019}{3}{}%
+\contentsline {section}{\numberline {3.2}Microsoft SQL Server Managemnet Studio}{3}{}%
+\contentsline {section}{\numberline {3.3}Microsoft Visual Studio 2022}{3}{}%
+\contentsline {section}{\numberline {3.4}Windows Presentation Foundation}{3}{}%
+\contentsline {section}{\numberline {3.5}Xamarin}{3}{}%
+\contentsline {section}{\numberline {3.6}Android Device Menager}{3}{}%
+\contentsline {section}{\numberline {3.7}NuGet}{3}{}%
+\contentsline {section}{\numberline {3.8}Entity Framework}{3}{}%
+\contentsline {section}{\numberline {3.9}Ten do wykresów}{3}{}%
+\contentsline {section}{\numberline {3.10}MVVM Toolkit}{3}{}%
+\contentsline {section}{\numberline {3.11}Xamarin Community Toolkit}{3}{}%
+\contentsline {section}{\numberline {3.12}ZXing.Net.Mobile.Forms}{3}{}%
+\contentsline {section}{\numberline {3.13}Structured Query Language}{3}{}%
+\contentsline {chapter}{\numberline {4}Specyfikacja wymagań}{4}{}%
+\contentsline {section}{\numberline {4.1}Opis wycinka rzeczywistości}{4}{}%
+\contentsline {section}{\numberline {4.2}Wymagania funkcjonalne}{5}{}%
+\contentsline {subsubsection}{Przypadki użycia}{10}{}%
+\contentsline {section}{\numberline {4.3}Wymagania niefunkcjonalne}{10}{}%
+\contentsline {chapter}{\numberline {5}Baza danych}{11}{}%
+\contentsline {section}{\numberline {5.1}Model konceptualny}{11}{}%
+\contentsline {subsubsection}{Słownik pojęć}{11}{}%
+\contentsline {subsubsection}{Kategorie}{11}{}%
+\contentsline {subsubsection}{Reguły funkcjonowania}{12}{}%
+\contentsline {subsubsection}{Ograniczenia dziedzinowe}{13}{}%
+\contentsline {subsubsection}{Transakcje}{13}{}%
+\contentsline {subsubsection}{Encje}{15}{}%
+\contentsline {section}{\numberline {5.2}Model logiczny}{23}{}%
+\contentsline {section}{\numberline {5.3}Model fizyczny}{23}{}%
+\contentsline {chapter}{\numberline {6}Projekt systemu}{24}{}%
+\contentsline {section}{\numberline {6.1}Model projektowanego systemu}{24}{}%
+\contentsline {subsubsection}{Diagramy stanów}{24}{}%
+\contentsline {subsubsection}{Diagramy aktywności}{24}{}%
+\contentsline {subsubsection}{Diagram klas}{24}{}%
+\contentsline {subsubsection}{Architektura aplikacji}{24}{}%
+\contentsline {subsubsection}{Wykorzystane wzorce projektowe}{24}{}%
+\contentsline {subsubsection}{Model architektoniczny MVVM}{24}{}%
+\contentsline {section}{\numberline {6.2}Wybrane aspekty implementacyjne}{24}{}%
+\contentsline {chapter}{\numberline {7}Testy aplikacji}{25}{}%
+\contentsline {section}{\numberline {7.1}Unit testy}{25}{}%
+\contentsline {section}{\numberline {7.2}Test case}{25}{}%
+\contentsline {section}{\numberline {7.3}Baza błędów}{25}{}%
+\contentsline {chapter}{\numberline {8}Dokumentacja użytkownika}{26}{}%
+\contentsline {section}{\numberline {8.1}Aplikacja desktopowa}{26}{}%
+\contentsline {section}{\numberline {8.2}Aplikacja mobilna}{26}{}%
+\contentsline {chapter}{\numberline {9}Podsumowanie}{27}{}%
+\contentsline {chapter}{\numberline {10}Spis listingów}{30}{}%
+\contentsline {chapter}{\numberline {11}Opis zawartości APD}{32}{}%
