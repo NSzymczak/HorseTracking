@@ -1,18 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:model ="clr-namespace:HorseTrackingMobile.Models"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
+             x:DataType="viewmodels:VisitViewModel"
              x:Class="HorseTrackingMobile.Views.VisitView"
-             Title="{Binding CustomTitle}">
+             Title="{Binding CurrentHorse.Name}"
+             Shell.TitleColor="{StaticResource MainAppColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Change"/>
+    </ContentPage.ToolbarItems>
 
-    <ListView x:Name="MyListView"
-            ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding .}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-
-    </ListView>
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Visits}" Margin="30">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Visit">
+                    <Frame Padding="5">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:VisitViewModel}}, Path=VisitTapped}"	
+                                                   CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                        <Frame BorderColor="{StaticResource Gray}"
+                           CornerRadius="15"
+                           Padding="0">
+                            <Grid ColumnDefinitions="*,0.1*,*">
+                                <Label Grid.Column="0" Text="{Binding Doctor.Specialisation.Name}" HorizontalOptions="Center" FontSize="15" HeightRequest="40" VerticalTextAlignment="Center"/>
+                                <BoxView Grid.Column="1" BackgroundColor="{StaticResource Gray}" Margin="7,1,7,1"/>
+                                <Label Grid.Column="2" Text="{Binding VisitDate, StringFormat='{0:dd.MM.yyyy}'}" HorizontalOptions="Center" FontSize="15" HeightRequest="40" VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </Frame>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
 </ContentPage>

@@ -18,6 +18,7 @@
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
+
             <!--<Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">

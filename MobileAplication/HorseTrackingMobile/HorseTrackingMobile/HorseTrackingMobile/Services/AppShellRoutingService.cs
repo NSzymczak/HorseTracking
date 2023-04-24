@@ -13,13 +13,13 @@ namespace HorseTrackingMobile.Services
         public AppShellRoutingService()
         {
             //Routings
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(LoginView), typeof(LoginView));
             Routing.RegisterRoute(nameof(ActivityView), typeof(ActivityView));
             Routing.RegisterRoute(nameof(ActivityDetailsView), typeof(ActivityDetailsView));
             Routing.RegisterRoute(nameof(AddActivityView), typeof(AddActivityView));
             Routing.RegisterRoute(nameof(VisitView), typeof(VisitView));
+            Routing.RegisterRoute(nameof(NutritionView), typeof(NutritionView));
+            Routing.RegisterRoute(nameof(CompetitionView), typeof(CompetitionView));
 
         }
 
@@ -40,7 +40,7 @@ namespace HorseTrackingMobile.Services
 
         public async Task GoToAddActivity()
         {
-            //await Shell.Current.GoToAsync(nameof(AddActivityView));
+            await Shell.Current.GoToAsync(nameof(AddActivityView));
         }
 
     }

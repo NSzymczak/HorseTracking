@@ -23,7 +23,5 @@ namespace HorseTrackingMobile.Models
 
         public string Description { get; set; }
 
-        public static List<Activity> Activities { get; set; }
-
     }
 }

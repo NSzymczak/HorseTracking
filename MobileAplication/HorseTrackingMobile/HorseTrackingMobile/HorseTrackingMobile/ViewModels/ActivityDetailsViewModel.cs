@@ -15,6 +15,7 @@ namespace HorseTrackingMobile.ViewModels
     public class ActivityDetailsViewModel : BaseViewModel
     {
         public Command AddActivityCommand{ get; set; }
+
         public List<Activity> activities;
 
         public ActivityDetailsViewModel()
@@ -26,6 +27,7 @@ namespace HorseTrackingMobile.ViewModels
         {
             get => ActivityType.ListOfActivity;
         }
+
         int activityID;
         public int ActivityID
         {
@@ -88,15 +90,14 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref description, value);
         }
 
-        Activity activity = new Activity();
 
         private async void LoadActivityId(int activityId)
         {
             try
             {
-                var item = Activity.Activities.Select(x=>x).Where(x => x.ID == activityId).FirstOrDefault();
+                var item = ListOfActivity.Select(x=>x).Where(x => x.ID == activityId).FirstOrDefault();
                 if (item == null) return;
-                activity = item;
+                var activity = item;
                 Date = item.Date;
                 Time = item.Time;
                 Type = item.Type;
@@ -106,7 +107,7 @@ namespace HorseTrackingMobile.ViewModels
                 Description = item.Description;
 
             }
-            catch (Exception ex)
+            catch
             {
                 await App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
             }
@@ -116,8 +117,8 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var item = Activity.Activities.Select(x => x).Where(x => x.ID == ActivityID).FirstOrDefault();
-                Activity.Activities.Remove(item);
+                var item = ListOfActivity.Select(x => x).Where(x => x.ID == ActivityID).FirstOrDefault();
+                ListOfActivity.Remove(item);
                 item.ID = ActivityID;
                 item.Date = Date;
                 item.Time = Time;
@@ -126,11 +127,11 @@ namespace HorseTrackingMobile.ViewModels
                 item.Satisfaction = Satisfaction;
                 item.Intensivity = Intensivity;
                 item.Description = Description;
-                Activity.Activities.Add(item);
+                ListOfActivity.Add(item);
                 Shell.Current.GoToAsync("..");
 
             }
-            catch (Exception ex)
+            catch
             {
                 App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się dodać aktywności", "Dobrze");
                 Shell.Current.GoToAsync("..");

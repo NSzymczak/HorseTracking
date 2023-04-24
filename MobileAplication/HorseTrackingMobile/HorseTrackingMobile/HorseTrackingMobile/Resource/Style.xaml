@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style x:Key="CenterLabel" TargetType='Label'>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="RateButton" TargetType="Button">
+        <Setter Property="WidthRequest" Value="29"/>
+        <Setter Property="BorderColor" Value="{StaticResource TabbarColor}"/>
+        <Setter Property="BorderWidth" Value="1"/>
+    </Style>
+</ResourceDictionary>

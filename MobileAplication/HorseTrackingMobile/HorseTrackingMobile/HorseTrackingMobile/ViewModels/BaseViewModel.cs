@@ -10,8 +10,6 @@ namespace HorseTrackingMobile.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-        public IDataStoreActivity<Activity> DataStoreActivity=> DependencyService.Get<IDataStoreActivity<Activity>>();
 
         bool isBusy = false;
         public bool IsBusy
@@ -26,6 +24,12 @@ namespace HorseTrackingMobile.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
+
+
+        public Horse CurrentHorse { get; set; }
+        public static User CurrentUser { get; set;}
+        public static List<Activity> ListOfActivity { get; set; } = new List<Activity>();
+
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

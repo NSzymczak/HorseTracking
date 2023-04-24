@@ -22,7 +22,7 @@ namespace HorseTrackingMobile
             Activity = activity;
         }
 
-        public async void Logout(object sender, EventArgs e)
+        public void Logout(object sender, EventArgs e)
         {
             Preferences.Set(PreferencesKeys.IsLogged, false);
             Preferences.Set(PreferencesKeys.UserID, 0);

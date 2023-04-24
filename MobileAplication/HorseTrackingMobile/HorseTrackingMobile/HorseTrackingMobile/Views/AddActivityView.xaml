@@ -118,7 +118,8 @@
                        FontSize="15"
                        HorizontalOptions="Start"
                        VerticalOptions="Start"
-                       IsSpellCheckEnabled="True"/>
+                       IsSpellCheckEnabled="True"
+                       />
             </Frame>
 
             <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"

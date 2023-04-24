@@ -39,10 +39,10 @@ namespace HorseTrackingMobile.ViewModels
 
         public void CheckLogin()
         {
-            userList = DataBaseOperation.GetAllUsers();
+            userList = DataBaseConnection.GetAllUsers();
             if (Preferences.Get(PreferencesKeys.IsLogged, false))
             {
-                User.CurrentUser = DataBaseOperation.GetLoggedUser();
+                User.CurrentUser = DataBaseConnection.GetLoggedUser();
                 GoToTheApp();
             }
             else
@@ -67,17 +67,18 @@ namespace HorseTrackingMobile.ViewModels
                 return;
             }
 
-            var correctUser = user.Where(x => x.Password == ReadedPassword).ToList();
+            var correctUser = user.Where(x => x.Hash == ReadedPassword).ToList();
             if (ListServices.IsAny(correctUser))
             {
                 IncorrectData();
                 return;
             }
             User.CurrentUser = correctUser.First();
+
             GoToTheApp();
         }
 
-        public async void GoToTheApp()
+        public void GoToTheApp()
         {
             Preferences.Set(PreferencesKeys.IsLogged, true);
             Preferences.Set(PreferencesKeys.UserID, User.CurrentUser.Id);

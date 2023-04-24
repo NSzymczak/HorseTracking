@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:HorseTrackingMobile.Views"
+       xmlns:view="clr-namespace:HorseTrackingMobile.Views"
        Title="HorseTrackingMobile"
        x:Class="HorseTrackingMobile.AppShell">
 
@@ -12,9 +12,7 @@
                 <Setter Property="Shell.ForegroundColor" Value="{StaticResource MainAppColor}" />     <!--HamburgerColor-->
                 <Setter Property="Shell.TitleColor" Value="{StaticResource Background}" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource Background}"/>
-                <Setter Property="Shell.UnselectedColor" Value="{StaticResource MainAppColor}" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource TabbarColor}" />
-                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource TabbarIconColor}"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TabbarIconColor}"/>
             </Style>
         </ResourceDictionary>
@@ -23,42 +21,37 @@
     <FlyoutItem Title="Aplikacja" Icon="icon_about.png" Style="{StaticResource BaseStyle}">
         
         <Tab Title="Aktywności"
-             Icon="Grass.png">
+             Icon="horse.png">
             <ShellContent x:Name="activity" 
-                          ContentTemplate="{DataTemplate local:ActivityView}"/>
+                          ContentTemplate="{DataTemplate view:ActivityView}"/>
         </Tab>
 
         <Tab Title="Wizyty"
-              Icon="icon_about.png">
+              Icon="visit.png">
             
             <ShellContent x:Name="visits" 
-                          Route="AboutPage"
-                          ContentTemplate="{DataTemplate local:VisitView}"/>
+                          ContentTemplate="{DataTemplate view:VisitView}"/>
         </Tab>
         
         <Tab Title="Żywienie" 
-             Icon="icon_about.png">
+             Icon="nutrition.png">
             
-            <ShellContent x:Name="Nutrition" 
-                          Route="AboutPage"
-                          ContentTemplate="{DataTemplate local:AboutPage}"/>
+            <ShellContent x:Name="Nutrition"
+                          ContentTemplate="{DataTemplate view:NutritionView}"/>
         </Tab>
         
         <Tab Title="Zawody" 
-             Icon="icon_about.png">
+             Icon="competition.png">
             
             <ShellContent x:Name="Competition" 
-                          ContentTemplate="{DataTemplate local:AboutPage}"/>
+                          ContentTemplate="{DataTemplate view:CompetitionView}"/>
         </Tab>
     
     </FlyoutItem>
     
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:AddActivityView}" />
-    </FlyoutItem>
 
     <MenuItem Text="Logout" Clicked="Logout">
     </MenuItem>
     <TabBar>
-        <ShellContent Route="LoginView" ContentTemplate="{DataTemplate local:LoginView}" />    </TabBar>
+        <ShellContent Route="LoginView" ContentTemplate="{DataTemplate view:LoginView}" />    </TabBar>
 </Shell>

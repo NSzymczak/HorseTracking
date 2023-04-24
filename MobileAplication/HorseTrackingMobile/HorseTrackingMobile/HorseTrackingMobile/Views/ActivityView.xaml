@@ -1,20 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" x:DataType="viewmodels:ActivityViewModel"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
+             x:DataType="viewmodels:ActivityViewModel"
              xmlns:model="clr-namespace:HorseTrackingMobile.Models"
              x:Class="HorseTrackingMobile.Views.ActivityView"
-             Title="{Binding SelectedHorse.Name}"
+             Title="Aktywności"
              Shell.TitleColor="{StaticResource MainAppColor}">
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Aktywności" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.TitleView>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Change" Command="{Binding }"/>
-    </ContentPage.ToolbarItems>
-    
     <ContentPage.Content>
         <Grid ColumnDefinitions="30,*,30" 
-              RowDefinitions="10,*,40"
-              Margin="0,20,0,0">
+              RowDefinitions="40,*,40"
+              Margin="0,5,0,0">
+            <Frame Grid.Column="1" Padding="0" 
+                   BackgroundColor="{StaticResource Background}" 
+                   BorderColor="{StaticResource Background}"
+                   CornerRadius="5"
+                   Margin="50,0">
+                
+                <Picker ItemsSource="{Binding Horses}"
+                        ItemDisplayBinding="{Binding Name}"
+                        SelectedItem="{Binding CurrentHorse,Mode=TwoWay}"
+                        SelectedIndexChanged="SwichHorse"
+                        TitleColor="Transparent"
+                        HorizontalTextAlignment="Center"/>
+            </Frame>
 
             <!--List of activity-->
             <CollectionView ItemsSource="{Binding DayOfActivities}" 
