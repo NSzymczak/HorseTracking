@@ -37,7 +37,7 @@
              Icon="nutrition.png">
             
             <ShellContent x:Name="Nutrition"
-                          ContentTemplate="{DataTemplate view:NutritionView}"/>
+                          ContentTemplate="{DataTemplate view:NutritionPlanView}"/>
         </Tab>
         
         <Tab Title="Zawody" 

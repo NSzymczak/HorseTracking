@@ -4,6 +4,8 @@
              xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
              x:DataType="viewmodels:ActivityDetailsViewModel"
              x:Class="HorseTrackingMobile.Views.ActivityDetailsView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutItemIsVisible="False"
              Shell.BackgroundColor="{Binding Type.Color}"
              Shell.ForegroundColor="{StaticResource Background}"
              Shell.NavBarHasShadow="False">

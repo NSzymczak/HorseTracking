@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,9 +14,9 @@ namespace HorseTrackingMobile.Database
     public class DataBaseConnection
     {
         private static string dbName = "HorseTracking";
-        //private static string serverName = "tcp:192.168.88.249,1433"; //Głuchołazy
-        private static string serverName = "tcp:192.168.1.19,1433"; //Opole
-        //private static string serverName = "tcp:10.1.1.141,1433"; //Studia
+        private static string serverName = "tcp:192.168.88.249,1433"; //Głuchołazy
+        //private static string serverName = "tcp:192.168.1.19,1433"; //Opole
+        //private static string serverName = "tcp:10.1.0.230,1433"; //Studia
         private static string serverUserName = "Natka";
         private static string serverPassword = "123456";
         private static string connectionString = $"Data Source={serverName}; Initial Catalog={dbName}; User id={serverUserName}; Password={serverPassword}; Connection Timeout = 10; MultipleActiveResultSets=true";
@@ -30,7 +31,7 @@ namespace HorseTrackingMobile.Database
             }
             catch (Exception ex)
             {
-                App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
+                //App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
             }
         }
 
@@ -202,14 +203,103 @@ namespace HorseTrackingMobile.Database
             }
         }
 
-        public static void GetAllForage()
+        public static void GetMealsName()
         {
+            string query = $"SELECT * FROM MealName";
 
+            var cmd = new SqlCommand(query, sqlConnection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Dictionaries.MealsName.Add(Convert.ToInt32(reader["mealNameID"]), reader["mealName"].ToString());
+            }
         }
 
-        public static void GetNutritionPlan()
+        public static Forage GetForage(int forageID)
         {
+            string query = $"SELECT * FROM Forage WHERE forageID={forageID}";
 
+            var cmd = new SqlCommand(query, sqlConnection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                return new Forage()
+                {
+                    Id = Convert.ToInt32(reader["forageID"]),
+                    Name = reader["name"].ToString(),
+                    Capacity = Convert.ToInt32(reader["capacity"]),
+                    Producent = reader["producent"].ToString(),
+                    UnitOfMeasure = Dictionaries.UnitOfMeasure[Convert.ToInt32(reader["unitOfMeasure"])],
+                };
+            }
+            return null;
+        }
+
+        public static NutritionPlan GetNutritionPlansForHorse(int horseID)
+        {
+            string query = $"SELECT * FROM NutritionPlan AS n inner join Eat AS e ON  n.nutritionPlanID = e.nutritionPlanID WHERE horseID={horseID}";
+
+            var cmd = new SqlCommand(query, sqlConnection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                return new NutritionPlan()
+                {
+                    ID = Convert.ToInt32(reader["nutritionPlanID"]),
+                    Title = reader["title"].ToString(),
+                    Description = reader["description"].ToString(),
+                    Icon = reader["icon"].ToString(),
+                    Color= reader["color"].ToString(),
+                    Meals = GetMeals(Convert.ToInt32(reader["nutritionPlanID"]))
+                };
+            }
+            return null;
+        }
+
+        public static List<Meal> GetMeals(int id)
+        {
+            string query = $"SELECT * FROM Meal WHERE nutritionID={id}";
+
+            var cmd = new SqlCommand(query, sqlConnection);
+            var reader = cmd.ExecuteReader();
+            var listOfMeals = new List<Meal>();
+
+            while (reader.Read())
+            {
+                listOfMeals.Add(new Meal()
+                {
+                    Id = Convert.ToInt32(reader["mealID"]),
+                    MealName = Dictionaries.MealsName[Convert.ToInt32(reader["mealNameID"])],
+                    Feedings = GetFeeding(id, Convert.ToInt32(reader["mealID"])),
+                }) ;
+            }
+            return listOfMeals;
+        }
+
+        public static List<Feeding> GetFeeding(int nutritionId,int mealId)
+        {
+            string query = $"SELECT * FROM Feeding Where mealID={mealId}";
+
+            var cmd = new SqlCommand(query, sqlConnection);
+            var reader = cmd.ExecuteReader();
+            var listOfFeeding = new List<Feeding>();
+
+            while (reader.Read())
+            {
+                listOfFeeding.Add(
+                    new Feeding()
+                    {
+                        Id = Convert.ToInt32(reader["feedID"]),
+                        Forage = GetForage(Convert.ToInt32(reader["forageID"])),
+                        Unit = Dictionaries.UnitOfMeasure[Convert.ToInt32(reader["unitID"])],
+                        MealID = Convert.ToInt32(reader["mealID"]),
+                        Amount = reader["amount"].ToString(),
+                    });
+            }
+            return listOfFeeding;
         }
 
     }

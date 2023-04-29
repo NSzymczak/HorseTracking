@@ -4,7 +4,9 @@
              xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
              x:DataType="viewmodels:ActivityDetailsViewModel"
              x:Class="HorseTrackingMobile.Views.AddActivityView"
-             xmlns:model="clr-namespace:HorseTrackingMobile.Models">
+             xmlns:model="clr-namespace:HorseTrackingMobile.Models"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutItemIsVisible="False">
     <ContentPage.Content>
 
         <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,3*,*,6*"
@@ -118,8 +120,7 @@
                        FontSize="15"
                        HorizontalOptions="Start"
                        VerticalOptions="Start"
-                       IsSpellCheckEnabled="True"
-                       />
+                       IsSpellCheckEnabled="True"/>
             </Frame>
 
             <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"

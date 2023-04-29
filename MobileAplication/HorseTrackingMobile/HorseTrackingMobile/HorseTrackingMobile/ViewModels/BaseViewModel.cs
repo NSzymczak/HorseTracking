@@ -1,9 +1,12 @@
-﻿using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
@@ -24,12 +27,6 @@ namespace HorseTrackingMobile.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
-
-
-        public Horse CurrentHorse { get; set; }
-        public static User CurrentUser { get; set;}
-        public static List<Activity> ListOfActivity { get; set; } = new List<Activity>();
-
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

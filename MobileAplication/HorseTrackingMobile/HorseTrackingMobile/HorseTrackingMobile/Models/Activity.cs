@@ -23,5 +23,6 @@ namespace HorseTrackingMobile.Models
 
         public string Description { get; set; }
 
+
     }
 }

@@ -5,8 +5,8 @@
              x:DataType="viewmodels:ActivityViewModel"
              xmlns:model="clr-namespace:HorseTrackingMobile.Models"
              x:Class="HorseTrackingMobile.Views.ActivityView"
-             Title="Aktywności"
              Shell.TitleColor="{StaticResource MainAppColor}">
+    
     <Shell.TitleView>
         <Grid ColumnDefinitions="4*,*">
             <Label Text="Aktywności" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
@@ -24,8 +24,8 @@
                    Margin="50,0">
                 
                 <Picker ItemsSource="{Binding Horses}"
-                        ItemDisplayBinding="{Binding Name}"
-                        SelectedItem="{Binding CurrentHorse,Mode=TwoWay}"
+                        ItemDisplayBinding="{Binding Name, Mode=TwoWay}"
+                        SelectedItem="{Binding CurrentHorse, Mode=TwoWay}"
                         SelectedIndexChanged="SwichHorse"
                         TitleColor="Transparent"
                         HorizontalTextAlignment="Center"/>
@@ -56,12 +56,14 @@
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate x:DataType="model:Activity">
                                         <StackLayout>
-                                            <Button BackgroundColor="{Binding Type.Color}"
-                                                    HeightRequest="50" 
-                                                    WidthRequest="50"
-                                                    CornerRadius="5"
-                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ActivityViewModel}}, Path=ActivityTapped}"	
-                                                    CommandParameter="{Binding .}"/>
+                                            <ImageButton BackgroundColor="{Binding Type.Color}"
+                                                         HeightRequest="50" 
+                                                         WidthRequest="50"
+                                                         CornerRadius="5"
+                                                         Source="{Binding Type.Image}"
+                                                         Padding="5"
+                                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:ActivityViewModel}}, Path=ActivityTapped}"	
+                                                         CommandParameter="{Binding .}"/>
                                         </StackLayout>
                                     </DataTemplate>
                                 </CollectionView.ItemTemplate>

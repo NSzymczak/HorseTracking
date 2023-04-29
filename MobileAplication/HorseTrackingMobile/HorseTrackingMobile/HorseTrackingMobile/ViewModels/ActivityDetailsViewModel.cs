@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,16 +13,16 @@ namespace HorseTrackingMobile.ViewModels
 {
     [QueryProperty(nameof(ActivityID), nameof(ActivityID))]
 
-    public class ActivityDetailsViewModel : BaseViewModel
+    public class ActivityDetailsViewModel : HorseAppViewModel
     {
-        public Command AddActivityCommand{ get; set; }
-
-        public List<Activity> activities;
+        public Command AddActivityCommand { get; set; }
 
         public ActivityDetailsViewModel()
         {
             AddActivityCommand = new Command(Add);
+            SetDate();
         }
+
 
         public List<ActivityType> ListOfActivityType
         {
@@ -90,18 +91,22 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref description, value);
         }
 
+        private void SetDate()
+        {
+            Date= DateTime.Now;
+        }
 
         private async void LoadActivityId(int activityId)
         {
             try
             {
-                var item = ListOfActivity.Select(x=>x).Where(x => x.ID == activityId).FirstOrDefault();
+                var item = Horse.CurrentHorse.ListOfAllActivityForHorse.Select(x => x).Where(x => x.ID == activityId).FirstOrDefault();
                 if (item == null) return;
                 var activity = item;
                 Date = item.Date;
                 Time = item.Time;
                 Type = item.Type;
-                Trainer= item.Trainer;
+                Trainer = item.Trainer;
                 Satisfaction = item.Satisfaction;
                 Intensivity = item.Intensivity;
                 Description = item.Description;
@@ -117,17 +122,19 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var item = ListOfActivity.Select(x => x).Where(x => x.ID == ActivityID).FirstOrDefault();
-                ListOfActivity.Remove(item);
-                item.ID = ActivityID;
-                item.Date = Date;
-                item.Time = Time;
-                item.Type = Type;
-                item.Trainer = Trainer;
-                item.Satisfaction = Satisfaction;
-                item.Intensivity = Intensivity;
-                item.Description = Description;
-                ListOfActivity.Add(item);
+                var add = new Activity()
+                {
+                    ID = ListServices.IsAny(Horse.CurrentHorse.ListOfAllActivityForHorse) ? 1 : Horse.CurrentHorse.ListOfAllActivityForHorse.Max(x => x.ID) + 1,
+                    Date = Date,
+                    Time = Time,
+                    Type = Type,
+                    Trainer = Trainer,
+                    Satisfaction = Satisfaction,
+                    Intensivity = Intensivity,
+                    Description = Description
+                };
+
+                Horse.CurrentHorse.ListOfAllActivityForHorse.Add(add);
                 Shell.Current.GoToAsync("..");
 
             }

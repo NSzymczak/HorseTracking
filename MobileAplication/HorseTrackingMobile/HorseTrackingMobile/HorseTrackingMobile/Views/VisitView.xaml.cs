@@ -13,12 +13,20 @@ namespace HorseTrackingMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VisitView : ContentPage
     {
+
+        VisitViewModel viewModel = new VisitViewModel();
         public VisitView()
         {
             InitializeComponent();
-            var visitViewModel = new VisitViewModel();
-            BindingContext = visitViewModel;
-            Appearing += (s, e) => { visitViewModel.Load(); };
+            BindingContext = viewModel;
+            Appearing += (s, e) => 
+            { 
+                viewModel.Load(); 
+            };
+        }
+        private void SwichHorse(object sender, EventArgs e)
+        {
+            viewModel.SwitchHorseCommand.Execute(true);
         }
     }
 }

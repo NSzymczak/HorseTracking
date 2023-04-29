@@ -18,7 +18,7 @@ namespace HorseTrackingMobile.Services
             Routing.RegisterRoute(nameof(ActivityDetailsView), typeof(ActivityDetailsView));
             Routing.RegisterRoute(nameof(AddActivityView), typeof(AddActivityView));
             Routing.RegisterRoute(nameof(VisitView), typeof(VisitView));
-            Routing.RegisterRoute(nameof(NutritionView), typeof(NutritionView));
+            Routing.RegisterRoute(nameof(NutritionPlanView), typeof(NutritionPlanView));
             Routing.RegisterRoute(nameof(CompetitionView), typeof(CompetitionView));
 
         }
