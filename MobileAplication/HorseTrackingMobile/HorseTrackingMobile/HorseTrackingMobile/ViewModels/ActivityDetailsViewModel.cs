@@ -2,11 +2,7 @@
 using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
@@ -100,9 +96,8 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var item = Horse.CurrentHorse.ListOfAllActivityForHorse.Select(x => x).Where(x => x.ID == activityId).FirstOrDefault();
+                var item = Horse.CurrentHorse.ListOfAllActivity.Select(x => x).Where(x => x.ID == activityId).FirstOrDefault();
                 if (item == null) return;
-                var activity = item;
                 Date = item.Date;
                 Time = item.Time;
                 Type = item.Type;
@@ -124,7 +119,7 @@ namespace HorseTrackingMobile.ViewModels
             {
                 var add = new Activity()
                 {
-                    ID = ListServices.IsAny(Horse.CurrentHorse.ListOfAllActivityForHorse) ? 1 : Horse.CurrentHorse.ListOfAllActivityForHorse.Max(x => x.ID) + 1,
+                    ID = ListServices.IsAny(Horse.CurrentHorse.ListOfAllActivity) ? 1 : Horse.CurrentHorse.ListOfAllActivity.Max(x => x.ID) + 1,
                     Date = Date,
                     Time = Time,
                     Type = Type,
@@ -134,7 +129,7 @@ namespace HorseTrackingMobile.ViewModels
                     Description = Description
                 };
 
-                Horse.CurrentHorse.ListOfAllActivityForHorse.Add(add);
+                Horse.CurrentHorse.ListOfAllActivity.Add(add);
                 Shell.Current.GoToAsync("..");
 
             }

@@ -7,6 +7,20 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="HorizontalOptions" Value="Center"/>
     </Style>
+
+    <Style x:Key="LabelRegularA" TargetType='Label'>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+    <Style x:Key="LabelRegularB" TargetType='Label'>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    <Style x:Key="LabelRegularC" TargetType='Label'>
+        <Setter Property="FontSize" Value="25"/>
+    </Style>
+    <Style x:Key="LabelRegularD" TargetType='Label'>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
     <Style x:Key="RateButton" TargetType="Button">
         <Setter Property="WidthRequest" Value="29"/>
         <Setter Property="BorderColor" Value="{StaticResource TabbarColor}"/>

@@ -22,10 +22,11 @@ namespace HorseTrackingMobile.Models
         public HorseStatus Status { get; set; }
         public NutritionPlan Plan { get; set; }
 
+        public List<Activity> ListOfAllActivity = new List<Activity>();
+
+        public List<Visit> ListOfVisit = new List<Visit>();
+
         public static Horse CurrentHorse { get; set; }
-
-        public List<Activity> ListOfAllActivityForHorse = new List<Activity>();
-
         public static List<Horse> HorseList { get; set; }
     }
 }

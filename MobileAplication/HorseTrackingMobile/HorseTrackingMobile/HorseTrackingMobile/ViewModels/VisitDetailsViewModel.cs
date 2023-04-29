@@ -1,6 +1,7 @@
 ﻿using HorseTrackingMobile.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
@@ -8,9 +9,22 @@ namespace HorseTrackingMobile.ViewModels
 {
     [QueryProperty(nameof(VisitID), nameof(VisitID))]
 
-    public class VisitDetailsViewModel:BaseViewModel
+    public class VisitDetailsViewModel: HorseAppViewModel
     {
-        public int VisitID { get; set; }
+
+        int visitID;
+        public int VisitID
+        {
+            get
+            {
+                return visitID;
+            }
+            set
+            {
+                visitID = value;
+                LoadVisit(value);
+            }
+        }
 
         private string cost;
         public string Cost 
@@ -33,18 +47,28 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref visitDate, value);
         }
 
-        private PeopleDetails peopleDetails;
-        public PeopleDetails PeopleDetails
-        {
-            get => peopleDetails;
-            set => SetProperty(ref peopleDetails, value);
-        }
-
         private Doctor doctor;
         public Doctor Doctor
         {
             get => doctor;
             set => SetProperty(ref doctor, value);
+        }
+
+        private async void LoadVisit(int visitID)
+        {
+            try
+            {
+                var item = Horse.CurrentHorse.ListOfVisit.Select(x => x).Where(x => x.VisitID == visitID).FirstOrDefault();
+                if (item == null) return;
+                VisitDate= item.VisitDate;
+                Doctor = item.Doctor;
+                Cost= item.Cost;
+                Summary = item.Summary;
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
+            }
         }
     }
 }

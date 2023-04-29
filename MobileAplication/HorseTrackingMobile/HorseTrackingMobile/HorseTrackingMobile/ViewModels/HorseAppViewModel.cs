@@ -12,6 +12,7 @@ namespace HorseTrackingMobile.ViewModels
     public class HorseAppViewModel :BaseViewModel
     {
         public ICommand SwitchHorseCommand { get; set; }
+        public ObservableCollection<Horse> Horses { get; set; }
 
         public HorseAppViewModel() 
         {
@@ -49,6 +50,5 @@ namespace HorseTrackingMobile.ViewModels
                 }
             }
         }
-        public ObservableCollection<Horse> Horses { get; set; } = new ObservableCollection<Horse>();
     }
 }

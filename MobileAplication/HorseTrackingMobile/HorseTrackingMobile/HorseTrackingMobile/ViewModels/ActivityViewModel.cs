@@ -3,12 +3,8 @@ using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -19,7 +15,6 @@ namespace HorseTrackingMobile.ViewModels
         public ObservableCollection<DayOfActivity> DayOfActivities { get; set; } = new ObservableCollection<DayOfActivity>();
         public DateTime MainDate { get; set; }
 
-        public ICommand LoadHorsesCommand { get; set; }
         public ICommand PrevCommand { get; set; }
         public ICommand NextCommand { get; set; }
         public ICommand AddCommand { get; set; }
@@ -110,11 +105,11 @@ namespace HorseTrackingMobile.ViewModels
         {
             if (CurrentHorse == null)
                 return;
-            if (ListServices.IsAny(CurrentHorse.ListOfAllActivityForHorse))
+            if (ListServices.IsAny(CurrentHorse.ListOfAllActivity))
             {
-                CurrentHorse.ListOfAllActivityForHorse = DataBaseConnection.GetActivity(CurrentHorse.ID);
+                CurrentHorse.ListOfAllActivity = DataBaseConnection.GetActivity(CurrentHorse.ID);
             }
-            var activityForWeek = CurrentHorse.ListOfAllActivityForHorse.Where(x => x.Date >= MainDate && x.Date <= MainDate.AddDays(7)).ToList();
+            var activityForWeek = CurrentHorse.ListOfAllActivity.Where(x => x.Date >= MainDate && x.Date < MainDate.AddDays(7)).ToList();
 
             foreach (var activity in activityForWeek)
             {

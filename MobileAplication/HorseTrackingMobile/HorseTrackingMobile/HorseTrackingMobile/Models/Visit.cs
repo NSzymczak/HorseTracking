@@ -10,8 +10,6 @@ namespace HorseTrackingMobile.Models
         public string Cost { get; set; }
         public string Summary { get; set; }
         public DateTime VisitDate { get; set; }
-        public PeopleDetails Details { get; set; }
-
         public Doctor Doctor { get; set; }
     }
 }

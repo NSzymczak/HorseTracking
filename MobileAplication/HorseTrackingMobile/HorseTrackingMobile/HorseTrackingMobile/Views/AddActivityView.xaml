@@ -6,7 +6,7 @@
              x:Class="HorseTrackingMobile.Views.AddActivityView"
              xmlns:model="clr-namespace:HorseTrackingMobile.Models"
              Shell.TabBarIsVisible="False"
-             Shell.FlyoutItemIsVisible="False">
+             Shell.FlyoutBehavior="Disabled">
     <ContentPage.Content>
 
         <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,3*,*,6*"

@@ -13,10 +13,15 @@ namespace HorseTrackingMobile.ViewModels
     public class VisitViewModel : HorseAppViewModel
     {
         public ICommand VisitTapped { get; set; }
-        public ObservableCollection<Visit> Visits { get; set; } = new ObservableCollection<Visit>();
+        public ObservableCollection<Visit> Visits { get; set; }
         public VisitViewModel() 
         {
-            VisitTapped = new Command<Visit>(VisitDetails);
+            VisitTapped = new Command<Visit>(async(visit) =>
+            {
+                if (visit == null)
+                    return;
+                await Shell.Current.GoToAsync($"{nameof(VisitDetailsView)}?{nameof(VisitDetailsViewModel.VisitID)}={visit.VisitID}");
+            });
             SwitchHorseCommand = new Command(() =>
             {
                 Horse.CurrentHorse = CurrentHorse;
@@ -24,28 +29,11 @@ namespace HorseTrackingMobile.ViewModels
             });
         }
 
-        public void Load()
+        public void LoadVisit()
         {
-            CurrentHorse = Horse.CurrentHorse;
-            LoadVisit();
-        }
-
-        private void LoadVisit()
-        {
-            Visits.Clear();
-            foreach (var visit in DataBaseConnection.GetVisits(CurrentHorse.ID))
-            {
-                Visits.Add(visit);
-            }
-        }
-
-        public async void VisitDetails(Visit visit)
-        {
-            if (visit == null)
-                return;
-
-            // This will push the ActivityDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(VisitDetailsView)}?{nameof(VisitDetailsViewModel.VisitID)}={visit.VisitID}");
+            CurrentHorse.ListOfVisit = DataBaseConnection.GetVisits(CurrentHorse.ID);
+            Visits = new ObservableCollection<Visit>(CurrentHorse.ListOfVisit);
+            OnPropertyChanged(nameof(Visits));
         }
     }
 }

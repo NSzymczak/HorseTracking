@@ -21,7 +21,7 @@ namespace HorseTrackingMobile.Views
             BindingContext = viewModel;
             Appearing += (s, e) => 
             { 
-                viewModel.Load(); 
+                viewModel.LoadVisit(); 
             };
         }
         private void SwichHorse(object sender, EventArgs e)

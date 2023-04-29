@@ -5,6 +5,13 @@
              xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
              x:DataType="viewmodels:NutritionPlanViewModel"
              x:Class="HorseTrackingMobile.Views.NutritionPlanView">
+    
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Plan żywienia" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.TitleView>    
+    
     <ContentPage.Content>
         <Grid ColumnDefinitions="30,*,30" 
               RowDefinitions="20,*"

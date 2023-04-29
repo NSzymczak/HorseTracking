@@ -12,9 +12,12 @@ namespace HorseTrackingMobile.ViewModels
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VisitDetailsView : ContentPage
     {
+        VisitDetailsViewModel viewModel;
         public VisitDetailsView()
         {
             InitializeComponent();
+            viewModel= new VisitDetailsViewModel();
+            BindingContext = viewModel;
         }
     }
 }
