@@ -1,17 +1,18 @@
-﻿using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-        public IDataStoreActivity<Activity> DataStoreActivity=> DependencyService.Get<IDataStoreActivity<Activity>>();
 
         bool isBusy = false;
         public bool IsBusy

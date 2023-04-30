@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using HorseTrackingMobile.ViewModels;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -12,36 +13,20 @@ namespace HorseTrackingMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VisitView : ContentPage
     {
-        public ObservableCollection<string> Items { get; set; }
 
+        VisitViewModel viewModel = new VisitViewModel();
         public VisitView()
         {
             InitializeComponent();
-
-            Items = new ObservableCollection<string>
-            {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
+            BindingContext = viewModel;
+            Appearing += (s, e) => 
+            { 
+                viewModel.LoadVisit(); 
             };
-
-            MyListView.ItemsSource = Items;
-            CustomTitle = "cos";
         }
-
-        public string CustomTitle { get; set; }
-
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void SwichHorse(object sender, EventArgs e)
         {
-            if (e.Item == null)
-                return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            viewModel.SwitchHorseCommand.Execute(true);
         }
     }
 }

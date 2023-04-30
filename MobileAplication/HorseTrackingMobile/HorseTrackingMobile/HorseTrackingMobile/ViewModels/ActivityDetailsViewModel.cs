@@ -1,31 +1,30 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
 {
     [QueryProperty(nameof(ActivityID), nameof(ActivityID))]
 
-    public class ActivityDetailsViewModel : BaseViewModel
+    public class ActivityDetailsViewModel : HorseAppViewModel
     {
-        public Command AddActivityCommand{ get; set; }
-        public List<Activity> activities;
+        public Command AddActivityCommand { get; set; }
 
         public ActivityDetailsViewModel()
         {
             AddActivityCommand = new Command(Add);
+            SetDate();
         }
+
 
         public List<ActivityType> ListOfActivityType
         {
             get => ActivityType.ListOfActivity;
         }
+
         int activityID;
         public int ActivityID
         {
@@ -88,25 +87,27 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref description, value);
         }
 
-        Activity activity = new Activity();
+        private void SetDate()
+        {
+            Date= DateTime.Now;
+        }
 
         private async void LoadActivityId(int activityId)
         {
             try
             {
-                var item = Activity.Activities.Select(x=>x).Where(x => x.ID == activityId).FirstOrDefault();
+                var item = Horse.CurrentHorse.ListOfAllActivity.Select(x => x).Where(x => x.ID == activityId).FirstOrDefault();
                 if (item == null) return;
-                activity = item;
                 Date = item.Date;
                 Time = item.Time;
                 Type = item.Type;
-                Trainer= item.Trainer;
+                Trainer = item.Trainer;
                 Satisfaction = item.Satisfaction;
                 Intensivity = item.Intensivity;
                 Description = item.Description;
 
             }
-            catch (Exception ex)
+            catch
             {
                 await App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
             }
@@ -116,21 +117,23 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var item = Activity.Activities.Select(x => x).Where(x => x.ID == ActivityID).FirstOrDefault();
-                Activity.Activities.Remove(item);
-                item.ID = ActivityID;
-                item.Date = Date;
-                item.Time = Time;
-                item.Type = Type;
-                item.Trainer = Trainer;
-                item.Satisfaction = Satisfaction;
-                item.Intensivity = Intensivity;
-                item.Description = Description;
-                Activity.Activities.Add(item);
+                var add = new Activity()
+                {
+                    ID = ListServices.IsAny(Horse.CurrentHorse.ListOfAllActivity) ? 1 : Horse.CurrentHorse.ListOfAllActivity.Max(x => x.ID) + 1,
+                    Date = Date,
+                    Time = Time,
+                    Type = Type,
+                    Trainer = Trainer,
+                    Satisfaction = Satisfaction,
+                    Intensivity = Intensivity,
+                    Description = Description
+                };
+
+                Horse.CurrentHorse.ListOfAllActivity.Add(add);
                 Shell.Current.GoToAsync("..");
 
             }
-            catch (Exception ex)
+            catch
             {
                 App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się dodać aktywności", "Dobrze");
                 Shell.Current.GoToAsync("..");

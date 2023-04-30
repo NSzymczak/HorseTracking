@@ -10790,6 +10790,1709 @@ namespace HorseTrackingMobile.Droid
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_bottom_start = global::HorseTrackingMobile.Droid.Resource.Xml.standalone_badge_gravity_bottom_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_top_start = global::HorseTrackingMobile.Droid.Resource.Xml.standalone_badge_gravity_top_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_offset = global::HorseTrackingMobile.Droid.Resource.Xml.standalone_badge_offset;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_fade_in = global::HorseTrackingMobile.Droid.Resource.Animation.abc_fade_in;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_fade_out = global::HorseTrackingMobile.Droid.Resource.Animation.abc_fade_out;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_grow_fade_in_from_bottom = global::HorseTrackingMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_popup_enter = global::HorseTrackingMobile.Droid.Resource.Animation.abc_popup_enter;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_popup_exit = global::HorseTrackingMobile.Droid.Resource.Animation.abc_popup_exit;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_shrink_fade_out_from_bottom = global::HorseTrackingMobile.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_slide_in_bottom = global::HorseTrackingMobile.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_slide_in_top = global::HorseTrackingMobile.Droid.Resource.Animation.abc_slide_in_top;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_slide_out_bottom = global::HorseTrackingMobile.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_slide_out_top = global::HorseTrackingMobile.Droid.Resource.Animation.abc_slide_out_top;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_tooltip_enter = global::HorseTrackingMobile.Droid.Resource.Animation.abc_tooltip_enter;
+			global::ZXing.Net.Mobile.Resource.Animation.abc_tooltip_exit = global::HorseTrackingMobile.Droid.Resource.Animation.abc_tooltip_exit;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::HorseTrackingMobile.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::ZXing.Net.Mobile.Resource.Animation.fragment_fast_out_extra_slow_in = global::HorseTrackingMobile.Droid.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarDivider = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarDivider;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarItemBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarItemBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarPopupTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarSize = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarSize;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarSplitStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarTabBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarTabStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarTabStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarTabTextStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionBarWidgetTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionDropDownStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionDropDownStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.actionLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionMenuTextAppearance = global::HorseTrackingMobile.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionMenuTextColor = global::HorseTrackingMobile.Droid.Resource.Attribute.actionMenuTextColor;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeCloseButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeCloseDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeCopyDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeCutDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeFindDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModePasteDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModePopupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeSelectAllDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeShareDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeSplitBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionModeWebSearchDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionOverflowButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionOverflowMenuStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionProviderClass = global::HorseTrackingMobile.Droid.Resource.Attribute.actionProviderClass;
+			global::ZXing.Net.Mobile.Resource.Attribute.actionViewClass = global::HorseTrackingMobile.Droid.Resource.Attribute.actionViewClass;
+			global::ZXing.Net.Mobile.Resource.Attribute.activityChooserViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.alertDialogButtonGroupStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.alertDialogCenterButtons = global::HorseTrackingMobile.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::ZXing.Net.Mobile.Resource.Attribute.alertDialogStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.alertDialogStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.alertDialogTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.alertDialogTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.allowStacking = global::HorseTrackingMobile.Droid.Resource.Attribute.allowStacking;
+			global::ZXing.Net.Mobile.Resource.Attribute.alpha = global::HorseTrackingMobile.Droid.Resource.Attribute.alpha;
+			global::ZXing.Net.Mobile.Resource.Attribute.alphabeticModifiers = global::HorseTrackingMobile.Droid.Resource.Attribute.alphabeticModifiers;
+			global::ZXing.Net.Mobile.Resource.Attribute.arrowHeadLength = global::HorseTrackingMobile.Droid.Resource.Attribute.arrowHeadLength;
+			global::ZXing.Net.Mobile.Resource.Attribute.arrowShaftLength = global::HorseTrackingMobile.Droid.Resource.Attribute.arrowShaftLength;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoCompleteTextViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoSizeMaxTextSize = global::HorseTrackingMobile.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoSizeMinTextSize = global::HorseTrackingMobile.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoSizePresetSizes = global::HorseTrackingMobile.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoSizeStepGranularity = global::HorseTrackingMobile.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::ZXing.Net.Mobile.Resource.Attribute.autoSizeTextType = global::HorseTrackingMobile.Droid.Resource.Attribute.autoSizeTextType;
+			global::ZXing.Net.Mobile.Resource.Attribute.background = global::HorseTrackingMobile.Droid.Resource.Attribute.background;
+			global::ZXing.Net.Mobile.Resource.Attribute.backgroundSplit = global::HorseTrackingMobile.Droid.Resource.Attribute.backgroundSplit;
+			global::ZXing.Net.Mobile.Resource.Attribute.backgroundStacked = global::HorseTrackingMobile.Droid.Resource.Attribute.backgroundStacked;
+			global::ZXing.Net.Mobile.Resource.Attribute.backgroundTint = global::HorseTrackingMobile.Droid.Resource.Attribute.backgroundTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.backgroundTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.backgroundTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.barLength = global::HorseTrackingMobile.Droid.Resource.Attribute.barLength;
+			global::ZXing.Net.Mobile.Resource.Attribute.borderlessButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonBarButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonBarNegativeButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonBarNeutralButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonBarPositiveButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonGravity = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonGravity;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonIconDimen = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonIconDimen;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonPanelSideLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonStyleSmall = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonStyleSmall;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonTint = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.buttonTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.buttonTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.checkboxStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.checkboxStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.checkedTextViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.closeIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.closeIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.closeItemLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.closeItemLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.collapseContentDescription = global::HorseTrackingMobile.Droid.Resource.Attribute.collapseContentDescription;
+			global::ZXing.Net.Mobile.Resource.Attribute.collapseIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.collapseIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.color = global::HorseTrackingMobile.Droid.Resource.Attribute.color;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorAccent = global::HorseTrackingMobile.Droid.Resource.Attribute.colorAccent;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorBackgroundFloating = global::HorseTrackingMobile.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorButtonNormal = global::HorseTrackingMobile.Droid.Resource.Attribute.colorButtonNormal;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorControlActivated = global::HorseTrackingMobile.Droid.Resource.Attribute.colorControlActivated;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorControlHighlight = global::HorseTrackingMobile.Droid.Resource.Attribute.colorControlHighlight;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorControlNormal = global::HorseTrackingMobile.Droid.Resource.Attribute.colorControlNormal;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorError = global::HorseTrackingMobile.Droid.Resource.Attribute.colorError;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorPrimary = global::HorseTrackingMobile.Droid.Resource.Attribute.colorPrimary;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorPrimaryDark = global::HorseTrackingMobile.Droid.Resource.Attribute.colorPrimaryDark;
+			global::ZXing.Net.Mobile.Resource.Attribute.colorSwitchThumbNormal = global::HorseTrackingMobile.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::ZXing.Net.Mobile.Resource.Attribute.commitIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.commitIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentDescription = global::HorseTrackingMobile.Droid.Resource.Attribute.contentDescription;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetEnd = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetEnd;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetEndWithActions = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetLeft = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetLeft;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetRight = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetRight;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetStart = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetStart;
+			global::ZXing.Net.Mobile.Resource.Attribute.contentInsetStartWithNavigation = global::HorseTrackingMobile.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::ZXing.Net.Mobile.Resource.Attribute.controlBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.controlBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.customNavigationLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.customNavigationLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.defaultQueryHint = global::HorseTrackingMobile.Droid.Resource.Attribute.defaultQueryHint;
+			global::ZXing.Net.Mobile.Resource.Attribute.dialogCornerRadius = global::HorseTrackingMobile.Droid.Resource.Attribute.dialogCornerRadius;
+			global::ZXing.Net.Mobile.Resource.Attribute.dialogPreferredPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.dialogTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.dialogTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.displayOptions = global::HorseTrackingMobile.Droid.Resource.Attribute.displayOptions;
+			global::ZXing.Net.Mobile.Resource.Attribute.divider = global::HorseTrackingMobile.Droid.Resource.Attribute.divider;
+			global::ZXing.Net.Mobile.Resource.Attribute.dividerHorizontal = global::HorseTrackingMobile.Droid.Resource.Attribute.dividerHorizontal;
+			global::ZXing.Net.Mobile.Resource.Attribute.dividerPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.dividerPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.dividerVertical = global::HorseTrackingMobile.Droid.Resource.Attribute.dividerVertical;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableBottomCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableBottomCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableEndCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableEndCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableLeftCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableLeftCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableRightCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableRightCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableSize = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableSize;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableStartCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableStartCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableTint = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawableTopCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.drawableTopCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawerArrowStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.drawerArrowStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.drawerLayoutStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.drawerLayoutStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.dropdownListPreferredItemHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.dropDownListViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.editTextBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.editTextBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.editTextColor = global::HorseTrackingMobile.Droid.Resource.Attribute.editTextColor;
+			global::ZXing.Net.Mobile.Resource.Attribute.editTextStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.editTextStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.elevation = global::HorseTrackingMobile.Droid.Resource.Attribute.elevation;
+			global::ZXing.Net.Mobile.Resource.Attribute.expandActivityOverflowButtonDrawable = global::HorseTrackingMobile.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::ZXing.Net.Mobile.Resource.Attribute.firstBaselineToTopHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.font = global::HorseTrackingMobile.Droid.Resource.Attribute.font;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontFamily = global::HorseTrackingMobile.Droid.Resource.Attribute.fontFamily;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderAuthority = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderAuthority;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderCerts = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderCerts;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderFetchStrategy = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderFetchTimeout = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderPackage = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderPackage;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontProviderQuery = global::HorseTrackingMobile.Droid.Resource.Attribute.fontProviderQuery;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.fontStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontVariationSettings = global::HorseTrackingMobile.Droid.Resource.Attribute.fontVariationSettings;
+			global::ZXing.Net.Mobile.Resource.Attribute.fontWeight = global::HorseTrackingMobile.Droid.Resource.Attribute.fontWeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.gapBetweenBars = global::HorseTrackingMobile.Droid.Resource.Attribute.gapBetweenBars;
+			global::ZXing.Net.Mobile.Resource.Attribute.goIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.goIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.height = global::HorseTrackingMobile.Droid.Resource.Attribute.height;
+			global::ZXing.Net.Mobile.Resource.Attribute.hideOnContentScroll = global::HorseTrackingMobile.Droid.Resource.Attribute.hideOnContentScroll;
+			global::ZXing.Net.Mobile.Resource.Attribute.homeAsUpIndicator = global::HorseTrackingMobile.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::ZXing.Net.Mobile.Resource.Attribute.homeLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.homeLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.icon = global::HorseTrackingMobile.Droid.Resource.Attribute.icon;
+			global::ZXing.Net.Mobile.Resource.Attribute.iconifiedByDefault = global::HorseTrackingMobile.Droid.Resource.Attribute.iconifiedByDefault;
+			global::ZXing.Net.Mobile.Resource.Attribute.iconTint = global::HorseTrackingMobile.Droid.Resource.Attribute.iconTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.iconTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.iconTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.imageButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.imageButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.indeterminateProgressStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.initialActivityCount = global::HorseTrackingMobile.Droid.Resource.Attribute.initialActivityCount;
+			global::ZXing.Net.Mobile.Resource.Attribute.isLightTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.isLightTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.itemPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.itemPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.lastBaselineToBottomHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.layout = global::HorseTrackingMobile.Droid.Resource.Attribute.layout;
+			global::ZXing.Net.Mobile.Resource.Attribute.lineHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.lineHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.listChoiceBackgroundIndicator = global::HorseTrackingMobile.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::ZXing.Net.Mobile.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::HorseTrackingMobile.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::ZXing.Net.Mobile.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::HorseTrackingMobile.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::ZXing.Net.Mobile.Resource.Attribute.listDividerAlertDialog = global::HorseTrackingMobile.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::ZXing.Net.Mobile.Resource.Attribute.listItemLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.listItemLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.listLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.listLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.listMenuViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.listMenuViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPopupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemHeightLarge = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemHeightSmall = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemPaddingEnd = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemPaddingLeft = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemPaddingRight = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::ZXing.Net.Mobile.Resource.Attribute.listPreferredItemPaddingStart = global::HorseTrackingMobile.Droid.Resource.Attribute.listPreferredItemPaddingStart;
+			global::ZXing.Net.Mobile.Resource.Attribute.logo = global::HorseTrackingMobile.Droid.Resource.Attribute.logo;
+			global::ZXing.Net.Mobile.Resource.Attribute.logoDescription = global::HorseTrackingMobile.Droid.Resource.Attribute.logoDescription;
+			global::ZXing.Net.Mobile.Resource.Attribute.maxButtonHeight = global::HorseTrackingMobile.Droid.Resource.Attribute.maxButtonHeight;
+			global::ZXing.Net.Mobile.Resource.Attribute.measureWithLargestChild = global::HorseTrackingMobile.Droid.Resource.Attribute.measureWithLargestChild;
+			global::ZXing.Net.Mobile.Resource.Attribute.menu = global::HorseTrackingMobile.Droid.Resource.Attribute.menu;
+			global::ZXing.Net.Mobile.Resource.Attribute.multiChoiceItemLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.navigationContentDescription = global::HorseTrackingMobile.Droid.Resource.Attribute.navigationContentDescription;
+			global::ZXing.Net.Mobile.Resource.Attribute.navigationIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.navigationIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.navigationMode = global::HorseTrackingMobile.Droid.Resource.Attribute.navigationMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.numericModifiers = global::HorseTrackingMobile.Droid.Resource.Attribute.numericModifiers;
+			global::ZXing.Net.Mobile.Resource.Attribute.overlapAnchor = global::HorseTrackingMobile.Droid.Resource.Attribute.overlapAnchor;
+			global::ZXing.Net.Mobile.Resource.Attribute.paddingBottomNoButtons = global::HorseTrackingMobile.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::ZXing.Net.Mobile.Resource.Attribute.paddingEnd = global::HorseTrackingMobile.Droid.Resource.Attribute.paddingEnd;
+			global::ZXing.Net.Mobile.Resource.Attribute.paddingStart = global::HorseTrackingMobile.Droid.Resource.Attribute.paddingStart;
+			global::ZXing.Net.Mobile.Resource.Attribute.paddingTopNoTitle = global::HorseTrackingMobile.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::ZXing.Net.Mobile.Resource.Attribute.panelBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.panelBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.panelMenuListTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.panelMenuListTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.panelMenuListWidth = global::HorseTrackingMobile.Droid.Resource.Attribute.panelMenuListWidth;
+			global::ZXing.Net.Mobile.Resource.Attribute.popupMenuStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.popupMenuStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.popupTheme = global::HorseTrackingMobile.Droid.Resource.Attribute.popupTheme;
+			global::ZXing.Net.Mobile.Resource.Attribute.popupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.popupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.preserveIconSpacing = global::HorseTrackingMobile.Droid.Resource.Attribute.preserveIconSpacing;
+			global::ZXing.Net.Mobile.Resource.Attribute.progressBarPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.progressBarPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.progressBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.progressBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.queryBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.queryBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.queryHint = global::HorseTrackingMobile.Droid.Resource.Attribute.queryHint;
+			global::ZXing.Net.Mobile.Resource.Attribute.radioButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.radioButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.ratingBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.ratingBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.ratingBarStyleIndicator = global::HorseTrackingMobile.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::ZXing.Net.Mobile.Resource.Attribute.ratingBarStyleSmall = global::HorseTrackingMobile.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::ZXing.Net.Mobile.Resource.Attribute.searchHintIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.searchHintIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.searchIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.searchIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.searchViewStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.searchViewStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.seekBarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.seekBarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.selectableItemBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.selectableItemBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.selectableItemBackgroundBorderless = global::HorseTrackingMobile.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::ZXing.Net.Mobile.Resource.Attribute.showAsAction = global::HorseTrackingMobile.Droid.Resource.Attribute.showAsAction;
+			global::ZXing.Net.Mobile.Resource.Attribute.showDividers = global::HorseTrackingMobile.Droid.Resource.Attribute.showDividers;
+			global::ZXing.Net.Mobile.Resource.Attribute.showText = global::HorseTrackingMobile.Droid.Resource.Attribute.showText;
+			global::ZXing.Net.Mobile.Resource.Attribute.showTitle = global::HorseTrackingMobile.Droid.Resource.Attribute.showTitle;
+			global::ZXing.Net.Mobile.Resource.Attribute.singleChoiceItemLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.spinBars = global::HorseTrackingMobile.Droid.Resource.Attribute.spinBars;
+			global::ZXing.Net.Mobile.Resource.Attribute.spinnerDropDownItemStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.spinnerStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.spinnerStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.splitTrack = global::HorseTrackingMobile.Droid.Resource.Attribute.splitTrack;
+			global::ZXing.Net.Mobile.Resource.Attribute.srcCompat = global::HorseTrackingMobile.Droid.Resource.Attribute.srcCompat;
+			global::ZXing.Net.Mobile.Resource.Attribute.state_above_anchor = global::HorseTrackingMobile.Droid.Resource.Attribute.state_above_anchor;
+			global::ZXing.Net.Mobile.Resource.Attribute.subMenuArrow = global::HorseTrackingMobile.Droid.Resource.Attribute.subMenuArrow;
+			global::ZXing.Net.Mobile.Resource.Attribute.submitBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.submitBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.subtitle = global::HorseTrackingMobile.Droid.Resource.Attribute.subtitle;
+			global::ZXing.Net.Mobile.Resource.Attribute.subtitleTextAppearance = global::HorseTrackingMobile.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Attribute.subtitleTextColor = global::HorseTrackingMobile.Droid.Resource.Attribute.subtitleTextColor;
+			global::ZXing.Net.Mobile.Resource.Attribute.subtitleTextStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.subtitleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.suggestionRowLayout = global::HorseTrackingMobile.Droid.Resource.Attribute.suggestionRowLayout;
+			global::ZXing.Net.Mobile.Resource.Attribute.switchMinWidth = global::HorseTrackingMobile.Droid.Resource.Attribute.switchMinWidth;
+			global::ZXing.Net.Mobile.Resource.Attribute.switchPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.switchPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.switchStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.switchStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.switchTextAppearance = global::HorseTrackingMobile.Droid.Resource.Attribute.switchTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAllCaps = global::HorseTrackingMobile.Droid.Resource.Attribute.textAllCaps;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceLargePopupMenu = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceListItem = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceListItem;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceListItemSecondary = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceListItemSmall = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearancePopupMenuHeader = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceSearchResultSubtitle = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceSearchResultTitle = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::ZXing.Net.Mobile.Resource.Attribute.textAppearanceSmallPopupMenu = global::HorseTrackingMobile.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::ZXing.Net.Mobile.Resource.Attribute.textColorAlertDialogListItem = global::HorseTrackingMobile.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::ZXing.Net.Mobile.Resource.Attribute.textColorSearchUrl = global::HorseTrackingMobile.Droid.Resource.Attribute.textColorSearchUrl;
+			global::ZXing.Net.Mobile.Resource.Attribute.textLocale = global::HorseTrackingMobile.Droid.Resource.Attribute.textLocale;
+			global::ZXing.Net.Mobile.Resource.Attribute.theme = global::HorseTrackingMobile.Droid.Resource.Attribute.theme;
+			global::ZXing.Net.Mobile.Resource.Attribute.thickness = global::HorseTrackingMobile.Droid.Resource.Attribute.thickness;
+			global::ZXing.Net.Mobile.Resource.Attribute.thumbTextPadding = global::HorseTrackingMobile.Droid.Resource.Attribute.thumbTextPadding;
+			global::ZXing.Net.Mobile.Resource.Attribute.thumbTint = global::HorseTrackingMobile.Droid.Resource.Attribute.thumbTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.thumbTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.thumbTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.tickMark = global::HorseTrackingMobile.Droid.Resource.Attribute.tickMark;
+			global::ZXing.Net.Mobile.Resource.Attribute.tickMarkTint = global::HorseTrackingMobile.Droid.Resource.Attribute.tickMarkTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.tickMarkTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.tickMarkTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.tint = global::HorseTrackingMobile.Droid.Resource.Attribute.tint;
+			global::ZXing.Net.Mobile.Resource.Attribute.tintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.tintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.title = global::HorseTrackingMobile.Droid.Resource.Attribute.title;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMargin = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMargin;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMarginBottom = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMarginBottom;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMarginEnd = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMarginEnd;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMargins = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMargins;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMarginStart = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMarginStart;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleMarginTop = global::HorseTrackingMobile.Droid.Resource.Attribute.titleMarginTop;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleTextAppearance = global::HorseTrackingMobile.Droid.Resource.Attribute.titleTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleTextColor = global::HorseTrackingMobile.Droid.Resource.Attribute.titleTextColor;
+			global::ZXing.Net.Mobile.Resource.Attribute.titleTextStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.titleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.toolbarNavigationButtonStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.toolbarStyle = global::HorseTrackingMobile.Droid.Resource.Attribute.toolbarStyle;
+			global::ZXing.Net.Mobile.Resource.Attribute.tooltipForegroundColor = global::HorseTrackingMobile.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::ZXing.Net.Mobile.Resource.Attribute.tooltipFrameBackground = global::HorseTrackingMobile.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::ZXing.Net.Mobile.Resource.Attribute.tooltipText = global::HorseTrackingMobile.Droid.Resource.Attribute.tooltipText;
+			global::ZXing.Net.Mobile.Resource.Attribute.track = global::HorseTrackingMobile.Droid.Resource.Attribute.track;
+			global::ZXing.Net.Mobile.Resource.Attribute.trackTint = global::HorseTrackingMobile.Droid.Resource.Attribute.trackTint;
+			global::ZXing.Net.Mobile.Resource.Attribute.trackTintMode = global::HorseTrackingMobile.Droid.Resource.Attribute.trackTintMode;
+			global::ZXing.Net.Mobile.Resource.Attribute.ttcIndex = global::HorseTrackingMobile.Droid.Resource.Attribute.ttcIndex;
+			global::ZXing.Net.Mobile.Resource.Attribute.viewInflaterClass = global::HorseTrackingMobile.Droid.Resource.Attribute.viewInflaterClass;
+			global::ZXing.Net.Mobile.Resource.Attribute.voiceIcon = global::HorseTrackingMobile.Droid.Resource.Attribute.voiceIcon;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowActionBar = global::HorseTrackingMobile.Droid.Resource.Attribute.windowActionBar;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowActionBarOverlay = global::HorseTrackingMobile.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowActionModeOverlay = global::HorseTrackingMobile.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowFixedHeightMajor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowFixedHeightMinor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowFixedWidthMajor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowFixedWidthMinor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowMinWidthMajor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowMinWidthMinor = global::HorseTrackingMobile.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::ZXing.Net.Mobile.Resource.Attribute.windowNoTitle = global::HorseTrackingMobile.Droid.Resource.Attribute.windowNoTitle;
+			global::ZXing.Net.Mobile.Resource.Boolean.abc_action_bar_embed_tabs = global::HorseTrackingMobile.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::ZXing.Net.Mobile.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::HorseTrackingMobile.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::ZXing.Net.Mobile.Resource.Color.abc_background_cache_hint_selector_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.abc_background_cache_hint_selector_material_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_btn_colored_borderless_text_material = global::HorseTrackingMobile.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::ZXing.Net.Mobile.Resource.Color.abc_btn_colored_text_material = global::HorseTrackingMobile.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::ZXing.Net.Mobile.Resource.Color.abc_color_highlight_material = global::HorseTrackingMobile.Droid.Resource.Color.abc_color_highlight_material;
+			global::ZXing.Net.Mobile.Resource.Color.abc_decor_view_status_guard = global::HorseTrackingMobile.Droid.Resource.Color.abc_decor_view_status_guard;
+			global::ZXing.Net.Mobile.Resource.Color.abc_decor_view_status_guard_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_decor_view_status_guard_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_hint_foreground_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.abc_hint_foreground_material_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_primary_text_disable_only_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.abc_primary_text_disable_only_material_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_primary_text_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.abc_primary_text_material_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_primary_text_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_search_url_text = global::HorseTrackingMobile.Droid.Resource.Color.abc_search_url_text;
+			global::ZXing.Net.Mobile.Resource.Color.abc_search_url_text_normal = global::HorseTrackingMobile.Droid.Resource.Color.abc_search_url_text_normal;
+			global::ZXing.Net.Mobile.Resource.Color.abc_search_url_text_pressed = global::HorseTrackingMobile.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::ZXing.Net.Mobile.Resource.Color.abc_search_url_text_selected = global::HorseTrackingMobile.Droid.Resource.Color.abc_search_url_text_selected;
+			global::ZXing.Net.Mobile.Resource.Color.abc_secondary_text_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.abc_secondary_text_material_light = global::HorseTrackingMobile.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_btn_checkable = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_default = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_default;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_edittext = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_edittext;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_seek_thumb = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_spinner = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_spinner;
+			global::ZXing.Net.Mobile.Resource.Color.abc_tint_switch_track = global::HorseTrackingMobile.Droid.Resource.Color.abc_tint_switch_track;
+			global::ZXing.Net.Mobile.Resource.Color.accent_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.accent_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.accent_material_light = global::HorseTrackingMobile.Droid.Resource.Color.accent_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.androidx_core_ripple_material_light = global::HorseTrackingMobile.Droid.Resource.Color.androidx_core_ripple_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.androidx_core_secondary_text_default_material_light = global::HorseTrackingMobile.Droid.Resource.Color.androidx_core_secondary_text_default_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.background_floating_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.background_floating_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.background_floating_material_light = global::HorseTrackingMobile.Droid.Resource.Color.background_floating_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.background_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.background_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.background_material_light = global::HorseTrackingMobile.Droid.Resource.Color.background_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_disabled_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_disabled_material_light = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_inverse_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_inverse_material_light = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.bright_foreground_material_light = global::HorseTrackingMobile.Droid.Resource.Color.bright_foreground_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.browser_actions_bg_grey = global::HorseTrackingMobile.Droid.Resource.Color.browser_actions_bg_grey;
+			global::ZXing.Net.Mobile.Resource.Color.browser_actions_divider_color = global::HorseTrackingMobile.Droid.Resource.Color.browser_actions_divider_color;
+			global::ZXing.Net.Mobile.Resource.Color.browser_actions_text_color = global::HorseTrackingMobile.Droid.Resource.Color.browser_actions_text_color;
+			global::ZXing.Net.Mobile.Resource.Color.browser_actions_title_color = global::HorseTrackingMobile.Droid.Resource.Color.browser_actions_title_color;
+			global::ZXing.Net.Mobile.Resource.Color.button_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.button_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.button_material_light = global::HorseTrackingMobile.Droid.Resource.Color.button_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.dim_foreground_disabled_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.dim_foreground_disabled_material_light = global::HorseTrackingMobile.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.dim_foreground_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.dim_foreground_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.dim_foreground_material_light = global::HorseTrackingMobile.Droid.Resource.Color.dim_foreground_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.error_color_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.error_color_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.error_color_material_light = global::HorseTrackingMobile.Droid.Resource.Color.error_color_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.foreground_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.foreground_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.foreground_material_light = global::HorseTrackingMobile.Droid.Resource.Color.foreground_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.highlighted_text_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.highlighted_text_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.highlighted_text_material_light = global::HorseTrackingMobile.Droid.Resource.Color.highlighted_text_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.material_blue_grey_800 = global::HorseTrackingMobile.Droid.Resource.Color.material_blue_grey_800;
+			global::ZXing.Net.Mobile.Resource.Color.material_blue_grey_900 = global::HorseTrackingMobile.Droid.Resource.Color.material_blue_grey_900;
+			global::ZXing.Net.Mobile.Resource.Color.material_blue_grey_950 = global::HorseTrackingMobile.Droid.Resource.Color.material_blue_grey_950;
+			global::ZXing.Net.Mobile.Resource.Color.material_deep_teal_200 = global::HorseTrackingMobile.Droid.Resource.Color.material_deep_teal_200;
+			global::ZXing.Net.Mobile.Resource.Color.material_deep_teal_500 = global::HorseTrackingMobile.Droid.Resource.Color.material_deep_teal_500;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_100 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_100;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_300 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_300;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_50 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_50;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_600 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_600;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_800 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_800;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_850 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_850;
+			global::ZXing.Net.Mobile.Resource.Color.material_grey_900 = global::HorseTrackingMobile.Droid.Resource.Color.material_grey_900;
+			global::ZXing.Net.Mobile.Resource.Color.notification_action_color_filter = global::HorseTrackingMobile.Droid.Resource.Color.notification_action_color_filter;
+			global::ZXing.Net.Mobile.Resource.Color.notification_icon_bg_color = global::HorseTrackingMobile.Droid.Resource.Color.notification_icon_bg_color;
+			global::ZXing.Net.Mobile.Resource.Color.primary_dark_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.primary_dark_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.primary_dark_material_light = global::HorseTrackingMobile.Droid.Resource.Color.primary_dark_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.primary_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.primary_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.primary_material_light = global::HorseTrackingMobile.Droid.Resource.Color.primary_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.primary_text_default_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.primary_text_default_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.primary_text_default_material_light = global::HorseTrackingMobile.Droid.Resource.Color.primary_text_default_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.primary_text_disabled_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.primary_text_disabled_material_light = global::HorseTrackingMobile.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.ripple_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.ripple_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.ripple_material_light = global::HorseTrackingMobile.Droid.Resource.Color.ripple_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.secondary_text_default_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.secondary_text_default_material_light = global::HorseTrackingMobile.Droid.Resource.Color.secondary_text_default_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.secondary_text_disabled_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.secondary_text_disabled_material_light = global::HorseTrackingMobile.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_disabled_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_disabled_material_light = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_material_light = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_normal_material_dark = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::ZXing.Net.Mobile.Resource.Color.switch_thumb_normal_material_light = global::HorseTrackingMobile.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::ZXing.Net.Mobile.Resource.Color.tooltip_background_dark = global::HorseTrackingMobile.Droid.Resource.Color.tooltip_background_dark;
+			global::ZXing.Net.Mobile.Resource.Color.tooltip_background_light = global::HorseTrackingMobile.Droid.Resource.Color.tooltip_background_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_content_inset_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_default_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_default_padding_end_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_default_padding_start_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_elevation_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_stacked_max_height = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_button_min_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_button_min_width_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_action_button_min_width_overflow_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_alert_dialog_button_bar_height = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_alert_dialog_button_dimen = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_button_inset_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_button_inset_vertical_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_button_padding_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_button_padding_vertical_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_config_prefDialogWidth = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_control_corner_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_control_corner_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_control_inset_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_control_inset_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_control_padding_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_control_padding_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_corner_radius_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_fixed_height_major = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_fixed_height_minor = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_fixed_width_major = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_fixed_width_minor = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_min_width_major = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_min_width_minor = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_padding_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_padding_top_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dialog_title_divider_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_disabled_alpha_material_dark = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_disabled_alpha_material_light = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dropdownitem_icon_width = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dropdownitem_text_padding_left = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_dropdownitem_text_padding_right = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_edit_text_inset_bottom_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_edit_text_inset_top_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_floating_window_z = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_floating_window_z;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_list_item_height_large_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_list_item_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_list_item_height_small_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_list_item_height_small_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_list_item_padding_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_panel_menu_list_width = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_progress_bar_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_search_view_preferred_height = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_search_view_preferred_width = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_seekbar_track_background_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_seekbar_track_progress_height_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_select_dialog_padding_start_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_switch_padding = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_switch_padding;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_body_1_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_body_2_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_button_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_caption_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_display_1_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_display_2_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_display_3_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_display_4_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_headline_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_large_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_medium_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_menu_header_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_menu_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_small_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_subhead_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_title_material = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.abc_text_size_title_material_toolbar = global::HorseTrackingMobile.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::ZXing.Net.Mobile.Resource.Dimension.browser_actions_context_menu_max_width = global::HorseTrackingMobile.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.browser_actions_context_menu_min_padding = global::HorseTrackingMobile.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_button_inset_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_button_inset_vertical_material = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_button_padding_horizontal_material = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_button_padding_vertical_material = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_control_corner_material = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_control_corner_material;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_notification_large_icon_max_height = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::ZXing.Net.Mobile.Resource.Dimension.compat_notification_large_icon_max_width = global::HorseTrackingMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.def_drawer_elevation = global::HorseTrackingMobile.Droid.Resource.Dimension.def_drawer_elevation;
+			global::ZXing.Net.Mobile.Resource.Dimension.disabled_alpha_material_dark = global::HorseTrackingMobile.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::ZXing.Net.Mobile.Resource.Dimension.disabled_alpha_material_light = global::HorseTrackingMobile.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.highlight_alpha_material_colored = global::HorseTrackingMobile.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::ZXing.Net.Mobile.Resource.Dimension.highlight_alpha_material_dark = global::HorseTrackingMobile.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::ZXing.Net.Mobile.Resource.Dimension.highlight_alpha_material_light = global::HorseTrackingMobile.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.hint_alpha_material_dark = global::HorseTrackingMobile.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::ZXing.Net.Mobile.Resource.Dimension.hint_alpha_material_light = global::HorseTrackingMobile.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.hint_pressed_alpha_material_dark = global::HorseTrackingMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::ZXing.Net.Mobile.Resource.Dimension.hint_pressed_alpha_material_light = global::HorseTrackingMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_action_icon_size = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_action_icon_size;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_action_text_size = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_action_text_size;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_big_circle_margin = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_content_margin_start = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_content_margin_start;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_large_icon_height = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_large_icon_height;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_large_icon_width = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_large_icon_width;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_main_column_padding_top = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_media_narrow_margin = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_right_icon_size = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_right_icon_size;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_right_side_padding_top = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_small_icon_background_padding = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_small_icon_size_as_large = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_subtext_size = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_subtext_size;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_top_pad = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_top_pad;
+			global::ZXing.Net.Mobile.Resource.Dimension.notification_top_pad_large_text = global::HorseTrackingMobile.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_corner_radius = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_horizontal_padding = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_margin = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_margin;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_precise_anchor_threshold = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_vertical_padding = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_y_offset_non_touch = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::ZXing.Net.Mobile.Resource.Dimension.tooltip_y_offset_touch = global::HorseTrackingMobile.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_action_bar_item_background_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_borderless_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_check_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_check_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_check_material_anim = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_check_material_anim;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_colored_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_default_mtrl_shape = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_radio_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_radio_material_anim = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_radio_material_anim;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_cab_background_internal_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_cab_background_top_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_control_background_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_control_background_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_dialog_material_background = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_edit_text_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_edit_text_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_ab_back_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_clear_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_go_search_api_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_overflow_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_search_api_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ic_voice_search_api_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_item_background_holo_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_item_background_holo_light = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_divider_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_divider_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_divider_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_focused_holo = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_longpressed_holo = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_pressed_holo_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_pressed_holo_light = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_disabled_holo_light = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_holo_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_list_selector_holo_light = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_popup_background_mtrl_mult = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ratingbar_indicator_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ratingbar_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_ratingbar_small_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_seekbar_thumb_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_seekbar_tick_mark_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_seekbar_track_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_spinner_textfield_background_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_switch_thumb_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_switch_track_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_tab_indicator_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_textfield_search_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_text_cursor_material = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::ZXing.Net.Mobile.Resource.Drawable.abc_vector_test = global::HorseTrackingMobile.Droid.Resource.Drawable.abc_vector_test;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_checkbox_checked_mtrl = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_radio_off_mtrl = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_radio_on_mtrl = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::ZXing.Net.Mobile.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::HorseTrackingMobile.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_action_background = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_action_background;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg_low = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg_low;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg_low_normal = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg_low_pressed = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg_normal = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg_normal;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_bg_normal_pressed = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_icon_background = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_icon_background;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_template_icon_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_template_icon_low_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.notification_tile_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.notification_tile_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.notify_panel_notification_icon_bg = global::HorseTrackingMobile.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::ZXing.Net.Mobile.Resource.Drawable.tooltip_frame_dark = global::HorseTrackingMobile.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::ZXing.Net.Mobile.Resource.Drawable.tooltip_frame_light = global::HorseTrackingMobile.Droid.Resource.Drawable.tooltip_frame_light;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_action_clickable_span = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_0 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_0;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_1 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_1;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_10 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_10;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_11 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_11;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_12 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_12;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_13 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_13;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_14 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_14;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_15 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_15;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_16 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_16;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_17 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_17;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_18 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_18;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_19 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_19;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_2 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_2;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_20 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_20;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_21 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_21;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_22 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_22;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_23 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_23;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_24 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_24;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_25 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_25;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_26 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_26;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_27 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_27;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_28 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_28;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_29 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_29;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_3 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_3;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_30 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_30;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_31 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_31;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_4 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_4;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_5 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_5;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_6 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_6;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_7 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_7;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_8 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_8;
+			global::ZXing.Net.Mobile.Resource.Id.accessibility_custom_action_9 = global::HorseTrackingMobile.Droid.Resource.Id.accessibility_custom_action_9;
+			global::ZXing.Net.Mobile.Resource.Id.actions = global::HorseTrackingMobile.Droid.Resource.Id.actions;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar = global::HorseTrackingMobile.Droid.Resource.Id.action_bar;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_activity_content = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_activity_content;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_container = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_container;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_root = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_root;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_spinner = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_spinner;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_subtitle = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_subtitle;
+			global::ZXing.Net.Mobile.Resource.Id.action_bar_title = global::HorseTrackingMobile.Droid.Resource.Id.action_bar_title;
+			global::ZXing.Net.Mobile.Resource.Id.action_container = global::HorseTrackingMobile.Droid.Resource.Id.action_container;
+			global::ZXing.Net.Mobile.Resource.Id.action_context_bar = global::HorseTrackingMobile.Droid.Resource.Id.action_context_bar;
+			global::ZXing.Net.Mobile.Resource.Id.action_divider = global::HorseTrackingMobile.Droid.Resource.Id.action_divider;
+			global::ZXing.Net.Mobile.Resource.Id.action_image = global::HorseTrackingMobile.Droid.Resource.Id.action_image;
+			global::ZXing.Net.Mobile.Resource.Id.action_menu_divider = global::HorseTrackingMobile.Droid.Resource.Id.action_menu_divider;
+			global::ZXing.Net.Mobile.Resource.Id.action_menu_presenter = global::HorseTrackingMobile.Droid.Resource.Id.action_menu_presenter;
+			global::ZXing.Net.Mobile.Resource.Id.action_mode_bar = global::HorseTrackingMobile.Droid.Resource.Id.action_mode_bar;
+			global::ZXing.Net.Mobile.Resource.Id.action_mode_bar_stub = global::HorseTrackingMobile.Droid.Resource.Id.action_mode_bar_stub;
+			global::ZXing.Net.Mobile.Resource.Id.action_mode_close_button = global::HorseTrackingMobile.Droid.Resource.Id.action_mode_close_button;
+			global::ZXing.Net.Mobile.Resource.Id.action_text = global::HorseTrackingMobile.Droid.Resource.Id.action_text;
+			global::ZXing.Net.Mobile.Resource.Id.activity_chooser_view_content = global::HorseTrackingMobile.Droid.Resource.Id.activity_chooser_view_content;
+			global::ZXing.Net.Mobile.Resource.Id.add = global::HorseTrackingMobile.Droid.Resource.Id.add;
+			global::ZXing.Net.Mobile.Resource.Id.alertTitle = global::HorseTrackingMobile.Droid.Resource.Id.alertTitle;
+			global::ZXing.Net.Mobile.Resource.Id.ALT = global::HorseTrackingMobile.Droid.Resource.Id.ALT;
+			global::ZXing.Net.Mobile.Resource.Id.always = global::HorseTrackingMobile.Droid.Resource.Id.always;
+			global::ZXing.Net.Mobile.Resource.Id.async = global::HorseTrackingMobile.Droid.Resource.Id.async;
+			global::ZXing.Net.Mobile.Resource.Id.beginning = global::HorseTrackingMobile.Droid.Resource.Id.beginning;
+			global::ZXing.Net.Mobile.Resource.Id.blocking = global::HorseTrackingMobile.Droid.Resource.Id.blocking;
+			global::ZXing.Net.Mobile.Resource.Id.bottom = global::HorseTrackingMobile.Droid.Resource.Id.bottom;
+			global::ZXing.Net.Mobile.Resource.Id.browser_actions_header_text = global::HorseTrackingMobile.Droid.Resource.Id.browser_actions_header_text;
+			global::ZXing.Net.Mobile.Resource.Id.browser_actions_menu_items = global::HorseTrackingMobile.Droid.Resource.Id.browser_actions_menu_items;
+			global::ZXing.Net.Mobile.Resource.Id.browser_actions_menu_item_icon = global::HorseTrackingMobile.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::ZXing.Net.Mobile.Resource.Id.browser_actions_menu_item_text = global::HorseTrackingMobile.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::ZXing.Net.Mobile.Resource.Id.browser_actions_menu_view = global::HorseTrackingMobile.Droid.Resource.Id.browser_actions_menu_view;
+			global::ZXing.Net.Mobile.Resource.Id.buttonPanel = global::HorseTrackingMobile.Droid.Resource.Id.buttonPanel;
+			global::ZXing.Net.Mobile.Resource.Id.center_vertical = global::HorseTrackingMobile.Droid.Resource.Id.center_vertical;
+			global::ZXing.Net.Mobile.Resource.Id.checkbox = global::HorseTrackingMobile.Droid.Resource.Id.checkbox;
+			global::ZXing.Net.Mobile.Resource.Id.@checked = global::HorseTrackingMobile.Droid.Resource.Id.@checked;
+			global::ZXing.Net.Mobile.Resource.Id.chronometer = global::HorseTrackingMobile.Droid.Resource.Id.chronometer;
+			global::ZXing.Net.Mobile.Resource.Id.collapseActionView = global::HorseTrackingMobile.Droid.Resource.Id.collapseActionView;
+			global::ZXing.Net.Mobile.Resource.Id.content = global::HorseTrackingMobile.Droid.Resource.Id.content;
+			global::ZXing.Net.Mobile.Resource.Id.contentFrame = global::HorseTrackingMobile.Droid.Resource.Id.contentFrame;
+			global::ZXing.Net.Mobile.Resource.Id.contentPanel = global::HorseTrackingMobile.Droid.Resource.Id.contentPanel;
+			global::ZXing.Net.Mobile.Resource.Id.CTRL = global::HorseTrackingMobile.Droid.Resource.Id.CTRL;
+			global::ZXing.Net.Mobile.Resource.Id.custom = global::HorseTrackingMobile.Droid.Resource.Id.custom;
+			global::ZXing.Net.Mobile.Resource.Id.customPanel = global::HorseTrackingMobile.Droid.Resource.Id.customPanel;
+			global::ZXing.Net.Mobile.Resource.Id.decor_content_parent = global::HorseTrackingMobile.Droid.Resource.Id.decor_content_parent;
+			global::ZXing.Net.Mobile.Resource.Id.default_activity_button = global::HorseTrackingMobile.Droid.Resource.Id.default_activity_button;
+			global::ZXing.Net.Mobile.Resource.Id.dialog_button = global::HorseTrackingMobile.Droid.Resource.Id.dialog_button;
+			global::ZXing.Net.Mobile.Resource.Id.disableHome = global::HorseTrackingMobile.Droid.Resource.Id.disableHome;
+			global::ZXing.Net.Mobile.Resource.Id.edit_query = global::HorseTrackingMobile.Droid.Resource.Id.edit_query;
+			global::ZXing.Net.Mobile.Resource.Id.end = global::HorseTrackingMobile.Droid.Resource.Id.end;
+			global::ZXing.Net.Mobile.Resource.Id.expanded_menu = global::HorseTrackingMobile.Droid.Resource.Id.expanded_menu;
+			global::ZXing.Net.Mobile.Resource.Id.expand_activities_button = global::HorseTrackingMobile.Droid.Resource.Id.expand_activities_button;
+			global::ZXing.Net.Mobile.Resource.Id.forever = global::HorseTrackingMobile.Droid.Resource.Id.forever;
+			global::ZXing.Net.Mobile.Resource.Id.fragment_container_view_tag = global::HorseTrackingMobile.Droid.Resource.Id.fragment_container_view_tag;
+			global::ZXing.Net.Mobile.Resource.Id.FUNCTION = global::HorseTrackingMobile.Droid.Resource.Id.FUNCTION;
+			global::ZXing.Net.Mobile.Resource.Id.group_divider = global::HorseTrackingMobile.Droid.Resource.Id.group_divider;
+			global::ZXing.Net.Mobile.Resource.Id.home = global::HorseTrackingMobile.Droid.Resource.Id.home;
+			global::ZXing.Net.Mobile.Resource.Id.homeAsUp = global::HorseTrackingMobile.Droid.Resource.Id.homeAsUp;
+			global::ZXing.Net.Mobile.Resource.Id.icon = global::HorseTrackingMobile.Droid.Resource.Id.icon;
+			global::ZXing.Net.Mobile.Resource.Id.icon_group = global::HorseTrackingMobile.Droid.Resource.Id.icon_group;
+			global::ZXing.Net.Mobile.Resource.Id.ifRoom = global::HorseTrackingMobile.Droid.Resource.Id.ifRoom;
+			global::ZXing.Net.Mobile.Resource.Id.image = global::HorseTrackingMobile.Droid.Resource.Id.image;
+			global::ZXing.Net.Mobile.Resource.Id.info = global::HorseTrackingMobile.Droid.Resource.Id.info;
+			global::ZXing.Net.Mobile.Resource.Id.italic = global::HorseTrackingMobile.Droid.Resource.Id.italic;
+			global::ZXing.Net.Mobile.Resource.Id.line1 = global::HorseTrackingMobile.Droid.Resource.Id.line1;
+			global::ZXing.Net.Mobile.Resource.Id.line3 = global::HorseTrackingMobile.Droid.Resource.Id.line3;
+			global::ZXing.Net.Mobile.Resource.Id.listMode = global::HorseTrackingMobile.Droid.Resource.Id.listMode;
+			global::ZXing.Net.Mobile.Resource.Id.list_item = global::HorseTrackingMobile.Droid.Resource.Id.list_item;
+			global::ZXing.Net.Mobile.Resource.Id.message = global::HorseTrackingMobile.Droid.Resource.Id.message;
+			global::ZXing.Net.Mobile.Resource.Id.META = global::HorseTrackingMobile.Droid.Resource.Id.META;
+			global::ZXing.Net.Mobile.Resource.Id.middle = global::HorseTrackingMobile.Droid.Resource.Id.middle;
+			global::ZXing.Net.Mobile.Resource.Id.multiply = global::HorseTrackingMobile.Droid.Resource.Id.multiply;
+			global::ZXing.Net.Mobile.Resource.Id.never = global::HorseTrackingMobile.Droid.Resource.Id.never;
+			global::ZXing.Net.Mobile.Resource.Id.none = global::HorseTrackingMobile.Droid.Resource.Id.none;
+			global::ZXing.Net.Mobile.Resource.Id.normal = global::HorseTrackingMobile.Droid.Resource.Id.normal;
+			global::ZXing.Net.Mobile.Resource.Id.notification_background = global::HorseTrackingMobile.Droid.Resource.Id.notification_background;
+			global::ZXing.Net.Mobile.Resource.Id.notification_main_column = global::HorseTrackingMobile.Droid.Resource.Id.notification_main_column;
+			global::ZXing.Net.Mobile.Resource.Id.notification_main_column_container = global::HorseTrackingMobile.Droid.Resource.Id.notification_main_column_container;
+			global::ZXing.Net.Mobile.Resource.Id.off = global::HorseTrackingMobile.Droid.Resource.Id.off;
+			global::ZXing.Net.Mobile.Resource.Id.on = global::HorseTrackingMobile.Droid.Resource.Id.on;
+			global::ZXing.Net.Mobile.Resource.Id.parentPanel = global::HorseTrackingMobile.Droid.Resource.Id.parentPanel;
+			global::ZXing.Net.Mobile.Resource.Id.progress_circular = global::HorseTrackingMobile.Droid.Resource.Id.progress_circular;
+			global::ZXing.Net.Mobile.Resource.Id.progress_horizontal = global::HorseTrackingMobile.Droid.Resource.Id.progress_horizontal;
+			global::ZXing.Net.Mobile.Resource.Id.radio = global::HorseTrackingMobile.Droid.Resource.Id.radio;
+			global::ZXing.Net.Mobile.Resource.Id.right_icon = global::HorseTrackingMobile.Droid.Resource.Id.right_icon;
+			global::ZXing.Net.Mobile.Resource.Id.right_side = global::HorseTrackingMobile.Droid.Resource.Id.right_side;
+			global::ZXing.Net.Mobile.Resource.Id.screen = global::HorseTrackingMobile.Droid.Resource.Id.screen;
+			global::ZXing.Net.Mobile.Resource.Id.scrollIndicatorDown = global::HorseTrackingMobile.Droid.Resource.Id.scrollIndicatorDown;
+			global::ZXing.Net.Mobile.Resource.Id.scrollIndicatorUp = global::HorseTrackingMobile.Droid.Resource.Id.scrollIndicatorUp;
+			global::ZXing.Net.Mobile.Resource.Id.scrollView = global::HorseTrackingMobile.Droid.Resource.Id.scrollView;
+			global::ZXing.Net.Mobile.Resource.Id.search_badge = global::HorseTrackingMobile.Droid.Resource.Id.search_badge;
+			global::ZXing.Net.Mobile.Resource.Id.search_bar = global::HorseTrackingMobile.Droid.Resource.Id.search_bar;
+			global::ZXing.Net.Mobile.Resource.Id.search_button = global::HorseTrackingMobile.Droid.Resource.Id.search_button;
+			global::ZXing.Net.Mobile.Resource.Id.search_close_btn = global::HorseTrackingMobile.Droid.Resource.Id.search_close_btn;
+			global::ZXing.Net.Mobile.Resource.Id.search_edit_frame = global::HorseTrackingMobile.Droid.Resource.Id.search_edit_frame;
+			global::ZXing.Net.Mobile.Resource.Id.search_go_btn = global::HorseTrackingMobile.Droid.Resource.Id.search_go_btn;
+			global::ZXing.Net.Mobile.Resource.Id.search_mag_icon = global::HorseTrackingMobile.Droid.Resource.Id.search_mag_icon;
+			global::ZXing.Net.Mobile.Resource.Id.search_plate = global::HorseTrackingMobile.Droid.Resource.Id.search_plate;
+			global::ZXing.Net.Mobile.Resource.Id.search_src_text = global::HorseTrackingMobile.Droid.Resource.Id.search_src_text;
+			global::ZXing.Net.Mobile.Resource.Id.search_voice_btn = global::HorseTrackingMobile.Droid.Resource.Id.search_voice_btn;
+			global::ZXing.Net.Mobile.Resource.Id.select_dialog_listview = global::HorseTrackingMobile.Droid.Resource.Id.select_dialog_listview;
+			global::ZXing.Net.Mobile.Resource.Id.SHIFT = global::HorseTrackingMobile.Droid.Resource.Id.SHIFT;
+			global::ZXing.Net.Mobile.Resource.Id.shortcut = global::HorseTrackingMobile.Droid.Resource.Id.shortcut;
+			global::ZXing.Net.Mobile.Resource.Id.showCustom = global::HorseTrackingMobile.Droid.Resource.Id.showCustom;
+			global::ZXing.Net.Mobile.Resource.Id.showHome = global::HorseTrackingMobile.Droid.Resource.Id.showHome;
+			global::ZXing.Net.Mobile.Resource.Id.showTitle = global::HorseTrackingMobile.Droid.Resource.Id.showTitle;
+			global::ZXing.Net.Mobile.Resource.Id.spacer = global::HorseTrackingMobile.Droid.Resource.Id.spacer;
+			global::ZXing.Net.Mobile.Resource.Id.split_action_bar = global::HorseTrackingMobile.Droid.Resource.Id.split_action_bar;
+			global::ZXing.Net.Mobile.Resource.Id.src_atop = global::HorseTrackingMobile.Droid.Resource.Id.src_atop;
+			global::ZXing.Net.Mobile.Resource.Id.src_in = global::HorseTrackingMobile.Droid.Resource.Id.src_in;
+			global::ZXing.Net.Mobile.Resource.Id.src_over = global::HorseTrackingMobile.Droid.Resource.Id.src_over;
+			global::ZXing.Net.Mobile.Resource.Id.submenuarrow = global::HorseTrackingMobile.Droid.Resource.Id.submenuarrow;
+			global::ZXing.Net.Mobile.Resource.Id.submit_area = global::HorseTrackingMobile.Droid.Resource.Id.submit_area;
+			global::ZXing.Net.Mobile.Resource.Id.SYM = global::HorseTrackingMobile.Droid.Resource.Id.SYM;
+			global::ZXing.Net.Mobile.Resource.Id.tabMode = global::HorseTrackingMobile.Droid.Resource.Id.tabMode;
+			global::ZXing.Net.Mobile.Resource.Id.tag_accessibility_actions = global::HorseTrackingMobile.Droid.Resource.Id.tag_accessibility_actions;
+			global::ZXing.Net.Mobile.Resource.Id.tag_accessibility_clickable_spans = global::HorseTrackingMobile.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::ZXing.Net.Mobile.Resource.Id.tag_accessibility_heading = global::HorseTrackingMobile.Droid.Resource.Id.tag_accessibility_heading;
+			global::ZXing.Net.Mobile.Resource.Id.tag_accessibility_pane_title = global::HorseTrackingMobile.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::ZXing.Net.Mobile.Resource.Id.tag_screen_reader_focusable = global::HorseTrackingMobile.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::ZXing.Net.Mobile.Resource.Id.tag_transition_group = global::HorseTrackingMobile.Droid.Resource.Id.tag_transition_group;
+			global::ZXing.Net.Mobile.Resource.Id.tag_unhandled_key_event_manager = global::HorseTrackingMobile.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::ZXing.Net.Mobile.Resource.Id.tag_unhandled_key_listeners = global::HorseTrackingMobile.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::ZXing.Net.Mobile.Resource.Id.text = global::HorseTrackingMobile.Droid.Resource.Id.text;
+			global::ZXing.Net.Mobile.Resource.Id.text2 = global::HorseTrackingMobile.Droid.Resource.Id.text2;
+			global::ZXing.Net.Mobile.Resource.Id.textSpacerNoButtons = global::HorseTrackingMobile.Droid.Resource.Id.textSpacerNoButtons;
+			global::ZXing.Net.Mobile.Resource.Id.textSpacerNoTitle = global::HorseTrackingMobile.Droid.Resource.Id.textSpacerNoTitle;
+			global::ZXing.Net.Mobile.Resource.Id.time = global::HorseTrackingMobile.Droid.Resource.Id.time;
+			global::ZXing.Net.Mobile.Resource.Id.title = global::HorseTrackingMobile.Droid.Resource.Id.title;
+			global::ZXing.Net.Mobile.Resource.Id.titleDividerNoCustom = global::HorseTrackingMobile.Droid.Resource.Id.titleDividerNoCustom;
+			global::ZXing.Net.Mobile.Resource.Id.title_template = global::HorseTrackingMobile.Droid.Resource.Id.title_template;
+			global::ZXing.Net.Mobile.Resource.Id.top = global::HorseTrackingMobile.Droid.Resource.Id.top;
+			global::ZXing.Net.Mobile.Resource.Id.topPanel = global::HorseTrackingMobile.Droid.Resource.Id.topPanel;
+			global::ZXing.Net.Mobile.Resource.Id.@unchecked = global::HorseTrackingMobile.Droid.Resource.Id.@unchecked;
+			global::ZXing.Net.Mobile.Resource.Id.uniform = global::HorseTrackingMobile.Droid.Resource.Id.uniform;
+			global::ZXing.Net.Mobile.Resource.Id.up = global::HorseTrackingMobile.Droid.Resource.Id.up;
+			global::ZXing.Net.Mobile.Resource.Id.useLogo = global::HorseTrackingMobile.Droid.Resource.Id.useLogo;
+			global::ZXing.Net.Mobile.Resource.Id.view_tree_saved_state_registry_owner = global::HorseTrackingMobile.Droid.Resource.Id.view_tree_saved_state_registry_owner;
+			global::ZXing.Net.Mobile.Resource.Id.visible_removing_fragment_view_tag = global::HorseTrackingMobile.Droid.Resource.Id.visible_removing_fragment_view_tag;
+			global::ZXing.Net.Mobile.Resource.Id.withText = global::HorseTrackingMobile.Droid.Resource.Id.withText;
+			global::ZXing.Net.Mobile.Resource.Id.wrap_content = global::HorseTrackingMobile.Droid.Resource.Id.wrap_content;
+			global::ZXing.Net.Mobile.Resource.Integer.abc_config_activityDefaultDur = global::HorseTrackingMobile.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::ZXing.Net.Mobile.Resource.Integer.abc_config_activityShortDur = global::HorseTrackingMobile.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::ZXing.Net.Mobile.Resource.Integer.cancel_button_image_alpha = global::HorseTrackingMobile.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::ZXing.Net.Mobile.Resource.Integer.config_tooltipAnimTime = global::HorseTrackingMobile.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::ZXing.Net.Mobile.Resource.Integer.status_bar_notification_info_maxnum = global::HorseTrackingMobile.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::ZXing.Net.Mobile.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::HorseTrackingMobile.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::ZXing.Net.Mobile.Resource.Interpolator.fast_out_slow_in = global::HorseTrackingMobile.Droid.Resource.Interpolator.fast_out_slow_in;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_bar_title_item = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_bar_up_container = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_menu_item_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_menu_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_menu_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_mode_bar = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_mode_bar;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_action_mode_close_item_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_activity_chooser_view = global::HorseTrackingMobile.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_activity_chooser_view_list_item = global::HorseTrackingMobile.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_alert_dialog_button_bar_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_alert_dialog_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_alert_dialog_title_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_cascading_menu_item_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_dialog_title_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_dialog_title_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_expanded_menu_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_list_menu_item_checkbox = global::HorseTrackingMobile.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_list_menu_item_icon = global::HorseTrackingMobile.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_list_menu_item_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_list_menu_item_radio = global::HorseTrackingMobile.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_popup_menu_header_item_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_popup_menu_item_layout = global::HorseTrackingMobile.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_screen_content_include = global::HorseTrackingMobile.Droid.Resource.Layout.abc_screen_content_include;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_screen_simple = global::HorseTrackingMobile.Droid.Resource.Layout.abc_screen_simple;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_screen_simple_overlay_action_mode = global::HorseTrackingMobile.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_screen_toolbar = global::HorseTrackingMobile.Droid.Resource.Layout.abc_screen_toolbar;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_search_dropdown_item_icons_2line = global::HorseTrackingMobile.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_search_view = global::HorseTrackingMobile.Droid.Resource.Layout.abc_search_view;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_select_dialog_material = global::HorseTrackingMobile.Droid.Resource.Layout.abc_select_dialog_material;
+			global::ZXing.Net.Mobile.Resource.Layout.abc_tooltip = global::HorseTrackingMobile.Droid.Resource.Layout.abc_tooltip;
+			global::ZXing.Net.Mobile.Resource.Layout.browser_actions_context_menu_page = global::HorseTrackingMobile.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::ZXing.Net.Mobile.Resource.Layout.browser_actions_context_menu_row = global::HorseTrackingMobile.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::ZXing.Net.Mobile.Resource.Layout.custom_dialog = global::HorseTrackingMobile.Droid.Resource.Layout.custom_dialog;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_action = global::HorseTrackingMobile.Droid.Resource.Layout.notification_action;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_action_tombstone = global::HorseTrackingMobile.Droid.Resource.Layout.notification_action_tombstone;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_template_custom_big = global::HorseTrackingMobile.Droid.Resource.Layout.notification_template_custom_big;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_template_icon_group = global::HorseTrackingMobile.Droid.Resource.Layout.notification_template_icon_group;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_template_part_chronometer = global::HorseTrackingMobile.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::ZXing.Net.Mobile.Resource.Layout.notification_template_part_time = global::HorseTrackingMobile.Droid.Resource.Layout.notification_template_part_time;
+			global::ZXing.Net.Mobile.Resource.Layout.select_dialog_item_material = global::HorseTrackingMobile.Droid.Resource.Layout.select_dialog_item_material;
+			global::ZXing.Net.Mobile.Resource.Layout.select_dialog_multichoice_material = global::HorseTrackingMobile.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::ZXing.Net.Mobile.Resource.Layout.select_dialog_singlechoice_material = global::HorseTrackingMobile.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::ZXing.Net.Mobile.Resource.Layout.support_simple_spinner_dropdown_item = global::HorseTrackingMobile.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::ZXing.Net.Mobile.Resource.Layout.zxingscanneractivitylayout = global::HorseTrackingMobile.Droid.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Net.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::HorseTrackingMobile.Droid.Resource.Layout.zxingscannerfragmentlayout;
+			global::ZXing.Net.Mobile.Resource.String.abc_action_bar_home_description = global::HorseTrackingMobile.Droid.Resource.String.abc_action_bar_home_description;
+			global::ZXing.Net.Mobile.Resource.String.abc_action_bar_up_description = global::HorseTrackingMobile.Droid.Resource.String.abc_action_bar_up_description;
+			global::ZXing.Net.Mobile.Resource.String.abc_action_menu_overflow_description = global::HorseTrackingMobile.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::ZXing.Net.Mobile.Resource.String.abc_action_mode_done = global::HorseTrackingMobile.Droid.Resource.String.abc_action_mode_done;
+			global::ZXing.Net.Mobile.Resource.String.abc_activitychooserview_choose_application = global::HorseTrackingMobile.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::ZXing.Net.Mobile.Resource.String.abc_activity_chooser_view_see_all = global::HorseTrackingMobile.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::ZXing.Net.Mobile.Resource.String.abc_capital_off = global::HorseTrackingMobile.Droid.Resource.String.abc_capital_off;
+			global::ZXing.Net.Mobile.Resource.String.abc_capital_on = global::HorseTrackingMobile.Droid.Resource.String.abc_capital_on;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_alt_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_ctrl_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_delete_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_enter_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_function_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_meta_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_shift_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_space_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_menu_sym_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_prepend_shortcut_label = global::HorseTrackingMobile.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::ZXing.Net.Mobile.Resource.String.abc_searchview_description_clear = global::HorseTrackingMobile.Droid.Resource.String.abc_searchview_description_clear;
+			global::ZXing.Net.Mobile.Resource.String.abc_searchview_description_query = global::HorseTrackingMobile.Droid.Resource.String.abc_searchview_description_query;
+			global::ZXing.Net.Mobile.Resource.String.abc_searchview_description_search = global::HorseTrackingMobile.Droid.Resource.String.abc_searchview_description_search;
+			global::ZXing.Net.Mobile.Resource.String.abc_searchview_description_submit = global::HorseTrackingMobile.Droid.Resource.String.abc_searchview_description_submit;
+			global::ZXing.Net.Mobile.Resource.String.abc_searchview_description_voice = global::HorseTrackingMobile.Droid.Resource.String.abc_searchview_description_voice;
+			global::ZXing.Net.Mobile.Resource.String.abc_search_hint = global::HorseTrackingMobile.Droid.Resource.String.abc_search_hint;
+			global::ZXing.Net.Mobile.Resource.String.abc_shareactionprovider_share_with = global::HorseTrackingMobile.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::ZXing.Net.Mobile.Resource.String.abc_shareactionprovider_share_with_application = global::HorseTrackingMobile.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::ZXing.Net.Mobile.Resource.String.abc_toolbar_collapse_description = global::HorseTrackingMobile.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::ZXing.Net.Mobile.Resource.String.copy_toast_msg = global::HorseTrackingMobile.Droid.Resource.String.copy_toast_msg;
+			global::ZXing.Net.Mobile.Resource.String.fallback_menu_item_copy_link = global::HorseTrackingMobile.Droid.Resource.String.fallback_menu_item_copy_link;
+			global::ZXing.Net.Mobile.Resource.String.fallback_menu_item_open_in_browser = global::HorseTrackingMobile.Droid.Resource.String.fallback_menu_item_open_in_browser;
+			global::ZXing.Net.Mobile.Resource.String.fallback_menu_item_share_link = global::HorseTrackingMobile.Droid.Resource.String.fallback_menu_item_share_link;
+			global::ZXing.Net.Mobile.Resource.String.search_menu_title = global::HorseTrackingMobile.Droid.Resource.String.search_menu_title;
+			global::ZXing.Net.Mobile.Resource.String.status_bar_notification_info_overflow = global::HorseTrackingMobile.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::ZXing.Net.Mobile.Resource.Style.AlertDialog_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.AlertDialog_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Animation_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Animation_AppCompat_DropDownUp = global::HorseTrackingMobile.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::ZXing.Net.Mobile.Resource.Style.Animation_AppCompat_Tooltip = global::HorseTrackingMobile.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::ZXing.Net.Mobile.Resource.Style.Base_AlertDialog_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_AlertDialog_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Animation_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::HorseTrackingMobile.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Animation_AppCompat_Tooltip = global::HorseTrackingMobile.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::ZXing.Net.Mobile.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_DialogWindowTitle_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Button = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Large = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Small = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Title = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::HorseTrackingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::HorseTrackingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V21_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V21_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V22_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V22_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V23_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V23_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V26_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V26_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::HorseTrackingMobile.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V28_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V28_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::ZXing.Net.Mobile.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::HorseTrackingMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionButton = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActionMode = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Button_Small = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_EditText = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ImageButton = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ListView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_RatingBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_SearchView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_SeekBar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_TextView = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Toolbar = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::ZXing.Net.Mobile.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::HorseTrackingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Platform_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_ThemeOverlay_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::HorseTrackingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_V21_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_V21_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_V25_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_V25_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Platform_Widget_AppCompat_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::ZXing.Net.Mobile.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::HorseTrackingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::ZXing.Net.Mobile.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::HorseTrackingMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::ZXing.Net.Mobile.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Body1 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Body2 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Button = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Caption = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Display1 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Display2 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Display3 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Display4 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Headline = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Large = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Medium = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Menu = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Small = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Subhead = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Tooltip = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Compat_Notification = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Compat_Notification_Info = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Compat_Notification_Time = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Compat_Notification_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::ZXing.Net.Mobile.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::HorseTrackingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_Dark = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.ThemeOverlay_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_CompactMenu = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Empty = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Empty;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_Dialog = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Theme_AppCompat_NoActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionButton = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActionMode = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ActivityChooserView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ButtonBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button_Borderless = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button_Colored = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Button_Small = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_EditText = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ImageButton = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionButton = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_SearchView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ListMenuView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ListPopupWindow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ListView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ListView_DropDown = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ListView_Menu = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_PopupMenu = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_PopupWindow = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ProgressBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_RatingBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_RatingBar_Small = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_SearchView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_SeekBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Spinner = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_TextView = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_TextView;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Toolbar = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::HorseTrackingMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_Compat_NotificationActionContainer = global::HorseTrackingMobile.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::ZXing.Net.Mobile.Resource.Style.Widget_Compat_NotificationActionText = global::HorseTrackingMobile.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBarLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBarLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_background = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_background;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_backgroundSplit = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_backgroundStacked = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetLeft = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetRight = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetStart = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_customNavigationLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_displayOptions = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_divider = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_divider;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_elevation = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_elevation;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_height = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_height;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_hideOnContentScroll = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_homeAsUpIndicator = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_homeLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_icon = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_icon;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_itemPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_logo = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_logo;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_navigationMode = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_popupTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_progressBarPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_progressBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_subtitle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_subtitleTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_title = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_title;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionBar_titleTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMenuItemView = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMenuItemView;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMenuItemView_android_minWidth = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMenuView = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMenuView;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_background = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_background;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_backgroundSplit = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_closeItemLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_height = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_height;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_subtitleTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActionMode_titleTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActivityChooserView = global::HorseTrackingMobile.Droid.Resource.Styleable.ActivityChooserView;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.ActivityChooserView_initialActivityCount = global::HorseTrackingMobile.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_android_layout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_buttonIconDimen = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_listItemLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_listLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_showTitle = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableItem = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableTransition = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::ZXing.Net.Mobile.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::HorseTrackingMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatImageView = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatImageView;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatImageView_android_src = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatImageView_srcCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatImageView_tint = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatImageView_tintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatSeekBar = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatSeekBar_android_thumb = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatSeekBar_tickMark = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_android_textAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableTint = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_fontFamily = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_lineHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_textAllCaps = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTextView_textLocale = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTextView_textLocale;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarDivider = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarSize = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_checkboxStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorAccent = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorControlActivated = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorControlNormal = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorError = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorPrimary = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_controlBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dialogTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dividerVertical = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_editTextBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_editTextColor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_editTextStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_panelBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_searchViewStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_seekBarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_spinnerStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_switchStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_toolbarStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowActionBar = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::ZXing.Net.Mobile.Resource.Styleable.AppCompatTheme_windowNoTitle = global::HorseTrackingMobile.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.ButtonBarLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.ButtonBarLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.ButtonBarLayout_allowStacking = global::HorseTrackingMobile.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::ZXing.Net.Mobile.Resource.Styleable.ColorStateListItem = global::HorseTrackingMobile.Droid.Resource.Styleable.ColorStateListItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.ColorStateListItem_alpha = global::HorseTrackingMobile.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::ZXing.Net.Mobile.Resource.Styleable.ColorStateListItem_android_alpha = global::HorseTrackingMobile.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::ZXing.Net.Mobile.Resource.Styleable.ColorStateListItem_android_color = global::HorseTrackingMobile.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::ZXing.Net.Mobile.Resource.Styleable.CompoundButton = global::HorseTrackingMobile.Droid.Resource.Styleable.CompoundButton;
+			global::ZXing.Net.Mobile.Resource.Styleable.CompoundButton_android_button = global::HorseTrackingMobile.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::ZXing.Net.Mobile.Resource.Styleable.CompoundButton_buttonCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.CompoundButton_buttonCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.CompoundButton_buttonTint = global::HorseTrackingMobile.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.CompoundButton_buttonTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_barLength = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_color = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_drawableSize = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_spinBars = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerArrowToggle_thickness = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.DrawerLayout_elevation = global::HorseTrackingMobile.Droid.Resource.Styleable.DrawerLayout_elevation;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_android_font = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_android_fontStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_android_fontWeight = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_font = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_fontStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_fontWeight = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamilyFont_ttcIndex = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderAuthority = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderCerts = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderPackage = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::ZXing.Net.Mobile.Resource.Styleable.FontFamily_fontProviderQuery = global::HorseTrackingMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::ZXing.Net.Mobile.Resource.Styleable.Fragment = global::HorseTrackingMobile.Droid.Resource.Styleable.Fragment;
+			global::ZXing.Net.Mobile.Resource.Styleable.FragmentContainerView = global::HorseTrackingMobile.Droid.Resource.Styleable.FragmentContainerView;
+			global::ZXing.Net.Mobile.Resource.Styleable.FragmentContainerView_android_name = global::HorseTrackingMobile.Droid.Resource.Styleable.FragmentContainerView_android_name;
+			global::ZXing.Net.Mobile.Resource.Styleable.FragmentContainerView_android_tag = global::HorseTrackingMobile.Droid.Resource.Styleable.FragmentContainerView_android_tag;
+			global::ZXing.Net.Mobile.Resource.Styleable.Fragment_android_id = global::HorseTrackingMobile.Droid.Resource.Styleable.Fragment_android_id;
+			global::ZXing.Net.Mobile.Resource.Styleable.Fragment_android_name = global::HorseTrackingMobile.Droid.Resource.Styleable.Fragment_android_name;
+			global::ZXing.Net.Mobile.Resource.Styleable.Fragment_android_tag = global::HorseTrackingMobile.Droid.Resource.Styleable.Fragment_android_tag;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColorItem = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColorItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColorItem_android_color = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColorItem_android_offset = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_centerColor = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_centerX = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_centerY = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_endColor = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_endX = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_endY = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_gradientRadius = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_startColor = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_startX = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_startY = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_tileMode = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.GradientColor_android_type = global::HorseTrackingMobile.Droid.Resource.Styleable.GradientColor_android_type;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_android_gravity = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_android_orientation = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_divider = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_Layout = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::ZXing.Net.Mobile.Resource.Styleable.LinearLayoutCompat_showDividers = global::HorseTrackingMobile.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::ZXing.Net.Mobile.Resource.Styleable.ListPopupWindow = global::HorseTrackingMobile.Droid.Resource.Styleable.ListPopupWindow;
+			global::ZXing.Net.Mobile.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::HorseTrackingMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::ZXing.Net.Mobile.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::HorseTrackingMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_checkableBehavior = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_enabled = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_id = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_menuCategory = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_orderInCategory = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuGroup_android_visible = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_actionLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_actionProviderClass = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_actionViewClass = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_alphabeticModifiers = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_checkable = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_checked = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_enabled = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_icon = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_id = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_id;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_menuCategory = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_numericShortcut = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_onClick = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_orderInCategory = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_title = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_title;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_titleCondensed = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_android_visible = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_contentDescription = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_iconTint = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_iconTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_numericModifiers = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_showAsAction = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuItem_tooltipText = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_headerBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_horizontalDivider = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_itemBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_itemTextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_verticalDivider = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_android_windowAnimationStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_preserveIconSpacing = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::ZXing.Net.Mobile.Resource.Styleable.MenuView_subMenuArrow = global::HorseTrackingMobile.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindow = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindow;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindowBackgroundState = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindow_android_popupBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.PopupWindow_overlapAnchor = global::HorseTrackingMobile.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::ZXing.Net.Mobile.Resource.Styleable.RecycleListView = global::HorseTrackingMobile.Droid.Resource.Styleable.RecycleListView;
+			global::ZXing.Net.Mobile.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::HorseTrackingMobile.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::ZXing.Net.Mobile.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::HorseTrackingMobile.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_android_focusable = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_android_imeOptions = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_android_inputType = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_android_maxWidth = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_closeIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_commitIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_defaultQueryHint = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_goIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_goIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_iconifiedByDefault = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_layout = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_layout;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_queryBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_queryHint = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_queryHint;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_searchHintIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_searchIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_submitBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_suggestionRowLayout = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::ZXing.Net.Mobile.Resource.Styleable.SearchView_voiceIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner_android_dropDownWidth = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner_android_entries = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner_android_entries;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner_android_popupBackground = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner_android_prompt = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::ZXing.Net.Mobile.Resource.Styleable.Spinner_popupTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawableItem = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawableItem;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawableItem_android_drawable = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_constantSize = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_dither = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_variablePadding = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.StateListDrawable_android_visible = global::HorseTrackingMobile.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_android_textOff = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_android_textOn = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_android_thumb = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_showText = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_splitTrack = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_switchMinWidth = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_switchPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_switchTextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_thumbTextPadding = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_thumbTint = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_thumbTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_track = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_track;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_trackTint = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.SwitchCompat_trackTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_fontFamily = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_shadowColor = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_shadowDx = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_shadowDy = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_shadowRadius = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textColor = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textColorHint = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textColorLink = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textFontWeight = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textSize = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_textStyle = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_android_typeface = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_fontFamily = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_fontVariationSettings = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_textAllCaps = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::ZXing.Net.Mobile.Resource.Styleable.TextAppearance_textLocale = global::HorseTrackingMobile.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_android_gravity = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_android_minHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_buttonGravity = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_collapseContentDescription = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_collapseIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetLeft = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetRight = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetStart = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_logo = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_logo;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_logoDescription = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_maxButtonHeight = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_menu = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_menu;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_navigationContentDescription = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_navigationIcon = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_popupTheme = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_subtitle = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_subtitleTextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_subtitleTextColor = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_title = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_title;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMargin = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMarginBottom = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMarginEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMargins = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMarginStart = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleMarginTop = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleTextAppearance = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::ZXing.Net.Mobile.Resource.Styleable.Toolbar_titleTextColor = global::HorseTrackingMobile.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::ZXing.Net.Mobile.Resource.Styleable.View = global::HorseTrackingMobile.Droid.Resource.Styleable.View;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewBackgroundHelper = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewBackgroundHelper_android_background = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewStubCompat = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewStubCompat;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewStubCompat_android_id = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewStubCompat_android_inflatedId = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::ZXing.Net.Mobile.Resource.Styleable.ViewStubCompat_android_layout = global::HorseTrackingMobile.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::ZXing.Net.Mobile.Resource.Styleable.View_android_focusable = global::HorseTrackingMobile.Droid.Resource.Styleable.View_android_focusable;
+			global::ZXing.Net.Mobile.Resource.Styleable.View_android_theme = global::HorseTrackingMobile.Droid.Resource.Styleable.View_android_theme;
+			global::ZXing.Net.Mobile.Resource.Styleable.View_paddingEnd = global::HorseTrackingMobile.Droid.Resource.Styleable.View_paddingEnd;
+			global::ZXing.Net.Mobile.Resource.Styleable.View_paddingStart = global::HorseTrackingMobile.Droid.Resource.Styleable.View_paddingStart;
+			global::ZXing.Net.Mobile.Resource.Styleable.View_theme = global::HorseTrackingMobile.Droid.Resource.Styleable.View_theme;
+			global::ZXing.Net.Mobile.Resource.Xml.image_share_filepaths = global::HorseTrackingMobile.Droid.Resource.Xml.image_share_filepaths;
+			global::ZXing.Net.Mobile.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::HorseTrackingMobile.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 		}
 		
 		public partial class Animation
@@ -16517,193 +18220,214 @@ namespace HorseTrackingMobile.Droid
 			public const int btn_radio_on_to_off_mtrl_animation = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int Carusele = 2131165279;
+			public const int calendar = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int Competition = 2131165280;
+			public const int Carusele = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int Cross = 2131165281;
+			public const int Competition = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_fab_background = 2131165282;
+			public const int Cross = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_ic_visibility = 2131165283;
+			public const int design_fab_background = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int design_ic_visibility_off = 2131165284;
+			public const int design_ic_visibility = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int design_password_eye = 2131165285;
+			public const int design_ic_visibility_off = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int design_snackbar_background = 2131165286;
+			public const int design_password_eye = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int Dressage = 2131165287;
+			public const int design_snackbar_background = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int FreeJump = 2131165288;
+			public const int Dressage = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Grass = 2131165289;
+			public const int FreeJump = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Horseback = 2131165290;
-			
-			// aapt resource value: 0x7F070072
-			public const int icon_about = 2131165298;
-			
-			// aapt resource value: 0x7F070073
-			public const int icon_feed = 2131165299;
+			public const int Grass = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int ic_arrow_down_24dp = 2131165291;
+			public const int group = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int ic_clock_black_24dp = 2131165292;
+			public const int horse = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int ic_keyboard_black_24dp = 2131165293;
-			
-			// aapt resource value: 0x7F07006E
-			public const int ic_mtrl_checked_circle = 2131165294;
-			
-			// aapt resource value: 0x7F07006F
-			public const int ic_mtrl_chip_checked_black = 2131165295;
-			
-			// aapt resource value: 0x7F070070
-			public const int ic_mtrl_chip_checked_circle = 2131165296;
-			
-			// aapt resource value: 0x7F070071
-			public const int ic_mtrl_chip_close_circle = 2131165297;
-			
-			// aapt resource value: 0x7F070074
-			public const int Jump = 2131165300;
+			public const int Horseback = 2131165293;
 			
 			// aapt resource value: 0x7F070075
-			public const int Lounge = 2131165301;
+			public const int icon_about = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int material_cursor_drawable = 2131165302;
+			public const int icon_feed = 2131165302;
+			
+			// aapt resource value: 0x7F07006E
+			public const int ic_arrow_down_24dp = 2131165294;
+			
+			// aapt resource value: 0x7F07006F
+			public const int ic_clock_black_24dp = 2131165295;
+			
+			// aapt resource value: 0x7F070070
+			public const int ic_keyboard_black_24dp = 2131165296;
+			
+			// aapt resource value: 0x7F070071
+			public const int ic_mtrl_checked_circle = 2131165297;
+			
+			// aapt resource value: 0x7F070072
+			public const int ic_mtrl_chip_checked_black = 2131165298;
+			
+			// aapt resource value: 0x7F070073
+			public const int ic_mtrl_chip_checked_circle = 2131165299;
+			
+			// aapt resource value: 0x7F070074
+			public const int ic_mtrl_chip_close_circle = 2131165300;
 			
 			// aapt resource value: 0x7F070077
-			public const int material_ic_calendar_black_24dp = 2131165303;
+			public const int Jump = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int material_ic_clear_black_24dp = 2131165304;
+			public const int Lounge = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int material_ic_edit_black_24dp = 2131165305;
+			public const int material_cursor_drawable = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165306;
+			public const int material_ic_calendar_black_24dp = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165307;
+			public const int material_ic_clear_black_24dp = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165308;
+			public const int material_ic_edit_black_24dp = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165309;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165310;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165311;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int mtrl_dialog_background = 2131165312;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int mtrl_dropdown_arrow = 2131165313;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int mtrl_ic_arrow_drop_down = 2131165314;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int mtrl_ic_arrow_drop_up = 2131165315;
+			public const int mtrl_dialog_background = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int mtrl_ic_cancel = 2131165316;
+			public const int mtrl_dropdown_arrow = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int mtrl_ic_error = 2131165317;
+			public const int mtrl_ic_arrow_drop_down = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int mtrl_navigation_bar_item_background = 2131165318;
+			public const int mtrl_ic_arrow_drop_up = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int mtrl_popupmenu_background = 2131165319;
+			public const int mtrl_ic_cancel = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int mtrl_popupmenu_background_dark = 2131165320;
+			public const int mtrl_ic_error = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int mtrl_tabs_default_indicator = 2131165321;
+			public const int mtrl_navigation_bar_item_background = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int navigation_empty_icon = 2131165322;
+			public const int mtrl_popupmenu_background = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notification_action_background = 2131165323;
+			public const int mtrl_popupmenu_background_dark = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int notification_bg = 2131165324;
+			public const int mtrl_tabs_default_indicator = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int notification_bg_low = 2131165325;
+			public const int navigation_empty_icon = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int notification_bg_low_normal = 2131165326;
+			public const int notification_action_background = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int notification_bg_low_pressed = 2131165327;
+			public const int notification_bg = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int notification_bg_normal = 2131165328;
+			public const int notification_bg_low = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int notification_bg_normal_pressed = 2131165329;
+			public const int notification_bg_low_normal = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int notification_icon_background = 2131165330;
+			public const int notification_bg_low_pressed = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_template_icon_bg = 2131165331;
+			public const int notification_bg_normal = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_template_icon_low_bg = 2131165332;
+			public const int notification_bg_normal_pressed = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_tile_bg = 2131165333;
+			public const int notification_icon_background = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notify_panel_notification_icon_bg = 2131165334;
+			public const int notification_template_icon_bg = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int preference_list_divider_material = 2131165335;
+			public const int notification_template_icon_low_bg = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int Riding = 2131165336;
+			public const int notification_tile_bg = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int test_custom_background = 2131165337;
+			public const int notify_panel_notification_icon_bg = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int tooltip_frame_dark = 2131165338;
+			public const int nutrition = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int tooltip_frame_light = 2131165339;
+			public const int preference_list_divider_material = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int Walk = 2131165340;
+			public const int Riding = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int xamarin_logo = 2131165341;
+			public const int settings = 2131165341;
+			
+			// aapt resource value: 0x7F07009E
+			public const int statistics = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int test_custom_background = 2131165343;
+			
+			// aapt resource value: 0x7F0700A0
+			public const int tooltip_frame_dark = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int tooltip_frame_light = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int visit = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int Walk = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int xamarin_logo = 2131165348;
 			
 			static Drawable()
 			{
@@ -17091,772 +18815,775 @@ namespace HorseTrackingMobile.Droid
 			public const int content = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int contentPanel = 2131230855;
+			public const int contentFrame = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int contiguous = 2131230856;
+			public const int contentPanel = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int continuousVelocity = 2131230857;
+			public const int contiguous = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int coordinator = 2131230858;
+			public const int continuousVelocity = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int cos = 2131230859;
+			public const int coordinator = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int counterclockwise = 2131230860;
+			public const int cos = 2131230860;
+			
+			// aapt resource value: 0x7F08008D
+			public const int counterclockwise = 2131230861;
 			
 			// aapt resource value: 0x7F080003
 			public const int CTRL = 2131230723;
 			
-			// aapt resource value: 0x7F08008D
-			public const int currentState = 2131230861;
-			
 			// aapt resource value: 0x7F08008E
-			public const int custom = 2131230862;
+			public const int currentState = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int customPanel = 2131230863;
+			public const int custom = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int cut = 2131230864;
+			public const int customPanel = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int date_picker_actions = 2131230865;
+			public const int cut = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int decelerate = 2131230866;
+			public const int date_picker_actions = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int decelerateAndComplete = 2131230867;
+			public const int decelerate = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int decor_content_parent = 2131230868;
+			public const int decelerateAndComplete = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int default_activity_button = 2131230869;
+			public const int decor_content_parent = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int deltaRelative = 2131230870;
+			public const int default_activity_button = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int dependency_ordering = 2131230871;
+			public const int deltaRelative = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int design_bottom_sheet = 2131230872;
+			public const int dependency_ordering = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int design_menu_item_action_area = 2131230873;
+			public const int design_bottom_sheet = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int design_menu_item_action_area_stub = 2131230874;
+			public const int design_menu_item_action_area = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int design_menu_item_text = 2131230875;
+			public const int design_menu_item_action_area_stub = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int design_navigation_view = 2131230876;
+			public const int design_menu_item_text = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int dialog_button = 2131230877;
+			public const int design_navigation_view = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int dimensions = 2131230878;
+			public const int dialog_button = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int direct = 2131230879;
+			public const int dimensions = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int disableHome = 2131230880;
+			public const int direct = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int disableIntraAutoTransition = 2131230881;
+			public const int disableHome = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int disablePostScroll = 2131230882;
+			public const int disableIntraAutoTransition = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int disableScroll = 2131230883;
+			public const int disablePostScroll = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int disjoint = 2131230884;
+			public const int disableScroll = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int dragAnticlockwise = 2131230885;
+			public const int disjoint = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int dragClockwise = 2131230886;
+			public const int dragAnticlockwise = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int dragDown = 2131230887;
+			public const int dragClockwise = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int dragEnd = 2131230888;
+			public const int dragDown = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int dragLeft = 2131230889;
+			public const int dragEnd = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int dragRight = 2131230890;
+			public const int dragLeft = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int dragStart = 2131230891;
+			public const int dragRight = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int dragUp = 2131230892;
+			public const int dragStart = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int dropdown_menu = 2131230893;
+			public const int dragUp = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int easeIn = 2131230894;
+			public const int dropdown_menu = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int easeInOut = 2131230895;
+			public const int easeIn = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int easeOut = 2131230896;
+			public const int easeInOut = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int east = 2131230897;
+			public const int easeOut = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int edit_query = 2131230898;
+			public const int east = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int elastic = 2131230899;
+			public const int edit_query = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int end = 2131230900;
+			public const int elastic = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int endToStart = 2131230901;
+			public const int end = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int end_padder = 2131230902;
+			public const int endToStart = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int enterAlways = 2131230903;
+			public const int end_padder = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int enterAlwaysCollapsed = 2131230904;
+			public const int enterAlways = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int exitUntilCollapsed = 2131230905;
-			
-			// aapt resource value: 0x7F0800BB
-			public const int expanded_menu = 2131230907;
+			public const int enterAlwaysCollapsed = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int expand_activities_button = 2131230906;
+			public const int exitUntilCollapsed = 2131230906;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int fade = 2131230908;
+			public const int expanded_menu = 2131230908;
+			
+			// aapt resource value: 0x7F0800BB
+			public const int expand_activities_button = 2131230907;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int fill = 2131230909;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int filled = 2131230912;
+			public const int fade = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int fill_horizontal = 2131230910;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int fill_vertical = 2131230911;
+			public const int fill = 2131230910;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int fitToContents = 2131230913;
+			public const int filled = 2131230913;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int fill_horizontal = 2131230911;
+			
+			// aapt resource value: 0x7F0800C0
+			public const int fill_vertical = 2131230912;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int @fixed = 2131230914;
+			public const int fitToContents = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int flip = 2131230915;
+			public const int @fixed = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int floating = 2131230916;
+			public const int flip = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int flyoutcontent_appbar = 2131230917;
+			public const int floating = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int forever = 2131230918;
+			public const int flyoutcontent_appbar = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int fragment_container_view_tag = 2131230919;
+			public const int forever = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int frost = 2131230920;
+			public const int fragment_container_view_tag = 2131230920;
+			
+			// aapt resource value: 0x7F0800C9
+			public const int frost = 2131230921;
 			
 			// aapt resource value: 0x7F080004
 			public const int FUNCTION = 2131230724;
 			
-			// aapt resource value: 0x7F0800C9
-			public const int ghost_view = 2131230921;
-			
 			// aapt resource value: 0x7F0800CA
-			public const int ghost_view_holder = 2131230922;
+			public const int ghost_view = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int gone = 2131230923;
+			public const int ghost_view_holder = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int graph = 2131230924;
+			public const int gone = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int graph_wrap = 2131230925;
-			
-			// aapt resource value: 0x7F0800CF
-			public const int grouping = 2131230927;
-			
-			// aapt resource value: 0x7F0800D0
-			public const int groups = 2131230928;
+			public const int graph = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int group_divider = 2131230926;
+			public const int graph_wrap = 2131230926;
+			
+			// aapt resource value: 0x7F0800D0
+			public const int grouping = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int guideline = 2131230929;
+			public const int groups = 2131230929;
+			
+			// aapt resource value: 0x7F0800CF
+			public const int group_divider = 2131230927;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int header_title = 2131230930;
+			public const int guideline = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int hideable = 2131230931;
+			public const int header_title = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int home = 2131230932;
+			public const int hideable = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int homeAsUp = 2131230933;
+			public const int home = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int honorRequest = 2131230934;
+			public const int homeAsUp = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int horizontal_only = 2131230935;
+			public const int honorRequest = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int icon = 2131230936;
+			public const int horizontal_only = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int icon_frame = 2131230937;
+			public const int icon = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int icon_group = 2131230938;
+			public const int icon_frame = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int ifRoom = 2131230939;
+			public const int icon_group = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int ignore = 2131230940;
+			public const int ifRoom = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int ignoreRequest = 2131230941;
+			public const int ignore = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int image = 2131230942;
+			public const int ignoreRequest = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int immediateStop = 2131230943;
+			public const int image = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int included = 2131230944;
+			public const int immediateStop = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int info = 2131230945;
+			public const int included = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int invisible = 2131230946;
+			public const int info = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int inward = 2131230947;
+			public const int invisible = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int italic = 2131230948;
+			public const int inward = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int item_touch_helper_previous_elevation = 2131230949;
+			public const int italic = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int jumpToEnd = 2131230950;
+			public const int item_touch_helper_previous_elevation = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int jumpToStart = 2131230951;
+			public const int jumpToEnd = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int labeled = 2131230952;
+			public const int jumpToStart = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int layout = 2131230953;
+			public const int labeled = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int left = 2131230954;
+			public const int layout = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int leftToRight = 2131230955;
+			public const int left = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int legacy = 2131230956;
+			public const int leftToRight = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int line1 = 2131230957;
+			public const int legacy = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int line3 = 2131230958;
+			public const int line1 = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int linear = 2131230959;
+			public const int line3 = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int listMode = 2131230960;
+			public const int linear = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int list_item = 2131230961;
+			public const int listMode = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int main_appbar = 2131230962;
+			public const int list_item = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int main_tablayout = 2131230963;
+			public const int main_appbar = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int main_toolbar = 2131230964;
+			public const int main_tablayout = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int main_viewpager = 2131230965;
+			public const int main_toolbar = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int masked = 2131230966;
+			public const int main_viewpager = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int match_constraint = 2131230967;
+			public const int masked = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int match_parent = 2131230968;
+			public const int match_constraint = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int material_clock_display = 2131230969;
+			public const int match_parent = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int material_clock_face = 2131230970;
+			public const int material_clock_display = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int material_clock_hand = 2131230971;
+			public const int material_clock_face = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int material_clock_period_am_button = 2131230972;
+			public const int material_clock_hand = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int material_clock_period_pm_button = 2131230973;
+			public const int material_clock_period_am_button = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int material_clock_period_toggle = 2131230974;
+			public const int material_clock_period_pm_button = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int material_hour_text_input = 2131230975;
+			public const int material_clock_period_toggle = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int material_hour_tv = 2131230976;
+			public const int material_hour_text_input = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int material_label = 2131230977;
+			public const int material_hour_tv = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int material_minute_text_input = 2131230978;
+			public const int material_label = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int material_minute_tv = 2131230979;
+			public const int material_minute_text_input = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int material_textinput_timepicker = 2131230980;
+			public const int material_minute_tv = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int material_timepicker_cancel_button = 2131230981;
+			public const int material_textinput_timepicker = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int material_timepicker_container = 2131230982;
+			public const int material_timepicker_cancel_button = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int material_timepicker_edit_text = 2131230983;
+			public const int material_timepicker_container = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int material_timepicker_mode_button = 2131230984;
+			public const int material_timepicker_edit_text = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int material_timepicker_ok_button = 2131230985;
+			public const int material_timepicker_mode_button = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int material_timepicker_view = 2131230986;
+			public const int material_timepicker_ok_button = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int material_value_index = 2131230987;
+			public const int material_timepicker_view = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int media_actions = 2131230988;
+			public const int material_value_index = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int media_controller_compat_view_tag = 2131230989;
+			public const int media_actions = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int message = 2131230990;
+			public const int media_controller_compat_view_tag = 2131230990;
+			
+			// aapt resource value: 0x7F08010F
+			public const int message = 2131230991;
 			
 			// aapt resource value: 0x7F080005
 			public const int META = 2131230725;
 			
-			// aapt resource value: 0x7F08010F
-			public const int middle = 2131230991;
-			
 			// aapt resource value: 0x7F080110
-			public const int mini = 2131230992;
+			public const int middle = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int month_grid = 2131230993;
+			public const int mini = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int month_navigation_bar = 2131230994;
+			public const int month_grid = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int month_navigation_fragment_toggle = 2131230995;
+			public const int month_navigation_bar = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int month_navigation_next = 2131230996;
+			public const int month_navigation_fragment_toggle = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int month_navigation_previous = 2131230997;
+			public const int month_navigation_next = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int month_title = 2131230998;
+			public const int month_navigation_previous = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int motion_base = 2131230999;
+			public const int month_title = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int mtrl_anchor_parent = 2131231000;
-			
-			// aapt resource value: 0x7F08011A
-			public const int mtrl_calendar_days_of_week = 2131231002;
+			public const int motion_base = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int mtrl_calendar_day_selector_frame = 2131231001;
+			public const int mtrl_anchor_parent = 2131231001;
 			
 			// aapt resource value: 0x7F08011B
-			public const int mtrl_calendar_frame = 2131231003;
+			public const int mtrl_calendar_days_of_week = 2131231003;
+			
+			// aapt resource value: 0x7F08011A
+			public const int mtrl_calendar_day_selector_frame = 2131231002;
 			
 			// aapt resource value: 0x7F08011C
-			public const int mtrl_calendar_main_pane = 2131231004;
+			public const int mtrl_calendar_frame = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int mtrl_calendar_months = 2131231005;
+			public const int mtrl_calendar_main_pane = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int mtrl_calendar_selection_frame = 2131231006;
+			public const int mtrl_calendar_months = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int mtrl_calendar_text_input_frame = 2131231007;
+			public const int mtrl_calendar_selection_frame = 2131231007;
 			
 			// aapt resource value: 0x7F080120
-			public const int mtrl_calendar_year_selector_frame = 2131231008;
+			public const int mtrl_calendar_text_input_frame = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int mtrl_card_checked_layer_id = 2131231009;
+			public const int mtrl_calendar_year_selector_frame = 2131231009;
 			
 			// aapt resource value: 0x7F080122
-			public const int mtrl_child_content_container = 2131231010;
+			public const int mtrl_card_checked_layer_id = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int mtrl_internal_children_alpha_tag = 2131231011;
+			public const int mtrl_child_content_container = 2131231011;
 			
 			// aapt resource value: 0x7F080124
-			public const int mtrl_motion_snapshot_view = 2131231012;
+			public const int mtrl_internal_children_alpha_tag = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int mtrl_picker_fullscreen = 2131231013;
+			public const int mtrl_motion_snapshot_view = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int mtrl_picker_header = 2131231014;
+			public const int mtrl_picker_fullscreen = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int mtrl_picker_header_selection_text = 2131231015;
+			public const int mtrl_picker_header = 2131231015;
 			
 			// aapt resource value: 0x7F080128
-			public const int mtrl_picker_header_title_and_selection = 2131231016;
+			public const int mtrl_picker_header_selection_text = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int mtrl_picker_header_toggle = 2131231017;
+			public const int mtrl_picker_header_title_and_selection = 2131231017;
 			
 			// aapt resource value: 0x7F08012A
-			public const int mtrl_picker_text_input_date = 2131231018;
+			public const int mtrl_picker_header_toggle = 2131231018;
 			
 			// aapt resource value: 0x7F08012B
-			public const int mtrl_picker_text_input_range_end = 2131231019;
+			public const int mtrl_picker_text_input_date = 2131231019;
 			
 			// aapt resource value: 0x7F08012C
-			public const int mtrl_picker_text_input_range_start = 2131231020;
+			public const int mtrl_picker_text_input_range_end = 2131231020;
 			
 			// aapt resource value: 0x7F08012D
-			public const int mtrl_picker_title_text = 2131231021;
+			public const int mtrl_picker_text_input_range_start = 2131231021;
 			
 			// aapt resource value: 0x7F08012E
-			public const int mtrl_view_tag_bottom_padding = 2131231022;
+			public const int mtrl_picker_title_text = 2131231022;
 			
 			// aapt resource value: 0x7F08012F
-			public const int multiply = 2131231023;
-			
-			// aapt resource value: 0x7F080131
-			public const int navigation_bar_item_icon_view = 2131231025;
-			
-			// aapt resource value: 0x7F080132
-			public const int navigation_bar_item_labels_group = 2131231026;
-			
-			// aapt resource value: 0x7F080133
-			public const int navigation_bar_item_large_label_view = 2131231027;
-			
-			// aapt resource value: 0x7F080134
-			public const int navigation_bar_item_small_label_view = 2131231028;
-			
-			// aapt resource value: 0x7F080135
-			public const int navigation_header_container = 2131231029;
+			public const int mtrl_view_tag_bottom_padding = 2131231023;
 			
 			// aapt resource value: 0x7F080130
-			public const int nav_controller_view_tag = 2131231024;
+			public const int multiply = 2131231024;
+			
+			// aapt resource value: 0x7F080132
+			public const int navigation_bar_item_icon_view = 2131231026;
+			
+			// aapt resource value: 0x7F080133
+			public const int navigation_bar_item_labels_group = 2131231027;
+			
+			// aapt resource value: 0x7F080134
+			public const int navigation_bar_item_large_label_view = 2131231028;
+			
+			// aapt resource value: 0x7F080135
+			public const int navigation_bar_item_small_label_view = 2131231029;
 			
 			// aapt resource value: 0x7F080136
-			public const int never = 2131231030;
+			public const int navigation_header_container = 2131231030;
+			
+			// aapt resource value: 0x7F080131
+			public const int nav_controller_view_tag = 2131231025;
 			
 			// aapt resource value: 0x7F080137
-			public const int neverCompleteToEnd = 2131231031;
+			public const int never = 2131231031;
 			
 			// aapt resource value: 0x7F080138
-			public const int neverCompleteToStart = 2131231032;
-			
-			// aapt resource value: 0x7F08013B
-			public const int none = 2131231035;
-			
-			// aapt resource value: 0x7F08013C
-			public const int normal = 2131231036;
-			
-			// aapt resource value: 0x7F08013D
-			public const int north = 2131231037;
+			public const int neverCompleteToEnd = 2131231032;
 			
 			// aapt resource value: 0x7F080139
-			public const int noScroll = 2131231033;
+			public const int neverCompleteToStart = 2131231033;
 			
-			// aapt resource value: 0x7F08013A
-			public const int noState = 2131231034;
+			// aapt resource value: 0x7F08013C
+			public const int none = 2131231036;
+			
+			// aapt resource value: 0x7F08013D
+			public const int normal = 2131231037;
 			
 			// aapt resource value: 0x7F08013E
-			public const int notification_background = 2131231038;
+			public const int north = 2131231038;
+			
+			// aapt resource value: 0x7F08013A
+			public const int noScroll = 2131231034;
+			
+			// aapt resource value: 0x7F08013B
+			public const int noState = 2131231035;
 			
 			// aapt resource value: 0x7F08013F
-			public const int notification_main_column = 2131231039;
+			public const int notification_background = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int notification_main_column_container = 2131231040;
+			public const int notification_main_column = 2131231040;
+			
+			// aapt resource value: 0x7F080141
+			public const int notification_main_column_container = 2131231041;
 			
 			// aapt resource value: 0x7F080006
 			public const int NO_DEBUG = 2131230726;
 			
-			// aapt resource value: 0x7F080141
-			public const int off = 2131231041;
-			
 			// aapt resource value: 0x7F080142
-			public const int on = 2131231042;
+			public const int off = 2131231042;
 			
 			// aapt resource value: 0x7F080143
-			public const int outline = 2131231043;
+			public const int on = 2131231043;
 			
 			// aapt resource value: 0x7F080144
-			public const int outward = 2131231044;
+			public const int outline = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int overshoot = 2131231045;
+			public const int outward = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int packed = 2131231046;
+			public const int overshoot = 2131231046;
 			
 			// aapt resource value: 0x7F080147
-			public const int parallax = 2131231047;
+			public const int packed = 2131231047;
 			
 			// aapt resource value: 0x7F080148
-			public const int parent = 2131231048;
+			public const int parallax = 2131231048;
 			
 			// aapt resource value: 0x7F080149
-			public const int parentPanel = 2131231049;
+			public const int parent = 2131231049;
 			
 			// aapt resource value: 0x7F08014A
-			public const int parentRelative = 2131231050;
+			public const int parentPanel = 2131231050;
 			
 			// aapt resource value: 0x7F08014B
-			public const int parent_matrix = 2131231051;
+			public const int parentRelative = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int password_toggle = 2131231052;
+			public const int parent_matrix = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int path = 2131231053;
+			public const int password_toggle = 2131231053;
 			
 			// aapt resource value: 0x7F08014E
-			public const int pathRelative = 2131231054;
+			public const int path = 2131231054;
 			
 			// aapt resource value: 0x7F08014F
-			public const int peekHeight = 2131231055;
+			public const int pathRelative = 2131231055;
 			
 			// aapt resource value: 0x7F080150
-			public const int percent = 2131231056;
+			public const int peekHeight = 2131231056;
 			
 			// aapt resource value: 0x7F080151
-			public const int pin = 2131231057;
+			public const int percent = 2131231057;
 			
 			// aapt resource value: 0x7F080152
-			public const int position = 2131231058;
+			public const int pin = 2131231058;
 			
 			// aapt resource value: 0x7F080153
-			public const int postLayout = 2131231059;
+			public const int position = 2131231059;
 			
 			// aapt resource value: 0x7F080154
-			public const int progress_circular = 2131231060;
+			public const int postLayout = 2131231060;
 			
 			// aapt resource value: 0x7F080155
-			public const int progress_horizontal = 2131231061;
+			public const int progress_circular = 2131231061;
 			
 			// aapt resource value: 0x7F080156
-			public const int radio = 2131231062;
+			public const int progress_horizontal = 2131231062;
 			
 			// aapt resource value: 0x7F080157
-			public const int ratio = 2131231063;
+			public const int radio = 2131231063;
 			
 			// aapt resource value: 0x7F080158
-			public const int rectangles = 2131231064;
+			public const int ratio = 2131231064;
 			
 			// aapt resource value: 0x7F080159
-			public const int recycler_view = 2131231065;
+			public const int rectangles = 2131231065;
 			
 			// aapt resource value: 0x7F08015A
-			public const int reverseSawtooth = 2131231066;
+			public const int recycler_view = 2131231066;
 			
 			// aapt resource value: 0x7F08015B
-			public const int right = 2131231067;
+			public const int reverseSawtooth = 2131231067;
 			
 			// aapt resource value: 0x7F08015C
-			public const int rightToLeft = 2131231068;
+			public const int right = 2131231068;
 			
 			// aapt resource value: 0x7F08015D
-			public const int right_icon = 2131231069;
+			public const int rightToLeft = 2131231069;
 			
 			// aapt resource value: 0x7F08015E
-			public const int right_side = 2131231070;
+			public const int right_icon = 2131231070;
 			
 			// aapt resource value: 0x7F08015F
-			public const int rounded = 2131231071;
+			public const int right_side = 2131231071;
 			
 			// aapt resource value: 0x7F080160
-			public const int row_index_key = 2131231072;
+			public const int rounded = 2131231072;
 			
 			// aapt resource value: 0x7F080161
-			public const int save_non_transition_alpha = 2131231073;
+			public const int row_index_key = 2131231073;
 			
 			// aapt resource value: 0x7F080162
-			public const int save_overlay_view = 2131231074;
+			public const int save_non_transition_alpha = 2131231074;
 			
 			// aapt resource value: 0x7F080163
-			public const int sawtooth = 2131231075;
+			public const int save_overlay_view = 2131231075;
 			
 			// aapt resource value: 0x7F080164
-			public const int scale = 2131231076;
+			public const int sawtooth = 2131231076;
 			
 			// aapt resource value: 0x7F080165
-			public const int screen = 2131231077;
+			public const int scale = 2131231077;
 			
 			// aapt resource value: 0x7F080166
-			public const int scroll = 2131231078;
-			
-			// aapt resource value: 0x7F08016A
-			public const int scrollable = 2131231082;
+			public const int screen = 2131231078;
 			
 			// aapt resource value: 0x7F080167
-			public const int scrollIndicatorDown = 2131231079;
-			
-			// aapt resource value: 0x7F080168
-			public const int scrollIndicatorUp = 2131231080;
-			
-			// aapt resource value: 0x7F080169
-			public const int scrollView = 2131231081;
+			public const int scroll = 2131231079;
 			
 			// aapt resource value: 0x7F08016B
-			public const int search_badge = 2131231083;
+			public const int scrollable = 2131231083;
+			
+			// aapt resource value: 0x7F080168
+			public const int scrollIndicatorDown = 2131231080;
+			
+			// aapt resource value: 0x7F080169
+			public const int scrollIndicatorUp = 2131231081;
+			
+			// aapt resource value: 0x7F08016A
+			public const int scrollView = 2131231082;
 			
 			// aapt resource value: 0x7F08016C
-			public const int search_bar = 2131231084;
+			public const int search_badge = 2131231084;
 			
 			// aapt resource value: 0x7F08016D
-			public const int search_button = 2131231085;
+			public const int search_bar = 2131231085;
 			
 			// aapt resource value: 0x7F08016E
-			public const int search_close_btn = 2131231086;
+			public const int search_button = 2131231086;
 			
 			// aapt resource value: 0x7F08016F
-			public const int search_edit_frame = 2131231087;
+			public const int search_close_btn = 2131231087;
 			
 			// aapt resource value: 0x7F080170
-			public const int search_go_btn = 2131231088;
+			public const int search_edit_frame = 2131231088;
 			
 			// aapt resource value: 0x7F080171
-			public const int search_mag_icon = 2131231089;
+			public const int search_go_btn = 2131231089;
 			
 			// aapt resource value: 0x7F080172
-			public const int search_plate = 2131231090;
+			public const int search_mag_icon = 2131231090;
 			
 			// aapt resource value: 0x7F080173
-			public const int search_src_text = 2131231091;
+			public const int search_plate = 2131231091;
 			
 			// aapt resource value: 0x7F080174
-			public const int search_voice_btn = 2131231092;
+			public const int search_src_text = 2131231092;
 			
 			// aapt resource value: 0x7F080175
-			public const int seekbar = 2131231093;
+			public const int search_voice_btn = 2131231093;
 			
 			// aapt resource value: 0x7F080176
-			public const int seekbar_value = 2131231094;
-			
-			// aapt resource value: 0x7F080178
-			public const int selected = 2131231096;
-			
-			// aapt resource value: 0x7F080179
-			public const int selection_type = 2131231097;
+			public const int seekbar = 2131231094;
 			
 			// aapt resource value: 0x7F080177
-			public const int select_dialog_listview = 2131231095;
+			public const int seekbar_value = 2131231095;
+			
+			// aapt resource value: 0x7F080179
+			public const int selected = 2131231097;
 			
 			// aapt resource value: 0x7F08017A
-			public const int sharedValueSet = 2131231098;
+			public const int selection_type = 2131231098;
+			
+			// aapt resource value: 0x7F080178
+			public const int select_dialog_listview = 2131231096;
 			
 			// aapt resource value: 0x7F08017B
-			public const int sharedValueUnset = 2131231099;
+			public const int sharedValueSet = 2131231099;
 			
 			// aapt resource value: 0x7F08017C
-			public const int shellcontent_appbar = 2131231100;
+			public const int sharedValueUnset = 2131231100;
 			
 			// aapt resource value: 0x7F08017D
-			public const int shellcontent_toolbar = 2131231101;
+			public const int shellcontent_appbar = 2131231101;
+			
+			// aapt resource value: 0x7F08017E
+			public const int shellcontent_toolbar = 2131231102;
 			
 			// aapt resource value: 0x7F080007
 			public const int SHIFT = 2131230727;
 			
-			// aapt resource value: 0x7F08017E
-			public const int shortcut = 2131231102;
-			
 			// aapt resource value: 0x7F08017F
-			public const int showCustom = 2131231103;
+			public const int shortcut = 2131231103;
 			
 			// aapt resource value: 0x7F080180
-			public const int showHome = 2131231104;
+			public const int showCustom = 2131231104;
 			
 			// aapt resource value: 0x7F080181
-			public const int showTitle = 2131231105;
+			public const int showHome = 2131231105;
+			
+			// aapt resource value: 0x7F080182
+			public const int showTitle = 2131231106;
 			
 			// aapt resource value: 0x7F080008
 			public const int SHOW_ALL = 2131230728;
@@ -17867,242 +19594,242 @@ namespace HorseTrackingMobile.Droid
 			// aapt resource value: 0x7F08000A
 			public const int SHOW_PROGRESS = 2131230730;
 			
-			// aapt resource value: 0x7F080182
-			public const int sin = 2131231106;
-			
 			// aapt resource value: 0x7F080183
-			public const int skipCollapsed = 2131231107;
+			public const int sin = 2131231107;
 			
 			// aapt resource value: 0x7F080184
-			public const int skipped = 2131231108;
+			public const int skipCollapsed = 2131231108;
 			
 			// aapt resource value: 0x7F080185
-			public const int slide = 2131231109;
+			public const int skipped = 2131231109;
 			
 			// aapt resource value: 0x7F080186
-			public const int sliding_tabs = 2131231110;
+			public const int slide = 2131231110;
 			
 			// aapt resource value: 0x7F080187
-			public const int snackbar_action = 2131231111;
+			public const int sliding_tabs = 2131231111;
 			
 			// aapt resource value: 0x7F080188
-			public const int snackbar_text = 2131231112;
+			public const int snackbar_action = 2131231112;
 			
 			// aapt resource value: 0x7F080189
-			public const int snap = 2131231113;
+			public const int snackbar_text = 2131231113;
 			
 			// aapt resource value: 0x7F08018A
-			public const int snapMargins = 2131231114;
+			public const int snap = 2131231114;
 			
 			// aapt resource value: 0x7F08018B
-			public const int south = 2131231115;
+			public const int snapMargins = 2131231115;
 			
 			// aapt resource value: 0x7F08018C
-			public const int spacer = 2131231116;
+			public const int south = 2131231116;
 			
 			// aapt resource value: 0x7F08018D
-			public const int special_effects_controller_view_tag = 2131231117;
+			public const int spacer = 2131231117;
 			
 			// aapt resource value: 0x7F08018E
-			public const int spinner = 2131231118;
+			public const int special_effects_controller_view_tag = 2131231118;
 			
 			// aapt resource value: 0x7F08018F
-			public const int spline = 2131231119;
+			public const int spinner = 2131231119;
 			
 			// aapt resource value: 0x7F080190
-			public const int split_action_bar = 2131231120;
+			public const int spline = 2131231120;
 			
 			// aapt resource value: 0x7F080191
-			public const int spread = 2131231121;
+			public const int split_action_bar = 2131231121;
 			
 			// aapt resource value: 0x7F080192
-			public const int spread_inside = 2131231122;
+			public const int spread = 2131231122;
 			
 			// aapt resource value: 0x7F080193
-			public const int spring = 2131231123;
+			public const int spread_inside = 2131231123;
 			
 			// aapt resource value: 0x7F080194
-			public const int square = 2131231124;
+			public const int spring = 2131231124;
 			
 			// aapt resource value: 0x7F080195
-			public const int src_atop = 2131231125;
+			public const int square = 2131231125;
 			
 			// aapt resource value: 0x7F080196
-			public const int src_in = 2131231126;
+			public const int src_atop = 2131231126;
 			
 			// aapt resource value: 0x7F080197
-			public const int src_over = 2131231127;
+			public const int src_in = 2131231127;
 			
 			// aapt resource value: 0x7F080198
-			public const int standard = 2131231128;
+			public const int src_over = 2131231128;
 			
 			// aapt resource value: 0x7F080199
-			public const int start = 2131231129;
+			public const int standard = 2131231129;
 			
 			// aapt resource value: 0x7F08019A
-			public const int startHorizontal = 2131231130;
+			public const int start = 2131231130;
 			
 			// aapt resource value: 0x7F08019B
-			public const int startToEnd = 2131231131;
+			public const int startHorizontal = 2131231131;
 			
 			// aapt resource value: 0x7F08019C
-			public const int startVertical = 2131231132;
+			public const int startToEnd = 2131231132;
 			
 			// aapt resource value: 0x7F08019D
-			public const int staticLayout = 2131231133;
+			public const int startVertical = 2131231133;
 			
 			// aapt resource value: 0x7F08019E
-			public const int staticPostLayout = 2131231134;
+			public const int staticLayout = 2131231134;
 			
 			// aapt resource value: 0x7F08019F
-			public const int status_bar_latest_event_content = 2131231135;
+			public const int staticPostLayout = 2131231135;
 			
 			// aapt resource value: 0x7F0801A0
-			public const int stop = 2131231136;
+			public const int status_bar_latest_event_content = 2131231136;
 			
 			// aapt resource value: 0x7F0801A1
-			public const int stretch = 2131231137;
+			public const int stop = 2131231137;
 			
 			// aapt resource value: 0x7F0801A2
-			public const int submenuarrow = 2131231138;
+			public const int stretch = 2131231138;
 			
 			// aapt resource value: 0x7F0801A3
-			public const int submit_area = 2131231139;
+			public const int submenuarrow = 2131231139;
 			
 			// aapt resource value: 0x7F0801A4
-			public const int supportScrollUp = 2131231140;
+			public const int submit_area = 2131231140;
 			
 			// aapt resource value: 0x7F0801A5
-			public const int switchWidget = 2131231141;
+			public const int supportScrollUp = 2131231141;
+			
+			// aapt resource value: 0x7F0801A6
+			public const int switchWidget = 2131231142;
 			
 			// aapt resource value: 0x7F08000B
 			public const int SYM = 2131230731;
 			
-			// aapt resource value: 0x7F0801A6
-			public const int tabMode = 2131231142;
-			
 			// aapt resource value: 0x7F0801A7
-			public const int tag_accessibility_actions = 2131231143;
+			public const int tabMode = 2131231143;
 			
 			// aapt resource value: 0x7F0801A8
-			public const int tag_accessibility_clickable_spans = 2131231144;
+			public const int tag_accessibility_actions = 2131231144;
 			
 			// aapt resource value: 0x7F0801A9
-			public const int tag_accessibility_heading = 2131231145;
+			public const int tag_accessibility_clickable_spans = 2131231145;
 			
 			// aapt resource value: 0x7F0801AA
-			public const int tag_accessibility_pane_title = 2131231146;
+			public const int tag_accessibility_heading = 2131231146;
 			
 			// aapt resource value: 0x7F0801AB
-			public const int tag_on_apply_window_listener = 2131231147;
+			public const int tag_accessibility_pane_title = 2131231147;
 			
 			// aapt resource value: 0x7F0801AC
-			public const int tag_on_receive_content_listener = 2131231148;
+			public const int tag_on_apply_window_listener = 2131231148;
 			
 			// aapt resource value: 0x7F0801AD
-			public const int tag_on_receive_content_mime_types = 2131231149;
+			public const int tag_on_receive_content_listener = 2131231149;
 			
 			// aapt resource value: 0x7F0801AE
-			public const int tag_screen_reader_focusable = 2131231150;
+			public const int tag_on_receive_content_mime_types = 2131231150;
 			
 			// aapt resource value: 0x7F0801AF
-			public const int tag_state_description = 2131231151;
+			public const int tag_screen_reader_focusable = 2131231151;
 			
 			// aapt resource value: 0x7F0801B0
-			public const int tag_transition_group = 2131231152;
+			public const int tag_state_description = 2131231152;
 			
 			// aapt resource value: 0x7F0801B1
-			public const int tag_unhandled_key_event_manager = 2131231153;
+			public const int tag_transition_group = 2131231153;
 			
 			// aapt resource value: 0x7F0801B2
-			public const int tag_unhandled_key_listeners = 2131231154;
+			public const int tag_unhandled_key_event_manager = 2131231154;
 			
 			// aapt resource value: 0x7F0801B3
-			public const int tag_window_insets_animation_callback = 2131231155;
+			public const int tag_unhandled_key_listeners = 2131231155;
 			
 			// aapt resource value: 0x7F0801B4
-			public const int test_checkbox_android_button_tint = 2131231156;
+			public const int tag_window_insets_animation_callback = 2131231156;
 			
 			// aapt resource value: 0x7F0801B5
-			public const int test_checkbox_app_button_tint = 2131231157;
+			public const int test_checkbox_android_button_tint = 2131231157;
 			
 			// aapt resource value: 0x7F0801B6
-			public const int test_radiobutton_android_button_tint = 2131231158;
+			public const int test_checkbox_app_button_tint = 2131231158;
 			
 			// aapt resource value: 0x7F0801B7
-			public const int test_radiobutton_app_button_tint = 2131231159;
+			public const int test_radiobutton_android_button_tint = 2131231159;
 			
 			// aapt resource value: 0x7F0801B8
-			public const int text = 2131231160;
+			public const int test_radiobutton_app_button_tint = 2131231160;
 			
 			// aapt resource value: 0x7F0801B9
-			public const int text2 = 2131231161;
+			public const int text = 2131231161;
 			
 			// aapt resource value: 0x7F0801BA
-			public const int textEnd = 2131231162;
-			
-			// aapt resource value: 0x7F0801C2
-			public const int textinput_counter = 2131231170;
-			
-			// aapt resource value: 0x7F0801C3
-			public const int textinput_error = 2131231171;
-			
-			// aapt resource value: 0x7F0801C4
-			public const int textinput_helper_text = 2131231172;
-			
-			// aapt resource value: 0x7F0801C5
-			public const int textinput_placeholder = 2131231173;
-			
-			// aapt resource value: 0x7F0801C6
-			public const int textinput_prefix_text = 2131231174;
-			
-			// aapt resource value: 0x7F0801C7
-			public const int textinput_suffix_text = 2131231175;
+			public const int text2 = 2131231162;
 			
 			// aapt resource value: 0x7F0801BB
-			public const int textSpacerNoButtons = 2131231163;
+			public const int textEnd = 2131231163;
 			
-			// aapt resource value: 0x7F0801BC
-			public const int textSpacerNoTitle = 2131231164;
+			// aapt resource value: 0x7F0801C3
+			public const int textinput_counter = 2131231171;
 			
-			// aapt resource value: 0x7F0801BD
-			public const int textStart = 2131231165;
+			// aapt resource value: 0x7F0801C4
+			public const int textinput_error = 2131231172;
 			
-			// aapt resource value: 0x7F0801BE
-			public const int textTop = 2131231166;
+			// aapt resource value: 0x7F0801C5
+			public const int textinput_helper_text = 2131231173;
 			
-			// aapt resource value: 0x7F0801BF
-			public const int text_input_end_icon = 2131231167;
+			// aapt resource value: 0x7F0801C6
+			public const int textinput_placeholder = 2131231174;
 			
-			// aapt resource value: 0x7F0801C0
-			public const int text_input_error_icon = 2131231168;
-			
-			// aapt resource value: 0x7F0801C1
-			public const int text_input_start_icon = 2131231169;
+			// aapt resource value: 0x7F0801C7
+			public const int textinput_prefix_text = 2131231175;
 			
 			// aapt resource value: 0x7F0801C8
-			public const int time = 2131231176;
+			public const int textinput_suffix_text = 2131231176;
+			
+			// aapt resource value: 0x7F0801BC
+			public const int textSpacerNoButtons = 2131231164;
+			
+			// aapt resource value: 0x7F0801BD
+			public const int textSpacerNoTitle = 2131231165;
+			
+			// aapt resource value: 0x7F0801BE
+			public const int textStart = 2131231166;
+			
+			// aapt resource value: 0x7F0801BF
+			public const int textTop = 2131231167;
+			
+			// aapt resource value: 0x7F0801C0
+			public const int text_input_end_icon = 2131231168;
+			
+			// aapt resource value: 0x7F0801C1
+			public const int text_input_error_icon = 2131231169;
+			
+			// aapt resource value: 0x7F0801C2
+			public const int text_input_start_icon = 2131231170;
 			
 			// aapt resource value: 0x7F0801C9
-			public const int title = 2131231177;
+			public const int time = 2131231177;
 			
 			// aapt resource value: 0x7F0801CA
-			public const int titleDividerNoCustom = 2131231178;
+			public const int title = 2131231178;
 			
 			// aapt resource value: 0x7F0801CB
-			public const int title_template = 2131231179;
+			public const int titleDividerNoCustom = 2131231179;
 			
 			// aapt resource value: 0x7F0801CC
-			public const int toggle = 2131231180;
+			public const int title_template = 2131231180;
 			
 			// aapt resource value: 0x7F0801CD
-			public const int toolbar = 2131231181;
+			public const int toggle = 2131231181;
 			
 			// aapt resource value: 0x7F0801CE
-			public const int top = 2131231182;
+			public const int toolbar = 2131231182;
 			
 			// aapt resource value: 0x7F0801CF
-			public const int topPanel = 2131231183;
+			public const int top = 2131231183;
+			
+			// aapt resource value: 0x7F0801D0
+			public const int topPanel = 2131231184;
 			
 			// aapt resource value: 0x7F08000C
 			public const int TOP_END = 2131230732;
@@ -18110,98 +19837,98 @@ namespace HorseTrackingMobile.Droid
 			// aapt resource value: 0x7F08000D
 			public const int TOP_START = 2131230733;
 			
-			// aapt resource value: 0x7F0801D0
-			public const int touch_outside = 2131231184;
-			
 			// aapt resource value: 0x7F0801D1
-			public const int transitionToEnd = 2131231185;
+			public const int touch_outside = 2131231185;
 			
 			// aapt resource value: 0x7F0801D2
-			public const int transitionToStart = 2131231186;
+			public const int transitionToEnd = 2131231186;
 			
 			// aapt resource value: 0x7F0801D3
-			public const int transition_current_scene = 2131231187;
+			public const int transitionToStart = 2131231187;
 			
 			// aapt resource value: 0x7F0801D4
-			public const int transition_layout_save = 2131231188;
+			public const int transition_current_scene = 2131231188;
 			
 			// aapt resource value: 0x7F0801D5
-			public const int transition_position = 2131231189;
+			public const int transition_layout_save = 2131231189;
 			
 			// aapt resource value: 0x7F0801D6
-			public const int transition_scene_layoutid_cache = 2131231190;
+			public const int transition_position = 2131231190;
 			
 			// aapt resource value: 0x7F0801D7
-			public const int transition_transform = 2131231191;
+			public const int transition_scene_layoutid_cache = 2131231191;
 			
 			// aapt resource value: 0x7F0801D8
-			public const int triangle = 2131231192;
+			public const int transition_transform = 2131231192;
 			
 			// aapt resource value: 0x7F0801D9
-			public const int @unchecked = 2131231193;
+			public const int triangle = 2131231193;
 			
 			// aapt resource value: 0x7F0801DA
-			public const int uniform = 2131231194;
+			public const int @unchecked = 2131231194;
 			
 			// aapt resource value: 0x7F0801DB
-			public const int unlabeled = 2131231195;
+			public const int uniform = 2131231195;
 			
 			// aapt resource value: 0x7F0801DC
-			public const int up = 2131231196;
+			public const int unlabeled = 2131231196;
 			
 			// aapt resource value: 0x7F0801DD
-			public const int useLogo = 2131231197;
+			public const int up = 2131231197;
 			
 			// aapt resource value: 0x7F0801DE
-			public const int vertical_only = 2131231198;
+			public const int useLogo = 2131231198;
 			
 			// aapt resource value: 0x7F0801DF
-			public const int view_offset_helper = 2131231199;
+			public const int vertical_only = 2131231199;
 			
 			// aapt resource value: 0x7F0801E0
-			public const int view_transition = 2131231200;
+			public const int view_offset_helper = 2131231200;
 			
 			// aapt resource value: 0x7F0801E1
-			public const int view_tree_lifecycle_owner = 2131231201;
+			public const int view_transition = 2131231201;
 			
 			// aapt resource value: 0x7F0801E2
-			public const int view_tree_saved_state_registry_owner = 2131231202;
+			public const int view_tree_lifecycle_owner = 2131231202;
 			
 			// aapt resource value: 0x7F0801E3
-			public const int view_tree_view_model_store_owner = 2131231203;
+			public const int view_tree_saved_state_registry_owner = 2131231203;
 			
 			// aapt resource value: 0x7F0801E4
-			public const int visible = 2131231204;
+			public const int view_tree_view_model_store_owner = 2131231204;
 			
 			// aapt resource value: 0x7F0801E5
-			public const int visible_removing_fragment_view_tag = 2131231205;
+			public const int visible = 2131231205;
 			
 			// aapt resource value: 0x7F0801E6
-			public const int west = 2131231206;
-			
-			// aapt resource value: 0x7F0801E8
-			public const int withinBounds = 2131231208;
+			public const int visible_removing_fragment_view_tag = 2131231206;
 			
 			// aapt resource value: 0x7F0801E7
-			public const int withText = 2131231207;
+			public const int west = 2131231207;
 			
 			// aapt resource value: 0x7F0801E9
-			public const int wrap = 2131231209;
+			public const int withinBounds = 2131231209;
+			
+			// aapt resource value: 0x7F0801E8
+			public const int withText = 2131231208;
 			
 			// aapt resource value: 0x7F0801EA
-			public const int wrap_content = 2131231210;
+			public const int wrap = 2131231210;
 			
 			// aapt resource value: 0x7F0801EB
-			public const int wrap_content_constrained = 2131231211;
+			public const int wrap_content = 2131231211;
 			
 			// aapt resource value: 0x7F0801EC
-			public const int x_left = 2131231212;
+			public const int wrap_content_constrained = 2131231212;
 			
 			// aapt resource value: 0x7F0801ED
-			public const int x_right = 2131231213;
+			public const int x_left = 2131231213;
 			
 			// aapt resource value: 0x7F0801EE
-			public const int zero_corner_chip = 2131231214;
+			public const int x_right = 2131231214;
+			
+			// aapt resource value: 0x7F0801EF
+			public const int zero_corner_chip = 2131231215;
 			
 			static Id()
 			{
@@ -18808,6 +20535,12 @@ namespace HorseTrackingMobile.Droid
 			
 			// aapt resource value: 0x7F0B0094
 			public const int Toolbar = 2131427476;
+			
+			// aapt resource value: 0x7F0B0095
+			public const int zxingscanneractivitylayout = 2131427477;
+			
+			// aapt resource value: 0x7F0B0096
+			public const int zxingscannerfragmentlayout = 2131427478;
 			
 			static Layout()
 			{

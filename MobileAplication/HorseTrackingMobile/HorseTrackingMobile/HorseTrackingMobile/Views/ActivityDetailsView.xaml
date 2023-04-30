@@ -4,34 +4,63 @@
              xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
              x:DataType="viewmodels:ActivityDetailsViewModel"
              x:Class="HorseTrackingMobile.Views.ActivityDetailsView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutItemIsVisible="False"
              Shell.BackgroundColor="{Binding Type.Color}"
              Shell.ForegroundColor="{StaticResource Background}"
-             Shell.NavBarHasShadow="False">
+             Shell.NavBarHasShadow="False"
+             Shell.FlyoutBehavior="Disabled">
     <ContentPage.Content>
         <Grid RowDefinitions="*,3*">
             <Rectangle BackgroundColor="{Binding Type.Color}"/>
+            <Image Source="{Binding Type.Image}" HorizontalOptions="End" VerticalOptions="Center" Margin="10" WidthRequest="200"/>
+
+            <Label Text="{Binding Type.Name}" 
+                   TextColor="DimGray"
+                   FontSize="60" 
+                   VerticalTextAlignment="End"
+                   Margin="18"/>
             <Label Text="{Binding Type.Name}" 
                    TextColor="{StaticResource Background}" 
                    FontSize="60" 
                    VerticalTextAlignment="End"
                    Margin="20"/>
+
             <Grid Grid.Row="1"
                   Margin="0,30,0,0"
-                  ColumnDefinitions="*,*"
-                  RowDefinitions="*,*,*,*,*,3*">
-                <Label Grid.Row="0" Grid.Column="0" Text="Data:" Style="{StaticResource CenterLabel}"/>
-                <DatePicker Grid.Row="0" Grid.Column="1" Date="{Binding Date}" Style="{StaticResource CenterLabel}" VerticalOptions="Start"/>
-                <Label Grid.Row="1" Grid.Column="0" Text="Satysfakcja: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Satisfaction}" Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="2" Grid.Column="0" Text="Intensywność: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Intensivity}" Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="3" Grid.Column="0" Text="Czas trwania: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="3" Grid.Column="1" Text="{Binding Time}" Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="4" Grid.Column="0" Text="Trener: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Trainer}" Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="5" Grid.Column="0" Text="Opis: " Style="{StaticResource CenterLabel}"/>
-                <Label Grid.Row="5" Grid.Column="1" Text="{Binding Description}" Style="{StaticResource CenterLabel}"/>
+                  ColumnDefinitions="30,*,30">
 
+                <StackLayout Grid.Column="1" Spacing="15">
+
+                    <DatePicker Date="{Binding Date}" IsEnabled="False" 
+                                    Format="dd.MM.yyyy" MinimumWidthRequest="100"
+                                    FontSize="25" HorizontalOptions="Center"/>
+
+                    <Frame>
+                        <Grid ColumnDefinitions="2*,*" RowDefinitions="*,*">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Satysfakcja: "          FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Satisfaction}" FontSize="18"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Intensywność: "         FontSize="18"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Intensivity}"  FontSize="18"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame>
+                        <Grid ColumnDefinitions="2*,*" RowDefinitions="*,*">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Czas trwania: "    FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Time}"    FontSize="18"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Trener: "          FontSize="18"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Trainer}" FontSize="18"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <Label Text="Opis: " FontSize="17"/>
+                            <Label Text="{Binding Description}"  />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
             </Grid>
 
         </Grid>

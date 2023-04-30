@@ -16,8 +16,7 @@ namespace HorseTrackingMobile.Database
                 new User()
                 {
                     Id= 1,
-                    Login="Karo",
-                    Password="123"
+                    Login="Karo"
                 }
             };
         }
@@ -34,8 +33,7 @@ namespace HorseTrackingMobile.Database
                     User=new User()
                     {
                         Id= 1,
-                        Login="Karo",
-                        Password="123"
+                        Login="Karo"
                     },
                     Status=new HorseStatus()
                     {
@@ -51,8 +49,7 @@ namespace HorseTrackingMobile.Database
                     User=new User()
                     {
                         Id= 1,
-                        Login="Karo",
-                        Password="123"
+                        Login="Karo"
                     },
                     Status=new HorseStatus()
                     {

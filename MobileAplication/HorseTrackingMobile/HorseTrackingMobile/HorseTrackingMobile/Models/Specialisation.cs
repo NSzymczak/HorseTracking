@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HorseTrackingMobile.Models
 {
-    public class UserType
+    public class Specialisation
     {
-        public int ID { get; set; }
-        public string Type { get; set; }
+        public int SpecialisationID { get; set; }
+        public string Name { get; set;}
     }
 }

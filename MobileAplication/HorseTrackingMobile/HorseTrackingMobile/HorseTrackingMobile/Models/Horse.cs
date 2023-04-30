@@ -20,6 +20,13 @@ namespace HorseTrackingMobile.Models
         public string Passport { get; set; }
         public Image Photo { get; set; }
         public HorseStatus Status { get; set; }
+        public NutritionPlan Plan { get; set; }
+
+        public List<Activity> ListOfAllActivity = new List<Activity>();
+
+        public List<Visit> ListOfVisit = new List<Visit>();
+
         public static Horse CurrentHorse { get; set; }
+        public static List<Horse> HorseList { get; set; }
     }
 }

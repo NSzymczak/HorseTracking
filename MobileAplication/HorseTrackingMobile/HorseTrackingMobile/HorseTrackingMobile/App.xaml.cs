@@ -1,4 +1,5 @@
-﻿using HorseTrackingMobile.Services;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Views;
 using System;
 using Xamarin.Forms;
@@ -12,9 +13,7 @@ namespace HorseTrackingMobile
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
-            DependencyService.Register<ActivityDataManagement>();
+            DataBaseConnection.Connect();
             MainPage = new LoginView();
         }
 

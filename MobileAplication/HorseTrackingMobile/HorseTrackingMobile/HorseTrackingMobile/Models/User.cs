@@ -9,7 +9,8 @@ namespace HorseTrackingMobile.Models
         public int Id { get; set; }
         public UserType Type { get; set; }
         public string Login { get; set; }
-        public string Password { get; set; }
+        public string Hash { get; set; }
+        public string Salt { get; set; }
         public DateTime CreatedDate { get; set; }
         public PeopleDetails Details { get; set; }
 
