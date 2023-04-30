@@ -14,10 +14,11 @@ namespace HorseTrackingMobile.Views
     public partial class VisitView : ContentPage
     {
 
-        VisitViewModel viewModel = new VisitViewModel();
+        VisitViewModel viewModel;
         public VisitView()
         {
             InitializeComponent();
+            viewModel = Startup.ServiceProvider.GetService<VisitViewModel>();
             BindingContext = viewModel;
             Appearing += (s, e) => 
             { 

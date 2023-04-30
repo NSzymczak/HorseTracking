@@ -1,4 +1,4 @@
-﻿using HorseTrackingMobile.Database;
+﻿using HorseTrackingMobile.Database.ActivityServices;
 using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Views;
@@ -21,8 +21,11 @@ namespace HorseTrackingMobile.ViewModels
         public ICommand ChangeHorse { get; set; }
         public ICommand ActivityTapped { get; set; }
 
-        public ActivityViewModel()
+        private readonly IActivityService _activityServices;
+
+        public ActivityViewModel( IActivityService activityServices)
         {
+            _activityServices = activityServices;
             SetMainDate();
             PrevCommand = new Command(() =>
             {
@@ -107,7 +110,7 @@ namespace HorseTrackingMobile.ViewModels
                 return;
             if (ListServices.IsAny(CurrentHorse.ListOfAllActivity))
             {
-                CurrentHorse.ListOfAllActivity = DataBaseConnection.GetActivity(CurrentHorse.ID);
+                CurrentHorse.ListOfAllActivity = _activityServices.GetActivities(CurrentHorse.ID);
             }
             var activityForWeek = CurrentHorse.ListOfAllActivity.Where(x => x.Date >= MainDate && x.Date < MainDate.AddDays(7)).ToList();
 

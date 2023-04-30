@@ -1,9 +1,6 @@
 ﻿using HorseTrackingMobile.Database;
-using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace HorseTrackingMobile
 {
@@ -13,6 +10,7 @@ namespace HorseTrackingMobile
         public App()
         {
             InitializeComponent();
+            Startup.Init();
             DataBaseConnection.Connect();
             MainPage = new LoginView();
         }

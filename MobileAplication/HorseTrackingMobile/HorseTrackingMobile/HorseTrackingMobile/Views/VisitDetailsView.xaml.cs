@@ -16,7 +16,7 @@ namespace HorseTrackingMobile.ViewModels
         public VisitDetailsView()
         {
             InitializeComponent();
-            viewModel= new VisitDetailsViewModel();
+            viewModel= Startup.ServiceProvider.GetService<VisitDetailsViewModel>();
             BindingContext = viewModel;
         }
     }

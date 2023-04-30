@@ -8,17 +8,15 @@ using HorseTrackingMobile.Models;
 using System.Linq;
 using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Database;
+using System.Windows.Input;
+using HorseTrackingMobile.Database.UserServices;
 
 namespace HorseTrackingMobile.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
 
-        public LoginViewModel()
-        {
-            LoginCommand = new Command(LogIn);
-        }
+        List<User> userList = new List<User>();
 
         private string readedLogin;
         private string readedPassword;
@@ -34,48 +32,42 @@ namespace HorseTrackingMobile.ViewModels
             get => readedPassword;
             set => SetProperty(ref readedPassword, value);
         }
+        public ICommand LoginCommand { get; }
 
-        List<User> userList = new List<User>();
+        IUserService _userService;
 
+        public LoginViewModel(IUserService userService)
+        {
+            _userService = userService;
+
+            LoginCommand = new Command(() =>
+            {
+                if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
+                    return;
+
+                var user = _userService.GetUser(ReadedLogin, ReadedPassword);
+                if (ListServices.IsAny(user))
+                {
+                    IncorrectData();
+                    return;
+                }
+                User.CurrentUser = user.First();
+
+                GoToTheApp();
+            });
+        }
         public void CheckLogin()
         {
-            userList = DataBaseConnection.GetAllUsers();
             if (Preferences.Get(PreferencesKeys.IsLogged, false))
             {
-                User.CurrentUser = DataBaseConnection.GetLoggedUser();
+                User.CurrentUser = _userService.GetLoggedUser();
                 GoToTheApp();
-            }
-            else
-            {
             }
         }
 
         public void IncorrectData()
         {
             //IncorrectDataLabel.IsVisible = true;
-        }
-
-        private void LogIn()
-        {
-            if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
-                return;
-
-            var user = userList.Where(x => x.Login == ReadedLogin).ToList();
-            if (ListServices.IsAny(user))
-            {
-                IncorrectData();
-                return;
-            }
-
-            var correctUser = user.Where(x => x.Hash == ReadedPassword).ToList();
-            if (ListServices.IsAny(correctUser))
-            {
-                IncorrectData();
-                return;
-            }
-            User.CurrentUser = correctUser.First();
-
-            GoToTheApp();
         }
 
         public void GoToTheApp()

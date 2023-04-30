@@ -31,7 +31,7 @@ namespace HorseTrackingMobile.Database
             }
             catch (Exception ex)
             {
-                //App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
+                App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
             }
         }
 
@@ -64,13 +64,11 @@ namespace HorseTrackingMobile.Database
             }
             return userList;
         }
-
         public static User GetLoggedUser()
         {
             var id = Preferences.Get(PreferencesKeys.UserID, 0);
             return GetAllUsers().Where(x => x.Id == id).FirstOrDefault();
         }
-
         public static List<Horse> GetHorses()
         {
             string query = $"SELECT horseID,name,birthday FROM Horse WHERE UserID='{User.CurrentUser.Id}'";
@@ -91,7 +89,6 @@ namespace HorseTrackingMobile.Database
             Horse.HorseList = horseList;
             return horseList;
         }
-
         public static List<Activity> GetActivity(int id)
         {
             string query = $"SELECT * FROM Activity WHERE HorseID='{id}'";
@@ -114,7 +111,6 @@ namespace HorseTrackingMobile.Database
             }
             return activityList;
         }
-
         public static List<Visit> GetVisits(int id)
         {
             string query = $"SELECT * FROM Visit WHERE HorseID='{id}'";
@@ -135,7 +131,6 @@ namespace HorseTrackingMobile.Database
             }
             return visitList;
         }
-
         private static Doctor GetDoctor(int id)
         {
             string query = $"SELECT * FROM Doctor WHERE doctorID='{id}'";
@@ -151,7 +146,6 @@ namespace HorseTrackingMobile.Database
             }
             return doctor;
         }
-
         private static PeopleDetails GetDetails(int id)
         {
             string query = $"SELECT * FROM PeopleDetails WHERE detailsID='{id}'";
@@ -174,7 +168,6 @@ namespace HorseTrackingMobile.Database
             }
             return null;
         }
-
         public static Specialisation GetSpecialisation(int id)
         {
             string query = $"SELECT * FROM DoctorSpecialisation WHERE specialisationID='{id}'";
@@ -189,7 +182,6 @@ namespace HorseTrackingMobile.Database
             }
             return d;
         }
-
         public static void GetUnitOfMeasure()
         {
             string query = $"SELECT * FROM UnitOfMeasure";
@@ -202,7 +194,6 @@ namespace HorseTrackingMobile.Database
                 Dictionaries.UnitOfMeasure.Add(Convert.ToInt32(reader["unitID"]), reader["unitName"].ToString());
             }
         }
-
         public static void GetMealsName()
         {
             string query = $"SELECT * FROM MealName";
@@ -215,7 +206,6 @@ namespace HorseTrackingMobile.Database
                 Dictionaries.MealsName.Add(Convert.ToInt32(reader["mealNameID"]), reader["mealName"].ToString());
             }
         }
-
         public static Forage GetForage(int forageID)
         {
             string query = $"SELECT * FROM Forage WHERE forageID={forageID}";
@@ -236,7 +226,6 @@ namespace HorseTrackingMobile.Database
             }
             return null;
         }
-
         public static NutritionPlan GetNutritionPlansForHorse(int horseID)
         {
             string query = $"SELECT * FROM NutritionPlan AS n inner join Eat AS e ON  n.nutritionPlanID = e.nutritionPlanID WHERE horseID={horseID}";
@@ -258,7 +247,6 @@ namespace HorseTrackingMobile.Database
             }
             return null;
         }
-
         public static List<Meal> GetMeals(int id)
         {
             string query = $"SELECT * FROM Meal WHERE nutritionID={id}";
@@ -278,7 +266,6 @@ namespace HorseTrackingMobile.Database
             }
             return listOfMeals;
         }
-
         public static List<Feeding> GetFeeding(int nutritionId,int mealId)
         {
             string query = $"SELECT * FROM Feeding Where mealID={mealId}";
@@ -301,6 +288,5 @@ namespace HorseTrackingMobile.Database
             }
             return listOfFeeding;
         }
-
     }
 }

@@ -17,7 +17,7 @@ namespace HorseTrackingMobile.Views
         public AddActivityView()
         {
             InitializeComponent();
-            viewmodel = new ActivityDetailsViewModel();
+            viewmodel = Startup.ServiceProvider.GetService<ActivityDetailsViewModel>();
             BindingContext = viewmodel;
         }
 
