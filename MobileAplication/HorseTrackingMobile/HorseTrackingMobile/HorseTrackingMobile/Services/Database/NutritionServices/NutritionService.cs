@@ -1,13 +1,13 @@
-﻿using HorseTrackingMobile.Models;
-using HorseTrackingMobile.Services;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace HorseTrackingMobile.Database.NutritionServices
+namespace HorseTrackingMobile.Services.Database.NutritionServices
 {
-    public class NutritionService : BaseService, INutritionService
+    public class NutritionService : BaseDataService, INutritionService
     {
         public NutritionService(IConnectionService connectionServices) : base(connectionServices) { }
 

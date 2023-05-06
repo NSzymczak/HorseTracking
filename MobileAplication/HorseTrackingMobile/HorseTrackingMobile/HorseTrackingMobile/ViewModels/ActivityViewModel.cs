@@ -1,6 +1,6 @@
-﻿using HorseTrackingMobile.Database.ActivityServices;
-using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
+using HorseTrackingMobile.Services.Database.ActivityServices;
 using HorseTrackingMobile.Views;
 using System;
 using System.Collections.ObjectModel;
@@ -22,10 +22,14 @@ namespace HorseTrackingMobile.ViewModels
         public ICommand ActivityTapped { get; set; }
 
         private readonly IActivityService _activityServices;
-
-        public ActivityViewModel( IActivityService activityServices)
+        private readonly IAppShellRoutingService _appShellRoutingService;
+        private readonly IAppState _appState;
+        public ActivityViewModel( IActivityService activityServices, IAppShellRoutingService appShellRoutingService, 
+                                  IAppState appState)
         {
             _activityServices = activityServices;
+            _appShellRoutingService = appShellRoutingService;
+            _appState = appState;
             SetMainDate();
             PrevCommand = new Command(() =>
             {
@@ -42,18 +46,16 @@ namespace HorseTrackingMobile.ViewModels
                 Horse.CurrentHorse = CurrentHorse;
                 LoadActivityUI();
             });
-            ActivityTapped = new Command<Activity>(async(activity) =>
+            ActivityTapped = new Command<Activity>((activity) =>
             {
                 if (activity == null)
                     return;
-
-                await Shell.Current.GoToAsync($"{nameof(ActivityDetailsView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
+                _appShellRoutingService.GoToActivityDetails(activity);
             });
-            AddCommand = new Command(async() =>
+            AddCommand = new Command(() =>
             {
-                await Shell.Current.GoToAsync(nameof(AddActivityView));
+                _appShellRoutingService.GoToAddActivity();
             });
-
         }
 
         public void Load()

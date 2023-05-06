@@ -1,4 +1,6 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services.Database;
+using HorseTrackingMobile.Services.Database.UserServices;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,7 +9,7 @@ using Xamarin.Essentials;
 
 namespace HorseTrackingMobile.Database.UserServices
 {
-    public class UserService : BaseService, IUserService
+    public class UserService : BaseDataService, IUserService
     {
         public UserService(IConnectionService connectionServices) : base(connectionServices) { }
 

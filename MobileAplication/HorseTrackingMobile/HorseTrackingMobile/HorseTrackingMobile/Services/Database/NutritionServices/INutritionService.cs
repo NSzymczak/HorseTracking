@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HorseTrackingMobile.Database.NutritionServices
+namespace HorseTrackingMobile.Services.Database.NutritionServices
 {
     public interface INutritionService
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace HorseTrackingMobile.Database
+namespace HorseTrackingMobile.Services.Database
 {
     public interface IConnectionService
     {

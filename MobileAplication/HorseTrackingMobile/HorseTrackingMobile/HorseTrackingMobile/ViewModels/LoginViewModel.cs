@@ -9,14 +9,13 @@ using System.Linq;
 using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Database;
 using System.Windows.Input;
-using HorseTrackingMobile.Database.UserServices;
+using HorseTrackingMobile.Services.Database.UserServices;
+using HorseTrackingMobile.Services.Database.HorseServices;
 
 namespace HorseTrackingMobile.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-
-        List<User> userList = new List<User>();
 
         private string readedLogin;
         private string readedPassword;
@@ -34,11 +33,14 @@ namespace HorseTrackingMobile.ViewModels
         }
         public ICommand LoginCommand { get; }
 
-        IUserService _userService;
-
-        public LoginViewModel(IUserService userService)
+        private readonly IUserService _userService;
+        private readonly IAppState _appState;
+        private readonly IHorseService _horseService;
+        public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService)
         {
             _userService = userService;
+            _appState = appState;
+            _horseService = horseService;
 
             LoginCommand = new Command(() =>
             {
@@ -51,18 +53,18 @@ namespace HorseTrackingMobile.ViewModels
                     IncorrectData();
                     return;
                 }
+                _appState.CurrentUser = user.First();
                 User.CurrentUser = user.First();
-
                 GoToTheApp();
             });
         }
         public void CheckLogin()
         {
-            if (Preferences.Get(PreferencesKeys.IsLogged, false))
-            {
-                User.CurrentUser = _userService.GetLoggedUser();
-                GoToTheApp();
-            }
+            //if (Preferences.Get(PreferencesKeys.IsLogged, false))
+            //{
+            //    User.CurrentUser = _userService.GetLoggedUser();
+            //    GoToTheApp();
+            //}
         }
 
         public void IncorrectData()
@@ -74,6 +76,14 @@ namespace HorseTrackingMobile.ViewModels
         {
             Preferences.Set(PreferencesKeys.IsLogged, true);
             Preferences.Set(PreferencesKeys.UserID, User.CurrentUser.Id);
+            var horseList = _horseService.GetHorses();
+
+            if (ListServices.IsAny(horseList))
+            {
+                return;
+            }
+            _appState.HorseList = horseList;
+            _appState.CurrentHorse = horseList.First();
             App.Current.MainPage = new AppShell();
         }
     }

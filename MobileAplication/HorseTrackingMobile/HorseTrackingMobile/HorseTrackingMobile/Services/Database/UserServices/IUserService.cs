@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HorseTrackingMobile.Database.UserServices
+namespace HorseTrackingMobile.Services.Database.UserServices
 {
     public interface IUserService
     {

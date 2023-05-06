@@ -1,5 +1,5 @@
-﻿using HorseTrackingMobile.Database.VisitServices;
-using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services.Database.VisitServices;
 using HorseTrackingMobile.Views;
 using System;
 using System.Collections.Generic;

@@ -9,14 +9,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Xamarin.Essentials;
 
-namespace HorseTrackingMobile.Database
+namespace HorseTrackingMobile.Services.Database
 {
     public class DataBaseConnection
     {
         private static string dbName = "HorseTracking";
-        private static string serverName = "tcp:192.168.88.249,1433"; //Głuchołazy
+        //private static string serverName = "tcp:192.168.88.249,1433"; //Głuchołazy
         //private static string serverName = "tcp:192.168.1.19,1433"; //Opole
-        //private static string serverName = "tcp:10.1.0.230,1433"; //Studia
+        private static string serverName = "tcp:192.168.10.118,1433"; //Kondradów
         private static string serverUserName = "Natka";
         private static string serverPassword = "123456";
         private static string connectionString = $"Data Source={serverName}; Initial Catalog={dbName}; User id={serverUserName}; Password={serverPassword}; Connection Timeout = 10; MultipleActiveResultSets=true";
@@ -31,7 +31,7 @@ namespace HorseTrackingMobile.Database
             }
             catch (Exception ex)
             {
-                App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
+                Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Błąd", ex.Message, "OK");
             }
         }
 
@@ -71,6 +71,7 @@ namespace HorseTrackingMobile.Database
         }
         public static List<Horse> GetHorses()
         {
+            Connect();
             string query = $"SELECT horseID,name,birthday FROM Horse WHERE UserID='{User.CurrentUser.Id}'";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -241,7 +242,7 @@ namespace HorseTrackingMobile.Database
                     Title = reader["title"].ToString(),
                     Description = reader["description"].ToString(),
                     Icon = reader["icon"].ToString(),
-                    Color= reader["color"].ToString(),
+                    Color = reader["color"].ToString(),
                     Meals = GetMeals(Convert.ToInt32(reader["nutritionPlanID"]))
                 };
             }
@@ -262,11 +263,11 @@ namespace HorseTrackingMobile.Database
                     Id = Convert.ToInt32(reader["mealID"]),
                     MealName = Dictionaries.MealsName[Convert.ToInt32(reader["mealNameID"])],
                     Feedings = GetFeeding(id, Convert.ToInt32(reader["mealID"])),
-                }) ;
+                });
             }
             return listOfMeals;
         }
-        public static List<Feeding> GetFeeding(int nutritionId,int mealId)
+        public static List<Feeding> GetFeeding(int nutritionId, int mealId)
         {
             string query = $"SELECT * FROM Feeding Where mealID={mealId}";
 

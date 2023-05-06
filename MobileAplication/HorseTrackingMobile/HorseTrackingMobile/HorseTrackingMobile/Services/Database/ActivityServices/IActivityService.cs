@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HorseTrackingMobile.Database.ActivityServices
+namespace HorseTrackingMobile.Services.Database.ActivityServices
 {
     public interface IActivityService
     {

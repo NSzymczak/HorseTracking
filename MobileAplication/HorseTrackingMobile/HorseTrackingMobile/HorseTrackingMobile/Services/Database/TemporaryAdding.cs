@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Numerics;
 using System.Text;
 
-namespace HorseTrackingMobile.Database
+namespace HorseTrackingMobile.Services.Database
 {
     public class TemporaryAdding
     {
@@ -139,37 +139,37 @@ namespace HorseTrackingMobile.Database
                     ID= 1,
                     Date= DateTime.Now.AddDays(-4),
                     Type=ActivityType.Grass,
-                },                
+                },
                 new Activity()
                 {
                     ID= 2,
                     Date= DateTime.Now.AddDays(-3),
                     Type=ActivityType.Grass,
-                },                
+                },
                 new Activity()
                 {
                     ID= 3,
                     Date= DateTime.Now.AddDays(-2),
                     Type=ActivityType.Grass,
-                },                
+                },
                 new Activity()
                 {
                     ID= 4,
                     Date= DateTime.Now.AddDays(-1),
                     Type=ActivityType.Grass,
-                },                
+                },
                 new Activity()
                 {
                     ID= 5,
                     Date= DateTime.Now.AddDays(0),
                     Type=ActivityType.Grass,
-                },               
+                },
                 new Activity()
                 {
                     ID= 6,
                     Date= DateTime.Now.AddDays(0),
                     Type=ActivityType.Ride,
-                },                
+                },
                 new Activity()
                 {
                     ID= 7,

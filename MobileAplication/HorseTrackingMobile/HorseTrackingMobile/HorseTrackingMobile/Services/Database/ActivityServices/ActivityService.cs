@@ -1,19 +1,24 @@
-﻿using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace HorseTrackingMobile.Database.ActivityServices
+namespace HorseTrackingMobile.Services.Database.ActivityServices
 {
-    public class ActivityService : BaseService, IActivityService
+    public class ActivityService : IActivityService
     {
-        public ActivityService(IConnectionService connectionServices) : base(connectionServices) { }
+        private readonly IConnectionService _connectionService;
+        public ActivityService(IConnectionService connectionServices) 
+        {
+            _connectionService= connectionServices;
+        }
 
         public List<Activity> GetActivities(int horseID)
         {
             var query = $"SELECT * FROM Activity WHERE HorseID='{horseID}'";
 
-            var cmd = new SqlCommand(query, sqlConnection);
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
             var reader = cmd.ExecuteReader();
 
             var activityList = new List<Activity>();

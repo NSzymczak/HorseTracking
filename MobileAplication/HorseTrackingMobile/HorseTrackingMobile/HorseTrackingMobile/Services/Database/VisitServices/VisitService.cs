@@ -1,11 +1,12 @@
-﻿using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace HorseTrackingMobile.Database.VisitServices
+namespace HorseTrackingMobile.Services.Database.VisitServices
 {
-    public class VisitService : BaseService, IVisitService
+    public class VisitService : BaseDataService, IVisitService
     {
         public VisitService(IConnectionService connectionServices) : base(connectionServices) { }
 

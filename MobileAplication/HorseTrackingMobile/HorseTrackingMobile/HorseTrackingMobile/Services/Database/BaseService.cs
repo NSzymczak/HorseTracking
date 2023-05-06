@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using HorseTrackingMobile.Services.Database;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace HorseTrackingMobile.Database
 {
-    public class BaseService
+    public class BaseDataService
     {
         private IConnectionService _connectionService;
         protected static SqlConnection sqlConnection;
 
-        public BaseService(IConnectionService connectionServices)
+        public BaseDataService(IConnectionService connectionServices)
         {
             _connectionService = connectionServices;
             sqlConnection = _connectionService.GetConnection();

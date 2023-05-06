@@ -1,5 +1,6 @@
-﻿using HorseTrackingMobile.Database;
-using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services.Database;
+using HorseTrackingMobile.Services.Database.HorseServices;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
