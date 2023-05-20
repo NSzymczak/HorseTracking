@@ -8,5 +8,6 @@ namespace HorseTrackingMobile.Services.Database.ActivityServices
     public interface IActivityService
     {
         List<Activity> GetActivities(int horseID);
+        void AddActivity(Activity activity);
     }
 }

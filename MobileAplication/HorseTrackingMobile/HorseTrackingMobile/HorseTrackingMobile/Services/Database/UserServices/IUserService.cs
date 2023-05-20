@@ -7,8 +7,9 @@ namespace HorseTrackingMobile.Services.Database.UserServices
 {
     public interface IUserService
     {
-        User GetLoggedUser();
+        User GetLoggedUser(int id);
         List<User> GetAllUsers();
-        List<User> GetUser(string login, string password);
+        User GetUser(string login, string password);
+        List<User> GetTrainers();
     }
 }

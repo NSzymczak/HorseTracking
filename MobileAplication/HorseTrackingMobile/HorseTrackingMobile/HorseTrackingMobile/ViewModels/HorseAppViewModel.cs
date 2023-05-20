@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Services.Database;
 using HorseTrackingMobile.Services.Database.HorseServices;
 using System;
@@ -15,15 +16,10 @@ namespace HorseTrackingMobile.ViewModels
         public ICommand SwitchHorseCommand { get; set; }
         public ObservableCollection<Horse> Horses { get; set; }
 
-        public HorseAppViewModel() 
+        public HorseAppViewModel(IAppState appState) 
         {
-            Horses = new ObservableCollection<Horse>(DataBaseConnection.GetHorses());
-            if(Horse.CurrentHorse == null)
-            {
-                Horse.CurrentHorse = Horses.First();
-            }
-            CurrentHorse = Horse.CurrentHorse;
-            CurrentUser = User.CurrentUser;
+            Horses = new ObservableCollection<Horse>(appState.HorseList);
+            CurrentHorse = appState.CurrentHorse;
         }
 
         private Horse currentHorse;
@@ -39,17 +35,17 @@ namespace HorseTrackingMobile.ViewModels
             }
         }
         private User currentUser;
-        public User CurrentUser
-        {
-            get { return currentUser; }
-            set
-            {
-                if (currentUser != value)
-                {
-                    currentUser = value;
-                    OnPropertyChanged(nameof(CurrentUser));
-                }
-            }
-        }
+        //public User CurrentUser
+        //{
+        //    get { return currentUser; }
+        //    set
+        //    {
+        //        if (currentUser != value)
+        //        {
+        //            currentUser = value;
+        //            OnPropertyChanged(nameof(CurrentUser));
+        //        }
+        //    }
+        //}
     }
 }

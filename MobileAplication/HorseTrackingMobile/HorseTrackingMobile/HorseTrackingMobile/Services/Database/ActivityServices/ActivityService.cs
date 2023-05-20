@@ -1,5 +1,6 @@
 ﻿using HorseTrackingMobile.Database;
 using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Views;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -36,6 +37,32 @@ namespace HorseTrackingMobile.Services.Database.ActivityServices
                 });
             }
             return activityList;
+        }
+
+        public void AddActivity(Activity activity)
+        {
+            var query = $"INSERT INTO Activity " +
+                        $"(activityID,userID,activityType,trainerID,horseID,date,description,time,intensivity,satisfaction)" +
+                        $"VALUES({activity.ID},{activity.User?.Id},{activity.Type.ID},{activity.Trainer?.Id},{activity.Horse?.ID}," +
+                        $"'{activity.Date.Year}.{activity.Date.Month}.{activity.Date.Day}','{activity.Description}',{activity.Time}," +
+                        $"{activity.Intensivity},{activity.Satisfaction})";
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
+            cmd.ExecuteReader();
+        }
+
+        public void EditActivity(int ID, Activity activity)
+        {
+            var quer = $"UPDATE Activity " +
+                $"SET userID = {activity.User.Id}, activityType = {activity.Type.ID}, trainerID = {activity.Trainer.Id}," +
+                $"horseID = {activity.Horse.ID}, date='{activity.Date.Year}.{activity.Date.Month}.{activity.Date.Day}', " +
+                $"description = '{activity.Description}', time = {activity.Time}, " +
+                $"intensivity = {activity.Intensivity}, satisfaction = {activity.Satisfaction}" +
+                $"WHERE activityID = {ID}";
+        }
+
+        public void DeleteActivity(int ID) 
+        { 
+        
         }
     }
 }

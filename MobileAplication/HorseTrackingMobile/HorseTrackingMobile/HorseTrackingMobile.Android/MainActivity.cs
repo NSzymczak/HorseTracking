@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android.Graphics;
 
 namespace HorseTrackingMobile.Droid
 {
@@ -17,6 +18,8 @@ namespace HorseTrackingMobile.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            Window.SetStatusBarColor(Color.ParseColor("#95B17F"));
+            Window.SetNavigationBarColor(Color.ParseColor("#EDEDED"));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

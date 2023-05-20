@@ -7,13 +7,16 @@
 
     <Shell.Resources>
         <ResourceDictionary>
+            <Style TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Background}" />
+            </Style>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource Background}" />      <!--Naglowek-->
                 <Setter Property="Shell.ForegroundColor" Value="{StaticResource MainAppColor}" />     <!--HamburgerColor-->
                 <Setter Property="Shell.TitleColor" Value="{StaticResource Background}" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource Background}"/>
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource TabbarColor}" />
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource TabbarIconColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#95B17F"/>
             </Style>
         </ResourceDictionary>
     </Shell.Resources>

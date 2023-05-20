@@ -11,9 +11,9 @@ namespace HorseTrackingMobile.Services.Database.HorseServices
     {
         public HorseService(IConnectionService connectionServices) : base(connectionServices) { }
 
-        public List<Horse> GetHorses()
+        public List<Horse> GetHorses(User user)
         {
-            string query = $"SELECT horseID,name,birthday FROM Horse WHERE UserID='{User.CurrentUser.Id}'";
+            string query = $"SELECT horseID,name,birthday FROM Horse WHERE UserID='{user.Id}'";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -28,7 +28,6 @@ namespace HorseTrackingMobile.Services.Database.HorseServices
                     Birthday = (DateTime)reader["birthday"],
                 });
             }
-            Horse.HorseList = horseList;
             return horseList;
         }
     }

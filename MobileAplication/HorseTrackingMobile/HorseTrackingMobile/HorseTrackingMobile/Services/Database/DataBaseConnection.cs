@@ -14,9 +14,9 @@ namespace HorseTrackingMobile.Services.Database
     public class DataBaseConnection
     {
         private static string dbName = "HorseTracking";
-        //private static string serverName = "tcp:192.168.88.249,1433"; //Głuchołazy
+        private static string serverName = "tcp:192.168.88.244,1433"; //Głuchołazy
         //private static string serverName = "tcp:192.168.1.19,1433"; //Opole
-        private static string serverName = "tcp:192.168.10.118,1433"; //Kondradów
+        //private static string serverName = "tcp:192.168.10.118,1433"; //Kondradów
         private static string serverUserName = "Natka";
         private static string serverPassword = "123456";
         private static string connectionString = $"Data Source={serverName}; Initial Catalog={dbName}; User id={serverUserName}; Password={serverPassword}; Connection Timeout = 10; MultipleActiveResultSets=true";
