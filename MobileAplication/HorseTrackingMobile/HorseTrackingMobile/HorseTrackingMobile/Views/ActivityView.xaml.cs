@@ -12,7 +12,7 @@ namespace HorseTrackingMobile.Views
         public ActivityView()
         {
             InitializeComponent();
-            modelView = new ActivityViewModel();
+            modelView = Startup.ServiceProvider.GetService<ActivityViewModel>();
             BindingContext = modelView;
             Appearing += (s, e) => 
             { 

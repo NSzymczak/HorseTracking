@@ -14,12 +14,13 @@ namespace HorseTrackingMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginView : ContentPage
     {
+        readonly LoginViewModel viewModel;
         public LoginView()
         {
             InitializeComponent();
-            var viewModel=new LoginViewModel();
-            this.BindingContext = viewModel;
-            Appearing += (s,e) => { viewModel.CheckLogin(); };
+            viewModel = Startup.ServiceProvider.GetService<LoginViewModel>();
+            BindingContext = viewModel;
+            Appearing += (s, e) => { viewModel.CheckLogin(); };
         }
 
     }

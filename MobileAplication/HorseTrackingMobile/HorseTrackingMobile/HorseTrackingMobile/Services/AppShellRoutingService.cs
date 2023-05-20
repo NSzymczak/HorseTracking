@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using HorseTrackingMobile.Views;
 using HorseTrackingMobile.ViewModels;
+using HorseTrackingMobile.Models;
 
 namespace HorseTrackingMobile.Services
 {
-    public class AppShellRoutingService
+    public class AppShellRoutingService : IAppShellRoutingService
     {
 
         public AppShellRoutingService()
@@ -39,10 +40,15 @@ namespace HorseTrackingMobile.Services
         {
             await Shell.Current.GoToAsync("//LoginView");
         }
-
-        public async Task GoToAddActivity()
+        
+        public void GoToActivityDetails(Activity activity)
         {
-            await Shell.Current.GoToAsync(nameof(AddActivityView));
+            Shell.Current.GoToAsync($"{nameof(ActivityDetailsView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
+        }
+
+        public void GoToAddActivity()
+        {
+            Shell.Current.GoToAsync(nameof(AddActivityView));
         }
 
     }

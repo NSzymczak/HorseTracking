@@ -1,5 +1,5 @@
-﻿using HorseTrackingMobile.Database;
-using HorseTrackingMobile.Models;
+﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services.Database.VisitServices;
 using HorseTrackingMobile.Views;
 using System;
 using System.Collections.Generic;
@@ -14,8 +14,12 @@ namespace HorseTrackingMobile.ViewModels
     {
         public ICommand VisitTapped { get; set; }
         public ObservableCollection<Visit> Visits { get; set; }
-        public VisitViewModel() 
+
+        private readonly IVisitService _visitServices;
+
+        public VisitViewModel(IVisitService visitServices) 
         {
+            _visitServices = visitServices;
             VisitTapped = new Command<Visit>(async(visit) =>
             {
                 if (visit == null)
@@ -31,7 +35,7 @@ namespace HorseTrackingMobile.ViewModels
 
         public void LoadVisit()
         {
-            CurrentHorse.ListOfVisit = DataBaseConnection.GetVisits(CurrentHorse.ID);
+            CurrentHorse.ListOfVisit = _visitServices.GetVisits(CurrentHorse.ID);
             Visits = new ObservableCollection<Visit>(CurrentHorse.ListOfVisit);
             OnPropertyChanged(nameof(Visits));
         }

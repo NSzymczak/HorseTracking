@@ -13,7 +13,7 @@ namespace HorseTrackingMobile.Views
         public NutritionPlanView()
         {
             InitializeComponent();
-            viewModel = new NutritionPlanViewModel();
+            viewModel = Startup.ServiceProvider.GetService<NutritionPlanViewModel>();
             BindingContext = viewModel;
             Appearing += (s, e) =>
             {

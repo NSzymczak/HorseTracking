@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Database;
+using HorseTrackingMobile.Services.Database.NutritionServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +9,13 @@ namespace HorseTrackingMobile.ViewModels
 {
     public class NutritionPlanViewModel : HorseAppViewModel
     {
-        public NutritionPlanViewModel() 
+        private readonly INutritionService _nutritionService;
+        public NutritionPlanViewModel(INutritionService nutritionService) 
         {
-            DataBaseConnection.GetUnitOfMeasure();
-            DataBaseConnection.GetMealsName();
+            _nutritionService = nutritionService;
+
+            _nutritionService.GetUnitOfMeasure();
+            _nutritionService.GetMealsName();
         }
 
         public void Load()
@@ -22,7 +26,7 @@ namespace HorseTrackingMobile.ViewModels
             }
             foreach(var horse in Horses)
             {
-                horse.Plan = DataBaseConnection.GetNutritionPlansForHorse(horse.ID);
+                horse.Plan = _nutritionService.GetNutritionPlan(horse.ID);
             }
         }
     }
