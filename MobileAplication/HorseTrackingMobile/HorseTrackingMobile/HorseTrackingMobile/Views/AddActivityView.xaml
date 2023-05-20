@@ -4,129 +4,143 @@
              xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
              x:DataType="viewmodels:ActivityDetailsViewModel"
              x:Class="HorseTrackingMobile.Views.AddActivityView"
-             xmlns:model="clr-namespace:HorseTrackingMobile.Models"
              Shell.TabBarIsVisible="False"
-             Shell.FlyoutBehavior="Disabled">
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TitleColor="{StaticResource MainAppColor}">
+
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Dodawanie aktywności" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.TitleView>
     <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="40,20" HeightRequest="400" Spacing="10">
 
-        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,3*,*,6*"
-          Margin="40,20" 
-          RowSpacing="10">
-
-            <Frame Grid.Row="0" 
-                   Grid.ColumnSpan="2" 
-                   VerticalOptions="Center"
-                   BorderColor="{StaticResource TabbarColor}"
-                   CornerRadius="5"
-                   Padding="0">
-                <Picker Title="Wybierz rodzaj aktywności"
+                <Frame HeightRequest="80"
+                       BorderColor="{StaticResource TabbarColor}"
+                       CornerRadius="5"
+                       Padding="0">
+                    <Picker Title="Wybierz rodzaj aktywności"
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Center"
                         ItemsSource="{Binding ListOfActivityType}"
                         ItemDisplayBinding="{Binding Name}"
-                        FontSize="15"
+                        FontSize="20"
                         SelectedItem="{Binding Type}"/>
-            </Frame>
-            <Label Grid.Row="1"
-               Grid.Column="0"
-               Text="Data"
-               VerticalOptions="Center"/>
-            <Frame Grid.Row="1"
-                Grid.Column="1"
-                VerticalOptions="Center"
-                BorderColor="{StaticResource TabbarColor}"
-                CornerRadius="5"
-                Padding="0">
-                <DatePicker HorizontalOptions="Center"
+                </Frame>
+                
+                <Grid ColumnDefinitions="*,*">
+                    <Label Grid.Column="0"
+                           Text="Data"
+                           VerticalOptions="Center"/>
+                    <Frame Grid.Column="1"
+                           VerticalOptions="Center"
+                           BorderColor="{StaticResource TabbarColor}"
+                           CornerRadius="5"
+                           Padding="0">
+                        <DatePicker HorizontalOptions="Center"
                         x:Name="DatePicker"
                         Format="dd.MM.yyyy"
                         FontSize="15"
                         Date="{Binding Date}"/>
-            </Frame>
+                    </Frame>
+                </Grid>
 
-            <Label Grid.Row="2" 
-               Grid.Column="0"
-               Text="Zadowolenie"
-               VerticalOptions="Center"/>
-            <StackLayout Grid.Row="2" 
-                         Grid.Column="1"
+                <Grid ColumnDefinitions="*,*">
+                    <Label Grid.Column="0"
+                           Text="Zadowolenie"
+                           VerticalOptions="Center"
+                           IsVisible="{Binding IsActiveActivity}"/>
+                    <StackLayout Grid.Column="1"
                          Spacing="2"
-                         Orientation="Horizontal">
-                <Button x:Name="Satisfactionlvl1" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Satisfactionlvl2" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Satisfactionlvl3" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Satisfactionlvl4" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Satisfactionlvl5" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
-            </StackLayout>
+                         Orientation="Horizontal"
+                         IsVisible="{Binding IsActiveActivity}">
+                        <Button x:Name="Satisfactionlvl1" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl2" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl3" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl4" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl5" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                    </StackLayout>
+                </Grid>
 
-            <Label Grid.Row="3" 
-               Grid.Column="0" 
-               Text="Intensywność"
-               VerticalOptions="Center"/>
-            <StackLayout Grid.Row="3" 
-                         Grid.Column="1"
+                <Grid ColumnDefinitions="*,*">
+                <Label Grid.Column="0" 
+                       Text="Intensywność"
+                       VerticalOptions="Center"
+                       IsVisible="{Binding IsActiveActivity}"/>
+                <StackLayout Grid.Column="1"
                          Spacing="2"
-                         Orientation="Horizontal">
-                <Button x:Name="Intensivitylv1" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Intensivitylv2" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Intensivitylv3" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Intensivitylv4" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
-                <Button x:Name="Intensivitylv5" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
-            </StackLayout>
-            <Label Grid.Row="4" 
-               Grid.Column="0"
-               Text="Czas"
-               VerticalOptions="Center"/>
-            <Frame Grid.Row="4" 
-                Grid.Column="1"
-                HeightRequest="35"
-                BorderColor="{StaticResource TabbarColor}"
-                CornerRadius="5"
-                Padding="0">
-                <Entry Margin="10,0,0,0" 
-                       Placeholder="Ile trwała aktywność?"
-                       FontSize="12"
-                       Text="{Binding Time}"/>
-            </Frame>
+                         Orientation="Horizontal"
+                         IsVisible="{Binding IsActiveActivity}">
+                    <Button x:Name="Intensivitylv1" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv2" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv3" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv4" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv5" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                </StackLayout>
+                </Grid>
 
-            <Label Grid.Row="5" 
+                <Grid ColumnDefinitions="*,*">
+                <Label Grid.Column="0"
+                       Text="Czas"
+                       VerticalOptions="Center"/>
+                <Frame Grid.Column="1"
+                       HeightRequest="35"
+                       BorderColor="{StaticResource TabbarColor}"
+                       CornerRadius="5"
+                       Padding="0">
+                    <Entry Margin="10,0,0,0" 
+                           Placeholder="Ile trwała aktywność?"
+                           FontSize="12"
+                           Text="{Binding Time}"/>
+                </Frame>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,*">
+                <Label
                Grid.Column="0"
                Text="Trener"
-               VerticalOptions="Center"/>
+               VerticalOptions="Center"
+                       IsVisible="{Binding IsActiveActivity}"/>
 
-            <Frame Grid.Row="5" 
+                <Frame
                    Grid.Column="1"
                    HeightRequest="35"
                    BorderColor="{StaticResource TabbarColor}"
                    CornerRadius="5"
-                   Padding="0">
-                <Picker Title="Wybierz Trenera"
+                   Padding="0"
+                       IsVisible="{Binding IsActiveActivity}">
+
+                    <Picker Title="Wybierz Trenera"
                         Margin="10,0,0,0"
-                        FontSize="10"/>
-            </Frame>
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        ItemsSource="{Binding ListOfTrainers}"
+                        ItemDisplayBinding = "{Binding Login}"
+                        SelectedItem="{Binding Trainer}"/>
+                </Frame>
+                </Grid>
 
-            <Label Grid.Row="6" 
-               Grid.Column="0"
-               Text="Opis"
-               VerticalOptions="Start"/>
-
-            <Frame Grid.Row="6" Grid.Column="1"
+                <Frame Grid.ColumnSpan="2"
                    BorderColor="{StaticResource TabbarColor}"
                    CornerRadius="5"
-                   Padding="0">
-                <Entry Margin="10" 
-                       Placeholder="Opis..."
+                   Padding="0"
+                   MinimumHeightRequest="600">
+                    <Editor Margin="10" 
+                       Placeholder="Komentarz..."
                        Text="{Binding Description}"
                        FontSize="15"
-                       HorizontalOptions="Start"
-                       VerticalOptions="Start"
-                       IsSpellCheckEnabled="True"/>
-            </Frame>
+                       IsSpellCheckEnabled="True"
+                       HeightRequest="200"/>
+                </Frame>
+                
+                <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"
+                        Text="Dodaj"
+                        Command="{Binding AddActivityCommand}"/>
 
-            <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"
-                Text="Dodaj"
-                    Command="{Binding AddActivityCommand}"/>
-            
-        </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

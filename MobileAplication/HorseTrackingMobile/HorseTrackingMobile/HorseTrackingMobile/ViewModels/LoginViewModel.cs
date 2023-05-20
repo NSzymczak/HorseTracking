@@ -46,25 +46,26 @@ namespace HorseTrackingMobile.ViewModels
             {
                 if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
                     return;
-
-                var user = _userService.GetUser(ReadedLogin, ReadedPassword);
-                if (ListServices.IsAny(user))
+                var hashedPassword = ReadedPassword;
+                var user = _userService.GetUser(ReadedLogin, hashedPassword);
+                if (user == null)
                 {
                     IncorrectData();
                     return;
                 }
-                _appState.CurrentUser = user.First();
-                User.CurrentUser = user.First();
+                _appState.CurrentUser = user;
+                User.CurrentUser = user;
                 GoToTheApp();
             });
         }
         public void CheckLogin()
         {
-            //if (Preferences.Get(PreferencesKeys.IsLogged, false))
-            //{
-            //    User.CurrentUser = _userService.GetLoggedUser();
-            //    GoToTheApp();
-            //}
+            if (Preferences.Get(PreferencesKeys.UserID, 0)!=0)
+            {
+                _appState.CurrentUser = _userService.GetLoggedUser(Preferences.Get(PreferencesKeys.UserID, 0));
+                User.CurrentUser = _appState.CurrentUser;
+                GoToTheApp();
+            }
         }
 
         public void IncorrectData()
@@ -76,10 +77,12 @@ namespace HorseTrackingMobile.ViewModels
         {
             Preferences.Set(PreferencesKeys.IsLogged, true);
             Preferences.Set(PreferencesKeys.UserID, User.CurrentUser.Id);
-            var horseList = _horseService.GetHorses();
+
+            var horseList = _horseService.GetHorses(_appState.CurrentUser);
 
             if (ListServices.IsAny(horseList))
             {
+                App.Current.MainPage.DisplayAlert("Uwaga", "Nie posiadasz żadnych koni! Poproś administratora o dodanie koni", "Dobrze");
                 return;
             }
             _appState.HorseList = horseList;

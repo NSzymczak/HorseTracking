@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,13 @@ namespace HorseTrackingMobile.ViewModels
 {
     [QueryProperty(nameof(VisitID), nameof(VisitID))]
 
-    public class VisitDetailsViewModel: HorseAppViewModel
+    public class VisitDetailsViewModel : BaseViewModel
     {
+        private readonly IAppState _appState;
+        public VisitDetailsViewModel(IAppState appState)
+        {
+            _appState = appState;
+        }
 
         int visitID;
         public int VisitID
@@ -27,9 +33,9 @@ namespace HorseTrackingMobile.ViewModels
         }
 
         private string cost;
-        public string Cost 
-        { 
-            get=>cost; 
+        public string Cost
+        {
+            get => cost;
             set => SetProperty(ref cost, value);
         }
 
@@ -58,11 +64,11 @@ namespace HorseTrackingMobile.ViewModels
         {
             try
             {
-                var item = Horse.CurrentHorse.ListOfVisit.Select(x => x).Where(x => x.VisitID == visitID).FirstOrDefault();
+                var item = _appState.CurrentHorse.ListOfVisit.Select(x => x).Where(x => x.VisitID == visitID).FirstOrDefault();
                 if (item == null) return;
-                VisitDate= item.VisitDate;
+                VisitDate = item.VisitDate;
                 Doctor = item.Doctor;
-                Cost= item.Cost;
+                Cost = item.Cost;
                 Summary = item.Summary;
             }
             catch

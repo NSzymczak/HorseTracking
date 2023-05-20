@@ -5,12 +5,13 @@ using HorseTrackingMobile.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
 {
-    public class ActivityViewModel : HorseAppViewModel
+    public class ActivityViewModel : BaseViewModel
     {
         public ObservableCollection<DayOfActivity> DayOfActivities { get; set; } = new ObservableCollection<DayOfActivity>();
         public DateTime MainDate { get; set; }
@@ -20,16 +21,38 @@ namespace HorseTrackingMobile.ViewModels
         public ICommand AddCommand { get; set; }
         public ICommand ChangeHorse { get; set; }
         public ICommand ActivityTapped { get; set; }
+        public ICommand SwitchHorseCommand { get; set; }
 
         private readonly IActivityService _activityServices;
         private readonly IAppShellRoutingService _appShellRoutingService;
         private readonly IAppState _appState;
+
+        public ObservableCollection<Horse> Horses { get; set; }
+
+        private Horse currentHorse;
+        public Horse CurrentHorse
+        {
+            get { return currentHorse; }
+            set
+            {
+                if (currentHorse != value)
+                {
+                    currentHorse = value;
+                    OnPropertyChanged(nameof(CurrentHorse));
+                }
+            }
+        }
+
         public ActivityViewModel( IActivityService activityServices, IAppShellRoutingService appShellRoutingService, 
                                   IAppState appState)
         {
             _activityServices = activityServices;
             _appShellRoutingService = appShellRoutingService;
             _appState = appState;
+
+            Horses = new ObservableCollection<Horse>(_appState.HorseList);
+            CurrentHorse = _appState.CurrentHorse;
+
             SetMainDate();
             PrevCommand = new Command(() =>
             {
@@ -43,7 +66,7 @@ namespace HorseTrackingMobile.ViewModels
             });
             SwitchHorseCommand = new Command(() =>
             {
-                Horse.CurrentHorse = CurrentHorse;
+                _appState.CurrentHorse = CurrentHorse;
                 LoadActivityUI();
             });
             ActivityTapped = new Command<Activity>((activity) =>
@@ -60,7 +83,7 @@ namespace HorseTrackingMobile.ViewModels
 
         public void Load()
         {
-            CurrentHorse = Horse.CurrentHorse;
+            CurrentHorse = _appState.CurrentHorse;
             LoadActivityUI();
         }
 
@@ -105,15 +128,25 @@ namespace HorseTrackingMobile.ViewModels
                 DayOfActivities.Add(dayOfActivity);
             }
         }
+        private void GetActivity()
+        {
+            try
+            {
+                CurrentHorse.ListOfAllActivity = _activityServices.GetActivities(CurrentHorse.ID);
+
+            }catch(Exception ex)
+            {
+                App.Current.MainPage.DisplayAlert("Uwaga","Nie udało się pobrać aktywności z bazy danych","Dobrze");
+            }
+        }
 
         private void AsignActivityToDays()
         {
             if (CurrentHorse == null)
                 return;
-            if (ListServices.IsAny(CurrentHorse.ListOfAllActivity))
-            {
-                CurrentHorse.ListOfAllActivity = _activityServices.GetActivities(CurrentHorse.ID);
-            }
+
+            GetActivity();
+
             var activityForWeek = CurrentHorse.ListOfAllActivity.Where(x => x.Date >= MainDate && x.Date < MainDate.AddDays(7)).ToList();
 
             foreach (var activity in activityForWeek)

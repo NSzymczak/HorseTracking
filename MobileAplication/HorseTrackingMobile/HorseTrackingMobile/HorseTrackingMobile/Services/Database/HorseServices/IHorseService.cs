@@ -7,6 +7,6 @@ namespace HorseTrackingMobile.Services.Database.HorseServices
 {
     public interface IHorseService
     {
-        List<Horse> GetHorses();
+        List<Horse> GetHorses(User user);
     }
 }
