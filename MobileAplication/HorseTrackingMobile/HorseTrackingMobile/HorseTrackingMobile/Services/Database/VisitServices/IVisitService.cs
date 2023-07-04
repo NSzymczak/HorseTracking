@@ -8,5 +8,7 @@ namespace HorseTrackingMobile.Services.Database.VisitServices
     public interface IVisitService
     {
         List<Visit> GetVisits(int visitID);
+        void AddVisit(Visit visit);
+        void DeleteVisit(int ID);
     }
 }

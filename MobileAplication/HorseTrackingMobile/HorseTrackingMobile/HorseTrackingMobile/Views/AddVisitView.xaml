@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" x:DataType="viewmodels:VisitDetailsViewModel"
+             x:Class="HorseTrackingMobile.Views.AddVisitView"
+             Shell.TabBarIsVisible="False">
+    
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Dodawanie wizyt" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid ColumnDefinitions="30,*,30" RowDefinitions="30,*">
+            <StackLayout Grid.Column="1" Grid.Row="1" Spacing="20">
+                <Frame>
+                    <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                        <Label Text="Data: " VerticalOptions="Center" FontSize="20"/>
+                        <DatePicker Date="{Binding VisitDate}" Format="dd.MM.yyyy" VerticalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                
+                <Frame>
+                    <StackLayout Orientation="Vertical">
+                            <Label Text="Lekarz/Kowal: " FontSize="16"/>
+                            <Picker ItemsSource="{Binding ListOfDoctors}"
+                                    ItemDisplayBinding = "{Binding Details.Surname, Mode=TwoWay}"
+                                    SelectedItem="{Binding Doctor, Mode=TwoWay}"/>
+                        </StackLayout>
+                </Frame>
+
+                <Frame>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Koszt:" FontSize="20" VerticalOptions="Center"/>
+                        <Editor Text="{Binding Cost}" FontSize="20" WidthRequest="200"/>
+                    </StackLayout>
+                </Frame>
+                
+                <Frame>
+                    <StackLayout Orientation="Vertical">
+                        <Grid ColumnDefinitions="*,3*">
+                            <Label Grid.Column="0" Text="Opis" FontSize="20"/>
+                            <Label Grid.Column="1" Text="(Opis badań, zalecenia, data następnej wizyty)" FontSize="13"/>
+                        </Grid>
+                        <Editor Text="{Binding Summary}" HeightRequest="100"/>
+                    </StackLayout>
+                </Frame>
+                    <Button Margin="80,0" Text="Dodaj" BackgroundColor="#95B17F" TextColor="White" FontSize="18" CornerRadius="10"
+                            Command="{Binding AddVisitCommand}"/>
+                </StackLayout>
+
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

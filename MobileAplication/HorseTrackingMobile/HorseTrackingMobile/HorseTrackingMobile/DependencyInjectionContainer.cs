@@ -1,6 +1,7 @@
 ﻿using HorseTrackingMobile.Database;
 using HorseTrackingMobile.Database.UserServices;
 using HorseTrackingMobile.Services;
+using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database;
 using HorseTrackingMobile.Services.Database.ActivityServices;
 using HorseTrackingMobile.Services.Database.HorseServices;
@@ -33,11 +34,9 @@ namespace HorseTrackingMobile
             services.AddTransient<LoginViewModel>();
 
             services.AddSingleton<BaseViewModel>();
-            services.AddTransient<HorseAppViewModel>();
 
             services.AddTransient<ActivityViewModel>();
             services.AddTransient<ActivityDetailsViewModel>();
-            services.AddTransient<AddActivityViewModel>();
 
             services.AddTransient<VisitDetailsViewModel>();
             services.AddTransient<VisitViewModel>();

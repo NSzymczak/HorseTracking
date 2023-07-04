@@ -71,6 +71,16 @@ namespace HorseTrackingMobile.Models
         public static ActivityType Cross { get; set; }
         public static ActivityType Dressage { get; set; }
 
+        public static bool IsActiveActivity(ActivityType activityType)
+        {
+            if(activityType == ActivityType.Ride ||
+                activityType == ActivityType.Jump ||
+                activityType == ActivityType.Competition ||
+                activityType == ActivityType.Cross ||
+                activityType == ActivityType.Dressage)
+            { return true; }
+            return false;
+        }
 
     }
 

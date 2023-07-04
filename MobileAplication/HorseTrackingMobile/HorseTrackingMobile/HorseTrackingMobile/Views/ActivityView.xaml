@@ -26,7 +26,6 @@
                 <Picker ItemsSource="{Binding Horses}"
                         ItemDisplayBinding="{Binding Name, Mode=TwoWay}"
                         SelectedItem="{Binding CurrentHorse, Mode=TwoWay}"
-                        SelectedIndexChanged="SwichHorse"
                         TitleColor="Transparent"
                         HorizontalTextAlignment="Center"/>
             </Frame>
@@ -104,6 +103,7 @@
                              CornerRadius="10"
                              Source="Add.png"
                              Scale="1.4"
+                             IsVisible="{Binding CanModifyData}"
                              Command="{Binding AddCommand}"/>
             </Grid>
         </Grid>

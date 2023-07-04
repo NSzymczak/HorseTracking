@@ -19,10 +19,5 @@ namespace HorseTrackingMobile.Views
                 modelView.Load(); 
             };
         }
-
-        private void SwichHorse(object sender, EventArgs e)
-        {
-            modelView.SwitchHorseCommand.Execute(true);
-        }
     }
 }

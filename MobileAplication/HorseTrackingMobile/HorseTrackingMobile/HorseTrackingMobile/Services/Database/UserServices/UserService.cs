@@ -1,4 +1,5 @@
 ﻿using HorseTrackingMobile.Models;
+using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database;
 using HorseTrackingMobile.Services.Database.UserServices;
 using System;
@@ -11,15 +12,19 @@ namespace HorseTrackingMobile.Database.UserServices
 {
     public class UserService : IUserService
     {
-        IConnectionService _connectionService;
-        public UserService(IConnectionService connectionServices)
+        private readonly IConnectionService _connectionService;
+        private readonly IAppState _appState;
+        public UserService(IConnectionService connectionServices, IAppState appState)
         {
             _connectionService = connectionServices;
+            _appState= appState;
+            _appState.ListOfTrainer = GetTrainers();
+
         }
 
         public User GetUser(string login, string password)
         {
-            var query = $"SELECT * FROM UserAcount WHERE acountLogin='{login}' AND hash='{password}'";
+            var query = $"SELECT * FROM UserAcounts WHERE login='{login}' AND hash='{password}'";
 
             var cmd = new SqlCommand(query, _connectionService.GetConnection());
             var reader = cmd.ExecuteReader();
@@ -30,18 +35,12 @@ namespace HorseTrackingMobile.Database.UserServices
                 return new User()
                 {
                     Id = Convert.ToInt32(reader["userID"]),
-                    Type = new UserType()
-                    {
-                        ID = Convert.ToInt32(reader["userTypeID"])
-                    },
-                    Details = new PeopleDetails()
-                    {
-                        ID = Convert.ToInt32(reader["detailsID"])
-                    },
-                    Login = reader["acountLogin"].ToString(),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    Login = reader["login"].ToString(),
                     Hash = reader["hash"].ToString(),
                     Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDate"]
+                    CreatedDate = (DateTime)reader["createdDateTime"]
                 };
             }
             return null;
@@ -49,7 +48,7 @@ namespace HorseTrackingMobile.Database.UserServices
 
         public User GetLoggedUser(int id)
         {
-            var query = $"SELECT * FROM UserAcount WHERE userID={id}";
+            var query = $"SELECT * FROM UserAcounts WHERE userID={id}";
 
             var cmd = new SqlCommand(query, _connectionService.GetConnection());
             var reader = cmd.ExecuteReader();
@@ -59,18 +58,12 @@ namespace HorseTrackingMobile.Database.UserServices
                 return new User()
                 {
                     Id = Convert.ToInt32(reader["userID"]),
-                    Type = new UserType()
-                    {
-                        ID = Convert.ToInt32(reader["userTypeID"])
-                    },
-                    Details = new PeopleDetails()
-                    {
-                        ID = Convert.ToInt32(reader["detailsID"])
-                    },
-                    Login = reader["acountLogin"].ToString(),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    Login = reader["login"].ToString(),
                     Hash = reader["hash"].ToString(),
                     Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDate"]
+                    CreatedDate = (DateTime)reader["createdDateTime"]
                 };
             }
             return null;
@@ -78,7 +71,7 @@ namespace HorseTrackingMobile.Database.UserServices
 
         public List<User> GetTrainers()
         {
-            var query = $"Select * from UserAcount where userTypeID = 4";
+            var query = $"Select * from UserAcounts where typeID = 4";
 
             var cmd = new SqlCommand(query, _connectionService.GetConnection());
             var reader = cmd.ExecuteReader();
@@ -89,25 +82,42 @@ namespace HorseTrackingMobile.Database.UserServices
                 userList.Add(new User()
                 {
                     Id = Convert.ToInt32(reader["userID"]),
-                    Type = new UserType()
-                    {
-                        ID = Convert.ToInt32(reader["userTypeID"])
-                    },
-                    Details = new PeopleDetails()
-                    {
-                        ID = Convert.ToInt32(reader["detailsID"])
-                    },
-                    Login = reader["acountLogin"].ToString(),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    Login = reader["login"].ToString(),
                     Hash = reader["hash"].ToString(),
                     Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDate"]
+                    CreatedDate = (DateTime)reader["createdDateTime"]
                 });
             }
             return userList;
         }
+
+        public User GetTrainer(int id)
+        {
+            var query = $"Select * from UserAcounts where userID={id}";
+
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                return new User()
+                {
+                    Id = Convert.ToInt32(reader["userID"]),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    Login = reader["login"].ToString(),
+                    Hash = reader["hash"].ToString(),
+                    Salt = reader["salt"].ToString(),
+                    CreatedDate = (DateTime)reader["createdDateTime"]
+                };
+            }
+            return null;
+        }
         public List<User> GetAllUsers()
         {
-            var query = $"SELECT * FROM UserAcount";
+            var query = $"SELECT * FROM UserAcounts";
 
             var cmd = new SqlCommand(query, _connectionService.GetConnection());
             var reader = cmd.ExecuteReader();
@@ -118,21 +128,54 @@ namespace HorseTrackingMobile.Database.UserServices
                 userList.Add(new User()
                 {
                     Id = Convert.ToInt32(reader["userID"]),
-                    Type = new UserType()
-                    {
-                        ID = Convert.ToInt32(reader["userTypeID"])
-                    },
-                    Details = new PeopleDetails()
-                    {
-                        ID = Convert.ToInt32(reader["detailsID"])
-                    },
-                    Login = reader["acountLogin"].ToString(),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    Login = reader["login"].ToString(),
                     Hash = reader["hash"].ToString(),
                     Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDate"]
+                    CreatedDate = (DateTime)reader["createdDateTime"]
                 });
             }
             return userList;
+        }
+        public PeopleDetails GetDetails(int id)
+        {
+            var query = $"SELECT * FROM PeopleDetails WHERE detailID='{id}'";
+
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                return new PeopleDetails()
+                {
+                    ID = Convert.ToInt32(reader["detailID"]),
+                    Name = reader["name"].ToString(),
+                    Surname = reader["surname"].ToString(),
+                    PhoneNumber = reader["phoneNumber"].ToString(),
+                    Email = reader["email"].ToString(),
+                    City = reader["city"].ToString(),
+                    Street = reader["street"].ToString(),
+                    Number = reader["number"].ToString(),
+                    PostalCode = reader["postalCode"].ToString(),
+                };
+            }
+            return new PeopleDetails();
+        }
+
+        public UserType GetUserType(int id)
+        {
+            var query = $"SELECT * FROM UserTypes WHERE typeID={id}";
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                return new UserType()
+                {
+                    ID = Convert.ToInt32(reader["typeID"]),
+                    Type = reader["typeName"].ToString()
+                };
+            }
+            return null;
         }
     }
 }

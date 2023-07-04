@@ -24,7 +24,6 @@ namespace HorseTrackingMobile
 
         public void Logout(object sender, EventArgs e)
         {
-            Preferences.Set(PreferencesKeys.IsLogged, false);
             Preferences.Set(PreferencesKeys.UserID, 0);
 
             RoutingServices.GoToLogin();

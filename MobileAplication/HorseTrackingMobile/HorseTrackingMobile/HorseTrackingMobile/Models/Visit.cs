@@ -11,5 +11,6 @@ namespace HorseTrackingMobile.Models
         public string Summary { get; set; }
         public DateTime VisitDate { get; set; }
         public Doctor Doctor { get; set; }
+        public Horse Horse { get; set; }
     }
 }

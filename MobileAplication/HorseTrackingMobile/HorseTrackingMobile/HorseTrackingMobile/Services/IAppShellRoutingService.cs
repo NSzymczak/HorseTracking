@@ -11,5 +11,7 @@ namespace HorseTrackingMobile.Services
         void GoToLogin();
         void GoToActivityDetails(Activity activity);
         void GoToAddActivity();
+        void GoToAddActivity(Activity activity);
+        void GoToAddVisit();
     }
 }

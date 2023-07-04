@@ -13,31 +13,33 @@ namespace HorseTrackingMobile.Services.Database.NutritionServices
 
         public void GetUnitOfMeasure()
         {
-            string query = $"SELECT * FROM UnitOfMeasure";
+            string query = $"SELECT * FROM UnitOfMeasures";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                Dictionaries.UnitOfMeasure.Add(Convert.ToInt32(reader["unitID"]), reader["unitName"].ToString());
+                if (!Dictionaries.UnitOfMeasure.ContainsKey(Convert.ToInt32(reader["unitID"])))
+                    Dictionaries.UnitOfMeasure.Add(Convert.ToInt32(reader["unitID"]), reader["unitName"].ToString());
             }
         }
         public void GetMealsName()
         {
-            string query = $"SELECT * FROM MealName";
+            string query = $"SELECT * FROM MealNames";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                Dictionaries.MealsName.Add(Convert.ToInt32(reader["mealNameID"]), reader["mealName"].ToString());
+                if (!Dictionaries.MealsName.ContainsKey(Convert.ToInt32(reader["mealNameID"])))
+                    Dictionaries.MealsName.Add(Convert.ToInt32(reader["mealNameID"]), reader["mealName"].ToString());
             }
         }
         private Forage GetForage(int forageID)
         {
-            string query = $"SELECT * FROM Forage WHERE forageID={forageID}";
+            string query = $"SELECT * FROM Forages WHERE forageID={forageID}";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
@@ -50,14 +52,14 @@ namespace HorseTrackingMobile.Services.Database.NutritionServices
                     Name = reader["name"].ToString(),
                     Capacity = Convert.ToInt32(reader["capacity"]),
                     Producent = reader["producent"].ToString(),
-                    UnitOfMeasure = Dictionaries.UnitOfMeasure[Convert.ToInt32(reader["unitOfMeasure"])],
+                    UnitOfMeasure = Dictionaries.UnitOfMeasure[Convert.ToInt32(reader["unitID"])],
                 };
             }
             return null;
         }
         public NutritionPlan GetNutritionPlan(int horseID)
         {
-            string query = $"SELECT * FROM NutritionPlan AS n inner join Eat AS e ON  n.nutritionPlanID = e.nutritionPlanID WHERE horseID={horseID}";
+            string query = $"SELECT * FROM NutritionPlans AS n inner join Diets AS e ON  n.nutritionPlanID = e.nutritionPlanID WHERE horseID={horseID}";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
@@ -78,7 +80,7 @@ namespace HorseTrackingMobile.Services.Database.NutritionServices
         }
         private List<Meal> GetMeals(int id)
         {
-            string query = $"SELECT * FROM Meal WHERE nutritionID={id}";
+            string query = $"SELECT * FROM Meals WHERE nutritionPlanID={id}";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
@@ -97,7 +99,7 @@ namespace HorseTrackingMobile.Services.Database.NutritionServices
         }
         private List<Feeding> GetFeeding(int nutritionId, int mealId)
         {
-            string query = $"SELECT * FROM Feeding Where mealID={mealId}";
+            string query = $"SELECT * FROM Portions Where mealID={mealId}";
 
             var cmd = new SqlCommand(query, sqlConnection);
             var reader = cmd.ExecuteReader();
@@ -108,7 +110,7 @@ namespace HorseTrackingMobile.Services.Database.NutritionServices
                 listOfFeeding.Add(
                     new Feeding()
                     {
-                        Id = Convert.ToInt32(reader["feedID"]),
+                        Id = Convert.ToInt32(reader["portionID"]),
                         Forage = GetForage(Convert.ToInt32(reader["forageID"])),
                         Unit = Dictionaries.UnitOfMeasure[Convert.ToInt32(reader["unitID"])],
                         MealID = Convert.ToInt32(reader["mealID"]),

@@ -11,5 +11,7 @@ namespace HorseTrackingMobile.Services.Database.UserServices
         List<User> GetAllUsers();
         User GetUser(string login, string password);
         List<User> GetTrainers();
+        User GetTrainer(int id);
+        PeopleDetails GetDetails(int id);
     }
 }

@@ -23,7 +23,7 @@ namespace HorseTrackingMobile.Services
             Routing.RegisterRoute(nameof(VisitDetailsView), typeof(VisitDetailsView));
             Routing.RegisterRoute(nameof(NutritionPlanView), typeof(NutritionPlanView));
             Routing.RegisterRoute(nameof(CompetitionView), typeof(CompetitionView));
-
+            Routing.RegisterRoute(nameof(AddVisitView), typeof(AddVisitView));
         }
 
         public void GoToApplication()
@@ -49,6 +49,14 @@ namespace HorseTrackingMobile.Services
         public void GoToAddActivity()
         {
             Shell.Current.GoToAsync(nameof(AddActivityView));
+        }
+        public void GoToAddActivity(Activity activity)
+        {
+            Shell.Current.GoToAsync($"{nameof(AddActivityView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
+        }
+        public void GoToAddVisit()
+        {
+            Shell.Current.GoToAsync(nameof(AddVisitView));
         }
 
     }

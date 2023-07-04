@@ -7,6 +7,8 @@ namespace HorseTrackingMobile.Services.Database.HorseServices
 {
     public interface IHorseService
     {
+        Horse GetHorse(string id);
         List<Horse> GetHorses(User user);
+        List<Horse> GetAllTrainedHorses(User user);
     }
 }

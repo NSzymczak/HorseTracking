@@ -26,7 +26,5 @@ namespace HorseTrackingMobile.Models
 
         public List<Visit> ListOfVisit = new List<Visit>();
 
-        public static Horse CurrentHorse { get; set; }
-        public static List<Horse> HorseList { get; set; }
     }
 }

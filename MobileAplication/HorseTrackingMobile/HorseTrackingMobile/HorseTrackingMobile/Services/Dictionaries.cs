@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace HorseTrackingMobile.Services
 {
     public class Dictionaries
     {
-
         public static Dictionary<int, string> UnitOfMeasure = new Dictionary<int, string>();
 
         public static Dictionary<int, string> MealsName = new Dictionary<int, string>();
@@ -21,6 +21,15 @@ namespace HorseTrackingMobile.Services
             {6, "Sobota"},
             {7, "Niedziela"}
         };
+
+    }
+
+    public class Enums
+    {
+        public enum UserTypes
+        {
+            horseOwner
+        }
 
     }
 }

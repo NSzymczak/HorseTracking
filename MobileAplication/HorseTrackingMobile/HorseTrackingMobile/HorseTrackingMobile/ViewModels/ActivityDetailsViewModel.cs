@@ -1,10 +1,12 @@
 ﻿using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
+using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database.ActivityServices;
 using HorseTrackingMobile.Services.Database.UserServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -14,23 +16,55 @@ namespace HorseTrackingMobile.ViewModels
 
     public class ActivityDetailsViewModel : BaseViewModel
     {
-        public ICommand AddActivityCommand { get; set; }
+
         private readonly IAppState _appState;
         private readonly IActivityService _activityService;
         private readonly IUserService _userService;
-        public ActivityDetailsViewModel(IAppState appState, IActivityService activityService, IUserService userService)
+        private readonly IAppShellRoutingService _appShellRoutingService;
+
+        public ICommand AddActivityCommand { get; set; }
+        public ICommand EditActivityCommand { get; set; }
+        public ICommand DeleteActivityCommand { get; set; }
+
+        public bool CanModifyData => _appState.CurrentUser.Type.Type == "horseOwner";
+        public static bool isEdit = false;
+
+        public ActivityDetailsViewModel(IAppState appState, IActivityService activityService, IUserService userService, IAppShellRoutingService appShellRoutingService)
         {
             _appState = appState;
             _activityService = activityService;
             _userService = userService;
+            _appShellRoutingService = appShellRoutingService;
 
+            EditActivityCommand = new Command(() =>
+            {
+                var activity = new Activity()
+                {
+                    ID = ActivityID,
+                    Date = Date,
+                    Time = Time,
+                    Type = Type,
+                    Trainer = Trainer,
+                    Satisfaction = Satisfaction,
+                    Intensivity = Intensivity,
+                    Description = Description,
+                    User = _appState.CurrentUser,
+                    Horse = _appState.CurrentHorse
+                };
+                isEdit = true;
+                _appShellRoutingService.GoToAddActivity(activity);
+            });
+            DeleteActivityCommand = new Command(() =>
+            {
+                _activityService.DeleteActivity(ActivityID);
+                Shell.Current.GoToAsync("..");
+            });
             AddActivityCommand = new Command(() =>
             {
                 try
                 {
                     var activity = new Activity()
                     {
-                        ID = ListServices.IsAny(_appState.CurrentHorse.ListOfAllActivity) ? 1 : _appState.CurrentHorse.ListOfAllActivity.Max(x => x.ID) + 1,
                         Date = Date,
                         Time = Time,
                         Type = Type,
@@ -41,29 +75,47 @@ namespace HorseTrackingMobile.ViewModels
                         User = _appState.CurrentUser,
                         Horse = _appState.CurrentHorse
                     };
+                    if(isEdit) 
+                    {
+                        EditActivity(activity, ActivityID);
+                    }
+                    else
+                    {
+                        AddActivity(activity);
+                    }
 
-                    _activityService.AddActivity(activity);
-                    _appState.CurrentHorse.ListOfAllActivity.Add(activity);
-                    Shell.Current.GoToAsync("..");
-
+                    isEdit = false;
+                    Shell.Current.Navigation.PopToRootAsync();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się dodać aktywności", "Dobrze");
+#if DEBUG
+
+                    App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "dupa");
+#endif
+                    App.Current.MainPage.DisplayAlert("Błąd", $"Coś poszło nie tak, nie udało się {(isEdit? "dodać": "edytować")} aktywności", "Dobrze");
                     Shell.Current.GoToAsync("..");
                 }
             });
             SetDate();
         }
 
+        private void AddActivity(Activity activity)
+        {
+            _activityService.AddActivity(activity);
+            _appState.CurrentHorse.ListOfAllActivity.Add(activity);
+        }
+
+        private void EditActivity(Activity activity, int id)
+        {
+            _activityService.EditActivity(id, activity);
+            _appState.CurrentHorse.ListOfAllActivity.Add(activity);
+        }
+
         private void CheckActivityType()
         {
-            if (activityType == ActivityType.Ride ||
-                activityType == ActivityType.Jump ||
-                activityType == ActivityType.Competition ||
-                activityType == ActivityType.Cross ||
-                activityType == ActivityType.Dressage)
-                IsActiveActivity= true;
+            if (ActivityType.IsActiveActivity(activityType))
+                IsActiveActivity = true;
             else
             {
                 IsActiveActivity = false;
@@ -96,8 +148,8 @@ namespace HorseTrackingMobile.ViewModels
         public ActivityType Type
         {
             get => activityType;
-            set 
-            { 
+            set
+            {
                 SetProperty(ref activityType, value);
                 CheckActivityType();
             }
@@ -132,7 +184,7 @@ namespace HorseTrackingMobile.ViewModels
         }
         public List<User> ListOfTrainers
         {
-            get => _userService.GetTrainers();
+            get => _appState.ListOfTrainer;
         }
 
         private User trainer;
@@ -150,7 +202,7 @@ namespace HorseTrackingMobile.ViewModels
 
         private void SetDate()
         {
-            Date= DateTime.Now;
+            Date = DateTime.Now;
         }
 
         private async void LoadActivityId(int activityId)
@@ -166,7 +218,6 @@ namespace HorseTrackingMobile.ViewModels
                 Satisfaction = item.Satisfaction;
                 Intensivity = item.Intensivity;
                 Description = item.Description;
-
             }
             catch
             {

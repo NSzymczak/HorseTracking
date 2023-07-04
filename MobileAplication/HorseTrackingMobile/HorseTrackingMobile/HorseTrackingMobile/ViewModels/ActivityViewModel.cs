@@ -1,11 +1,10 @@
 ﻿using HorseTrackingMobile.Models;
 using HorseTrackingMobile.Services;
+using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database.ActivityServices;
-using HorseTrackingMobile.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -13,8 +12,10 @@ namespace HorseTrackingMobile.ViewModels
 {
     public class ActivityViewModel : BaseViewModel
     {
-        public ObservableCollection<DayOfActivity> DayOfActivities { get; set; } = new ObservableCollection<DayOfActivity>();
-        public DateTime MainDate { get; set; }
+
+        private readonly IActivityService _activityServices;
+        private readonly IAppShellRoutingService _appShellRoutingService;
+        private readonly IAppState _appState;
 
         public ICommand PrevCommand { get; set; }
         public ICommand NextCommand { get; set; }
@@ -23,10 +24,9 @@ namespace HorseTrackingMobile.ViewModels
         public ICommand ActivityTapped { get; set; }
         public ICommand SwitchHorseCommand { get; set; }
 
-        private readonly IActivityService _activityServices;
-        private readonly IAppShellRoutingService _appShellRoutingService;
-        private readonly IAppState _appState;
-
+        public DateTime MainDate { get; set; }
+        public bool CanModifyData => _appState.CurrentUser.Type.Type == "horseOwner";
+        public ObservableCollection<DayOfActivity> DayOfActivities { get; set; } = new ObservableCollection<DayOfActivity>();
         public ObservableCollection<Horse> Horses { get; set; }
 
         private Horse currentHorse;
@@ -51,9 +51,9 @@ namespace HorseTrackingMobile.ViewModels
             _appState = appState;
 
             Horses = new ObservableCollection<Horse>(_appState.HorseList);
-            CurrentHorse = _appState.CurrentHorse;
 
             SetMainDate();
+
             PrevCommand = new Command(() =>
             {
                 MainDate = MainDate.AddDays(-7);
@@ -97,7 +97,7 @@ namespace HorseTrackingMobile.ViewModels
         #region Load activity
         private void ChangeWeek()
         {
-            ClearView();
+            DayOfActivities.Clear();
             LoadActivityUI();
             OnPropertyChanged(nameof(DayOfActivities));
         }
@@ -133,10 +133,15 @@ namespace HorseTrackingMobile.ViewModels
             try
             {
                 CurrentHorse.ListOfAllActivity = _activityServices.GetActivities(CurrentHorse.ID);
-
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
+#if DEBUG
+
+                App.Current.MainPage.DisplayAlert(ex.Message, ex.StackTrace,"dupa");
+#endif
                 App.Current.MainPage.DisplayAlert("Uwaga","Nie udało się pobrać aktywności z bazy danych","Dobrze");
+                 
             }
         }
 
@@ -161,12 +166,7 @@ namespace HorseTrackingMobile.ViewModels
             }
         }
 
-        #endregion
-
-        private void ClearView()
-        {
-            DayOfActivities.Clear();
-        }
+#endregion
 
     }
 }

@@ -1,9 +1,11 @@
 ﻿using HorseTrackingMobile.Models;
-using HorseTrackingMobile.Services;
+using HorseTrackingMobile.Services.AppState;
+using HorseTrackingMobile.Services.Database.VisitServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace HorseTrackingMobile.ViewModels
@@ -13,18 +15,15 @@ namespace HorseTrackingMobile.ViewModels
     public class VisitDetailsViewModel : BaseViewModel
     {
         private readonly IAppState _appState;
-        public VisitDetailsViewModel(IAppState appState)
-        {
-            _appState = appState;
-        }
+        private readonly IVisitService _visitService;
+
+        public ICommand AddVisitCommand { get; set; }
+
 
         int visitID;
         public int VisitID
         {
-            get
-            {
-                return visitID;
-            }
+            get => visitID;
             set
             {
                 visitID = value;
@@ -57,23 +56,75 @@ namespace HorseTrackingMobile.ViewModels
         public Doctor Doctor
         {
             get => doctor;
-            set => SetProperty(ref doctor, value);
+            set
+            {
+                SetProperty(ref doctor, value);
+                OnPropertyChanged(nameof(Doctor));
+            }
         }
 
-        private async void LoadVisit(int visitID)
+        public List<Doctor> ListOfDoctors
+        {
+            get => _appState.ListOfDoctors;
+        }
+
+        public bool isEdit;
+
+        public VisitDetailsViewModel(IAppState appState, IVisitService visitService)
+        {
+            _appState = appState;
+            _visitService = visitService;
+
+            SetDate();
+
+            AddVisitCommand = new Command(() =>
+            {
+                try
+                {
+                    var visit = new Visit()
+                    {
+                        VisitID = visitID,
+                        VisitDate = visitDate,
+                        Cost = cost,
+                        Doctor = doctor,
+                        Summary = summary,
+                        Horse = _appState.CurrentHorse
+                    };
+                    _visitService.AddVisit(visit);
+                    _appState.CurrentHorse.ListOfVisit.Add(visit);
+                    Shell.Current.Navigation.PopToRootAsync();
+                }
+                catch (Exception ex)
+                {
+#if DEBUG
+                    App.Current.MainPage.DisplayAlert("Błąd", ex.Message, "dupa");
+#endif
+                    App.Current.MainPage.DisplayAlert("Błąd", $"Coś poszło nie tak, nie udało się {(isEdit ? "dodać" : "edytować")} aktywności", "Dobrze");
+                    Shell.Current.GoToAsync("..");
+                }
+            });
+        }
+        private void SetDate()
+        {
+            VisitDate = DateTime.Now;
+        }
+
+        private void LoadVisit(int visitID)
         {
             try
             {
-                var item = _appState.CurrentHorse.ListOfVisit.Select(x => x).Where(x => x.VisitID == visitID).FirstOrDefault();
-                if (item == null) return;
+                var item = _appState.CurrentHorse.ListOfVisit.Where(x => x.VisitID == visitID).FirstOrDefault();
+                if (item == null)
+                    return;
                 VisitDate = item.VisitDate;
                 Doctor = item.Doctor;
                 Cost = item.Cost;
                 Summary = item.Summary;
+                isEdit = true;
             }
             catch
             {
-                await App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
+                 App.Current.MainPage.DisplayAlert("Błąd", "Coś poszło nie tak, nie udało się wczytać szczegółów", "Dobrze");
             }
         }
     }

@@ -28,6 +28,7 @@
 
             <Grid Grid.Row="1"
                   Margin="0,30,0,0"
+                  RowDefinitions="*,80"
                   ColumnDefinitions="30,*,30">
 
                 <StackLayout Grid.Column="1" Spacing="15">
@@ -36,7 +37,7 @@
                                     Format="dd.MM.yyyy" MinimumWidthRequest="100"
                                     FontSize="25" HorizontalOptions="Center"/>
 
-                    <Frame>
+                    <Frame IsVisible="{Binding IsActiveActivity}">
                         <Grid ColumnDefinitions="2*,*" RowDefinitions="*,*">
                             <Label Grid.Row="0" Grid.Column="0" Text="Satysfakcja: "          FontSize="18"/>
                             <Label Grid.Row="0" Grid.Column="1" Text="{Binding Satisfaction}" FontSize="18"/>
@@ -46,11 +47,16 @@
                     </Frame>
 
                     <Frame>
-                        <Grid ColumnDefinitions="2*,*" RowDefinitions="*,*">
-                            <Label Grid.Row="0" Grid.Column="0" Text="Czas trwania: "    FontSize="18"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Time}"    FontSize="18"/>
-                            <Label Grid.Row="1" Grid.Column="0" Text="Trener: "          FontSize="18"/>
-                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Trainer}" FontSize="18"/>
+                        <Grid ColumnDefinitions="2*,*">
+                            <Label Grid.Column="0" Text="Czas trwania: "    FontSize="18"/>
+                            <Label Grid.Column="1" Text="{Binding Time}"    FontSize="18"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame  IsVisible="{Binding IsActiveActivity}">
+                        <Grid ColumnDefinitions="2*,*">
+                            <Label Grid.Column="0" Text="Trener: "          FontSize="18"/>
+                            <Label Grid.Column="1" Text="{Binding Trainer.Details.Surname}" FontSize="18"/>
                         </Grid>
                     </Frame>
 
@@ -61,6 +67,17 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+                <Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="*,*" RowDefinitions="1,*" IsVisible="{Binding CanModifyData}">
+                    <BoxView Color="{Binding Type.Color}" Grid.ColumnSpan="2"/>
+                    <Button Grid.Row="1" Grid.Column="0" Text="Edytuj" 
+                           TextColor="{Binding Type.Color}" HorizontalOptions="Center" VerticalOptions="Start"
+                           Margin="30,0,0,0" FontSize="18" Command="{Binding EditActivityCommand}"
+                            CommandParameter="{Binding .}" BackgroundColor="Transparent"/>
+                    <Button Grid.Row="1" Grid.Column="1" Text="Usuń" 
+                           TextColor="{Binding Type.Color}" HorizontalOptions="Center" VerticalOptions="Start"
+                           Margin="0,0,30,0" FontSize="18" Command="{Binding DeleteActivityCommand}"
+                           CommandParameter="{Binding .}" BackgroundColor="Transparent"/>
+                </Grid>
             </Grid>
 
         </Grid>
