@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
 using CommunityToolkit.Mvvm.Input;
-using HorseTrackingDesktop.Database;
+using HorseTrackingDesktop.Services.Database;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.ViewModel;
 using LiveChartsCore;
@@ -20,33 +20,33 @@ namespace HorseTrackingDesktop.PageModel
 {
     public partial class StatisticPageModel : BaseViewModel
     {
-        public string Test { get; set; }
-        List<Activity> activities = new List<Activity>();
-        private static int[] chartData = new int[11];
+        //public string Test { get; set; }
+        //List<Activities> activities = new List<Activities>();
+        //private static int[] chartData = new int[11];
 
-        public ObservableCollection<ISeries> Series { get; set; }
+        //public ObservableCollection<ISeries> Series { get; set; }
 
         public StatisticPageModel()
         {
-            activities = Activity.activities.ToList();
+            //activities = Activities.activities.ToList();
 
-            Series = new ObservableCollection<ISeries>
-            {
-                new LineSeries<Activity>
-                {
-                    Values = activities,
-                    Fill = null
-                }
-            };
+            //Series = new ObservableCollection<ISeries>
+            //{
+            //    new LineSeries<Activity>
+            //    {
+            //        Values = activities,
+            //        Fill = null
+            //    }
+            //};
         }
 
 
-        [RelayCommand]
-        public async void LoadData()
-        {
-            await GetDataFromDatabase.GetAllActivities();
-            activities = Activity.activities.ToList();
-        }
+        //[RelayCommand]
+        //public async void LoadData()
+        //{
+        //    //await GetDataFromDatabase.GetAllActivities();
+        //    //activities = Activity.activities.ToList();
+        //}
 
         //private async Task saj()
         //{

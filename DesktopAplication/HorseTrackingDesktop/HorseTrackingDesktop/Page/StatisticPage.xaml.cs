@@ -25,7 +25,7 @@ namespace HorseTrackingDesktop.View
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            viewModel.LoadData();
+           // viewModel.LoadData();
         }
     }
 }

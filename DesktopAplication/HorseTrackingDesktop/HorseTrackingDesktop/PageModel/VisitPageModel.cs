@@ -1,4 +1,4 @@
-﻿using HorseTrackingDesktop.Database;
+﻿using HorseTrackingDesktop.Services.Database;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.ViewModel;
 using System;
@@ -14,12 +14,7 @@ namespace HorseTrackingDesktop.PageModel
     {
         public VisitPageModel()
         {
-            LoadHorses();
-
-            if (currentHorse != null)
-            {
-                LoadVisits();
-            }
+            
         }
     }
 }

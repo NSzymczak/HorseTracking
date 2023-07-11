@@ -1,4 +1,4 @@
-﻿using HorseTrackingDesktop.Database;
+﻿using HorseTrackingDesktop.Services.Database;
 using HorseTrackingDesktop.Models;
 using System;
 using System.Collections.Generic;
@@ -15,40 +15,23 @@ namespace HorseTrackingDesktop.ViewModel
     {
         #region INotify
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion INotify
 
-
-        public ObservableCollection<Visit> visits { get; set; } = new();
-        public ObservableCollection<Horse> horses { get; set; } = new();
-
-        public Horse? currentHorse { get; set; }
-
-        public void LoadHorses()
+        protected bool SetProperty<T>(ref T backingStore, T value,
+           [CallerMemberName] string propertyName = "",
+           Action? onChanged = null)
         {
-            foreach (var horse in Horse.Horses)
-            {
-                horses.Add(horse);
-            }
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return false;
 
-            if (horses == null)
-                return;
-
-            currentHorse = horses.FirstOrDefault();
-            Horse.CurrentHorse = currentHorse;
-
-        }
-
-        public void LoadVisits()
-        {
-            GetDataFromDatabase.GetVisit();
-            foreach (var visit in Visit.AllVisit)
-            {
-                visits.Add(visit);
-            }
+            backingStore = value;
+            onChanged?.Invoke();
+            OnPropertyChanged(propertyName);
+            return true;
         }
     }
 }

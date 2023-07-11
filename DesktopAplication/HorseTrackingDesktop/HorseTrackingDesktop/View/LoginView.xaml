@@ -96,7 +96,8 @@
                                      FontSize="20"
                                      Margin="15,0"
                                      BorderThickness="0" 
-                                     BorderBrush="Transparent"/>
+                                     BorderBrush="Transparent"
+                                     PasswordChanged="PasswordChanged"/>
                     </Border>
                     <Label Content="Hasło"
                            Grid.Column="1"
@@ -117,7 +118,7 @@
                             Margin="10"
                             Content="Logowanie"
                             Style="{StaticResource ImportantButton}"
-                            Command="{Binding LoggInCommand}"
+                            Command="{Binding CheckLoginCommand}"
                             CommandParameter="{Binding ElementName=LoginWindow}"/>
                 </Grid>
             </Border>
