@@ -125,6 +125,15 @@ FOREIGN KEY (unitID)
 REFERENCES UnitOfMeasures(unitID)
 )
 
+CREATE TABLE HorseTracking.dbo.CompetitionResult (
+resultID INT NOT NULL PRIMARY KEY,
+competitionID int NOT NULL,
+level varchar(50) NULL,
+result varchar(50) NULL,
+place int NULL,
+FOREIGN KEY (competitionID)
+REFERENCES Competition(competitionID)
+)
 
 CREATE TABLE HorseTracking.dbo.UserAcounts (
 userID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
@@ -153,6 +162,7 @@ race varchar(50) NULL,
 breeder varchar(60) NULL,
 passport varchar(20) NULL,
 photo varchar(MAX),
+status bit NOT NULL,
 FOREIGN KEY (statusID)
 REFERENCES Status(statusID),
 FOREIGN KEY (genderID)
@@ -170,6 +180,7 @@ title varchar(30) NOT NULL,
 description varchar(MAX) NULL,
 sendDate date NOT NULL,
 createdDate date NOT NULL,
+turnOn bit NOT NULL,
 FOREIGN KEY (userID)
 REFERENCES UserAcounts(userID),
 FOREIGN KEY (horseID)

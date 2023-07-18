@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:view="clr-namespace:HorseTrackingMobile.Views"
+       Title="HorseTrackingMobile"
+       x:Class="HorseTrackingMobile.AppShell">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Background}" />
+            </Style>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Background}" />      <!--Naglowek-->
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource MainAppColor}" />     <!--HamburgerColor-->
+                <Setter Property="Shell.TitleColor" Value="{StaticResource Background}" />
+                <Setter Property="Shell.DisabledColor" Value="{StaticResource Background}"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource TabbarColor}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="#95B17F"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <FlyoutItem Title="Aplikacja" Icon="icon_about.png" Style="{StaticResource BaseStyle}">
+        
+        <Tab Title="Aktywności"
+             Icon="horse.png">
+            <ShellContent x:Name="activity" 
+                          ContentTemplate="{DataTemplate view:ActivityView}"/>
+        </Tab>
+
+        <Tab Title="Wizyty"
+              Icon="visit.png">
+            
+            <ShellContent x:Name="visits" 
+                          ContentTemplate="{DataTemplate view:VisitView}"/>
+        </Tab>
+        
+        <Tab Title="Żywienie" 
+             Icon="nutrition.png">
+            
+            <ShellContent x:Name="Nutrition"
+                          ContentTemplate="{DataTemplate view:NutritionPlanView}"/>
+        </Tab>
+        
+        <Tab Title="Zawody" 
+             Icon="competition.png">
+            
+            <ShellContent x:Name="Competition" 
+                          ContentTemplate="{DataTemplate view:CompetitionView}"/>
+        </Tab>
+    
+    </FlyoutItem>
+    
+
+    <MenuItem Text="Logout" Clicked="Logout">
+    </MenuItem>
+    <TabBar>
+        <ShellContent Route="LoginView" ContentTemplate="{DataTemplate view:LoginView}" />    </TabBar>
+</Shell>
