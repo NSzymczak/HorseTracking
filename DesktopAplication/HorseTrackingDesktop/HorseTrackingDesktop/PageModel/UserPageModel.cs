@@ -12,6 +12,7 @@ namespace HorseTrackingDesktop.PageModel
     {
         private readonly IUserServices _userServices;
         public List<UserAcounts> Users { get; set; }
+
         public UserPageModel(IUserServices userServices) 
         { 
             _userServices= userServices;

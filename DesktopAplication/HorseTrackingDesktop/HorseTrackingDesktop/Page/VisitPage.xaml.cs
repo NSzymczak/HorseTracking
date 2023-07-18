@@ -22,15 +22,23 @@ namespace HorseTrackingDesktop.View
     /// </summary>
     public partial class VisitPage : Page
     {
+        VisitPageModel? pageModel;
         public VisitPage()
         {
             InitializeComponent();
-            DataContext = StartUp.ServiceProvider?.GetService<VisitPageModel>();
+            pageModel = StartUp.ServiceProvider?.GetService<VisitPageModel>();
+            DataContext= pageModel;
+            if(pageModel != null )
+            {
+                Loaded += async(s, e) => await pageModel.SetUp();
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if(pageModel== null)
+                return;
+            _ = pageModel.SwitchHorse();
         }
     }
 }

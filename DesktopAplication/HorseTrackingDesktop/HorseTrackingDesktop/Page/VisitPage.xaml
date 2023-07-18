@@ -14,49 +14,87 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Content="Wizyty Twoich koni"
-                   Style="{StaticResource TitleLabel}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
-            <ComboBox Grid.Column="1" 
-                      VerticalAlignment="Center"
-                      MinHeight="50"
-                      IsEditable="False"
-                      IsReadOnly="False"
-                      ItemsSource="{Binding Horses}"
-                      SelectedItem="{Binding CurrentHorse}">
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <Label Content="{Binding Name}"/>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Label  Content="Wizyty Twoich koni"
+                        Grid.RowSpan="2"
+                        Style="{StaticResource TitleLabel}"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                
+                <ComboBox   Grid.Column="1"
+                            Grid.Row="1"
+                            VerticalAlignment="Center"
+                            MinHeight="50"
+                            FontSize="15"
+                            IsEditable="False"
+                            IsReadOnly="False"
+                            ItemsSource="{Binding Horses}"
+                            SelectedItem="{Binding CurrentHorse}"
+                            SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
 
-            <Image Source="\Resources\Image\VisitImage\healthcare.png"
-                   Grid.Column="2"
-                   Margin="0,30,50,0"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Right"/>
+                <Image Grid.RowSpan="2"
+                       Source="\Resources\Image\VisitImage\healthcare.png"
+                       Grid.Column="2"
+                       Margin="0,30,50,0"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Right"/>
+            </Grid>
+           
             <DataGrid Grid.Row="1"
                       Grid.ColumnSpan="3"
                       Margin="20,20,20,20"
                       ItemsSource="{Binding Visits}"
                       AutoGenerateColumns="False"
+                      CanUserReorderColumns="False"
+                      CanUserDeleteRows="False"
+                      CanUserAddRows="False"
                       FontSize="15">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Data wizyty" Binding="{Binding VisitDate}"/>
-                    <DataGridTextColumn Header="Imie konia" Binding="{Binding Horse.Name}"/>
-                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Binding="{Binding Professional.Detail.Name}"/>
-                    <DataGridTextColumn Header="Specjalizacja" Binding="{Binding Professional.Specialisation.Name}"/>
-                    <DataGridTextColumn Header="Cena" Binding="{Binding Cost}"/>
+                    <DataGridTextColumn Header="Data wizyty"             Width="*"  Binding="{Binding VisitDate,StringFormat=dd.MM.yyyy}" />
+                    <DataGridTextColumn Header="Imie konia"              Width="2*" Binding="{Binding Horse.Name}"/>
+                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Width="2*" Binding="{Binding Professional.Detail.Name}"/>
+                    <DataGridTextColumn Header="Specjalizacja"           Width="2*" Binding="{Binding Professional.Specialisation.Name}"/>
+                    <DataGridTextColumn Header="Cena"                    Width="*"  Binding="{Binding Cost}"/>
                 </DataGrid.Columns>
             </DataGrid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                        Content="Dodaj"
+                        Style="{StaticResource ImportantButton}"
+                        HorizontalAlignment="Right"/>
+                <Button Grid.Column="1"
+                        Content="Edytuj"
+                        Style="{StaticResource NotImportantButton}"/>
+                <Button Grid.Column="2"
+                        Content="Usuń"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource NotImportantButton}"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
