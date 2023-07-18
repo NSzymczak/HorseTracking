@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels" 
+             x:DataType="viewmodels:ActivityDetailsViewModel"
+             x:Class="HorseTrackingMobile.Views.AddActivityView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TitleColor="{StaticResource MainAppColor}">
+
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Dodawanie aktywności" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="40,20" HeightRequest="400" Spacing="10">
+
+                <Frame HeightRequest="80"
+                       BorderColor="{StaticResource TabbarColor}"
+                       CornerRadius="5"
+                       Padding="0">
+                    <Picker Title="Wybierz rodzaj aktywności"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        ItemsSource="{Binding ListOfActivityType}"
+                        ItemDisplayBinding="{Binding Name}"
+                        FontSize="20"
+                        SelectedItem="{Binding Type}"/>
+                </Frame>
+                
+                <Grid ColumnDefinitions="*,*">
+                    <Label Grid.Column="0"
+                           Text="Data"
+                           VerticalOptions="Center"/>
+                    <Frame Grid.Column="1"
+                           VerticalOptions="Center"
+                           BorderColor="{StaticResource TabbarColor}"
+                           CornerRadius="5"
+                           Padding="0">
+                        <DatePicker HorizontalOptions="Center"
+                        x:Name="DatePicker"
+                        Format="dd.MM.yyyy"
+                        FontSize="15"
+                        Date="{Binding Date}"/>
+                    </Frame>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,*">
+                    <Label Grid.Column="0"
+                           Text="Zadowolenie"
+                           VerticalOptions="Center"
+                           IsVisible="{Binding IsActiveActivity}"/>
+                    <StackLayout Grid.Column="1"
+                         Spacing="2"
+                         Orientation="Horizontal"
+                         IsVisible="{Binding IsActiveActivity}">
+                        <Button x:Name="Satisfactionlvl1" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl2" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl3" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl4" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                        <Button x:Name="Satisfactionlvl5" Clicked="SatisfactionLevel" Style="{StaticResource RateButton}"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,*">
+                <Label Grid.Column="0" 
+                       Text="Intensywność"
+                       VerticalOptions="Center"
+                       IsVisible="{Binding IsActiveActivity}"/>
+                <StackLayout Grid.Column="1"
+                         Spacing="2"
+                         Orientation="Horizontal"
+                         IsVisible="{Binding IsActiveActivity}">
+                    <Button x:Name="Intensivitylv1" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv2" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv3" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv4" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                    <Button x:Name="Intensivitylv5" Clicked="IntensivityLevel" Style="{StaticResource RateButton}"/>
+                </StackLayout>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,*">
+                <Label Grid.Column="0"
+                       Text="Czas"
+                       VerticalOptions="Center"/>
+                <Frame Grid.Column="1"
+                       HeightRequest="35"
+                       BorderColor="{StaticResource TabbarColor}"
+                       CornerRadius="5"
+                       Padding="0">
+                    <Entry Margin="10,0,0,0" 
+                           Placeholder="Ile trwała aktywność?"
+                           FontSize="12"
+                           Text="{Binding Time}"/>
+                </Frame>
+                </Grid>
+
+                <Grid ColumnDefinitions="*,*">
+                <Label
+               Grid.Column="0"
+               Text="Trener"
+               VerticalOptions="Center"
+                       IsVisible="{Binding IsActiveActivity}"/>
+
+                <Frame
+                   Grid.Column="1"
+                   HeightRequest="35"
+                   BorderColor="{StaticResource TabbarColor}"
+                   CornerRadius="5"
+                   Padding="0"
+                       IsVisible="{Binding IsActiveActivity}">
+
+                    <Picker Title="Wybierz Trenera"
+                        Margin="10,0,0,0"
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        ItemsSource="{Binding ListOfTrainers}"
+                        ItemDisplayBinding = "{Binding Details.Surname}"
+                        SelectedItem="{Binding Trainer}"/>
+                </Frame>
+                </Grid>
+
+                <Frame Grid.ColumnSpan="2"
+                   BorderColor="{StaticResource TabbarColor}"
+                   CornerRadius="5"
+                   Padding="0"
+                   MinimumHeightRequest="600">
+                    <Editor Margin="10" 
+                       Placeholder="Komentarz..."
+                       Text="{Binding Description}"
+                       FontSize="15"
+                       IsSpellCheckEnabled="True"
+                       HeightRequest="200"/>
+                </Frame>
+                
+                <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="20,0"
+                        Text="Dodaj"
+                        Command="{Binding AddActivityCommand}"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

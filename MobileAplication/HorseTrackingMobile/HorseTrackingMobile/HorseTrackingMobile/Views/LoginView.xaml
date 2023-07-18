@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HorseTrackingMobile.Views.LoginView"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="30,*,30" RowDefinitions="*,*,*" >
+            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+                <Label x:Name="IncorrectDataLabel" Text="Nieprawidłowy login lub hasło" TextColor="Red" IsVisible="false"/>
+                <Label Text="Login"/>
+                <Frame>
+                    <Entry Text="{Binding ReadedLogin, Mode=TwoWay}"/>
+                </Frame>
+                <Label Text="Hasło"/>
+                <Frame>
+                    <Entry Text="{Binding ReadedPassword, Mode=TwoWay}"/>
+                </Frame>
+                <Grid ColumnDefinitions="*,*">
+                    <Button Grid.Column="0" 
+                        Text="Zaloguj"
+                        Command="{Binding LoginCommand}"/>
+                    <Button Grid.Column="1"
+                        Text="Zarejestruj"/>
+                </Grid>
+
+
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
