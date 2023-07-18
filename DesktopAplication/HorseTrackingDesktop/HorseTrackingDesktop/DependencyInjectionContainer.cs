@@ -1,13 +1,10 @@
-﻿using HorseTrackingDesktop.Services.AppState;
+﻿using HorseTrackingDesktop.Models;
+using HorseTrackingDesktop.PageModel;
+using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.UserService;
+using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HorseTrackingDesktop
 {
@@ -17,6 +14,8 @@ namespace HorseTrackingDesktop
         {
             services.AddSingleton<IAppState,AppState>();
             services.AddSingleton<IUserServices, UserSevices>();
+            services.AddSingleton<IVisitService, VisitService>();
+            services.AddSingleton<HorseTrackingContext>();
             return services;
         }
 
@@ -24,7 +23,9 @@ namespace HorseTrackingDesktop
         {
             services.AddSingleton<BaseViewModel>();
             services.AddTransient<LoginViewModel>();
-
+            services.AddTransient<StatisticPageModel>();
+            services.AddTransient<UserPageModel>();
+            services.AddTransient<VisitPageModel>();
             return services;
         }
     }

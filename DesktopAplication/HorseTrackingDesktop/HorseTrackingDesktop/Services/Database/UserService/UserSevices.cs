@@ -1,9 +1,8 @@
 ﻿using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
-using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HorseTrackingDesktop.Services.Database.UserService
@@ -11,23 +10,28 @@ namespace HorseTrackingDesktop.Services.Database.UserService
     public class UserSevices: IUserServices
     {
         private readonly IAppState _appState;
-        public UserSevices(IAppState appState)
+        private readonly HorseTrackingContext _context;
+        public UserSevices(IAppState appState, HorseTrackingContext context)
         {
             _appState = appState;
-            //_appState.ListOfTrainer = GetTrainers().Result;
+            _context = context;
         }
 
         public Task<UserAcounts?> GetUser(string login, string hash)
         {
-            using var context = new HorseTrackingContext();
-            var user = context.UserAcounts.Where(x => x.Login == login && x.Hash == hash).ToList().FirstOrDefault();
+            var user = _context.UserAcounts.Where(x => x.Login == login && x.Hash == hash).Include(x=>x.Horses).ToList().FirstOrDefault();
             return Task.FromResult(user);
+        }
+
+        public Task<List<UserAcounts>> GetAllUsers()
+        {
+            var listOfUsers = _context.UserAcounts.Include(i=>i.Type).Include(i=>i.Detail).ToList();
+            return Task.FromResult(listOfUsers);
         }
 
         public Task<List<UserAcounts>> GetTrainers()
         {
-            using var context = new HorseTrackingContext();
-            var trainers = context.UserAcounts.Where(x => x.TypeId == 4).ToList();
+            var trainers = _context.UserAcounts.Where(x => x.TypeId == 4).ToList();
             return Task.FromResult(trainers);
         }
     }

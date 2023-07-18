@@ -11,7 +11,7 @@ namespace HorseTrackingDesktop
 {
     public partial class LoginView : Window
     {
-        LoginViewModel LoginViewModel;
+        LoginViewModel? LoginViewModel;
         public LoginView()
         {
             InitializeComponent();
@@ -21,7 +21,10 @@ namespace HorseTrackingDesktop
 
         private void PasswordChanged(object sender, RoutedEventArgs e)
         {
-            LoginViewModel.UserHash = ((PasswordBox)sender).Password;
+            if (LoginViewModel != null)
+            {
+                LoginViewModel.UserHash = ((PasswordBox)sender).Password;
+            }
         }
     }
 }

@@ -8,5 +8,6 @@ namespace HorseTrackingDesktop.Services.Database.UserService
     {
         Task<UserAcounts?> GetUser(string login, string hash);
         Task<List<UserAcounts>> GetTrainers();
+        Task<List<UserAcounts>> GetAllUsers();
     }
 }

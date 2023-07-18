@@ -1,4 +1,5 @@
 ﻿using HorseTrackingDesktop.PageModel;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace HorseTrackingDesktop.View
         public VisitPage()
         {
             InitializeComponent();
-            DataContext = new VisitPageModel();
+            DataContext = StartUp.ServiceProvider?.GetService<VisitPageModel>();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
