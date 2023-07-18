@@ -3,56 +3,67 @@ using HorseTrackingDesktop.View;
 using Microsoft.EntityFrameworkCore.Update.Internal;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows;
+using HorseTrackingDesktop.Services.AppState;
+using System.Windows.Input;
+using HorseTrackingDesktop.Services.Database.UserService;
+using System.Threading.Tasks;
 using HorseTrackingDesktop.Models;
-using HorseTrackingDesktop.Database;
 
 namespace HorseTrackingDesktop.ViewModel
 {
-    public partial class LoginViewModel:BaseViewModel
+    public partial class LoginViewModel : BaseViewModel
     {
+        private readonly IAppState _appState;
+        private readonly IUserServices _userService;
 
-        private string _userLogin;
-        public string UserLogin
+        private string? _userLogin;
+        public string? UserLogin
         {
-            get { return _userLogin; }
-            set
-            {
-                _userLogin = value;
-                OnPropertyChanged();
-            }
+            get => _userLogin;
+            set => SetProperty(ref _userLogin, value);
         }
 
-        private string _userHash;
-        public string UserHash
+        private string? _userHash;
+        public string? UserHash
         {
-            get { return _userHash; }
-            set
-            {
-                _userHash = value;
-                OnPropertyChanged();
-            }
+            get => _userHash;
+            set => SetProperty(ref _userHash, value);
+        }
+        public LoginViewModel(IAppState appState, IUserServices userServices)
+        {
+            _appState = appState;
+            _userService = userServices;
+
         }
 
         [RelayCommand]
-        public void LoggIn(Window window)
+        public async Task CheckLogin()
         {
-            UserAcount.CurrentUser = new UserAcount()
+            if (!String.IsNullOrEmpty(UserLogin) && !String.IsNullOrEmpty(UserHash))
             {
-                UserId=1,
-                AcountLogin="admin"
-            };
-            GetDataFromDatabase.GetHorses(UserAcount.CurrentUser);
-            var view = new MainView();
-            view.Show();
-            window.Close();
+                var user = await _userService.GetUser(UserLogin, UserHash);
+                if (user == null)
+                {
+                    await IncorrectData();
+                    return;
+                }
+                await LogIn(user);
+            }
+        }
+
+        public Task LogIn(UserAcounts user)
+        {
+            _appState.CurrentUser = user;
+            new MainView().Show();
+            return Task.CompletedTask;
+        }
+
+        public Task IncorrectData()
+        {
+
+            return Task.CompletedTask;
         }
 
     }

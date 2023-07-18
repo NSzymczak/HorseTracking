@@ -3,12 +3,39 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:HorseTrackingDesktop.View"
+      xmlns:pagemodel="clr-namespace:HorseTrackingDesktop.PageModel" 
+      d:DataContext="{d:DesignInstance Type=pagemodel:UserPageModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UserPage">
     <Grid Background="White" Margin="50,30,0,0">
-        <Label Content="Zarządzaj użytkownikami"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Zarządzaj użytkownikami"
                Style="{StaticResource TitleLabel}"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <DataGrid 
+                      Margin="20,20,20,20"
+                      ItemsSource="{Binding Users}"
+                      AutoGenerateColumns="False"
+                      FontSize="12">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Imię" Binding="{Binding Detail.Name}"/>
+                        <DataGridTextColumn Header="Nazwisko" Binding="{Binding Detail.Surname}"/>
+                        <DataGridTextColumn Header="Typ użytkownika" Binding="{Binding Type.TypeName}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

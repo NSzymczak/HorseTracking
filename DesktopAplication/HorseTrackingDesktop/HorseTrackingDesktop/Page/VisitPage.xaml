@@ -29,8 +29,8 @@
                       MinHeight="50"
                       IsEditable="False"
                       IsReadOnly="False"
-                      ItemsSource="{Binding horses}"
-                      SelectedItem="{Binding currentHorse}">
+                      ItemsSource="{Binding Horses}"
+                      SelectedItem="{Binding CurrentHorse}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <Label Content="{Binding Name}"/>
@@ -46,14 +46,14 @@
             <DataGrid Grid.Row="1"
                       Grid.ColumnSpan="3"
                       Margin="20,20,20,20"
-                      ItemsSource="{Binding visits}"
+                      ItemsSource="{Binding Visits}"
                       AutoGenerateColumns="False"
-                      FontSize="25">
+                      FontSize="15">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Data wizyty" Binding="{Binding VisitDate}"/>
                     <DataGridTextColumn Header="Imie konia" Binding="{Binding Horse.Name}"/>
-                    <DataGridTextColumn Header="Lekarz/Kowal" Binding="{Binding Doctor.Details.Name}"/>
-                    <DataGridTextColumn Header="Typ lekarza" Binding="{Binding Doctor.Specialisation.Name}"/>
+                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Binding="{Binding Professional.Detail.Name}"/>
+                    <DataGridTextColumn Header="Specjalizacja" Binding="{Binding Professional.Specialisation.Name}"/>
                     <DataGridTextColumn Header="Cena" Binding="{Binding Cost}"/>
                 </DataGrid.Columns>
             </DataGrid>

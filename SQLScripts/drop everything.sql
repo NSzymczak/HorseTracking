@@ -10,11 +10,11 @@ drop TABLE HorseTracking.dbo.Feeding
 drop TABLE HorseTracking.dbo.Doctor
 drop TABLE HorseTracking.dbo.Forage
 drop TABLE HorseTracking.dbo.Competition
-drop TABLE HorseTracking.dbo.DoctorSpecialisation
+drop TABLE HorseTracking.dbo.Specialisation
 drop TABLE HorseTracking.dbo.UnitOfMeasure
 drop TABLE HorseTracking.dbo.Meal
-drop TABLE HorseTracking.dbo.HorseGender
-drop TABLE HorseTracking.dbo.HorseStatus
+drop TABLE HorseTracking.dbo.Gender
+drop TABLE HorseTracking.dbo.Status
 drop TABLE HorseTracking.dbo.NutritionPlan 
 drop TABLE HorseTracking.dbo.PeopleDetails
 drop TABLE HorseTracking.dbo.UserType

@@ -15,55 +15,47 @@
    "SelectedToBeGenerated": 0,
    "Tables": [
       {
-         "Name": "[dbo].[Activity]",
+         "Name": "[dbo].[Activities]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Competition]",
+         "Name": "[dbo].[Competitions]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CustomNotification]",
+         "Name": "[dbo].[Diets]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Doctor]",
+         "Name": "[dbo].[Forages]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[DoctorSpecialisation]",
+         "Name": "[dbo].[HorseGenders]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Eat]",
+         "Name": "[dbo].[Horses]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Feeding]",
+         "Name": "[dbo].[MealNames]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Forage]",
+         "Name": "[dbo].[Meals]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Horse]",
+         "Name": "[dbo].[Notifications]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[HorseGender]",
+         "Name": "[dbo].[NutritionPlans]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[HorseStatus]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Meal]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[NutritionPlan]",
+         "Name": "[dbo].[Participations]",
          "ObjectType": 0
       },
       {
@@ -71,27 +63,39 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Shared]",
+         "Name": "[dbo].[Portions]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TakePart]",
+         "Name": "[dbo].[Professionals]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UnitOfMeasure]",
+         "Name": "[dbo].[Shareds]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UserAcount]",
+         "Name": "[dbo].[Specialisations]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UserType]",
+         "Name": "[dbo].[Status]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Visit]",
+         "Name": "[dbo].[UnitOfMeasures]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserAcounts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Visits]",
          "ObjectType": 0
       }
    ],

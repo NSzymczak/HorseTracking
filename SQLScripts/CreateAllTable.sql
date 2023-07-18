@@ -1,116 +1,128 @@
-drop TABLE HorseTracking.dbo.TakePart
-drop TABLE HorseTracking.dbo.Activity 
-drop TABLE HorseTracking.dbo.Eat
-drop TABLE HorseTracking.dbo.Shared 
-drop TABLE HorseTracking.dbo.Visit 
-drop TABLE HorseTracking.dbo.CustomNotification
-drop TABLE HorseTracking.dbo.Horse 
-drop TABLE HorseTracking.dbo.UserAcount
-drop TABLE HorseTracking.dbo.Feeding 
-drop TABLE HorseTracking.dbo.Doctor
-drop TABLE HorseTracking.dbo.Forage
-drop TABLE HorseTracking.dbo.Competition
-drop TABLE HorseTracking.dbo.DoctorSpecialisation
-drop TABLE HorseTracking.dbo.UnitOfMeasure
-drop TABLE HorseTracking.dbo.Meal
-drop TABLE HorseTracking.dbo.HorseGender
-drop TABLE HorseTracking.dbo.HorseStatus
-drop TABLE HorseTracking.dbo.NutritionPlan 
-drop TABLE HorseTracking.dbo.PeopleDetails
-drop TABLE HorseTracking.dbo.UserType
+drop TABLE if exists HorseTracking.dbo.Shareds 
+drop TABLE if exists HorseTracking.dbo.Participations
+drop TABLE if exists HorseTracking.dbo.Competitions
+drop TABLE if exists HorseTracking.dbo.Diets
+drop TABLE if exists HorseTracking.dbo.Portions 
+drop TABLE if exists HorseTracking.dbo.Forages
+drop TABLE if exists HorseTracking.dbo.UnitOfMeasures
+drop TABLE if exists HorseTracking.dbo.Meals
+drop TABLE if exists HorseTracking.dbo.MealNames
+drop TABLE if exists HorseTracking.dbo.NutritionPlans
+drop TABLE if exists HorseTracking.dbo.Visits 
+drop TABLE if exists HorseTracking.dbo.Professionals
+drop TABLE if exists HorseTracking.dbo.Specialisations
+drop TABLE if exists HorseTracking.dbo.Notifications
+drop TABLE if exists HorseTracking.dbo.UserAcounts
+drop TABLE if exists HorseTracking.dbo.UserTypes
+drop TABLE if exists HorseTracking.dbo.PeopleDetails
+drop TABLE if exists HorseTracking.dbo.Activities 
+drop TABLE if exists HorseTracking.dbo.Horses
+drop TABLE if exists HorseTracking.dbo.HorseGenders
+drop TABLE if exists HorseTracking.dbo.Status;
+
 --Create all table
 
-CREATE TABLE HorseTracking.dbo.UserType (
-typeID INT NOT NULL PRIMARY KEY,
-typeName varchar(50) NOT NULL
+CREATE TABLE HorseTracking.dbo.UserTypes (
+typeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+typeName varchar(20) NOT NULL
 )
 
 CREATE TABLE HorseTracking.dbo.PeopleDetails (
-detailsID INT NOT NULL PRIMARY KEY,
-name varchar(50) NOT NULL,
-surname varchar(50) NOT NULL,
-phoneNumber varchar(50) NOT NULL,
-email varchar(50) NOT NULL,
-city varchar(50) NOT NULL,
-street varchar(50) NOT NULL,
-number varchar(50) NOT NULL
+detailID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+name varchar(40) NULL,
+surname varchar(40) NOT NULL,
+phoneNumber varchar(20) NULL,
+email varchar(320) NULL,
+city varchar(200) NULL,
+street varchar(90) NULL,
+number varchar(10) NULL,
+postalCode varchar(10) NULL,
 )
 
-CREATE TABLE HorseTracking.dbo.NutritionPlan (
-nutritionPlanID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.NutritionPlans (
+nutritionPlanID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 title varchar(50) NOT NULL,
 description varchar(MAX) NULL,
-icon int NOT NULL
+icon int NULL, 
+color varchar(7) NULL
 )
 
-CREATE TABLE HorseTracking.dbo.HorseStatus (
-statusID INT NOT NULL PRIMARY KEY,
-name varchar(50) NOT NULL
+CREATE TABLE HorseTracking.dbo.Status (
+statusID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+name varchar(20) NOT NULL
 )
 
-CREATE TABLE HorseTracking.dbo.HorseGender (
-genderID INT NOT NULL PRIMARY KEY,
-gender varchar(50) NOT NULL
+CREATE TABLE HorseTracking.dbo.HorseGenders (
+genderID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+gender varchar(10) NOT NULL
 )
 
-CREATE TABLE HorseTracking.dbo.Meal(
-mealID int NOT NULL PRIMARY KEY,
-mealName varchar(50) NULL
+CREATE TABLE HorseTracking.dbo.MealNames(
+mealNameID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+mealName varchar(20) NOT NULL)
+
+CREATE TABLE HorseTracking.dbo.Meals(
+mealID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+hour varchar(10) NULL,
+mealNameID int NOT NULL,
+nutritionPlanID int NOT NULL,
+FOREIGN KEY (nutritionPlanID)
+REFERENCES NutritionPlans(nutritionPlanID),
+FOREIGN KEY (mealNameID)
+REFERENCES MealNames(mealNameID)
 )
 
-CREATE TABLE HorseTracking.dbo.UnitOfMeasure(
-unitID int NOT NULL PRIMARY KEY,
-unitName varchar(50)
+CREATE TABLE HorseTracking.dbo.UnitOfMeasures(
+unitID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+unitName varchar(30) NOT NULL
 )
 
-CREATE TABLE HorseTracking.dbo.DoctorSpecialisation (
-specialisationID INT NOT NULL PRIMARY KEY,
-name varchar(50) NOT NULL
+CREATE TABLE HorseTracking.dbo.Specialisations (
+specialisationID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+name varchar(85) NOT NULL
 )
 
-CREATE TABLE HorseTracking.dbo.Competition (
-competitionID INT NOT NULL PRIMARY KEY,
-spot varchar(50) NULL,
+CREATE TABLE HorseTracking.dbo.Competitions (
+competitionID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+spot varchar(200) NULL,
 rank varchar(50) NULL,
-date datetime NOT NULL,
+date date NOT NULL,
 description varchar(MAX) NULL
 )
 
-CREATE TABLE HorseTracking.dbo.Forage (
-forageID INT NOT NULL PRIMARY KEY,
-name varchar(50) NOT NULL,
-unitOfMeasure int NOT NULL,
-producent varchar(50) NULL,
-capacity int NULL
-FOREIGN KEY (unitOfMeasure)
-REFERENCES UnitOfMeasure(unitID),
+CREATE TABLE HorseTracking.dbo.Forages (
+forageID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+name varchar(92) NOT NULL,
+unitID int NOT NULL,
+producent varchar(57) NULL,
+capacity float NULL
+FOREIGN KEY (unitID)
+REFERENCES UnitOfMeasures(unitID),
 )
 
-CREATE TABLE HorseTracking.dbo.Doctor (
-doctorID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Professionals (
+professionalID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+degree varchar(20) NULL,
 specialisationID int NOT NULL,
-detailsID int NOT NULL,
+detailID int NOT NULL,
 FOREIGN KEY (specialisationID)
-REFERENCES DoctorSpecialisation(specialisationID),
-FOREIGN KEY (detailsID)
-REFERENCES PeopleDetails(detailsID)
+REFERENCES Specialisations(specialisationID),
+FOREIGN KEY (detailID)
+REFERENCES PeopleDetails(detailID)
 )
 
-CREATE TABLE HorseTracking.dbo.Feeding (
-feedID INT NOT NULL PRIMARY KEY,
-nutritionPlanID int NOT NULL,
+CREATE TABLE HorseTracking.dbo.Portions (
+portionID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 forageID int NOT NULL,
 unitID int NOT NULL,
 mealID int NOT NULL,
-amount float NULL,
-FOREIGN KEY (nutritionPlanID)
-REFERENCES NutritionPlan(nutritionPlanID),
-FOREIGN KEY (forageID)
-REFERENCES Forage(forageID),
-FOREIGN KEY (unitID)
-REFERENCES UnitOfMeasure(unitID),
+amount float NOT NULL,
 FOREIGN KEY (mealID)
-REFERENCES Meal(mealID)
+REFERENCES Meals(mealID),
+FOREIGN KEY (forageID)
+REFERENCES Forages(forageID),
+FOREIGN KEY (unitID)
+REFERENCES UnitOfMeasures(unitID)
 )
 
 CREATE TABLE HorseTracking.dbo.CompetitionResult (
@@ -123,104 +135,105 @@ FOREIGN KEY (competitionID)
 REFERENCES Competition(competitionID)
 )
 
-CREATE TABLE HorseTracking.dbo.UserAcount (
-userID INT NOT NULL PRIMARY KEY,
-userTypeID int NOT NULL,
-detailsID int NOT NULL,
-acountLogin varchar(50) NOT NULL,
+CREATE TABLE HorseTracking.dbo.UserAcounts (
+userID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+typeID int NOT NULL,
+detailID int NOT NULL,
+login varchar(50) NOT NULL,
 hash varchar(50) NOT NULL,
 salt varchar(50) NOT NULL,
-createdDate date 
-FOREIGN KEY (userTypeID)
-REFERENCES UserType(typeID),
-FOREIGN KEY (detailsID)
-REFERENCES PeopleDetails(detailsID)
+createdDateTime datetime
+FOREIGN KEY (typeID)
+REFERENCES UserTypes(typeID),
+FOREIGN KEY (detailID)
+REFERENCES PeopleDetails(detailID)
 )
 
-CREATE TABLE HorseTracking.dbo.Horse (
-horseID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Horses (
+horseID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 genderID INT NOT NULL,
 userID INT NOT NULL,
 statusID INT NOT NULL,
-name varchar(50) NOT NULL,
-mother varchar(50) NULL,
-father varchar(50) NULL,
+name varchar(60) NOT NULL,
+mother varchar(60) NULL,
+father varchar(60) NULL,
 birthday date NULL,
 race varchar(50) NULL,
-breeder varchar(50) NULL,
-passport varchar(50) NULL,
+breeder varchar(60) NULL,
+passport varchar(20) NULL,
 photo varchar(MAX),
 status bit NOT NULL,
 FOREIGN KEY (statusID)
-REFERENCES HorseStatus(statusID),
+REFERENCES Status(statusID),
 FOREIGN KEY (genderID)
-REFERENCES HorseGender(genderID),
+REFERENCES HorseGenders(genderID),
 FOREIGN KEY (userID)
-REFERENCES UserAcount(userID)
+REFERENCES UserAcounts(userID)
 )
 
 
-CREATE TABLE HorseTracking.dbo.CustomNotification (
-notificationID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Notifications (
+notificationID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 userID int NOT NULL,
 horseID int NULL,
-title varchar(50) NOT NULL,
-description varchar(50) NULL,
+title varchar(30) NOT NULL,
+description varchar(MAX) NULL,
 sendDate date NOT NULL,
 createdDate date NOT NULL,
 turnOn bit NOT NULL,
 FOREIGN KEY (userID)
-REFERENCES UserAcount(userID),
+REFERENCES UserAcounts(userID),
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID)
+REFERENCES Horses(horseID)
 )
 
-CREATE TABLE HorseTracking.dbo.Visit (
-careID INT NOT NULL PRIMARY KEY,
-doctorID int NOT NULL,
+CREATE TABLE HorseTracking.dbo.Visits (
+visitID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+professionalID int NOT NULL,
 horseID int NOT NULL,
 visitDate datetime NOT NULL,
 summary varchar(MAX) NULL,
-artefactImage varchar(MAX) NULL,
+image varchar(MAX) NULL,
 cost float NULL,
-FOREIGN KEY (doctorID)
-REFERENCES Doctor(doctorID),
+FOREIGN KEY (professionalID)
+REFERENCES Professionals(professionalID),
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID)
+REFERENCES Horses(horseID)
 )
 
-CREATE TABLE HorseTracking.dbo.Shared (
-sharedID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Shareds (
+sharedID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 horseID int NOT NULL,
 userShareID int NOT NULL,
 userScanID int NOT NULL,
 endDate datetime NOT NULL,
 startDate datetime NOT NULL,
-code varchar(50) NULL,
+code varchar(50) NOT NULL,
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID),
+REFERENCES Horses(horseID),
 FOREIGN KEY (userShareID)
-REFERENCES UserAcount(userID),
+REFERENCES UserAcounts(userID),
 FOREIGN KEY (userScanID)
-REFERENCES UserAcount(userID)
+REFERENCES UserAcounts(userID)
 )
 
 
-CREATE TABLE HorseTracking.dbo.Eat (
-eatID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Diets (
+dietID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 nutritionPlanID int NOT NULL,
 horseID int NOT NULL,
+isActive bit NOT NULL,
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID),
+REFERENCES Horses(horseID),
 FOREIGN KEY (nutritionPlanID)
-REFERENCES NutritionPlan(nutritionPlanID)
+REFERENCES NutritionPlans(nutritionPlanID)
 )
 
-CREATE TABLE HorseTracking.dbo.Activity (
-activityID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Activities (
+activityID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 userID int NOT NULL,
 activityType int NOT NULL,
-trainerID int NOT NULL,
+trainerID int NULL,
 horseID int NOT NULL,
 date datetime NOT NULL,
 description varchar(MAX) NULL,
@@ -228,24 +241,22 @@ time int NULL,
 intensivity int NOT NULL,
 satisfaction int  NOT NULL
 FOREIGN KEY (userID)
-REFERENCES UserAcount(userID),
-FOREIGN KEY (activityTypeID)
-REFERENCES ActivityType(activityTypeID),
+REFERENCES UserAcounts(userID),
 FOREIGN KEY (trainerID)
-REFERENCES UserAcount(userID),
+REFERENCES UserAcounts(userID),
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID)
+REFERENCES Horses(horseID)
 )
 
-CREATE TABLE HorseTracking.dbo.TakePart (
-takePartID INT NOT NULL PRIMARY KEY,
+CREATE TABLE HorseTracking.dbo.Participations (
+participationID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 horseID int NOT NULL,
 competitionID int NOT NULL,
-level varchar(50) NULL,
-result varchar(50) NULL,
+level varchar(30) NULL,
+result varchar(MAX) NULL,
 place int NULL,
 FOREIGN KEY (horseID)
-REFERENCES Horse(horseID),
+REFERENCES Horses(horseID),
 FOREIGN KEY (competitionID)
-REFERENCES Competition(competitionID)
+REFERENCES Competitions(competitionID)
 )

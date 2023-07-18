@@ -9,11 +9,11 @@ namespace HorseTrackingDesktop.Models
     {
         public PeopleDetails()
         {
-            Doctor = new HashSet<Doctor>();
-            UserAcount = new HashSet<UserAcount>();
+            Professionals = new HashSet<Professionals>();
+            UserAcounts = new HashSet<UserAcounts>();
         }
 
-        public int DetailsId { get; set; }
+        public int DetailId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string PhoneNumber { get; set; }
@@ -21,8 +21,9 @@ namespace HorseTrackingDesktop.Models
         public string City { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
+        public string PostalCode { get; set; }
 
-        public virtual ICollection<Doctor> Doctor { get; set; }
-        public virtual ICollection<UserAcount> UserAcount { get; set; }
+        public virtual ICollection<Professionals> Professionals { get; set; }
+        public virtual ICollection<UserAcounts> UserAcounts { get; set; }
     }
 }
