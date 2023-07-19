@@ -17,7 +17,7 @@
     <Grid Background="{StaticResource DarkWhite}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -48,11 +48,8 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="2*"/>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
                     </Grid.RowDefinitions>
                     <Label Grid.Column="1" 
                            Content="Logowanie"
@@ -60,20 +57,21 @@
                            Foreground="{StaticResource MainGreenBrush}"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"/>
-                    <Border Grid.Column="1" 
-                            Grid.Row="1" 
-                            CornerRadius="10"  
-                            Margin="10"
-                            BorderBrush="{StaticResource MainGreenBrush}"
-                            BorderThickness="2">
-                        <TextBox BorderThickness="0"
-                                 Padding="5"
-                                 FontSize="18"
-                                 Margin="15,0"
-                                 Text="{Binding UserLogin}"/>
-                    </Border>
-                    <Label Grid.Row="1"
-                            Grid.Column="1"
+
+                    <StackPanel Grid.Row="1" Grid.Column="1">
+                        <Grid>
+                            <Border Height="50"
+                                CornerRadius="10"  
+                                Margin="10"
+                                BorderBrush="{StaticResource MainGreenBrush}"
+                                BorderThickness="2">
+                                <TextBox BorderThickness="0"
+                                         Padding="5"
+                                         FontSize="18"
+                                         Margin="15,0"
+                                         Text="{Binding UserLogin}"/>
+                            </Border>
+                            <Label
                             Content="Login"
                             FontSize="14"
                             Width="44"
@@ -85,21 +83,24 @@
                             HorizontalContentAlignment="Left"
                             Foreground="{StaticResource MainGreenBrush}"
                             Background="{StaticResource BackgroundBrush}"/>
-                    <Border Grid.Row="2" 
-                            Grid.Column="1"
-                            CornerRadius="10"  
-                            Margin="10"
-                            BorderBrush="{StaticResource MainGreenBrush}"
-                            BorderThickness="2">
-                        <PasswordBox VerticalAlignment="Center"
+                        </Grid>
+                        <Grid>
+                            <Border Grid.Row="2" 
+                                    Grid.Column="1"
+                                    CornerRadius="10"  
+                                    Margin="10"
+                                    Height="50"
+                                    BorderBrush="{StaticResource MainGreenBrush}"
+                                    BorderThickness="2">
+                                <PasswordBox VerticalAlignment="Center"
                                      Grid.Column="1"
                                      FontSize="20"
                                      Margin="15,0"
                                      BorderThickness="0" 
                                      BorderBrush="Transparent"
                                      PasswordChanged="PasswordChanged"/>
-                    </Border>
-                    <Label Content="Hasło"
+                            </Border>
+                            <Label Content="Hasło"
                            Grid.Column="1"
                            Grid.Row="2"
                            FontSize="14"
@@ -113,13 +114,18 @@
                            Foreground="{StaticResource MainGreenBrush}"
                            Background="{StaticResource BackgroundBrush}" RenderTransformOrigin="0.653,0.823"/>
 
-                    <Button Grid.Row="3"
-                            Grid.Column="1"
-                            Margin="10"
-                            Content="Logowanie"
-                            Style="{StaticResource ImportantButton}"
-                            Command="{Binding CheckLoginCommand}"
-                            CommandParameter="{Binding ElementName=LoginWindow}"/>
+                        </Grid>
+
+                        <Button Grid.Row="3"
+                                Grid.Column="1"
+                                Margin="10"
+                                Height="50"
+                                Content="Logowanie"
+                                Style="{StaticResource ImportantButton}"
+                                Command="{Binding CheckLoginCommand}"
+                                CommandParameter="{Binding ElementName=LoginWindow}"/>
+                    </StackPanel>
+
                 </Grid>
             </Border>
         </Border>

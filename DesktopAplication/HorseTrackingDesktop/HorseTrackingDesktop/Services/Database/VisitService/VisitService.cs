@@ -28,5 +28,25 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
                                               Include(i => i.Professional.Specialisation).ToList();
             return Task.FromResult(listOfUsers);
         }
+
+        public Task RemoveVisit(Visits visits)
+        {
+            _context.Visits.Remove(visits);
+            return Task.CompletedTask;
+        }
+
+        public Task AddVisit(Visits visits)
+        {
+            _context.Visits.Add(visits);
+            return Task.CompletedTask;
+        }
+
+        public Task EditVisit(Visits editedVisit, int id)
+        {
+           var visit = _context.Visits.Where(x => x.VisitId == id).SingleOrDefault();
+            visit = editedVisit;
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
     }
 }

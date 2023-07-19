@@ -1,6 +1,8 @@
-﻿using HorseTrackingDesktop.Models;
+﻿using CommunityToolkit.Mvvm.Input;
+using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.VisitService;
+using HorseTrackingDesktop.View;
 using HorseTrackingDesktop.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +13,7 @@ using System.Windows.Input;
 
 namespace HorseTrackingDesktop.PageModel
 {
-    public class VisitPageModel : BaseViewModel
+    public partial class VisitPageModel : BaseViewModel
     {
         private readonly IAppState _appState;
         private readonly IVisitService _visitService;
@@ -59,6 +61,18 @@ namespace HorseTrackingDesktop.PageModel
         {
             Visits = await _visitService.GetAllVisit(id);
             OnPropertyChanged(nameof(Visits));
+        }
+
+        [RelayCommand]
+        public async Task AddVisit(Visits visit)
+        {
+            new AddVisitView().ShowDialog();
+            //await _visitService.AddVisit(visit);
+        }
+
+        public async Task RemoveVistit(Visits visit)
+        {
+            await _visitService.RemoveVisit(visit);
         }
 
         public async Task SwitchHorse()

@@ -39,7 +39,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         [RelayCommand]
-        public async Task CheckLogin()
+        public async Task CheckLogin(Window window)
         {
             if (!String.IsNullOrEmpty(UserLogin) && !String.IsNullOrEmpty(UserHash))
             {
@@ -50,6 +50,7 @@ namespace HorseTrackingDesktop.ViewModel
                     return;
                 }
                 await LogIn(user);
+                window.Close();
             }
         }
 

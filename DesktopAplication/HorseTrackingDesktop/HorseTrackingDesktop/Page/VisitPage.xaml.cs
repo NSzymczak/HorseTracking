@@ -1,4 +1,5 @@
-﻿using HorseTrackingDesktop.PageModel;
+﻿using HorseTrackingDesktop.Models;
+using HorseTrackingDesktop.PageModel;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;

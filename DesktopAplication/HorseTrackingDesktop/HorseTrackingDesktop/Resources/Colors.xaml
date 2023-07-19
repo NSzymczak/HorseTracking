@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--CUSTOM COLORS-->
-    <Brush x:Key="MainGreenBrush">#336638</Brush>
+    <Brush x:Key="MainGreenBrush">#95B17F</Brush>
     <Brush x:Key="BackgroundBrush">White</Brush>
     <Brush x:Key="DarkWhite">#F0F0F0</Brush>
     <Brush x:Key="LightGrey">#B4B6B4</Brush>
+    <Brush x:Key="FontColor">#202020</Brush>
 </ResourceDictionary>

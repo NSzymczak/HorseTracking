@@ -67,7 +67,10 @@
                       CanUserReorderColumns="False"
                       CanUserDeleteRows="False"
                       CanUserAddRows="False"
-                      FontSize="15">
+                      FontSize="15"
+                      BorderBrush="{StaticResource MainGreenBrush}"
+                      HorizontalGridLinesBrush="{StaticResource MainGreenBrush}"
+                      VerticalGridLinesBrush="{StaticResource MainGreenBrush}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Data wizyty"             Width="*"  Binding="{Binding VisitDate,StringFormat=dd.MM.yyyy}" />
                     <DataGridTextColumn Header="Imie konia"              Width="2*" Binding="{Binding Horse.Name}"/>
@@ -80,20 +83,27 @@
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"
-                        Content="Dodaj"
-                        Style="{StaticResource ImportantButton}"
-                        HorizontalAlignment="Right"/>
-                <Button Grid.Column="1"
-                        Content="Edytuj"
-                        Style="{StaticResource NotImportantButton}"/>
-                <Button Grid.Column="2"
-                        Content="Usuń"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource NotImportantButton}"/>
+                <StackPanel Grid.Column="1"
+                            Orientation="Horizontal">
+                    <Button Grid.Column="0"
+                            Content="Dodaj"
+                            Margin="20,0"
+                            Command="{Binding AddVisitCommand}"
+                            Style="{StaticResource ImportantButton}"
+                            HorizontalAlignment="Right"/>
+                    <Button Grid.Column="1"
+                            Content="Edytuj"                            
+                            Margin="20,0"
+                            Style="{StaticResource NotImportantButton}"/>
+                    <Button Grid.Column="2"
+                            Content="Usuń"
+                            HorizontalAlignment="Left"
+                            Margin="20,0"
+                            Style="{StaticResource NotImportantButton}"/>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>

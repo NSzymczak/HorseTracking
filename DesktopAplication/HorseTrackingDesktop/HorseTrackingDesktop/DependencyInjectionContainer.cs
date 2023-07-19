@@ -26,6 +26,7 @@ namespace HorseTrackingDesktop
             services.AddTransient<StatisticPageModel>();
             services.AddTransient<UserPageModel>();
             services.AddTransient<VisitPageModel>();
+            services.AddTransient<AddVisitViewModel>();
             return services;
         }
     }
