@@ -48,5 +48,10 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
             _context.SaveChanges();
             return Task.CompletedTask;
         }
+
+        public Task<List<Professionals>> GetProfessionals()
+        {
+            return Task.FromResult(_context.Professionals.Include(i=>i.Detail).ToList());
+        }
     }
 }

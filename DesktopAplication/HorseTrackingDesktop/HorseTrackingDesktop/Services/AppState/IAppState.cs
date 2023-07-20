@@ -8,7 +8,6 @@ namespace HorseTrackingDesktop.Services.AppState
     {
         Horses? CurrentHorse { get; set; }
         UserAcounts? CurrentUser { get; set; }
-        List<Horses>? HorseList { get; set; }
         List<UserAcounts>? ListOfTrainer { get; set; }
         List<Professionals>? ListOfProfessionals { get; set; }
     }

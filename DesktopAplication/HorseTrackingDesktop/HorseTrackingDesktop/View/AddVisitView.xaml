@@ -29,15 +29,21 @@
             <Border BorderBrush="{StaticResource LightGrey}"
                     BorderThickness="0.5"
                     CornerRadius="5"
-                    Margin="10">
+                    Margin="10"
+                    Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Data wizyty:"/>
+                    <Label Content="Data wizyty:"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
                     <DatePicker Grid.Column="1"
-                                BorderThickness="0"/>
+                                BorderThickness="0"
+                                VerticalAlignment="Center"
+                                Margin="0,0,10,0"
+                                SelectedDate="{Binding VisitDate}"/>
                 </Grid>
             </Border>
             <Border BorderBrush="{StaticResource LightGrey}"
@@ -51,10 +57,23 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Content="Specjalista"
-                       VerticalAlignment="Center"/>
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
                     <ComboBox Grid.Column="1"
                               Margin="0,0,10,0"
-                              VerticalAlignment="Center"/>
+                              VerticalAlignment="Center"
+                              ItemsSource="{Binding Professionals}"
+                              SelectedItem="{Binding Professional}"
+                              SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Label Content="{Binding Detail.Name}"/>
+                                    <Label Content="{Binding Detail.Surname}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                        </ComboBox>
                 </Grid>
             </Border>
             <Border BorderBrush="{StaticResource LightGrey}"
@@ -68,23 +87,42 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Content="Koń"
-                       VerticalAlignment="Center"/>
+                            VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
                     <ComboBox Grid.Column="1"
                               Margin="0,0,10,0"
-                              VerticalAlignment="Center"/>
+                              VerticalAlignment="Center"
+                              ItemsSource="{Binding Horses}"
+                              SelectedItem="{Binding Horse}"
+                              SelectionChanged="ComboBox_SelectionChanged_1">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Label Content="{Binding Name}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
                 </Grid>
             </Border>
             <Border BorderBrush="{StaticResource LightGrey}"
                     BorderThickness="0.5"
                     CornerRadius="5"
-                    Margin="10">
+                    Margin="10"
+                    Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Koszt"/>
-
+                    <Label Content="Koszt"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="1" 
+                             VerticalAlignment="Center"
+                             Height="30"
+                             Margin="0,0,10,0"
+                             Text="{Binding Cost}"/>
                 </Grid>
             </Border>
             <Border BorderBrush="{StaticResource LightGrey}"
@@ -96,22 +134,34 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Opis (zalecenia, ważne informacje itp.)"/>
-                    <TextBlock Height="200"
-                               Padding="10"
-                               Grid.Row="1"/>
+                    <Label Content="Opis (zalecenia, ważne informacje itp.)"
+                           Margin="10,0,0,0"/>
+                    <RichTextBox Height="180"
+                                 Padding="20"
+                                 Margin="15,5,15,15"
+                                 Grid.Row="1"
+                                 DataContext="{Binding Description}"/>
                 </Grid>
             </Border>
             <Border BorderBrush="{StaticResource LightGrey}"
                     BorderThickness="0.5"
                     CornerRadius="5"
-                    Margin="10">
+                    Margin="10"
+                    Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Zdjęcie z wizyty"/>
+                    <Label Content="Zdjęcie z wizyty"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                    <Button Grid.Column="1"
+                            Style="{StaticResource ImportantButton}"
+                            Height="30"
+                            Width="80"
+                            Content="-->"
+                            Command="{Binding GoToImageCommand}"/>
                 </Grid>
             </Border>
         </StackPanel>

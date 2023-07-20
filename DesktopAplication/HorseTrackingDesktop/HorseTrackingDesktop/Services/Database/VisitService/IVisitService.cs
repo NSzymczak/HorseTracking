@@ -13,5 +13,7 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
         Task RemoveVisit(Visits visits);
         Task AddVisit(Visits visits);
         Task EditVisit(Visits editedVisit, int id);
+
+        Task<List<Professionals>> GetProfessionals();
     }
 }

@@ -5,6 +5,7 @@ using HorseTrackingDesktop.Services.Database.UserService;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
+using System.Drawing;
 
 namespace HorseTrackingDesktop
 {
@@ -27,6 +28,7 @@ namespace HorseTrackingDesktop
             services.AddTransient<UserPageModel>();
             services.AddTransient<VisitPageModel>();
             services.AddTransient<AddVisitViewModel>();
+            //services.AddTransient<ImageViewModel>();
             return services;
         }
     }
