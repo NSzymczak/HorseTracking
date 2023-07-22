@@ -32,12 +32,14 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
         public Task RemoveVisit(Visits visits)
         {
             _context.Visits.Remove(visits);
+            _context.SaveChanges();
             return Task.CompletedTask;
         }
 
         public Task AddVisit(Visits visits)
         {
             _context.Visits.Add(visits);
+            _context.SaveChanges();
             return Task.CompletedTask;
         }
 

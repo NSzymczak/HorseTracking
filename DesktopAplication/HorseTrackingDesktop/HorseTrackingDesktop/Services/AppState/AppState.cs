@@ -13,8 +13,8 @@ namespace HorseTrackingDesktop.Services.AppState
             set => currentHorse = value;
         }
 
-        private UserAcounts? currentUser;
-        public UserAcounts? CurrentUser
+        private UserAcounts currentUser;
+        public UserAcounts CurrentUser
         {
             get => currentUser;
             set => currentUser = value;

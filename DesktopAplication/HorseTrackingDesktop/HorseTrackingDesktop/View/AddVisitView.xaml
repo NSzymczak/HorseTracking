@@ -26,9 +26,7 @@
                VerticalAlignment="Center"/>
 
         <StackPanel Grid.Row="1">
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10"
                     Height="50">
                 <Grid>
@@ -46,9 +44,7 @@
                                 SelectedDate="{Binding VisitDate}"/>
                 </Grid>
             </Border>
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10"
                     Height="50">
                 <Grid>
@@ -67,18 +63,16 @@
                               SelectionChanged="ComboBox_SelectionChanged">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
-                                    <Label Content="{Binding Detail.Name}"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Detail.Name}" Margin="0,0,2,0"/>
                                     <Label Content="{Binding Detail.Surname}"/>
-                                </Grid>
+                                </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                         </ComboBox>
                 </Grid>
             </Border>
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10"
                     Height="50">
                 <Grid>
@@ -105,9 +99,7 @@
                     </ComboBox>
                 </Grid>
             </Border>
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10"
                     Height="50">
                 <Grid>
@@ -120,14 +112,13 @@
                            Margin="10,0,0,0"/>
                     <TextBox Grid.Column="1" 
                              VerticalAlignment="Center"
+                             Padding="5"
                              Height="30"
                              Margin="0,0,10,0"
                              Text="{Binding Cost}"/>
                 </Grid>
             </Border>
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -143,9 +134,7 @@
                                  DataContext="{Binding Description}"/>
                 </Grid>
             </Border>
-            <Border BorderBrush="{StaticResource LightGrey}"
-                    BorderThickness="0.5"
-                    CornerRadius="5"
+            <Border Style="{StaticResource GrayBorder}"
                     Margin="10"
                     Height="50">
                 <Grid>
@@ -173,12 +162,15 @@
             </Grid.ColumnDefinitions>
             <Button Style="{StaticResource ImportantButton}"
                     Grid.Column="0"
-                    Content="Dodaj"/>
+                    Content="Dodaj"
+                    Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=AddWindow}"/>
             <Button Style="{StaticResource NotImportantButton}"
                     Grid.Column="1"
                     Content="Wróć"
                     Command="{Binding GoBackCommand}"
-                    CommandParameter="{Binding ElementName=AddWindow}"/>
+                    CommandParameter="{Binding ElementName=AddWindow}">
+            </Button>
         </Grid>
     </Grid>
 </Window>

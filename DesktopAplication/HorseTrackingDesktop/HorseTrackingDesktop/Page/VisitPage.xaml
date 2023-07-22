@@ -43,7 +43,7 @@
                             IsReadOnly="False"
                             ItemsSource="{Binding Horses}"
                             SelectedItem="{Binding CurrentHorse}"
-                            SelectionChanged="ComboBox_SelectionChanged">
+                            SelectionChanged="SwitchHorses">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <Label Content="{Binding Name}"/>
@@ -58,7 +58,7 @@
                        VerticalAlignment="Top"
                        HorizontalAlignment="Right"/>
             </Grid>
-           
+
             <DataGrid Grid.Row="1"
                       Grid.ColumnSpan="3"
                       Margin="20,20,20,20"
@@ -70,11 +70,25 @@
                       FontSize="15"
                       BorderBrush="{StaticResource MainGreenBrush}"
                       HorizontalGridLinesBrush="{StaticResource MainGreenBrush}"
-                      VerticalGridLinesBrush="{StaticResource MainGreenBrush}">
+                      VerticalGridLinesBrush="{StaticResource MainGreenBrush}"
+                      SelectedItem="{Binding SelectedVisit}"
+                      MouseDoubleClick="GotoDetails">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridCell">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="{StaticResource MainGreenBrush}" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                        </Style.Triggers>
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderThickness" Value="1" />
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Data wizyty"             Width="*"  Binding="{Binding VisitDate,StringFormat=dd.MM.yyyy}" />
                     <DataGridTextColumn Header="Imie konia"              Width="2*" Binding="{Binding Horse.Name}"/>
-                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Width="2*" Binding="{Binding Professional.Detail.Name}"/>
+                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Width="2*" Binding="{Binding Professional.Detail.Surname}"/>
                     <DataGridTextColumn Header="Specjalizacja"           Width="2*" Binding="{Binding Professional.Specialisation.Name}"/>
                     <DataGridTextColumn Header="Cena"                    Width="*"  Binding="{Binding Cost}"/>
                 </DataGrid.Columns>
@@ -97,11 +111,13 @@
                     <Button Grid.Column="1"
                             Content="Edytuj"                            
                             Margin="20,0"
+                            Command="{Binding EditVisitCommand}"
                             Style="{StaticResource NotImportantButton}"/>
                     <Button Grid.Column="2"
                             Content="Usuń"
                             HorizontalAlignment="Left"
-                            Margin="20,0"
+                            Margin="20,0"                            
+                            Command="{Binding RemoveVistitCommand}"
                             Style="{StaticResource NotImportantButton}"/>
                 </StackPanel>
             </Grid>

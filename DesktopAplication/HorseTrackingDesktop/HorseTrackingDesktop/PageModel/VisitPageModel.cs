@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.View;
 using HorseTrackingDesktop.ViewModel;
@@ -17,8 +18,9 @@ namespace HorseTrackingDesktop.PageModel
     {
         private readonly IAppState _appState;
         private readonly IVisitService _visitService;
+        private readonly IHorseService _horseService;
 
-        public List<Visits>? Visits { get; set; }
+        public ObservableCollection<Visits>? Visits { get; set; }
         public ICollection<Horses>? Horses { get; set; }
 
         private Horses? currentHorse;
@@ -34,10 +36,26 @@ namespace HorseTrackingDesktop.PageModel
                 }
             }
         }
-        public VisitPageModel(IAppState appState ,IVisitService visitService)
+
+        private Visits? selectedVisit;
+        public Visits? SelectedVisit
+        {
+            get { return selectedVisit; }
+            set
+            {
+                if (selectedVisit != value)
+                {
+                    selectedVisit = value;
+                    OnPropertyChanged(nameof(CurrentHorse));
+                }
+            }
+        }
+
+        public VisitPageModel(IAppState appState, IVisitService visitService, IHorseService horseService)
         {
             _visitService = visitService;
             _appState = appState;
+            _horseService = horseService;
         }
 
         public async Task SetUp()
@@ -46,9 +64,9 @@ namespace HorseTrackingDesktop.PageModel
             {
                 return;
             }
-            Horses = _appState.CurrentUser.Horses;
+            Horses = await _horseService.GetHorses();
             CurrentHorse = Horses.FirstOrDefault();
-            if(CurrentHorse == null)
+            if (CurrentHorse == null)
             {
                 return;
             }
@@ -59,7 +77,8 @@ namespace HorseTrackingDesktop.PageModel
 
         private async Task GetVisit(int id)
         {
-            Visits = await _visitService.GetAllVisit(id);
+            var visits = await _visitService.GetAllVisit(id);
+            Visits = new ObservableCollection<Visits>(visits);
             OnPropertyChanged(nameof(Visits));
         }
 
@@ -67,21 +86,45 @@ namespace HorseTrackingDesktop.PageModel
         public async Task AddVisit(Visits visit)
         {
             new AddVisitView().ShowDialog();
-            //await _visitService.AddVisit(visit);
+            if (CurrentHorse != null)
+                await GetVisit(CurrentHorse.HorseId);
+
         }
 
-        public async Task RemoveVistit(Visits visit)
+        [RelayCommand]
+        public async Task RemoveVistit()
         {
-            await _visitService.RemoveVisit(visit);
+            if (selectedVisit != null)
+            {
+                await _visitService.RemoveVisit(selectedVisit);
+            }
+        }
+
+        [RelayCommand]
+        public async Task EditVisit()
+        {
+            if (selectedVisit != null)
+            {
+                new AddVisitView(selectedVisit).ShowDialog();
+                await GetVisit(selectedVisit.HorseId);
+            }
         }
 
         public async Task SwitchHorse()
         {
-            if(CurrentHorse== null)
+            if (CurrentHorse == null)
             {
                 return;
             }
             await GetVisit(CurrentHorse.HorseId);
+        }
+
+        public void GoToDetails()
+        {
+            if(selectedVisit!= null)
+            {
+                new VisitDetailsView(selectedVisit).ShowDialog();
+            }
         }
     }
 }

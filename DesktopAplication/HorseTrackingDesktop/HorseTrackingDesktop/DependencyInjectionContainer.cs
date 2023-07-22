@@ -1,6 +1,7 @@
 ﻿using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.PageModel;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.UserService;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.ViewModel;
@@ -16,6 +17,7 @@ namespace HorseTrackingDesktop
             services.AddSingleton<IAppState,AppState>();
             services.AddSingleton<IUserServices, UserSevices>();
             services.AddSingleton<IVisitService, VisitService>();
+            services.AddSingleton<IHorseService, HorseService>();
             services.AddSingleton<HorseTrackingContext>();
             return services;
         }

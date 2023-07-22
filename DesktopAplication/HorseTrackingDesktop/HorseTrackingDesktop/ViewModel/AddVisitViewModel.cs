@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.View;
 using System;
@@ -36,8 +38,8 @@ namespace HorseTrackingDesktop.ViewModel
             set => SetProperty(ref horse, value);
         }
 
-        private float cost;
-        public float Cost
+        private double cost;
+        public double Cost
         {
             get => cost;
             set => SetProperty(ref cost, value);
@@ -62,23 +64,37 @@ namespace HorseTrackingDesktop.ViewModel
 
         private readonly IAppState _appState;
         private readonly IVisitService _visitService;
-        public AddVisitViewModel(IAppState appState, IVisitService visitService)
+        private readonly IHorseService _horseService;
+        public AddVisitViewModel(IAppState appState, IVisitService visitService,
+                                IHorseService horseService)
         {
             _appState = appState;
             _visitService = visitService;
+            _horseService = horseService;
         }
 
         public async Task SetUp()
         {
-            //jakaś metoda pobierająca konie z bazy
-            //Horses = _appState.CurrentUser.Horses;
-            //Horse = 
-
+            Horses = await _horseService.GetHorses();
             Professionals = await _visitService.GetProfessionals();
-            Professional = Professionals.First();
-
             OnPropertyChanged(nameof(Professionals));
             OnPropertyChanged(nameof(Horses));
+        }
+
+        public void SetVist(Visits visit)
+        {
+            VisitDate = visit.VisitDate;
+            Cost = visit.Cost != null ? visit.Cost.Value : 0;
+            Horse = visit.Horse;
+            Professional = visit.Professional;
+            Description = visit.Summary;
+        }
+
+        public void SetDefault()
+        {
+            Horse = Horses.First();
+            Professional = Professionals.First();
+            VisitDate = DateTime.Now;
         }
 
         [RelayCommand]
@@ -98,6 +114,15 @@ namespace HorseTrackingDesktop.ViewModel
         [RelayCommand]
         public Task Add(Window window)
         {
+            var visit = new Visits()
+            {
+                VisitDate = VisitDate,
+                Cost = Cost,
+                Horse = Horse,
+                Professional = Professional,
+                Summary = Description
+            };
+            _visitService.AddVisit(visit);
             window.Close();
             return Task.CompletedTask;
         }
