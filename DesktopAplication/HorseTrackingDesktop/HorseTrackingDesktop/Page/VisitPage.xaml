@@ -71,25 +71,17 @@
                       HorizontalGridLinesBrush="{StaticResource MainGreenBrush}"
                       VerticalGridLinesBrush="{StaticResource MainGreenBrush}"
                       SelectedItem="{Binding SelectedVisit}"
-                      MouseDoubleClick="GotoDetails">
+                      MouseDoubleClick="GotoDetails"
+                      CellStyle="{StaticResource GreenCell}"
+                      HeadersVisibility="Column">
                 <DataGrid.Resources>
-                    <Style TargetType="DataGridCell">
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Background" Value="{StaticResource MainGreenBrush}" />
-                                <Setter Property="Foreground" Value="Black" />
-                            </Trigger>
-                        </Style.Triggers>
-                        <Setter Property="BorderBrush" Value="Transparent" />
-                        <Setter Property="BorderThickness" Value="1" />
-                    </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Data wizyty"             Width="*"  Binding="{Binding VisitDate,StringFormat=dd.MM.yyyy}" />
-                    <DataGridTextColumn Header="Imie konia"              Width="2*" Binding="{Binding Horse.Name}" />
-                    <DataGridTextColumn Header="Nazwisko lekarza/kowala" Width="2*" Binding="{Binding Professional.Detail.Surname}" />
-                    <DataGridTextColumn Header="Specjalizacja"           Width="2*" Binding="{Binding Professional.Specialisation.Name}" />
-                    <DataGridTextColumn Header="Cena"                    Width="*"  Binding="{Binding Cost}" />
+                    <DataGridTextColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Data wizyty"             Width="*"  Binding="{Binding VisitDate,StringFormat=dd.MM.yyyy}" />
+                    <DataGridTextColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Imie konia"              Width="2*" Binding="{Binding Horse.Name}" />
+                    <DataGridTextColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Nazwisko lekarza/kowala" Width="2*" Binding="{Binding Professional.Detail.Surname}" />
+                    <DataGridTextColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Specjalizacja"           Width="2*" Binding="{Binding Professional.Specialisation.Name}" />
+                    <DataGridTextColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Cena"                    Width="*"  Binding="{Binding Cost}" />
                 </DataGrid.Columns>
             </DataGrid>
 
