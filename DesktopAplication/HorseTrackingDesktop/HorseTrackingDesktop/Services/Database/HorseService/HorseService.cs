@@ -1,25 +1,24 @@
 ﻿using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace HorseTrackingDesktop.Services.Database.HorseService
 {
-    public class HorseService :IHorseService
+    public class HorseService : IHorseService
     {
         private readonly IAppState _appState;
         private readonly HorseTrackingContext _context;
+
         public HorseService(IAppState appState, HorseTrackingContext context)
         {
             _appState = appState;
             _context = context;
         }
+
         public async Task<List<Horses>> GetHorses()
         {
             if (_appState.CurrentUser.Type.TypeName == UserTypesEnum.horseOwner.ToString())

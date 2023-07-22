@@ -1,9 +1,5 @@
 ﻿using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,7 +7,8 @@ namespace HorseTrackingDesktop
 {
     public partial class LoginView : Window
     {
-        LoginViewModel? LoginViewModel;
+        private LoginViewModel? LoginViewModel;
+
         public LoginView()
         {
             InitializeComponent();

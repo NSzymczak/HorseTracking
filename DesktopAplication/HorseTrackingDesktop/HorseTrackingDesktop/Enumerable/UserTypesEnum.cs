@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HorseTrackingDesktop.Enumerable
+﻿namespace HorseTrackingDesktop.Enumerable
 {
     public enum UserTypesEnum
     {
@@ -13,5 +7,4 @@ namespace HorseTrackingDesktop.Enumerable
         horseOwner,
         trainer
     }
-
 }

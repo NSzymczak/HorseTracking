@@ -7,21 +7,22 @@ namespace HorseTrackingDesktop.View
 {
     public partial class VisitPage : Page
     {
-        VisitPageModel? pageModel;
+        private VisitPageModel? pageModel;
+
         public VisitPage()
         {
             InitializeComponent();
             pageModel = StartUp.ServiceProvider?.GetService<VisitPageModel>();
-            DataContext= pageModel;
-            if(pageModel != null )
+            DataContext = pageModel;
+            if (pageModel != null)
             {
-                Loaded += async(s, e) => await pageModel.SetUp();
+                Loaded += async (s, e) => await pageModel.SetUp();
             }
         }
 
         private async void SwitchHorses(object sender, SelectionChangedEventArgs e)
         {
-            if(pageModel== null)
+            if (pageModel == null)
             {
                 return;
             }
@@ -30,7 +31,7 @@ namespace HorseTrackingDesktop.View
 
         private void GotoDetails(object sender, MouseButtonEventArgs e)
         {
-            if(pageModel== null)
+            if (pageModel == null)
             {
                 return;
             }

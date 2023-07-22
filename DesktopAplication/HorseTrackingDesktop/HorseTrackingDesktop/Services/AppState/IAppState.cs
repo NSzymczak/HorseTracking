@@ -1,6 +1,5 @@
 ﻿using HorseTrackingDesktop.Models;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HorseTrackingDesktop.Services.AppState
 {

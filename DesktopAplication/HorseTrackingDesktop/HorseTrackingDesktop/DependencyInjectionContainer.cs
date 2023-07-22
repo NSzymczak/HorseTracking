@@ -6,7 +6,6 @@ using HorseTrackingDesktop.Services.Database.UserService;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
-using System.Drawing;
 
 namespace HorseTrackingDesktop
 {
@@ -14,7 +13,7 @@ namespace HorseTrackingDesktop
     {
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
-            services.AddSingleton<IAppState,AppState>();
+            services.AddSingleton<IAppState, AppState>();
             services.AddSingleton<IUserServices, UserSevices>();
             services.AddSingleton<IVisitService, VisitService>();
             services.AddSingleton<IHorseService, HorseService>();

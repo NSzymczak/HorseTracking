@@ -2,7 +2,6 @@
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace HorseTrackingDesktop.View
 {

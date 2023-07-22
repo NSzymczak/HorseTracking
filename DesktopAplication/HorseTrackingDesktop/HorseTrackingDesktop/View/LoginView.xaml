@@ -3,12 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HorseTrackingDesktop" 
+        xmlns:local="clr-namespace:HorseTrackingDesktop"
         xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
         x:Name="LoginWindow"
         mc:Ignorable="d"
-        Title="NAZWAAPKI" 
-        Height="900" 
+        Title="NAZWAAPKI"
+        Height="900"
         Width="1600"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
@@ -17,51 +17,51 @@
     <Grid Background="{StaticResource DarkWhite}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="1"
                    Grid.Row="1"
                    Fill="{StaticResource BackgroundBrush}"
-                   Margin="10"/>
-        <Border Grid.Row="1" 
+                   Margin="10" />
+        <Border Grid.Row="1"
                 Grid.Column="1"
                 BorderThickness="10"
                 CornerRadius="10"
                 Margin="1"
                 BorderBrush="{StaticResource BackgroundBrush}">
-            <Border Grid.Row="1" 
+            <Border Grid.Row="1"
                     Grid.Column="1"
                     BorderThickness="2"
                     Margin="5"
                     CornerRadius="10"
                     BorderBrush="{StaticResource MainGreenBrush}">
-                <Grid >
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
-                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="4*" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2*" />
                     </Grid.RowDefinitions>
-                    <Label Grid.Column="1" 
+                    <Label Grid.Column="1"
                            Content="Logowanie"
                            FontSize="40"
                            Foreground="{StaticResource MainGreenBrush}"
                            VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center" />
 
                     <StackPanel Grid.Row="1" Grid.Column="1">
                         <Grid>
                             <Border Height="50"
-                                CornerRadius="10"  
+                                CornerRadius="10"
                                 Margin="10"
                                 BorderBrush="{StaticResource MainGreenBrush}"
                                 BorderThickness="2">
@@ -69,7 +69,7 @@
                                          Padding="5"
                                          FontSize="18"
                                          Margin="15,0"
-                                         Text="{Binding UserLogin}"/>
+                                         Text="{Binding UserLogin}" />
                             </Border>
                             <Label
                             Content="Login"
@@ -82,12 +82,12 @@
                             VerticalContentAlignment="Top"
                             HorizontalContentAlignment="Left"
                             Foreground="{StaticResource MainGreenBrush}"
-                            Background="{StaticResource BackgroundBrush}"/>
+                            Background="{StaticResource BackgroundBrush}" />
                         </Grid>
                         <Grid>
-                            <Border Grid.Row="2" 
+                            <Border Grid.Row="2"
                                     Grid.Column="1"
-                                    CornerRadius="10"  
+                                    CornerRadius="10"
                                     Margin="10"
                                     Height="50"
                                     BorderBrush="{StaticResource MainGreenBrush}"
@@ -96,9 +96,9 @@
                                      Grid.Column="1"
                                      FontSize="20"
                                      Margin="15,0"
-                                     BorderThickness="0" 
+                                     BorderThickness="0"
                                      BorderBrush="Transparent"
-                                     PasswordChanged="PasswordChanged"/>
+                                     PasswordChanged="PasswordChanged" />
                             </Border>
                             <Label Content="Hasło"
                            Grid.Column="1"
@@ -112,8 +112,7 @@
                            VerticalContentAlignment="Top"
                            HorizontalContentAlignment="Left"
                            Foreground="{StaticResource MainGreenBrush}"
-                           Background="{StaticResource BackgroundBrush}" RenderTransformOrigin="0.653,0.823"/>
-
+                           Background="{StaticResource BackgroundBrush}" RenderTransformOrigin="0.653,0.823" />
                         </Grid>
 
                         <Button Grid.Row="3"
@@ -123,9 +122,8 @@
                                 Content="Logowanie"
                                 Style="{StaticResource ImportantButton}"
                                 Command="{Binding CheckLoginCommand}"
-                                CommandParameter="{Binding ElementName=LoginWindow}"/>
+                                CommandParameter="{Binding ElementName=LoginWindow}" />
                     </StackPanel>
-
                 </Grid>
             </Border>
         </Border>

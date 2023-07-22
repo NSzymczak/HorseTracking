@@ -5,8 +5,8 @@ namespace HorseTrackingDesktop.Services.AppState
 {
     public class AppState : IAppState
     {
-
         private Horses? currentHorse;
+
         public Horses? CurrentHorse
         {
             get => currentHorse;
@@ -14,6 +14,7 @@ namespace HorseTrackingDesktop.Services.AppState
         }
 
         private UserAcounts currentUser;
+
         public UserAcounts CurrentUser
         {
             get => currentUser;
@@ -21,6 +22,7 @@ namespace HorseTrackingDesktop.Services.AppState
         }
 
         private List<Horses>? horseList;
+
         public List<Horses>? HorseList
         {
             get => horseList;
@@ -28,6 +30,7 @@ namespace HorseTrackingDesktop.Services.AppState
         }
 
         private List<UserAcounts>? listOfTrainer;
+
         public List<UserAcounts>? ListOfTrainer
         {
             get => listOfTrainer;
@@ -35,6 +38,7 @@ namespace HorseTrackingDesktop.Services.AppState
         }
 
         private List<Professionals>? listOfProfessionals;
+
         public List<Professionals>? ListOfProfessionals
         {
             get => listOfProfessionals;

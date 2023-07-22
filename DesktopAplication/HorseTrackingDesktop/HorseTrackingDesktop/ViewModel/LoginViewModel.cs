@@ -1,15 +1,11 @@
-﻿using HorseTrackingDesktop.Services;
-using HorseTrackingDesktop.View;
-using Microsoft.EntityFrameworkCore.Update.Internal;
-using System;
-using System.Collections.Generic;
-using CommunityToolkit.Mvvm.Input;
-using System.Windows;
-using HorseTrackingDesktop.Services.AppState;
-using System.Windows.Input;
-using HorseTrackingDesktop.Services.Database.UserService;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.Input;
 using HorseTrackingDesktop.Models;
+using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.UserService;
+using HorseTrackingDesktop.View;
+using System;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace HorseTrackingDesktop.ViewModel
 {
@@ -19,6 +15,7 @@ namespace HorseTrackingDesktop.ViewModel
         private readonly IUserServices _userService;
 
         private string? _userLogin;
+
         public string? UserLogin
         {
             get => _userLogin;
@@ -26,16 +23,17 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private string? _userHash;
+
         public string? UserHash
         {
             get => _userHash;
             set => SetProperty(ref _userHash, value);
         }
+
         public LoginViewModel(IAppState appState, IUserServices userServices)
         {
             _appState = appState;
             _userService = userServices;
-
         }
 
         [RelayCommand]
@@ -63,9 +61,7 @@ namespace HorseTrackingDesktop.ViewModel
 
         public Task IncorrectData()
         {
-
             return Task.CompletedTask;
         }
-
     }
 }

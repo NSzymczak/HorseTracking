@@ -1,5 +1,4 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.HorseService;
@@ -9,7 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
