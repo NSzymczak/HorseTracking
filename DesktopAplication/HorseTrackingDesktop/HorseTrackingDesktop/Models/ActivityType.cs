@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -52,8 +51,8 @@ namespace HorseTrackingDesktop.Models
                 if (!ActivityTypeIdMap.ContainsKey(activity.ID))
                     ActivityTypeIdMap.Add(activity.ID, activity);
             }
-
         }
+
         public static List<ActivityType> ListOfActivity { get; protected set; }
         public int ID { get; }
         public string Name { get; }
@@ -71,8 +70,5 @@ namespace HorseTrackingDesktop.Models
         public static ActivityType Competition { get; set; }
         public static ActivityType Cross { get; set; }
         public static ActivityType Dressage { get; set; }
-
-
     }
-
 }

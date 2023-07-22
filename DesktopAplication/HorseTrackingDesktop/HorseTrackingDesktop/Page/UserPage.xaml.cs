@@ -10,6 +10,7 @@ namespace HorseTrackingDesktop.View
     public partial class UserPage : Page
     {
         private readonly UserPageModel? UserPageModel;
+
         public UserPage()
         {
             InitializeComponent();

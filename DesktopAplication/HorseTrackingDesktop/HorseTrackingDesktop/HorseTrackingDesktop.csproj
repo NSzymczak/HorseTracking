@@ -72,4 +72,9 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Database\CompetitionService\" />
+    <Folder Include="Services\Database\NutritionService\" />
+  </ItemGroup>
+
 </Project>

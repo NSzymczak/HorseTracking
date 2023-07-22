@@ -5,71 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:control="clr-namespace:HorseTrackingDesktop.Control"
         mc:Ignorable="d"
-        Title="NAZWAAPKI" 
-        Height="900" 
+        Title="NAZWAAPKI"
+        Height="900"
         Width="1600"
         WindowState="Maximized"
         ResizeMode="CanMinimize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="6*" />
         </Grid.ColumnDefinitions>
         <Border>
             <Grid Grid.Column="0" Background="#F0F0F0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="8*"/>
-                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="8*" />
+                    <RowDefinition Height="0.5*" />
                 </Grid.RowDefinitions>
-                <StackPanel  Orientation="Vertical" >
+                <StackPanel  Orientation="Vertical">
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/AcountPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\profile.png"
                                               Content="Nazwa konta"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/StatisticPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\statistics.png"
                                               Content="Statystyki"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/VisitPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\visit.png"
                                               Content="Wizyty"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/NutritionPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\nutrition.png"
                                               Content="Plan żywienia"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/CompetitionPage.xaml"
-                                              ImageSource="\Resources\Image\CategoryImage\competition.png" 
+                                              ImageSource="\Resources\Image\CategoryImage\competition.png"
                                               Content="Zawody"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/CalendarPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\calendar.png"
                                               Content="Kalendarz"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/UserPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\group.png"
                                               Content="Konta"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Page/SettingsPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\settings.png"
                                               Content="Ustawienia"
-                                              Click="Button_Click"/>
+                                              Click="Button_Click" />
                 </StackPanel>
                 <control:NavigationButton Grid.Row="1"
                                           Style="{StaticResource MenuButton}"
-                                          Content="Wyloguj"/>
+                                          Content="Wyloguj" />
             </Grid>
         </Border>
-        <Frame Grid.Column="1" x:Name="navigationFrame" NavigationUIVisibility="Hidden" BorderBrush="{StaticResource LightGrey}" BorderThickness="1"/>
-
-
+        <Frame Grid.Column="1" x:Name="navigationFrame" NavigationUIVisibility="Hidden" BorderBrush="{StaticResource LightGrey}" BorderThickness="1" />
     </Grid>
 </Window>

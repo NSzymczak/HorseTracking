@@ -1,10 +1,8 @@
 ﻿using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HorseTrackingDesktop.Services.Database.VisitService
@@ -13,6 +11,7 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
     {
         private readonly IAppState _appState;
         private readonly HorseTrackingContext _context;
+
         public VisitService(IAppState appState, HorseTrackingContext context)
         {
             _appState = appState;
@@ -27,6 +26,40 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
                                               Include(i => i.Professional.Detail).
                                               Include(i => i.Professional.Specialisation).ToList();
             return Task.FromResult(listOfUsers);
+        }
+
+        public Task RemoveVisit(Visits visits)
+        {
+            _context.Visits.Remove(visits);
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task AddVisit(Visits visits)
+        {
+            _context.Visits.Add(visits);
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task EditVisit(Visits editedVisit, int id)
+        {
+            var visit = _context.Visits.Where(x => x.VisitId == id).FirstOrDefault();
+            if (visit != null)
+            {
+                visit.VisitDate = editedVisit.VisitDate;
+                visit.Cost = editedVisit.Cost;
+                visit.Horse = editedVisit.Horse;
+                visit.Professional = editedVisit.Professional;
+                visit.Summary = editedVisit.Summary;
+                _context.SaveChanges();
+            }
+            return Task.CompletedTask;
+        }
+
+        public Task<List<Professionals>> GetProfessionals()
+        {
+            return Task.FromResult(_context.Professionals.Include(i => i.Detail).ToList());
         }
     }
 }

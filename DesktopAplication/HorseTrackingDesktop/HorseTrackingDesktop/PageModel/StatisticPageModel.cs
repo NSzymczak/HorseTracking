@@ -1,20 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Navigation;
-using CommunityToolkit.Mvvm.Input;
-using HorseTrackingDesktop.Services.Database;
-using HorseTrackingDesktop.Models;
-using HorseTrackingDesktop.ViewModel;
-using LiveChartsCore;
-using LiveChartsCore.Defaults;
-using LiveChartsCore.SkiaSharpView;
-using LiveChartsCore.SkiaSharpView.Painting;
-using Microsoft.EntityFrameworkCore;
-using SkiaSharp;
+﻿using HorseTrackingDesktop.ViewModel;
 
 namespace HorseTrackingDesktop.PageModel
 {
@@ -39,7 +23,6 @@ namespace HorseTrackingDesktop.PageModel
             //    }
             //};
         }
-
 
         //[RelayCommand]
         //public async void LoadData()
@@ -73,5 +56,4 @@ namespace HorseTrackingDesktop.PageModel
         //        new PieSeries<int> { Values=new int[]{chartData[10]}, Name="Skoki luzem" }
         //    };
     }
-
 }
