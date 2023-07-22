@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Documents;
-using System.Windows.Input;
 
 namespace HorseTrackingDesktop.PageModel
 {
@@ -24,6 +22,7 @@ namespace HorseTrackingDesktop.PageModel
         public ICollection<Horses>? Horses { get; set; }
 
         private Horses? currentHorse;
+
         public Horses? CurrentHorse
         {
             get { return currentHorse; }
@@ -38,6 +37,7 @@ namespace HorseTrackingDesktop.PageModel
         }
 
         private Visits? selectedVisit;
+
         public Visits? SelectedVisit
         {
             get { return selectedVisit; }
@@ -88,7 +88,6 @@ namespace HorseTrackingDesktop.PageModel
             new AddVisitView().ShowDialog();
             if (CurrentHorse != null)
                 await GetVisit(CurrentHorse.HorseId);
-
         }
 
         [RelayCommand]
@@ -121,7 +120,7 @@ namespace HorseTrackingDesktop.PageModel
 
         public void GoToDetails()
         {
-            if(selectedVisit!= null)
+            if (selectedVisit != null)
             {
                 new VisitDetailsView(selectedVisit).ShowDialog();
             }

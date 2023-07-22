@@ -17,7 +17,11 @@ namespace HorseTrackingDesktop.ViewModel
 {
     public partial class AddVisitViewModel : BaseViewModel
     {
+        private bool isEdit = false;
+
+        private int visitID;
         private DateTime visitDate;
+
         public DateTime VisitDate
         {
             get => visitDate;
@@ -25,6 +29,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private Professionals professional;
+
         public Professionals Professional
         {
             get => professional;
@@ -32,6 +37,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private Horses horse;
+
         public Horses Horse
         {
             get => horse;
@@ -39,6 +45,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private double cost;
+
         public double Cost
         {
             get => cost;
@@ -46,6 +53,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private string description;
+
         public string Description
         {
             get => description;
@@ -53,6 +61,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         private Image image;
+
         public Image Image
         {
             get => image;
@@ -65,6 +74,7 @@ namespace HorseTrackingDesktop.ViewModel
         private readonly IAppState _appState;
         private readonly IVisitService _visitService;
         private readonly IHorseService _horseService;
+
         public AddVisitViewModel(IAppState appState, IVisitService visitService,
                                 IHorseService horseService)
         {
@@ -83,6 +93,8 @@ namespace HorseTrackingDesktop.ViewModel
 
         public void SetVist(Visits visit)
         {
+            isEdit = true;
+            visitID = visit.VisitId;
             VisitDate = visit.VisitDate;
             Cost = visit.Cost != null ? visit.Cost.Value : 0;
             Horse = visit.Horse;
@@ -114,15 +126,28 @@ namespace HorseTrackingDesktop.ViewModel
         [RelayCommand]
         public Task Add(Window window)
         {
-            var visit = new Visits()
+            if (isEdit)
             {
-                VisitDate = VisitDate,
-                Cost = Cost,
-                Horse = Horse,
-                Professional = Professional,
-                Summary = Description
-            };
-            _visitService.AddVisit(visit);
+                _visitService.EditVisit(new Visits()
+                {
+                    VisitDate = VisitDate,
+                    Cost = Cost,
+                    Horse = Horse,
+                    Professional = Professional,
+                    Summary = Description
+                }, visitID);
+            }
+            else
+            {
+                _visitService.AddVisit(new Visits()
+                {
+                    VisitDate = VisitDate,
+                    Cost = Cost,
+                    Horse = Horse,
+                    Professional = Professional,
+                    Summary = Description
+                });
+            }
             window.Close();
             return Task.CompletedTask;
         }

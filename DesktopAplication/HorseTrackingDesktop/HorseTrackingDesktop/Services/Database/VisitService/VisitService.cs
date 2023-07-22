@@ -13,6 +13,7 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
     {
         private readonly IAppState _appState;
         private readonly HorseTrackingContext _context;
+
         public VisitService(IAppState appState, HorseTrackingContext context)
         {
             _appState = appState;
@@ -45,15 +46,22 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
 
         public Task EditVisit(Visits editedVisit, int id)
         {
-           var visit = _context.Visits.Where(x => x.VisitId == id).SingleOrDefault();
-            visit = editedVisit;
-            _context.SaveChanges();
+            var visit = _context.Visits.Where(x => x.VisitId == id).FirstOrDefault();
+            if (visit != null)
+            {
+                visit.VisitDate = editedVisit.VisitDate;
+                visit.Cost = editedVisit.Cost;
+                visit.Horse = editedVisit.Horse;
+                visit.Professional = editedVisit.Professional;
+                visit.Summary = editedVisit.Summary;
+                _context.SaveChanges();
+            }
             return Task.CompletedTask;
         }
 
         public Task<List<Professionals>> GetProfessionals()
         {
-            return Task.FromResult(_context.Professionals.Include(i=>i.Detail).ToList());
+            return Task.FromResult(_context.Professionals.Include(i => i.Detail).ToList());
         }
     }
 }

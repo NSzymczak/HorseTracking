@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HorseTrackingDesktop.View" 
-        xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel" 
+        xmlns:local="clr-namespace:HorseTrackingDesktop.View"
+        xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel"
         d:DataContext="{d:DesignInstance Type=viewmodel:AddVisitViewModel}"
         mc:Ignorable="d"
         Title="AddVisitView" Height="800" Width="400"
@@ -13,9 +13,9 @@
         x:Name="AddWindow">
     <Grid Margin="20,10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
         <Label Content="Dodaj wizytę"
@@ -23,7 +23,7 @@
                FontFamily="Segoe UI"
                Foreground="{StaticResource FontColor}"
                HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+               VerticalAlignment="Center" />
 
         <StackPanel Grid.Row="1">
             <Border Style="{StaticResource GrayBorder}"
@@ -31,17 +31,17 @@
                     Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Content="Data wizyty:"
                            VerticalAlignment="Center"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,0,0" />
                     <DatePicker Grid.Column="1"
                                 BorderThickness="0"
                                 VerticalAlignment="Center"
                                 Margin="0,0,10,0"
-                                SelectedDate="{Binding VisitDate}"/>
+                                SelectedDate="{Binding VisitDate}" />
                 </Grid>
             </Border>
             <Border Style="{StaticResource GrayBorder}"
@@ -49,27 +49,26 @@
                     Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Content="Specjalista"
                            VerticalAlignment="Center"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,0,0" />
                     <ComboBox Grid.Column="1"
                               Margin="0,0,10,0"
                               VerticalAlignment="Center"
                               ItemsSource="{Binding Professionals}"
-                              SelectedItem="{Binding Professional}"
-                              SelectionChanged="ComboBox_SelectionChanged">
+                              SelectedItem="{Binding Professional}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="{Binding Detail.Name}" Margin="0,0,2,0"/>
-                                    <Label Content="{Binding Detail.Surname}"/>
+                                    <Label Content="{Binding Detail.Name}" Margin="0,0,2,0" />
+                                    <Label Content="{Binding Detail.Surname}" />
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
-                        </ComboBox>
+                    </ComboBox>
                 </Grid>
             </Border>
             <Border Style="{StaticResource GrayBorder}"
@@ -77,22 +76,21 @@
                     Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Content="Koń"
                             VerticalAlignment="Center"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,0,0" />
                     <ComboBox Grid.Column="1"
                               Margin="0,0,10,0"
                               VerticalAlignment="Center"
                               ItemsSource="{Binding Horses}"
-                              SelectedItem="{Binding Horse}"
-                              SelectionChanged="ComboBox_SelectionChanged_1">
+                              SelectedItem="{Binding Horse}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Label Content="{Binding Name}"/>
+                                    <Label Content="{Binding Name}" />
                                 </Grid>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
@@ -104,34 +102,34 @@
                     Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Content="Koszt"
                            VerticalAlignment="Center"
-                           Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="1" 
+                           Margin="10,0,0,0" />
+                    <TextBox Grid.Column="1"
                              VerticalAlignment="Center"
                              Padding="5"
                              Height="30"
                              Margin="0,0,10,0"
-                             Text="{Binding Cost}"/>
+                             Text="{Binding Cost}" />
                 </Grid>
             </Border>
             <Border Style="{StaticResource GrayBorder}"
                     Margin="10">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1*"/>
-                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5*" />
                     </Grid.RowDefinitions>
                     <Label Content="Opis (zalecenia, ważne informacje itp.)"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,0,0" />
                     <RichTextBox Height="180"
                                  Padding="20"
                                  Margin="15,5,15,15"
                                  Grid.Row="1"
-                                 DataContext="{Binding Description}"/>
+                                 DataContext="{Binding Description}" />
                 </Grid>
             </Border>
             <Border Style="{StaticResource GrayBorder}"
@@ -139,32 +137,32 @@
                     Height="50">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Content="Zdjęcie z wizyty"
                            VerticalAlignment="Center"
-                           Margin="10,0,0,0"/>
+                           Margin="10,0,0,0" />
                     <Button Grid.Column="1"
                             Style="{StaticResource ImportantButton}"
                             Height="30"
                             Width="80"
                             Content="-->"
-                            Command="{Binding GoToImageCommand}"/>
+                            Command="{Binding GoToImageCommand}" />
                 </Grid>
             </Border>
         </StackPanel>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button Style="{StaticResource ImportantButton}"
                     Grid.Column="0"
                     Content="Dodaj"
                     Command="{Binding AddCommand}"
-                    CommandParameter="{Binding ElementName=AddWindow}"/>
+                    CommandParameter="{Binding ElementName=AddWindow}" />
             <Button Style="{StaticResource NotImportantButton}"
                     Grid.Column="1"
                     Content="Wróć"

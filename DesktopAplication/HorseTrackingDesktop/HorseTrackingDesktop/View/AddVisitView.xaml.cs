@@ -6,9 +6,6 @@ using System.Windows.Controls;
 
 namespace HorseTrackingDesktop.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AddVisitView.xaml
-    /// </summary>
     public partial class AddVisitView : Window
     {
         private AddVisitViewModel? viewModel;
@@ -34,14 +31,6 @@ namespace HorseTrackingDesktop.View
                     }
                 };
             }
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
         }
     }
 }
