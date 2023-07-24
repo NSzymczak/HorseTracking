@@ -1,8 +1,10 @@
-﻿using HorseTrackingDesktop.PageModel;
+﻿using HorseTrackingDesktop.Control;
+using HorseTrackingDesktop.PageModel;
 using Microsoft.Extensions.DependencyInjection;
+using System.Windows;
 using System.Windows.Controls;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
     /// <summary>
     /// Logika interakcji dla klasy UserPage.xaml
@@ -16,6 +18,14 @@ namespace HorseTrackingDesktop.View
             InitializeComponent();
             UserPageModel = StartUp.ServiceProvider?.GetService<UserPageModel>();
             DataContext = UserPageModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is NavigationButton selectedpage)
+            {
+                navigationFrame.Navigate(selectedpage.Routing);
+            }
         }
     }
 }

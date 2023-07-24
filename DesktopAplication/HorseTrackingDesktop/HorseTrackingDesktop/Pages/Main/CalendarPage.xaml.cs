@@ -1,10 +1,7 @@
 ﻿using System.Windows.Controls;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
-    /// <summary>
-    /// Logika interakcji dla klasy CalendarPage.xaml
-    /// </summary>
     public partial class CalendarPage : Page
     {
         public CalendarPage()

@@ -1,5 +1,7 @@
-﻿using HorseTrackingDesktop.Models;
+﻿using HorseTrackingDesktop.Management.PageModel;
+using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.PageModel;
+using HorseTrackingDesktop.PageModel.Management;
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.UserService;
@@ -30,6 +32,9 @@ namespace HorseTrackingDesktop
             services.AddTransient<VisitPageModel>();
             services.AddTransient<AddVisitViewModel>();
             //services.AddTransient<ImageViewModel>();
+            services.AddTransient<HorseManagmentPageModel>();
+            services.AddTransient<ProfessionalManagementPageModel>();
+            services.AddTransient<UserManagementPageModel>();
             return services;
         }
     }

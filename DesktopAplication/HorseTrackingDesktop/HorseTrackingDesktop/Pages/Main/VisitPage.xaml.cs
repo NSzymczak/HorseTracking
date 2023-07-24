@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
     public partial class VisitPage : Page
     {

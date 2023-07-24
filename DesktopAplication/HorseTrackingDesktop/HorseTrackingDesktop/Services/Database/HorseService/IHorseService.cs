@@ -7,5 +7,9 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
     public interface IHorseService
     {
         public Task<List<Horses>> GetHorses();
+
+        Task<List<Status>> GetStatus();
+
+        Task<List<HorseGenders>> GetGenders();
     }
 }

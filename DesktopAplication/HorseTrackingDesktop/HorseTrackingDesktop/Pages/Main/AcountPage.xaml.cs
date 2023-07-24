@@ -1,10 +1,7 @@
 ﻿using System.Windows.Controls;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AcountPage.xaml
-    /// </summary>
     public partial class AcountPage : Page
     {
         public AcountPage()

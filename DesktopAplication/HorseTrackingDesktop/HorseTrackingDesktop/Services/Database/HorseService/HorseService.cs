@@ -38,12 +38,17 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
 
         private Task<List<Horses>> GetHorsesForUser(int id)
         {
-            var horses = _context.Horses.Include(s => s.Status)
-                                        .Include(g => g.Gender)
-                                        .Where(x => x.UserId == id)
-                                        .Where(x => x.Status.Name == StatusEnum.active.ToString()
-                                                 || x.Status.Name == StatusEnum.sent.ToString()
-                                                 || x.Status.Name == StatusEnum.shared.ToString()).ToList();
+            var horses = _context.Horses.Where(x => x.UserId == id &&
+                                              (x.Status.Name == StatusEnum.active.ToString() ||
+                                               x.Status.Name == StatusEnum.sent.ToString() ||
+                                               x.Status.Name == StatusEnum.shared.ToString())).ToList();
+
+            foreach (var horse in horses)
+            {
+                _context.Entry(horse).Reference(h => h.Status).Load();
+                _context.Entry(horse).Reference(h => h.Gender).Load();
+            }
+
             return Task.FromResult(horses);
         }
 
@@ -60,6 +65,16 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
             var horses = _context.Horses.Include(s => s.Status)
                                         .Include(g => g.Gender).ToList();
             return Task.FromResult(horses);
+        }
+
+        public Task<List<Status>> GetStatus()
+        {
+            return Task.FromResult(_context.Status.ToList());
+        }
+
+        public Task<List<HorseGenders>> GetGenders()
+        {
+            return Task.FromResult(_context.HorseGenders.ToList());
         }
     }
 }

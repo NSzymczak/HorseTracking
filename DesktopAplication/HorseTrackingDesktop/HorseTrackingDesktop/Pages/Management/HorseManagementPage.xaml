@@ -1,0 +1,46 @@
+﻿<Page x:Class="HorseTrackingDesktop.Pages.ManagmentPage.HorseManagmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:pagemodel="clr-namespace:HorseTrackingDesktop.Management.PageModel"
+      xmlns:enums="clr-namespace:HorseTrackingDesktop.Enumerable"
+      d:DataContext="{d:DesignInstance Type=pagemodel:HorseManagmentPageModel}"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HorseManagmentPage">
+    <Page.Resources>
+        <CollectionViewSource x:Key="AvailableStatus" Source="{Binding AvailableStatus}" />
+        <CollectionViewSource x:Key="AvailableGender" Source="{Binding AvailableGenders}" />
+    </Page.Resources>
+    <Grid Background="White">
+        <DataGrid Grid.Row="1"
+                      Grid.ColumnSpan="3"
+                      Margin="20,20,20,20"
+                      ItemsSource="{Binding Horses}"
+                      AutoGenerateColumns="False"
+                      FontSize="15"
+                      BorderBrush="{StaticResource MainGreenBrush}"
+                      HorizontalGridLinesBrush="{StaticResource MainGreenBrush}"
+                      VerticalGridLinesBrush="{StaticResource MainGreenBrush}"
+                      CellStyle="{StaticResource GreenCell}"
+                      HeadersVisibility="Column"
+                  CellEditEnding="DataGrid_CellEditEnding"
+                  RowEditEnding="DataGrid_RowEditEnding"
+                  CanUserAddRows="True">
+            <DataGrid.Resources>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Imię"           Width="*"  Binding="{Binding Name}" />
+                <DataGridComboBoxColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Płeć"           Width="*"  ItemsSource="{Binding Source={StaticResource AvailableGender}}" SelectedItemBinding="{Binding Gender}" DisplayMemberPath="Gender" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Data urodzenia" Width="*"  Binding="{Binding Birthday}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Rasa"           Width="*"  Binding="{Binding Race}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Hodowca"        Width="*"  Binding="{Binding Breeder}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Matka"          Width="*"  Binding="{Binding Mother}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Ojciec"         Width="*"  Binding="{Binding Father}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Paszport"       Width="*"  Binding="{Binding Passport}" />
+                <DataGridComboBoxColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Status"         Width="*"  ItemsSource="{Binding Source={StaticResource AvailableStatus}}" SelectedItemBinding="{Binding Status}" DisplayMemberPath="Name" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

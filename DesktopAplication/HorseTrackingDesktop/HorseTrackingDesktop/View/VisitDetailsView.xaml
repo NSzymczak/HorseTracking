@@ -64,7 +64,7 @@
                     <Label Content="{Binding Horse.Name}"
                            FontSize="18" />
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="{Binding Horse.Gender}" />
+                        <Label Content="{Binding Horse.Gender.Gender}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="ur." />
