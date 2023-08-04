@@ -20,7 +20,7 @@ namespace HorseTrackingDesktop
         {
             if (LoginViewModel != null)
             {
-                LoginViewModel.UserHash = ((PasswordBox)sender).Password;
+                LoginViewModel.UserPassword = ((PasswordBox)sender).Password;
             }
         }
     }

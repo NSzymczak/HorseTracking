@@ -1,0 +1,63 @@
+﻿<Page x:Class="HorseTrackingDesktop.Pages.ManagmentPage.ProfessionalManagmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:pagemodel="clr-namespace:HorseTrackingDesktop.PageModel.Management"
+      d:DataContext="{d:DesignInstance Type=pagemodel:ProfessionalManagementPageModel}"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProfessionalManagmentPage">
+    <Page.Resources>
+        <CollectionViewSource x:Key="Specialisations" Source="{Binding Specialisations}" />
+    </Page.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0"
+                      Grid.ColumnSpan="3"
+                      Margin="20,20,20,20"
+                      ItemsSource="{Binding Professionals, UpdateSourceTrigger=PropertyChanged}"
+                      AutoGenerateColumns="False"
+                      FontSize="15"
+                      BorderBrush="{StaticResource MainGreenBrush}"
+                      HorizontalGridLinesBrush="{StaticResource MainGreenBrush}"
+                      VerticalGridLinesBrush="{StaticResource MainGreenBrush}"
+                  RowEditEnding="DataGrid_RowEditEnding"
+                      CellStyle="{StaticResource GreenCell}"
+                      HeadersVisibility="Column"
+                  SelectedItem="{Binding CurrentProfessional}"
+                  CanUserAddRows="True">
+            <DataGrid.Resources>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Imię"            Width="*"  Binding="{Binding Name, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Nazwisko"        Width="*"  Binding="{Binding Surname, Mode=TwoWay}" />
+                <DataGridComboBoxColumn HeaderStyle="{StaticResource GreenHeaders}"               Header="Specjalizacja"   Width="*"  ItemsSource="{Binding Source={StaticResource Specialisations}}" SelectedItemBinding="{Binding Specialisation}" DisplayMemberPath="Name" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Stopień"         Width="*"  Binding="{Binding Degree, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Ulica"           Width="*"  Binding="{Binding Street, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Numer"           Width="*"  Binding="{Binding Number, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Kod pocztowy"    Width="*"  Binding="{Binding PostalCode, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Miasto"          Width="*"  Binding="{Binding City, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Email"           Width="*"  Binding="{Binding Email, Mode=TwoWay}" />
+                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" FontSize="15" Header="Tel. num"        Width="*"  Binding="{Binding PhoneNumber, Mode=TwoWay}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button
+                    Style="{StaticResource ImportantButton}"
+                    Content="Usuń"
+                    Command="{Binding RemoveCommand}"
+                    Margin="20,0" />
+            <Button
+                    Style="{StaticResource ImportantButton}"
+                    Content="Dodaj specjalizację"
+                    Margin="20,0" />
+        </StackPanel>
+    </Grid>
+</Page>

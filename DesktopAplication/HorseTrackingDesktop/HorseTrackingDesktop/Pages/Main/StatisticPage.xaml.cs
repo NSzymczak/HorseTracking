@@ -2,11 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
-    /// <summary>
-    /// Logika interakcji dla klasy StatisticPage.xaml
-    /// </summary>
     public partial class StatisticPage : Page
     {
         private StatisticPageModel viewModel;

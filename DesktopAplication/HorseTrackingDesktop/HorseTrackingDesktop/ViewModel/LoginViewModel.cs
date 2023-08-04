@@ -2,6 +2,7 @@
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.UserService;
+using HorseTrackingDesktop.Services.Hasher;
 using HorseTrackingDesktop.View;
 using System;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace HorseTrackingDesktop.ViewModel
     {
         private readonly IAppState _appState;
         private readonly IUserServices _userService;
+        private readonly IHasher _hasher;
 
         private string? _userLogin;
 
@@ -22,33 +24,42 @@ namespace HorseTrackingDesktop.ViewModel
             set => SetProperty(ref _userLogin, value);
         }
 
-        private string? _userHash;
+        private string? _userPassword;
 
-        public string? UserHash
+        public string? UserPassword
         {
-            get => _userHash;
-            set => SetProperty(ref _userHash, value);
+            get => _userPassword;
+            set => SetProperty(ref _userPassword, value);
         }
 
-        public LoginViewModel(IAppState appState, IUserServices userServices)
+        public LoginViewModel(IAppState appState, IUserServices userServices, IHasher hasher)
         {
             _appState = appState;
             _userService = userServices;
+            _hasher = hasher;
         }
 
         [RelayCommand]
         public async Task CheckLogin(Window window)
         {
-            if (!String.IsNullOrEmpty(UserLogin) && !String.IsNullOrEmpty(UserHash))
+            if (!String.IsNullOrEmpty(UserLogin) && !String.IsNullOrEmpty(UserPassword))
             {
-                var user = await _userService.GetUser(UserLogin, UserHash);
+                var user = await _userService.GetUser(UserLogin);
                 if (user == null)
                 {
                     await IncorrectData();
                     return;
                 }
-                await LogIn(user);
-                window.Close();
+                else
+                {
+                    await LogIn(user);
+                    window.Close();
+
+                    if (_hasher.CheckPassword(UserPassword, user.Hash, user.Salt))
+                    {
+                        await LogIn(user);
+                    }
+                }
             }
         }
 

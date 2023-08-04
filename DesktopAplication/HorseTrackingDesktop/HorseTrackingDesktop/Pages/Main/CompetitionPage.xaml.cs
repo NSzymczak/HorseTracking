@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace HorseTrackingDesktop.View
+namespace HorseTrackingDesktop.Pages.MainPage
 {
     /// <summary>
     /// Logika interakcji dla klasy CompetitionPage.xaml

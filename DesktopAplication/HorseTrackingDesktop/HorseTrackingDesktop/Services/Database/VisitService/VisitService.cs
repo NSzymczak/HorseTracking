@@ -2,6 +2,7 @@
 using HorseTrackingDesktop.Services.AppState;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -57,9 +58,46 @@ namespace HorseTrackingDesktop.Services.Database.VisitService
             return Task.CompletedTask;
         }
 
-        public Task<List<Professionals>> GetProfessionals()
+        public Task<List<Professionals>> GetProfessionals(bool includeAll = false)
         {
+            if (includeAll)
+                return Task.FromResult(_context.Professionals.Include(i => i.Detail).Include(s => s.Specialisation).ToList());
+
             return Task.FromResult(_context.Professionals.Include(i => i.Detail).ToList());
+        }
+
+        public Task RemoveProfessionalDate(Professionals professional)
+        {
+            var profToDelete = _context.Professionals.Where(x => x.ProfessionalId == professional.ProfessionalId).First();
+            _context.Professionals.Remove(profToDelete);
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task AddProfessional(Professionals professional)
+        {
+            _context.Professionals.Add(professional);
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task EditProfessional(Professionals professional)
+        {
+            var oldProfessional = _context.Professionals.Where(x => x.ProfessionalId == professional.ProfessionalId).FirstOrDefault();
+            if (oldProfessional != null)
+            {
+                oldProfessional.ProfessionalId = professional.ProfessionalId;
+                oldProfessional.Degree = professional.Degree;
+                oldProfessional.Specialisation = professional.Specialisation;
+                oldProfessional.Detail = professional.Detail;
+            }
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task<List<Specialisations>> GetSpecialisations()
+        {
+            return Task.FromResult(_context.Specialisations.ToList());
         }
     }
 }
