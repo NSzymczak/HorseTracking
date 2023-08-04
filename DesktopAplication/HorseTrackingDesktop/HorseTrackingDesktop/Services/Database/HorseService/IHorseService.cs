@@ -6,10 +6,18 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
 {
     public interface IHorseService
     {
-        public Task<List<Horses>> GetHorses();
+        Task<List<Horses>> GetHorses();
+
+        Task<List<Horses>> GetAllHorses();
 
         Task<List<Status>> GetStatus();
 
         Task<List<HorseGenders>> GetGenders();
+
+        Task AddHorse(Horses horse);
+
+        Task DeleteHorse(Horses horse);
+
+        Task EditHorse(Horses horse);
     }
 }

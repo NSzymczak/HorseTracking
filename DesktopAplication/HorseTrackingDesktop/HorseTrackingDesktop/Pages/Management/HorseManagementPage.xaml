@@ -3,8 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:pagemodel="clr-namespace:HorseTrackingDesktop.Management.PageModel"
-      xmlns:enums="clr-namespace:HorseTrackingDesktop.Enumerable"
+      xmlns:pagemodel="clr-namespace:HorseTrackingDesktop.PageModel.Management"
       d:DataContext="{d:DesignInstance Type=pagemodel:HorseManagmentPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
@@ -13,11 +12,16 @@
         <CollectionViewSource x:Key="AvailableStatus" Source="{Binding AvailableStatus}" />
         <CollectionViewSource x:Key="AvailableGender" Source="{Binding AvailableGenders}" />
     </Page.Resources>
+
     <Grid Background="White">
-        <DataGrid Grid.Row="1"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0"
                       Grid.ColumnSpan="3"
                       Margin="20,20,20,20"
-                      ItemsSource="{Binding Horses}"
+                      ItemsSource="{Binding Horses, UpdateSourceTrigger=PropertyChanged}"
                       AutoGenerateColumns="False"
                       FontSize="15"
                       BorderBrush="{StaticResource MainGreenBrush}"
@@ -25,22 +29,35 @@
                       VerticalGridLinesBrush="{StaticResource MainGreenBrush}"
                       CellStyle="{StaticResource GreenCell}"
                       HeadersVisibility="Column"
+                  SelectedItem="{Binding SelectedHorse}"
                   CellEditEnding="DataGrid_CellEditEnding"
                   RowEditEnding="DataGrid_RowEditEnding"
                   CanUserAddRows="True">
             <DataGrid.Resources>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Imię"           Width="*"  Binding="{Binding Name}" />
-                <DataGridComboBoxColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Płeć"           Width="*"  ItemsSource="{Binding Source={StaticResource AvailableGender}}" SelectedItemBinding="{Binding Gender}" DisplayMemberPath="Gender" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Data urodzenia" Width="*"  Binding="{Binding Birthday}" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Rasa"           Width="*"  Binding="{Binding Race}" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Hodowca"        Width="*"  Binding="{Binding Breeder}" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Matka"          Width="*"  Binding="{Binding Mother}" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Ojciec"         Width="*"  Binding="{Binding Father}" />
-                <DataGridTextColumn     HeaderStyle="{StaticResource GreenHeaders}" Header="Paszport"       Width="*"  Binding="{Binding Passport}" />
-                <DataGridComboBoxColumn HeaderStyle="{StaticResource GreenHeaders}" Header="Status"         Width="*"  ItemsSource="{Binding Source={StaticResource AvailableStatus}}" SelectedItemBinding="{Binding Status}" DisplayMemberPath="Name" />
+                <DataGridTextColumn     x:Name="Name"     HeaderStyle="{StaticResource GreenHeaders}" Header="Imię"           Width="*"  Binding="{Binding Name}" />
+                <DataGridComboBoxColumn                   HeaderStyle="{StaticResource GreenHeaders}" Header="Płeć"           Width="*"  ItemsSource="{Binding Source={StaticResource AvailableGender}}" SelectedItemBinding="{Binding Gender}" DisplayMemberPath="Gender" />
+                <DataGridTextColumn     x:Name="Date"     HeaderStyle="{StaticResource GreenHeaders}" Header="Data urodzenia" Width="*"  Binding="{Binding Birthday}" />
+                <DataGridTextColumn     x:Name="Rase"     HeaderStyle="{StaticResource GreenHeaders}" Header="Rasa"           Width="*"  Binding="{Binding Race}" />
+                <DataGridTextColumn     x:Name="Breeder"  HeaderStyle="{StaticResource GreenHeaders}" Header="Hodowca"        Width="*"  Binding="{Binding Breeder}" />
+                <DataGridTextColumn     x:Name="Mother"   HeaderStyle="{StaticResource GreenHeaders}" Header="Matka"          Width="*"  Binding="{Binding Mother}" />
+                <DataGridTextColumn     x:Name="Father"   HeaderStyle="{StaticResource GreenHeaders}" Header="Ojciec"         Width="*"  Binding="{Binding Father}" />
+                <DataGridTextColumn     x:Name="Passport" HeaderStyle="{StaticResource GreenHeaders}" Header="Paszport"       Width="*"  Binding="{Binding Passport}" />
+                <DataGridComboBoxColumn                   HeaderStyle="{StaticResource GreenHeaders}" Header="Status"         Width="*"  ItemsSource="{Binding Source={StaticResource AvailableStatus}}" SelectedItemBinding="{Binding Status}" DisplayMemberPath="Name" />
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Command="{Binding DeleteHorseCommand}"
+                    Style="{StaticResource ImportantButton}"
+                    Content="Usuń"
+                    Margin="20,0" />
+            <Button Command="{Binding ChangeUserCommand}"
+                    Style="{StaticResource ImportantButton}"
+                    Content="Zmień właścicela"
+                    Margin="20,0" />
+        </StackPanel>
     </Grid>
 </Page>

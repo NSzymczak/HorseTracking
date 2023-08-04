@@ -43,7 +43,6 @@
             <Frame Grid.Row="1"
                    x:Name="navigationFrame"
                    NavigationUIVisibility="Hidden"
-                   BorderBrush="{StaticResource LightGrey}"
                    BorderThickness="1" />
         </Grid>
     </Grid>
