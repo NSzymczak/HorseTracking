@@ -59,11 +59,12 @@
                               Margin="0,0,10,0"
                               VerticalAlignment="Center"
                               ItemsSource="{Binding Professionals}"
-                              SelectedItem="{Binding Professional}">
+                              SelectedItem="{Binding Professional}"
+                              Style="{StaticResource RoundedComboBox}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="{Binding Detail.Name}" Margin="0,0,2,0" />
+                                    <Label Content="{Binding Detail.Name}" Margin="0,0,1,0" />
                                     <Label Content="{Binding Detail.Surname}" />
                                 </StackPanel>
                             </DataTemplate>
@@ -86,7 +87,8 @@
                               Margin="0,0,10,0"
                               VerticalAlignment="Center"
                               ItemsSource="{Binding Horses}"
-                              SelectedItem="{Binding Horse}">
+                              SelectedItem="{Binding Horse}"
+                              Style="{StaticResource RoundedComboBox}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
