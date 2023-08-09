@@ -1,19 +1,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architektura platformy Xamarin}}{4}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces przepływ informacji}}{5}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces przepływ informacji}}{6}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces przepływ informacji}}{6}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architektura platformy Xamarin}}{5}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architektura platformy Xamarin.Android}}{6}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Logo systemu NuGet}}{6}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Przepływ informacji}}{7}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces przepływ informacji}}{8}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces przepływ informacji}}{8}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{14}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{15}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{16}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{17}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{37}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{55}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{56}{}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{45}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{64}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{65}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces \centering Logowanie do aplikacji.}}{69}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces \centering Błędne dane logowania.}}{69}{}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ekran aktywności.}}{70}{}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces \centering Okno dodawania aktywności.}}{71}{}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Okno dodawania aktywności rozszerzone.}}{71}{}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces \centering Szczegóły aktywności.}}{72}{}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces \centering Okno wizyt.}}{73}{}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces \centering Szczegóły wizyty.}}{73}{}%
+\contentsline {figure}{\numberline {8.9}{\ignorespaces \centering Szczegóły aktywności.}}{74}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
