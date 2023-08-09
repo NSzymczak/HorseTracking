@@ -8,11 +8,13 @@ namespace HorseTrackingMobile.Services.Database
     public class ConnectionService : IConnectionService
     {
         private static string dbName = "HorseTracking";
-        private static string serverName = "tcp:192.168.88.244,1433"; //Głuchołazy
-                                                                      //private static string serverName = "tcp:192.168.1.19,1433"; //Opole
-                                                                      //private static string serverName = "tcp:10.1.1.107,1433"; //Studia
-                                                                      //private static string serverName = "tcp:192.168.10.118,1433"; //Kondradów
-                                                                      //private static string serverName = "tcp:192.168.1.7,1433"; //Olesno
+
+        //private static string serverName = "tcp:192.168.88.244,1433"; //Głuchołazy
+        private static string serverName = "tcp:192.168.1.19,1433"; //Opole
+
+        //private static string serverName = "tcp:10.1.1.107,1433"; //Studia
+        //private static string serverName = "tcp:192.168.10.118,1433"; //Kondradów
+        //private static string serverName = "tcp:192.168.1.7,1433"; //Olesno
 
         private static string serverUserName = "Natka";
         private static string serverPassword = "123456";
