@@ -20,5 +20,11 @@ namespace HorseTrackingDesktop.Services.Database.NutritionService
         public Task<IEnumerable<UnitOfMeasures>> GetUnitOfMeasure();
 
         Task AddNutritionPlan(NutritionPlans nutrition);
+
+        Task<bool> HorseHasDiet(Horses horses);
+
+        Task ChangeDiet(Horses horses, NutritionPlans nutritionPlans);
+
+        Task<IEnumerable<Meals>> GetMealsForPlan(int id);
     }
 }

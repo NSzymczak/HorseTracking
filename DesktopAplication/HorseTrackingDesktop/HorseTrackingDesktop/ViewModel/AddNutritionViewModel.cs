@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.Database.NutritionService;
+using HorseTrackingDesktop.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,11 +15,39 @@ namespace HorseTrackingDesktop.ViewModel
     public partial class AddNutritionViewModel : BaseViewModel
     {
         private readonly INutritionService _nutritionService;
-        public string Title { get; set; }
-        public string Color { get; set; }
-        public int Icon { get; set; }
-        public string Description { get; set; }
+        private string? title;
 
+        public string? Title
+        {
+            get => title;
+            set => SetProperty(ref title, value);
+        }
+
+        private string? color;
+
+        public string? Color
+        {
+            get => color;
+            set => SetProperty(ref color, value);
+        }
+
+        private int? icon;
+
+        public int? Icon
+        {
+            get => icon;
+            set => SetProperty(ref icon, value);
+        }
+
+        private string? description;
+
+        public string? Description
+        {
+            get => description;
+            set => SetProperty(ref description, value);
+        }
+
+        public NutritionPlans? NutritionPlans { get; set; }
         public List<MealNames> AllMealsName { get; set; }
         public List<UnitOfMeasures> AllUnit { get; set; }
         public List<Forages> AllForage { get; set; }
@@ -32,6 +61,15 @@ namespace HorseTrackingDesktop.ViewModel
 
         public async Task LoadData()
         {
+            if (NutritionPlans != null)
+            {
+                Title = NutritionPlans.Title;
+                Color = NutritionPlans.Color;
+                Description = NutritionPlans.Description;
+                var meals = (await _nutritionService.GetMealsForPlan(NutritionPlans.NutritionPlanId)).ToList();
+                Meals = new ObservableCollection<Meals>(meals);
+                OnPropertyChanged(nameof(Meals));
+            }
             AllForage = (await _nutritionService.GetForage()).ToList();
             AllMealsName = (await _nutritionService.GetMealName()).ToList();
             AllUnit = (await _nutritionService.GetUnitOfMeasure()).ToList();
@@ -87,10 +125,8 @@ namespace HorseTrackingDesktop.ViewModel
             if (CheckNutritionPlan(nutritionPlan))
             {
                 _nutritionService.AddNutritionPlan(nutritionPlan);
+                new AddPlanForHorseView(nutritionPlan).ShowDialog();
                 window.Close();
-            }
-            else
-            {
             }
         }
 

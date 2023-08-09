@@ -119,6 +119,7 @@
                     Margin="10,0" />
             <Button Style="{StaticResource NotImportantButton}"
                     Content="Edytuj"
+                    Command="{Binding EditPlanCommand}"
                     Margin="10,0" />
             <Button Style="{StaticResource NotImportantButton}"
                     Content="Usuń"

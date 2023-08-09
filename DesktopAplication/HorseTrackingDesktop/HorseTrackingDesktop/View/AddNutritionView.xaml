@@ -42,7 +42,7 @@
                              Padding="5"
                              Height="30"
                              Margin="0,0,10,0"
-                             Text="{Binding Title}" />
+                             Text="{Binding Title,Mode=TwoWay}" />
                     </Grid>
                 </Border>
                 <Border Style="{StaticResource GrayBorder}"
@@ -63,7 +63,7 @@
                              Padding="5"
                              Height="30"
                              Margin="0,0,10,0"
-                             Text="{Binding Color}" />
+                             Text="{Binding Color, Mode=TwoWay}" />
                         <Label Grid.Column="2"
                                 Content="Ikona:"
                            VerticalAlignment="Center"
@@ -86,12 +86,12 @@
                                 Margin="0,10,10,10"
                                 BorderBrush="Gray"
                                 BorderThickness="0.5">
-                            <TextBlock Text="{Binding Description}" />
+                            <TextBlock Text="{Binding Description, Mode=TwoWay}" />
                         </Border>
                     </Grid>
                 </Border>
 
-                <ItemsControl ItemsSource="{Binding Meals}">
+                <ItemsControl ItemsSource="{Binding Meals, Mode=TwoWay}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>

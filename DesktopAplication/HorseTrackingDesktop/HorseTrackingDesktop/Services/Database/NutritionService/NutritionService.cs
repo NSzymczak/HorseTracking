@@ -57,6 +57,15 @@ namespace HorseTrackingDesktop.Services.Database.NutritionService
             return Task.FromResult(nutritionPlans.AsEnumerable());
         }
 
+        public Task<IEnumerable<Meals>> GetMealsForPlan(int id)
+        {
+            var meals = _context.Meals.Where(m => m.NutritionPlanId == id)
+                .Include(p => p.Portions).ThenInclude(u => u.Unit)
+                .Include(p => p.Portions).ThenInclude(f => f.Forage)
+                .Include(m => m.MealName).AsEnumerable();
+            return Task.FromResult(meals);
+        }
+
         public Task<IEnumerable<MealNames>> GetMealName()
         {
             return Task.FromResult(_context.MealNames.AsEnumerable());
@@ -74,8 +83,42 @@ namespace HorseTrackingDesktop.Services.Database.NutritionService
 
         public Task AddNutritionPlan(NutritionPlans nutrition)
         {
+            if (nutrition.Color == null || nutrition.Color == String.Empty)
+            {
+                nutrition.Color = "#000000";
+            }
             _context.NutritionPlans.Add(nutrition);
             _context.SaveChanges();
+            return Task.CompletedTask;
+        }
+
+        public Task<bool> HorseHasDiet(Horses horses)
+        {
+            var diets = _context.Diets.Where(x => x.HorseId == horses.HorseId);
+            if (diets.Any())
+            {
+                return Task.FromResult(true);
+            }
+            return Task.FromResult(false);
+        }
+
+        public Task ChangeDiet(Horses horses, NutritionPlans nutritionPlans)
+        {
+            var diets = _context.Diets.Where(x => x.HorseId == horses.HorseId).FirstOrDefault();
+            if (diets != null)
+            {
+                diets.NutritionPlan = nutritionPlans;
+                _context.SaveChanges();
+            }
+            else
+            {
+                diets = new Diets()
+                {
+                    Horse = horses,
+                    NutritionPlan = nutritionPlans,
+                    IsActive = true
+                };
+            }
             return Task.CompletedTask;
         }
     }

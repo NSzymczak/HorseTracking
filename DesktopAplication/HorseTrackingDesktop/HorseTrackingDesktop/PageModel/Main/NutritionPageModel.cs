@@ -42,5 +42,12 @@ namespace HorseTrackingDesktop.PageModel.Main
             new AddNutritionView().ShowDialog();
             await GetPlans();
         }
+
+        [RelayCommand]
+        public async Task EditPlan()
+        {
+            new AddNutritionView(NutritionPlans?.LastOrDefault()).ShowDialog();
+            await GetPlans();
+        }
     }
 }
