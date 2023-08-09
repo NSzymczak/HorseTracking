@@ -24,7 +24,10 @@ namespace HorseTrackingMobile.ViewModels
 
         public ICommand LoginCommand { get; }
 
+        public bool WrongData { get; set; }
+
         private string readedLogin;
+
         public string ReadedLogin
         {
             get => readedLogin;
@@ -32,6 +35,7 @@ namespace HorseTrackingMobile.ViewModels
         }
 
         private string readedPassword;
+
         public string ReadedPassword
         {
             get => readedPassword;
@@ -59,6 +63,7 @@ namespace HorseTrackingMobile.ViewModels
                 GoToTheApp();
             });
         }
+
         public void CheckLogin()
         {
             if (Preferences.Get(PreferencesKeys.UserID, 0) != 0)
@@ -70,10 +75,11 @@ namespace HorseTrackingMobile.ViewModels
 
         public void IncorrectData()
         {
-            //IncorrectDataLabel.IsVisible = true;
+            WrongData = true;
+            OnPropertyChanged(nameof(WrongData));
         }
 
-        byte[] GenerateSalt(int length)
+        private byte[] GenerateSalt(int length)
         {
             var bytes = new byte[length];
 
@@ -84,7 +90,8 @@ namespace HorseTrackingMobile.ViewModels
 
             return bytes;
         }
-        byte[] GenerateHash(byte[] password, byte[] salt, int iterations, int length)
+
+        private byte[] GenerateHash(byte[] password, byte[] salt, int iterations, int length)
         {
             using (var deriveBytes = new Rfc2898DeriveBytes(password, salt, iterations))
             {
@@ -96,11 +103,11 @@ namespace HorseTrackingMobile.ViewModels
         {
             Preferences.Set(PreferencesKeys.UserID, _appState.CurrentUser.Id);
             var horseList = new List<Horse>();
-            if(_appState.CurrentUser.Type.Type == "horseOwner") 
+            if (_appState.CurrentUser.Type.Type == "horseOwner")
             {
                 horseList = _horseService.GetHorses(_appState.CurrentUser);
             }
-            else if(_appState.CurrentUser.Type.Type == "trainer")
+            else if (_appState.CurrentUser.Type.Type == "trainer")
             {
                 horseList = _horseService.GetAllTrainedHorses(_appState.CurrentUser);
             }

@@ -1,5 +1,6 @@
 \documentclass[12pt,twoside]{report}
 \usepackage[margin=2.5cm]{geometry}
+\linespread{1.375}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{polski}
@@ -12,7 +13,9 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{rotating}
-	
+\usepackage{lmodern} %Czcionka
+\usepackage{wrapfig} %Tekst wokół obrazu
+\raggedbottom %zwalcza dziwne rozciąganie
 \begin{document}
 	\begin{titlepage}
 		
@@ -112,20 +115,20 @@
 \chapter{Przegląd istniejących rozwiązań}
 \chapter{Technologie użyte w pracy}
 \section{Microsoft Visual Studio 2022}
-Microsoft Visual Studio to środowisko IDE, za pomocą którego można edytować, debugować jak także kompilować kod. Po stworzeniu aplikacji można ja także opublikować w prost ze środowiska. Środowisko to zawiera wiele funkcji wzbogacających proces tworzenia takich jak narzędzia uzupełniania kodu (Intellisense). Dzięki temu środowisku możemy programować aplikacje na dowolną platformę oraz dowolne urządzenia. 
+\textcolor{red} {Microsoft Visual Studio to środowisko IDE, za pomocą którego można edytować, debugować jak także kompilować kod. Po stworzeniu aplikacji można ja także opublikować w prost ze środowiska. Środowisko to zawiera wiele funkcji wzbogacających proces tworzenia takich jak narzędzia uzupełniania kodu (Intellisense). Dzięki temu środowisku możemy programować aplikacje na dowolną platformę oraz dowolne urządzenia. }
 \section{Microsoft SQL Server 2019 Express}
-Microsoft SQL Server jest to system, wspomagający zarządzanie bazą danych stworzony oraz utrzymywany przez firmę Microsoft. MS SQL wykorzystuje język zapytań Transact-SQL, który jest rozwinięciem standardu języka zapytań ANSI/SQL.
+\textcolor{red} {Microsoft SQL Server jest to system, wspomagający zarządzanie bazą danych stworzony oraz utrzymywany przez firmę Microsoft. MS SQL wykorzystuje język zapytań Transact-SQL, który jest rozwinięciem standardu języka zapytań ANSI/SQL.}
 
 \section{Microsoft SQL Server Management Studio}
 
 \section{Structured Query Language}
-SQL czyli Structured Query Language jest to język zapytań wykorzystywany w relacyjnych bazach danych. Umożliwia on tworzenie, modyfikowania oraz zarządzanie bazami danych. Dodatkowo dzięki SQL jesteśmy w stanie pobierać, dodawać, aktualizować oraz usuwać dane znajdujące się w naszej bazie danych. SQL wspiera również tworzenie skomplikowanych zapytań, dzięki czemu możemy wykonywać różne operacje na danych takie jak: filtrowanie, sortowanie, grupowanie oraz łączenie.
+\textcolor{red} {SQL czyli Structured Query Language jest to język zapytań wykorzystywany w relacyjnych bazach danych. Umożliwia on tworzenie, modyfikowania oraz zarządzanie bazami danych. Dodatkowo dzięki SQL jesteśmy w stanie pobierać, dodawać, aktualizować oraz usuwać dane znajdujące się w naszej bazie danych. SQL wspiera również tworzenie skomplikowanych zapytań, dzięki czemu możemy wykonywać różne operacje na danych takie jak: filtrowanie, sortowanie, grupowanie oraz łączenie.}
 
 \section{Windows Presentation Foundation}
-WPF - Windows Presentation Foundation, jest technologią opracowaną przez Microsoft. Służy ona do tworzenia aplikacji desktopowych na system Windows. Jest częścią .NET Framework i zapewnia on możliwość tworzenia zaawansowanych interfejsów użytkownika. WPF wykorzystuje język XAML do opisu interfejsu użytkownika.  
+WPF - Windows Presentation Foundation, jest technologią opracowaną przez Microsoft. Służy ona do tworzenia aplikacji desktopowych na system Windows. Jest częścią .NET Framework i zapewnia on możliwość tworzenia zaawansowanych interfejsów użytkownika wykorzystując język XAML. Interfejs ten jest niezależny od rozdzielczości oraz używa aparatu renderowania opartego na wektorach, aby korzystać z nowoczesnego sprzętu graficznego. WPF dostarcza kontrolki, powiązanie danych, układ, grafike 2D i 3D, animację, style, szablony, dokumenty, multimedia, tekst i typografię, jak także inne elementy interfejsu API platformy .NET. \cite{WPF}
 
 \section{Xamarin}
-Xamarin jest to platforma do tworzenia aplikacji mobilnych za pomocą platformy .NET, która automatycznie obsługuje odzyskiwanie i alokowanie pamięci, jak także współdziałanie z platformami bazowymi. Dzięki Xamarinowi możemy pisać aplikacje na androida, iOS jak także na windows phone. Tworzy on warstwę abstrakcji komunikującą się za pomiędzy kodem aplikacji, a kodem bazowej platformy. Aplikacje wykorzystujące Xamarin możemy pisać nie tylko na komputerach PC z systemem Windows lub Linux, lecz także na urządzeniach z systemem MacOS.
+Xamarin jest to platforma do tworzenia aplikacji mobilnych za pomocą platformy .NET, która automatycznie obsługuje odzyskiwanie i alokowanie pamięci, jak także współdziałanie z platformami bazowymi. Dzięki Xamarinowi możemy pisać aplikacje na androida, iOS jak także na windows phone. Tworzy on warstwę abstrakcji komunikującą się za pomiędzy kodem aplikacji, a kodem bazowej platformy. Aplikacje wykorzystujące Xamarin możemy pisać nie tylko na komputerach PC z systemem Windows lub Linux, lecz także na urządzeniach z systemem MacOS. Architektura systemu Xamarin przedstawiona zostala na rysunku \ref{XamarinArchitecture}. Możemy na nim zobaczyć część architektury dotyczącą platformy android jak także, część dotyczącą platformy iOS.\cite{XamarinLearn}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{xamarinArchitecture}
@@ -134,17 +137,32 @@ Xamarin jest to platforma do tworzenia aplikacji mobilnych za pomocą platformy 
 	\label{XamarinArchitecture}
 \end{figure}
 \subsection{Xamarin.Android}
-Aplikacja HorseTracking dostępna będzie jedynie na platformę android, ponieważ aby dostosować ją do systemu iOS niezbędne było by urządzenie z systemem MacOS.\\
-Xamarin.Android kompilowany jest z języka C\#, do języka pośredniego "just in time", często nazywanego JIT od pierwszych liter nazwy. JIT jest skompilowany do zestawu natywnego po uruchomieniu aplikacji. Xamarin.Android jest uruchamiany w środowisku mono obok maszyny wirtualnej środowiska Android Runtime. Dzięki platformie Xamarin możemy powiązać platformę .Net z przestrzeniami nazw Android.* i Java.*. Za pośrednictwem zarządzanych otok wywoływanych MCW środowisko mono może wywoływać przestrzenie nazw oraz udostępniać otoki wywoływane przez system Android(ACW). Dzięki temu oba środowiska mogą wywoływać kod nawzajem.
+Aplikacja HorseTracking dostępna będzie jedynie na platformę android. Aby dostosować ją do systemu iOS niezbędne było by urządzenie z systemem MacOS co nie było możliwe.
+Xamarin.Android kompilowany jest z języka C\#, do języka pośredniego "just in time", często nazywanego JIT od pierwszych liter nazwy. JIT jest skompilowany do zestawu natywnego po uruchomieniu aplikacji. Xamarin.Android jest uruchamiany w środowisku mono obok maszyny wirtualnej środowiska Android Runtime. Dzięki platformie Xamarin możemy powiązać platformę .Net z przestrzeniami nazw Android.* i Java.*. Za pośrednictwem zarządzanych otok wywoływanych MCW środowisko mono może wywoływać przestrzenie nazw oraz udostępniać otoki wywoływane przez system Android(ACW). Dzięki temu oba środowiska mogą wywoływać kod nawzajem. Na rysunku \ref{AndroidArchitecture} przedstawiona została architektura systemu Xamarin.Android\cite{XamarinLearn}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{androidArchitecture}
+	\caption{Architektura platformy Xamarin.Android}
+	\textit{Źródło: \cite{XamarinLearn}}
+	\label{AndroidArchitecture}
+\end{figure}
 
 \section{Android Device Menager}
 
 \section{NuGet}
-NuGet jest to mechanizm udostępniania kodu obsługiwany przez firmę Microsoft. Służy on do współdzielenia kodu. Pakiet NuGet obsługuje hosty prywatne oraz publicznego hosta. Na hoście publicznym NuGet ma tysiące unikatowych pakietów dostępnych dla użytkowników .Net. Niezależnie od tego czy host jest prywatny czy publiczny jest on połączeniem między twórcami pakietów a ich konsumentami. Przepływ informacji między deweloperami pakietów, a ich konsumerami możemy zaobserwować na rysunku \ref{NugetFlow}.
+NuGet (logo systemu na rysunku \ref{nugetLogo})jest to mechanizm udostępniania kodu obsługiwany przez firmę Microsoft. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{nugetLogo}
+	\caption{Logo systemu NuGet}
+	\textit{Źródło: \cite{Nuget}}
+	\label{nugetLogo}
+\end{figure}
+Służy on do współdzielenia kodu. Pakiet NuGet obsługuje hosty prywatne oraz publicznego hosta. Na hoście publicznym NuGet ma tysiące unikatowych pakietów dostępnych dla użytkowników .Net. Niezależnie od tego czy host jest prywatny czy publiczny jest on połączeniem między twórcami pakietów a ich konsumentami. Przepływ informacji między deweloperami pakietów, a ich konsumerami możemy zaobserwować na rysunku \ref{NugetFlow}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{nugetFlow}
-	\caption{przepływ informacji}
+	\caption{Przepływ informacji}
 	\textit{Źródło: \cite{Nuget}}
 	\label{NugetFlow}
 \end{figure}
@@ -201,7 +219,7 @@ Każdy członek klubu będzie miał swoje konto z możliwością logowania zaró
 \section{Wymagania funkcjonalne}
 Funkcjonalności aplikacji mobilnej oraz desktopowej nie są takie same mimo iż są podłączone do jednej bazy, więc czerpią z tego samego źródła informacji. Pomimo znaczących różnic niektóre funkcjonalności pokrywają się w obu tych produktach. 
 Wymagania funkcjonalne, które muszą spełniać obie aplikacje przedstawia tabelka \ref{funkcjonalneObuApek}.
-\renewcommand{\arraystretch}{1.5}
+%\renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\centering
 \begin{tabular}{|p{4.5cm}|p{4cm}|p{7cm}|}			
@@ -220,7 +238,7 @@ Wymagania funkcjonalne, które muszą spełniać obie aplikacje przedstawia tabe
 
 Aplikacja mobilna będzie służyć użytkownikom głównie do zapisu aktualnych wydarzeń z życia stajni. Jej głównym celem jest szybkie zapisanie informacji o aktywnościach koni i ich wizytach u lekarzy, bądź kowali. Można w niej także szybko sprawdzić przygotowany plan żywienia, oraz daty zbliżających się zawodów.
 Wymagania funkcjonalne dla aplikacji mobilnej zawierają poniższe tabele \ref{funkcjonalneMobilki1} i \ref{funkcjonalneMobilki2}.
-\renewcommand{\arraystretch}{1.8}
+%\renewcommand{\arraystretch}{1.8}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{6cm}|}			
@@ -252,7 +270,7 @@ Wymagania funkcjonalne dla aplikacji mobilnej zawierają poniższe tabele \ref{f
 	\label{funkcjonalneMobilki1}
 \end{table}
 
-\renewcommand{\arraystretch}{1.8}
+%\renewcommand{\arraystretch}{1.8}
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
@@ -277,7 +295,7 @@ Wymagania funkcjonalne dla aplikacji mobilnej zawierają poniższe tabele \ref{f
 \end{table}
 
 Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadających swoje konie jak i dla osób zarządzających klubem jeździeckim. W aplikacji desktop-owej posiadacze koni będą mogli obejrzeć zgromadzone informacje w przystępniejszej formie na dużym ekranie, stworzyć plan żywienia swojego konia, jak także przeanalizować statystki swoich koni. Osoby zarządzające klubem będą miały możliwość dodawania nowych użytkowników i koni jak także sprawdzania statystyk wszystkich koni klubowych. Szczególowe wymagania funkcjonalne dla aplikacji desktopowej zostały przedstawione w tabelach \ref{funkcjonalneDesktop1} oraz \ref{funkcjonalneDesktop2}.
-\renewcommand{\arraystretch}{1.8}
+%\renewcommand{\arraystretch}{1.8}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
@@ -309,7 +327,7 @@ Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadający
 \caption{Wymagania funkcjonalne aplikacji desktopowej}
 \label{funkcjonalneDesktop1}
 \end{table}
-\renewcommand{\arraystretch}{1.8}
+%\renewcommand{\arraystretch}{1.8}
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
@@ -532,7 +550,7 @@ Transakcje występujące w aplikacji:
 	\end{itemize} 
 \end{enumerate}
 \newpage
-\renewcommand{\arraystretch}{1.2}
+%\renewcommand{\arraystretch}{1.2}
 \subsubsection{Encje}
 Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i transakcji należy przystąpić do tworzenia encji i relacji między nimi.
 \\
@@ -2374,7 +2392,112 @@ kontrolki\\
 \section{Baza błędów}
 \chapter{Dokumentacja użytkownika}
 \section{Aplikacja desktopowa}
+\newpage
 \section{Aplikacja mobilna}
+Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności koni, ich wizyt u lekarzy, kowali jak także do zarządzania zawodami.
+
+\begin{wrapfigure}{r}{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.35]{LoginView}
+	\caption{\centering Logowanie do aplikacji.}
+	\textit{\centering Źródło: Opracowanie własne}
+	\label{LoginView}
+	\newline
+	\newline
+		\centering
+	\includegraphics[scale=0.35]{WrongLoginData}
+	\caption{\centering Błędne dane logowania.}
+	\textit{\centering Źródło: Opracowanie własne}
+	\label{LoginViewWrongPassword}
+\end{wrapfigure}
+Po pierwszym otwarciu aplikacji użytkownikowi ukaże się okno logowania przedstawione na rysunku \ref{LoginView}. 
+
+Na tym ekranie użytkownik może zalogować się do aplikacji. \textcolor{red}{Możliwa jest także opcja zresetowania swojego hasła, w przypadku zapomnienia hasła}. Rejestracja do aplikacji nie jest możliwa, ponieważ ta funkcja jest dostępna jedynie dla administratora w aplikacji desktopowej. Po wprowadzeniu loginu i hasła, a następnie kliknięciu przycisku "Zaloguj" sprawdzana jest poprawność wprowadzonych danych. 
+
+Jeśli przy próbie zalogowania podane zostaną nieprawidłowe dane logowania, bądź użytkownika nie ma w systemie, zostanie on o tym poinformowany (patrz. rys \ref{LoginViewWrongPassword})
+Użytkownik nieposiadający koni (użytkownik typu appOwner) nie może zalogować się do aplikacji mobilnej, ponieważ służy ona tylko do wpisywania danych o swoich koniach.
+
+Po poprawnym zalogowaniu się dane użytkownika zostają zapamiętane, więc przy kolejnym otwarciu aplikacji użytkownik będzie już zalogowany.
+Aby wylogować się z aplikacji użytkownik musi otworzyć menu boczne i wybrać opcję "Wyloguj".
+
+\begin{wrapfigure}{r}{0.59\textwidth}
+	\centering
+	\includegraphics[scale=0.8]{ActivityView}
+	\caption{Ekran aktywności.}
+	\textit{Źródło: Opracowanie własne}
+	\label{ActivityView}
+\end{wrapfigure} 
+
+Po zalogowaniu do aplikacji użytkownik zostaje przeniesiony na okno główne. Zawiera ono menu dolne pozwalające na nawigację pomiędzy czterema głównymi sekcjami aplikacji: aktywności, wizyty, żywienie, zawody. Na początek wyświetlona zostaje  strona dotycząca aktywności. W tym widoku można przeglądać informacje o wszystkich aktywnościach koni posiadanych lub tych które trenujemy.  
+
+Aktywności dotyczą konia, którego imię podane jest w polu powyżej. Aby zmienić konia wystarczy kliknąć w to pole i wybrać innego konia.
+Strzałki lewo-prawo widoczne na dole ekranu umożliwiają nawigację między kolejnymi tygodniami. W przypadku braku aktywności w danym dniu, wyświetlony jest napis informujący o braku aktywności tego dnia. Każdy typ aktywności ma inny kolor i ikonę, aby ułatwić identyfikacje. Po kliknięciu w daną aktywność możemy przejść do detali dotyczących tej aktywności. Ekran szczegółów został przedstawiony na rysunku \ref{ActivityDetails} i zostanie omówiony później.
+
+Pomiędzy strzałkami nawigującymi miedzy tygodniami znajduje się okrągły przycisk z ikoną "+". Umożliwia on dodawanie aktywności. Dla aktualnie wybranego konia. Przycisk ten dostępny jest jedynie dla właściciela konia oraz osób którym dany koń został udostępniony. Oznacza to, że jeśli użytkownik jest trenerem ta opcja jest dla niego zablokowana, a przycisk nie jest widoczny.
+
+Po kliknięciu w przycisk "+" użytkownik zostaje przeniesiony na okno "Dodawanie aktywności".
+\begin{figure}[H]
+	\begin{center}
+	\begin{minipage}{5cm}
+	\centering
+	\includegraphics[scale=0.6]{AddActivitySimpleView}
+	\caption{\centering Okno dodawania aktywności.}
+	\textit{Źródło: Opracowanie własne}
+	\label{AddActivitySimple}
+\end{minipage}
+\hfil
+\begin{minipage}{5cm}
+	\centering
+	\includegraphics[scale=0.6]{AddActivityAdvancedView}
+	\caption{Okno dodawania aktywności rozszerzone.}
+	\textit{Źródło: Opracowanie własne}
+	\label{AddActivityAdvanced}
+\end{minipage}
+	\end{center}
+\end{figure}
+Okno to wygląda różnie w zależności od tego jaki typ aktywności chcemy dodać (patrz rys. \ref{AddActivitySimple} i rys. \ref{AddActivityAdvanced}). Na początku wyświetlony jest prostszy model okna, a po wybraniu typu aktywności dostosowuje się. Dla aktywności: jazda, skoki, zawody, kros czy skoki w oknie dochodzą nowe opcje takie jak satysfakcja, intensywność oraz wybór trenera (patrz. rys \ref{AddActivityAdvanced}). Po uzupełnieniu wszystkich niezbędnych informacji aktywność zostaje dodana i pojawia się na ekranie głównym. Jeśli któraś z niezbędnych informacji nie zostanie uzupełniona aktywność nie doda się, użytkownik zostanie poinformowany o nieprawidłowościach i będzie mógł je poprawić.
+\begin{wrapfigure}{r}{0.6\textwidth}
+	\centering
+	\includegraphics[scale=0.7]{ActivityDetailsView}
+	\caption{\centering Szczegóły aktywności.}
+	\textit{Źródło: Opracowanie własne}
+	\label{ActivityDetails}
+\end{wrapfigure}
+Po dodaniu aktywności użytkownik zostaje przeniesiony z powrotem na okno główne, gdzie po kliknięciu w wybraną aktywność może zobaczyć jej szczegóły (patrz rys.\ref{ActivityDetails} ). 
+
+W oknie szczegółów oprócz przeczytania wszystkich informacji dotyczących aktywności można także przejść do edycji lub usunąć daną aktywność. Przy edycji otwiera się to samo okno co przy dodawaniu aktywności jednakże tym razem jest ono wypełnione aktualnymi danymi wybranej aktywności. Po zakończonej edycji użytkownik zostaje przeniesiony na okno główne. Po kliknięciu przycisku usuń, wyświetla się komunikat proszący o potwierdzenie wykonania akcji. Jeśli użytkownik potwierdzi, że akcje, to aktywność zostanie usunięta, a użytkownik zostanie przeniesiony na ekran główny. \textcolor{red}{Usunięcie aktywności jest także możliwe poprzez długie przytrzymanie wybranej aktywności na ekranie głównym, a następnie potwierdzenie akcji na pojawiającym się komunikacie.}
+\newpage
+Kolejną opcją w menu dolnym są wizyty. Na tym oknie podobnie jak w oknie aktywności mamy pole pozwalające wybrać konia o którym informacje chcemy obejrzeć. Koń wybrany na oknie aktywności przenosi się na okno wizyt i na odwrót. W tym oknie można sprawdzić jakie wizyty odbył ostatnio wybrany koń. 
+\begin{figure}[H]
+	\begin{center}
+	\begin{minipage}{5cm}
+		\centering
+		\includegraphics[scale=0.6]{VisitView}
+		\caption{\centering Okno wizyt.}
+		\textit{Źródło: Opracowanie własne}
+		\label{VisitView}
+	\end{minipage}
+	\hfil
+	\begin{minipage}{5cm}
+		\centering
+		\includegraphics[scale=0.6]{VisitViewDetails}
+		\caption{\centering Szczegóły wizyty.}
+		\textit{Źródło: Opracowanie własne}
+		\label{VisitDetailsView}
+	\end{minipage}
+\end{center}
+\end{figure}
+Na rysunku \ref{VisitView} widzimy listę wizyt wybranego konia. Po kliknięciu w wizytę zostaniemy przeniesieni do szczegółów wizyty, gdzie możemy znaleźć dane kontaktowe do lekarza/kowala, który przeprowadził wizytę oraz szczegóły takie jak opis wizyty i jej koszt. Dzięki temu widokowi użytkownik może sprawdzić jakie zalecenia były na poprzednich wizytach, jaki był ich koszt i kiedy dokładnie się odbyły.
+\newpage
+\begin{wrapfigure}{r}{0.6\textwidth}
+	\centering
+	\includegraphics[scale=0.7]{NutritionPlan}
+	\caption{\centering Szczegóły aktywności.}
+	\textit{Źródło: Opracowanie własne}
+	\label{ActivityDetails}
+\end{wrapfigure}
+Kolejną opcją dostępną w menu dolnym są plany żywienia. Po kliknięciu w ikonę "jabłka" użytkownik zostanie przeniesiony na stronę z planami żywienia wszystkich jego koni. W widoku tym można jedynie obejrzeć plan żywienia, nie jest możliwe ich dodanie, edycja bądź usunięcie. Całość zarządzania planami żywnienia została zaimplementowana w aplikacji desktopowej.
+
 \chapter{Podsumowanie}
 \begin{thebibliography}{9}
 	
@@ -2382,12 +2505,29 @@ kontrolki\\
 	Hanna Mazur, Zygmunt Mazur,
 	\emph{Projektowanie relacyjnych baz danych}.
 	Oficyna Wydawnicza Politechniki Wrocławskiej, Wrocław 2004.
-	\bibitem{XamarinLearn}https://learn.microsoft.com/pl-pl/xamarin/get-started/what-is-xamarin
-	\bibitem{Nuget}https://learn.microsoft.com/pl-pl/nuget/what-is-nuget
-	\bibitem{Entity}https://www.plukasiewicz.net/Artykuly/EntityFramework
-	\bibitem{FigmaBlog}https://blog.consdata.tech/2023/02/15/uiux-tools.html
-	\bibitem{FigmaAbout}https://www.figma.com/about/
-	\bibitem{FigmaIcon}https://commons.wikimedia.org/wiki/File:Figma-logo.svg
+
+	\bibitem{XamarinLearn} profexorgeek, alexbuckgit, v-hearya, davidbritch, conceptdev \emph{Co to jest środowisko Xamarin?}
+	https://learn.microsoft.com/pl-pl/xamarin/get-started/what-is-xamarin [Dostęp: 06.08.2023] 
+
+	\bibitem{Nuget} JonDouglas, alexbuckgit, Mikejo5000, v-hearya, zivkan, chrisraygill, loic-sharma, karann-msft, NickKruger,	mairaw, kraigb, alfredmyers, \emph{Wprowadzenie do narzędzia NuGet} https://learn.microsoft.com/pl-pl/nuget/what-is-nuget 
+	[Dostęp: 06.08.2023]
+
+	\bibitem{Entity}Paweł Łukasiewicz \emph{C\# - Entity Framework} https://www.plukasiewicz.net/Artykuly/EntityFramework
+	[Dostęp: 06.08.2023]
+
+	\bibitem{FigmaBlog} Juris Lavrinovics, \emph{Figma - narzędzie do projektowania interfejsu użytkownika}
+	https://blog.consdata.tech/2023/02/15/uiux-tools.html 
+	[Dostęp 05.05.2023]
+
+	\bibitem{FigmaAbout}https://www.figma.com/about/ 
+	[Dostęp 05.05.2023]
+
+	\bibitem{FigmaIcon}Figma \emph{Figma-logo} https://commons.wikimedia.org/wiki/File:Figma-logo.svg 
+	[Dostęp 05.05.2023]
+	
+	\bibitem{WPF} adegeo, ihsansfd, alexbuckgit, v-trisshores, DCtheGeek, \emph{Przewodnik dotyczący aplikacji klasycznych (WPF .NET)}\\ https://learn.microsoft.com/pl-pl/dotnet/desktop/wpf/overview/?view=netdesktop-7.0 
+	[Dostęp: 06.08.2023]
+
 \end{thebibliography}
 \listoffigures
 \lstlistoflistings
