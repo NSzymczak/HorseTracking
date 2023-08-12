@@ -125,7 +125,7 @@ namespace HorseTrackingDesktop.ViewModel
             if (CheckNutritionPlan(nutritionPlan))
             {
                 _nutritionService.AddNutritionPlan(nutritionPlan);
-                new AddPlanForHorseView(nutritionPlan).ShowDialog();
+                new SelectHorseView(false, nutritionPlan).ShowDialog();
                 window.Close();
             }
         }

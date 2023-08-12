@@ -20,18 +20,20 @@ namespace HorseTrackingDesktop.View
     /// <summary>
     /// Logika interakcji dla klasy AddPlanForHorse.xaml
     /// </summary>
-    public partial class AddPlanForHorseView : Window
+    public partial class SelectHorseView : Window
     {
-        private AddPlanForHorseViewModel? viewModel;
+        private SelectHorseViewModel? viewModel;
 
-        public AddPlanForHorseView(NutritionPlans nutritionPlans)
+        public SelectHorseView(bool isEdit, NutritionPlans? nutritionPlans = null)
         {
             InitializeComponent();
-            viewModel = StartUp.ServiceProvider?.GetService<AddPlanForHorseViewModel>();
+            viewModel = StartUp.ServiceProvider?.GetService<SelectHorseViewModel>();
             DataContext = viewModel;
             if (viewModel != null)
             {
-                viewModel.Plans = nutritionPlans;
+                if (nutritionPlans != null)
+                    viewModel.Plans = nutritionPlans;
+                viewModel.isEdit = isEdit;
                 Loaded += async (s, e) => await viewModel.SetUP();
             }
         }
