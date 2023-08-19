@@ -51,7 +51,7 @@ namespace HorseTrackingDesktop.PageModel
             }
         }
 
-        public VisitPageModel(IAppState appState, IVisitService visitService, IHorseService horseService)
+        public VisitPageModel(IAppState appState, IVisitService visitService, IHorseService horseService) : base(appState)
         {
             _visitService = visitService;
             _appState = appState;
