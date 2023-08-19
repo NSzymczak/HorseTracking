@@ -1,12 +1,43 @@
-﻿using System;
+﻿using HorseTrackingDesktop.Enumerable;
+using HorseTrackingDesktop.Services.AppState;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 
 namespace HorseTrackingDesktop.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        private readonly IAppState _appState;
+        private string userType;
+
+        public BaseViewModel()
+        {
+        }
+
+        public BaseViewModel(IAppState appState)
+        {
+            _appState = appState;
+            userType = _appState.CurrentUser.Type.TypeName;
+        }
+
+        public bool? IsAdmin
+        {
+            get => userType == UserTypesEnum.admin.ToString();
+        }
+
+        public bool? IsHorseOwner
+        {
+            get => userType == UserTypesEnum.horseOwner.ToString();
+        }
+
+        public bool? IsTrainer
+        {
+            get => userType == UserTypesEnum.trainer.ToString();
+        }
+
         #region INotify
 
         public event PropertyChangedEventHandler? PropertyChanged;

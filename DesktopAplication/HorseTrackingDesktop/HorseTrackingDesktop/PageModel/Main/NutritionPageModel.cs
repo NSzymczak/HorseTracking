@@ -21,7 +21,7 @@ namespace HorseTrackingDesktop.PageModel.Main
         public ObservableCollection<NutritionPlans>? NutritionPlans { get; set; }
 
         public NutritionPageModel(INutritionService nutritionService, IAppState appState,
-                                  IHorseService horseService)
+                                  IHorseService horseService) : base(appState)
         {
             _nutritionService = nutritionService;
             _appState = appState;

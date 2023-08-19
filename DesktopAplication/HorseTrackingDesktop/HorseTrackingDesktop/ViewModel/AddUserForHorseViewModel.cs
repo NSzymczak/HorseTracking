@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.UserService;
@@ -48,7 +49,10 @@ namespace HorseTrackingDesktop.ViewModel
         [RelayCommand]
         public async Task AddHorseWithUser(Window window)
         {
-            Horse.User = CurrentAcount;
+            if (CurrentAcount == null)
+            {
+                return;
+            }
             if (Horse.HorseId == 0)
             {
                 await _horseService.AddHorse(Horse);

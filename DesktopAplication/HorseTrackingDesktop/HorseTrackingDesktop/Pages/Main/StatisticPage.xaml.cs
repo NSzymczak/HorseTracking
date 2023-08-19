@@ -11,7 +11,7 @@ namespace HorseTrackingDesktop.Pages.MainPage
         public StatisticPage()
         {
             InitializeComponent();
-            viewModel = new StatisticPageModel();
+            // viewModel = new StatisticPageModel();
             DataContext = viewModel;
         }
 

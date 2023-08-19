@@ -4,12 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:control="clr-namespace:HorseTrackingDesktop.Control"
+        xmlns:converter ="clr-namespace:HorseTrackingDesktop.Converters"
+        xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         Title="NAZWAAPKI"
         Height="900"
         Width="1600"
         WindowState="Maximized"
         ResizeMode="CanMinimize">
+    <Window.Resources>
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -55,6 +61,7 @@
                                               Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Pages/Main/UserPage.xaml"
+                                              Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
                                               ImageSource="\Resources\Image\CategoryImage\group.png"
                                               Content="Konta"
                                               Click="Button_Click" />
