@@ -83,11 +83,24 @@ namespace HorseTrackingDesktop.Services.Database.NutritionService
 
         public Task AddNutritionPlan(NutritionPlans nutrition)
         {
+            var editPlan = _context.NutritionPlans.FirstOrDefault(x => x.NutritionPlanId == nutrition.NutritionPlanId);
             if (nutrition.Color == null || nutrition.Color == String.Empty)
             {
                 nutrition.Color = "#000000";
             }
-            _context.NutritionPlans.Add(nutrition);
+            if (editPlan != null)
+            {
+                var id = editPlan.NutritionPlanId;
+                editPlan.Title = nutrition.Title;
+                editPlan.Description = nutrition.Description;
+                editPlan.Color = nutrition.Color;
+                editPlan.Icon = nutrition.Icon;
+                _context.Entry(editPlan).State = EntityState.Modified;
+            }
+            else
+            {
+                _context.NutritionPlans.Add(nutrition);
+            }
             _context.SaveChanges();
             return Task.CompletedTask;
         }
@@ -105,20 +118,22 @@ namespace HorseTrackingDesktop.Services.Database.NutritionService
         public Task ChangeDiet(Horses horses, NutritionPlans nutritionPlans)
         {
             var diets = _context.Diets.Where(x => x.HorseId == horses.HorseId).FirstOrDefault();
+            var nutritionID = _context.NutritionPlans.Where(x => x.NutritionPlanId == nutritionPlans.NutritionPlanId).Select(x => x.NutritionPlanId).FirstOrDefault();
+
             if (diets != null)
             {
-                diets.NutritionPlan = nutritionPlans;
-                _context.SaveChanges();
+                diets.NutritionPlanId = nutritionID;
             }
             else
             {
                 diets = new Diets()
                 {
                     Horse = horses,
-                    NutritionPlan = nutritionPlans,
+                    NutritionPlanId = nutritionID,
                     IsActive = true
                 };
             }
+            _context.SaveChanges();
             return Task.CompletedTask;
         }
     }

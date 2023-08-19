@@ -18,6 +18,7 @@ namespace HorseTrackingDesktop.Pages.MainPage
             InitializeComponent();
             UserPageModel = StartUp.ServiceProvider?.GetService<UserPageModel>();
             DataContext = UserPageModel;
+            navigationFrame.Navigate(User.Routing);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

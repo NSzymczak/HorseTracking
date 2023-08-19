@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace HorseTrackingDesktop.View
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AddPlanForHorse.xaml
-    /// </summary>
     public partial class SelectHorseView : Window
     {
         private SelectHorseViewModel? viewModel;

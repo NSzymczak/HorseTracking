@@ -80,7 +80,7 @@ namespace HorseTrackingDesktop.ViewModel
             var nutritionPlan = (await _nutritionService.GetPlanForHorse(SelectedHorse.HorseId)).FirstOrDefault();
             if (nutritionPlan != null)
             {
-                new AddNutritionView(nutritionPlan).ShowDialog();
+                new AddNutritionView(nutritionPlan, SelectedHorse).ShowDialog();
             }
         }
     }

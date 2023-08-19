@@ -15,6 +15,9 @@ namespace HorseTrackingDesktop.ViewModel
     public partial class AddNutritionViewModel : BaseViewModel
     {
         private readonly INutritionService _nutritionService;
+
+        public Horses Horse { get; set; }
+
         private string? title;
 
         public string? Title
@@ -115,6 +118,7 @@ namespace HorseTrackingDesktop.ViewModel
         {
             var nutritionPlan = new NutritionPlans()
             {
+                NutritionPlanId = NutritionPlans?.NutritionPlanId ?? 0,
                 Title = Title,
                 Icon = Icon,
                 Color = Color,
@@ -125,8 +129,16 @@ namespace HorseTrackingDesktop.ViewModel
             if (CheckNutritionPlan(nutritionPlan))
             {
                 _nutritionService.AddNutritionPlan(nutritionPlan);
-                new SelectHorseView(false, nutritionPlan).ShowDialog();
-                window.Close();
+                if (Horse == null)
+                {
+                    new SelectHorseView(false, nutritionPlan).ShowDialog();
+                    window.Close();
+                }
+                else
+                {
+                    _nutritionService.ChangeDiet(Horse, nutritionPlan);
+                    window.Close();
+                }
             }
         }
 

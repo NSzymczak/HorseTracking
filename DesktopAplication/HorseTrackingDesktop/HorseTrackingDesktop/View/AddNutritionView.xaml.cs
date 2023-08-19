@@ -24,7 +24,7 @@ namespace HorseTrackingDesktop.View
     {
         private readonly AddNutritionViewModel? viewModel;
 
-        public AddNutritionView(NutritionPlans? nutrition = null)
+        public AddNutritionView(NutritionPlans? nutrition = null, Horses? horse = null)
         {
             InitializeComponent();
             viewModel = StartUp.ServiceProvider?.GetService<AddNutritionViewModel>();
@@ -35,6 +35,8 @@ namespace HorseTrackingDesktop.View
                 {
                     if (nutrition != null)
                         viewModel.NutritionPlans = nutrition;
+                    if (horse != null)
+                        viewModel.Horse = horse;
                     await viewModel.LoadData();
                 }
             };
