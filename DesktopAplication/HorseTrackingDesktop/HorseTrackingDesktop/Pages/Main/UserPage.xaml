@@ -25,6 +25,7 @@
                                           BorderThickness="1"
                                           Routing="Pages/Management/UserManagementPage.xaml"
                                           Content="Użytkownikami"
+                                          x:Name="User"
                                           Click="Button_Click"
                                           Margin="10,0" />
                 <control:NavigationButton Style="{StaticResource NotImportantButton}"

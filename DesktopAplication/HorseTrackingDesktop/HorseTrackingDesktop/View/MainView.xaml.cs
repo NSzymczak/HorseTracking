@@ -8,6 +8,7 @@ namespace HorseTrackingDesktop.View
         public MainView()
         {
             InitializeComponent();
+            navigationFrame.Navigate(Statistic.Routing);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

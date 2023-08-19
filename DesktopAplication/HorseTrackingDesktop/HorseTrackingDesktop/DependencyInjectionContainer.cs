@@ -44,6 +44,9 @@ namespace HorseTrackingDesktop
             services.AddTransient<ProfessionalManagementPageModel>();
             services.AddTransient<UserManagementPageModel>();
             services.AddTransient<AddUserForHorseViewModel>();
+            services.AddTransient<AddNutritionViewModel>();
+            services.AddTransient<SelectHorseViewModel>();
+
             return services;
         }
     }

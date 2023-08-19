@@ -31,6 +31,7 @@
                                               Routing="Pages/Main/StatisticPage.xaml"
                                               ImageSource="\Resources\Image\CategoryImage\statistics.png"
                                               Content="Statystyki"
+                                              x:Name="Statistic"
                                               Click="Button_Click" />
                     <control:NavigationButton Style="{StaticResource MenuButton}"
                                               Routing="Pages/Main/VisitPage.xaml"
