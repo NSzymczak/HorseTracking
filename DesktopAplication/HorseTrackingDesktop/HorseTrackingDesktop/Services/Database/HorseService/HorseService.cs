@@ -1,6 +1,7 @@
 ﻿using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.UserService;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,11 +13,14 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
     public class HorseService : IHorseService
     {
         private readonly IAppState _appState;
+        private readonly IUserServices _userService;
         private readonly HorseTrackingContext _context;
 
-        public HorseService(IAppState appState, HorseTrackingContext context)
+        public HorseService(IAppState appState, IUserServices userServices,
+                            HorseTrackingContext context)
         {
             _appState = appState;
+            _userService = userServices;
             _context = context;
         }
 
@@ -78,10 +82,13 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
             return Task.FromResult(_context.HorseGenders.ToList());
         }
 
-        public Task AddHorse(Horses horse)
+        public async Task AddHorse(Horses horse)
         {
             try
             {
+                var type = (await _userService.GetUserTypes()).Where(x => x.TypeName == UserTypesEnum.horseOwner.ToString())
+                                                               .Select(x => x.TypeId).FirstOrDefault();
+                horse.User.TypeId = type;
                 _context.Horses.Add(horse);
                 int changesSaved = _context.SaveChanges();
 
@@ -98,14 +105,26 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
             {
                 Console.WriteLine("Błąd podczas zapisu danych do bazy danych: " + ex.Message);
             }
-            return Task.CompletedTask;
         }
 
-        public Task DeleteHorse(Horses horse)
+        public async Task DeleteHorse(Horses horse)
         {
+            var user = horse.User;
             _context.Horses.Remove(horse);
             _context.SaveChanges();
-            return Task.CompletedTask;
+            var horsesCount = _context.Horses.Count(x => x.User.UserId == user.UserId);
+
+            if (horsesCount == 0)
+            {
+                var userToEdit = _context.UserAcounts.Where(x => x.UserId == user.UserId).FirstOrDefault();
+                if (userToEdit != null)
+                {
+                    var typeID = (await _userService.GetUserTypes()).Where(x => x.TypeName == UserTypesEnum.appOwner.ToString())
+                                   .Select(x => x.TypeId).FirstOrDefault();
+                    userToEdit.TypeId = typeID;
+                }
+            }
+            _context.SaveChanges();
         }
 
         public Task EditHorse(Horses horse)
