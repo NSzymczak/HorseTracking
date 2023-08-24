@@ -1,14 +1,11 @@
-﻿using HorseTrackingDesktop.Models.Dto;
+﻿using CommunityToolkit.Mvvm.Input;
 using HorseTrackingDesktop.Models;
-using HorseTrackingDesktop.Services.Database.VisitService;
-using System;
+using HorseTrackingDesktop.Models.Dto;
+using HorseTrackingDesktop.Services.Database.UserService;
+using HorseTrackingDesktop.ViewModel;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using HorseTrackingDesktop.Services.Database.UserService;
-using CommunityToolkit.Mvvm.Input;
-using HorseTrackingDesktop.ViewModel;
 
 namespace HorseTrackingDesktop.PageModel.Management
 {
