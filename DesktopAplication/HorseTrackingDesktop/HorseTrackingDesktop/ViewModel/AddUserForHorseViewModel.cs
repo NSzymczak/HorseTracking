@@ -1,16 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.UserService;
-using HorseTrackingDesktop.View;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
 namespace HorseTrackingDesktop.ViewModel
 {

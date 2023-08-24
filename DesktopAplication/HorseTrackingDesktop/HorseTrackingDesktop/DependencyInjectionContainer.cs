@@ -1,18 +1,15 @@
-﻿using HorseTrackingDesktop.PageModel.Management;
-using HorseTrackingDesktop.Models;
+﻿using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.PageModel;
-
+using HorseTrackingDesktop.PageModel.Main;
 using HorseTrackingDesktop.PageModel.Management;
-
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.HorseService;
+using HorseTrackingDesktop.Services.Database.NutritionService;
 using HorseTrackingDesktop.Services.Database.UserService;
 using HorseTrackingDesktop.Services.Database.VisitService;
+using HorseTrackingDesktop.Services.Hasher;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
-using HorseTrackingDesktop.Services.Hasher;
-using HorseTrackingDesktop.PageModel.Main;
-using HorseTrackingDesktop.Services.Database.NutritionService;
 
 namespace HorseTrackingDesktop
 {

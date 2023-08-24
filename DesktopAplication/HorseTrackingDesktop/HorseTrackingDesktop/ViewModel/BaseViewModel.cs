@@ -3,7 +3,6 @@ using HorseTrackingDesktop.Services.AppState;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 
 namespace HorseTrackingDesktop.ViewModel

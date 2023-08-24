@@ -5,7 +5,6 @@ using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.NutritionService;
 using HorseTrackingDesktop.View;
 using HorseTrackingDesktop.ViewModel;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
