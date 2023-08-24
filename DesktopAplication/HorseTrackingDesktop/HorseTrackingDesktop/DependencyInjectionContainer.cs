@@ -44,7 +44,7 @@ namespace HorseTrackingDesktop
             services.AddTransient<AddNutritionViewModel>();
             services.AddTransient<SelectHorseViewModel>();
             services.AddTransient<MainViewModel>();
-
+            services.AddTransient<AcountPageModel>();
             return services;
         }
     }
