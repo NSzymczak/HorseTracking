@@ -3,12 +3,156 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:main="clr-namespace:HorseTrackingDesktop.PageModel.Main"
+      d:DataContext="{d:DesignInstance Type=main:AcountPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AcountPage">
 
-    <Grid Background="White" Margin="50,30,0,0">
+    <Grid Background="White" Margin="50,30,50,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
         <Label Content="Twoje konto"
+                   Grid.Column="0"
                Style="{StaticResource TitleLabel}" />
+        <Label Content="Twoje konie"
+                   Grid.Column="1"
+               Style="{StaticResource TitleLabel}" />
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0,10">
+
+            <Border Style="{StaticResource GrayBorder}"
+                        Margin="20,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Content="Dane osobowe"
+                               FontWeight="Bold"
+                               Grid.Row="0" />
+                    <Label Content="Imie"
+                               Grid.Row="1" />
+                    <Label Content="Nazwisko"
+                               Grid.Row="2" />
+                    <Label Content="{Binding User.Detail.Name}"
+                               Grid.Row="1"
+                               Grid.Column="1" />
+                    <Label Content="{Binding User.Detail.Surname}"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource GrayBorder}"
+                        Margin="20,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Content="Dane kontaktowe"
+                               FontWeight="Bold"
+                               Grid.Row="0" />
+                    <Label Content="Tel."
+                               Grid.Row="1" />
+                    <Label Content="E-mail"
+                               Grid.Row="2" />
+                    <Label Content="{Binding User.Detail.PhoneNumber}"
+                               Grid.Row="1"
+                               Grid.Column="1" />
+                    <Label Content="{Binding User.Detail.Email}"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource GrayBorder}"
+                        Margin="20,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Content="Miejsce zamieszkania"
+                               FontWeight="Bold"
+                               Grid.Row="0" />
+                    <Label Content="Ulica"
+                               Grid.Row="1" />
+                    <Label Content="Miasto"
+                               Grid.Row="2" />
+                    <Label Content="{Binding User.Detail.Street}"
+                               Grid.Row="1"
+                               Grid.Column="1" />
+                    <Label Content="{Binding User.Detail.City}"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+                </Grid>
+            </Border>
+        </StackPanel>
+        <ScrollViewer Grid.Column="1"
+                      Grid.Row="1"
+                      Margin="0,10">
+            <StackPanel>
+                <ItemsControl Margin="20,5"
+                                  ItemsSource="{Binding UserHorses}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource GrayBorder}"
+                                        Margin="10, 10">
+                                <StackPanel HorizontalAlignment="Stretch">
+                                    <Label Content="{Binding Name}"
+                                               FontSize="18" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="{Binding Gender.Gender}" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="ur." />
+                                        <Label Content="{Binding Birthday}" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="r." />
+                                        <Label Content="{Binding Race}" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="m." />
+                                        <Label Content="{Binding Mother}" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="o." />
+                                        <Label Content="{Binding Father}" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="hod." />
+                                        <Label Content="{Binding Breeder}" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

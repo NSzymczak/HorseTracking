@@ -24,7 +24,10 @@ namespace HorseTrackingDesktop.Services.Database.UserService
 
         public Task<UserAcounts?> GetUser(string login)
         {
-            var user = _context.UserAcounts.Where(x => x.Login == login).Include(x => x.Type).ToList().FirstOrDefault();
+            var user = _context.UserAcounts.Where(x => x.Login == login)
+                                           .Include(x => x.Type)
+                                           .Include(x => x.Detail)
+                                           .Include(x => x.Horses).ToList().FirstOrDefault();
             return Task.FromResult(user);
         }
 
