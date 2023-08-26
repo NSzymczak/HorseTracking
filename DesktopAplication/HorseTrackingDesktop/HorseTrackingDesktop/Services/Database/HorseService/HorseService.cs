@@ -146,5 +146,11 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
             _context.SaveChanges();
             return Task.CompletedTask;
         }
+
+        public Task<List<Activities>> GetHorseActivity(int horseID)
+        {
+            var activities = _context.Activities.Where(x => x.HorseId == horseID).ToList();
+            return Task.FromResult(activities);
+        }
     }
 }

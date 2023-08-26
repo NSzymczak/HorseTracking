@@ -7,29 +7,28 @@ namespace HorseTrackingDesktop.Models
 {
     public class ActivityType
     {
-        public ActivityType(int id, string name, Color color, ImageSource image)
+        public ActivityType(int id, string name, Color color)
         {
             ID = id;
             Name = name;
             Color = color;
-            Image = image;
         }
 
         public static Dictionary<int, ActivityType> ActivityTypeIdMap = new Dictionary<int, ActivityType>();
 
         static ActivityType()
         {
-            Ride = new ActivityType(0, "Jazda", (Color)ColorConverter.ConvertFromString("#FBDE15"), new BitmapImage(new Uri("Riding.png")));
-            Walk = new ActivityType(1, "Spacer", (Color)ColorConverter.ConvertFromString("#404E4D"), new BitmapImage(new Uri("Walk.png")));
-            Jump = new ActivityType(2, "Skoki", (Color)ColorConverter.ConvertFromString("#FF9D2B"), new BitmapImage(new Uri("Jump.png")));
-            Lounge = new ActivityType(3, "Lonża", (Color)ColorConverter.ConvertFromString("#A02323"), new BitmapImage(new Uri("Lounge.png")));
-            HorsebackRiding = new ActivityType(4, "Teren", (Color)ColorConverter.ConvertFromString("#228B22"), new BitmapImage(new Uri("Horseback.png")));
-            Carousel = new ActivityType(5, "Karuzela", (Color)ColorConverter.ConvertFromString("#3C8279"), new BitmapImage(new Uri("Carusele.png")));
-            Grass = new ActivityType(6, "Padok", (Color)ColorConverter.ConvertFromString("#9BC53D"), new BitmapImage(new Uri("Grass.png")));
-            Competition = new ActivityType(7, "Zawody", (Color)ColorConverter.ConvertFromString("#61304B"), new BitmapImage(new Uri("Competition.png")));
-            Cross = new ActivityType(8, "Kros", (Color)ColorConverter.ConvertFromString("#C3423F"), new BitmapImage(new Uri("Cross.png")));
-            Dressage = new ActivityType(9, "Ujeżdżenie", (Color)ColorConverter.ConvertFromString("#8B4513"), new BitmapImage(new Uri("Dressage.png")));
-            FreeJump = new ActivityType(10, "Skoki luzem", (Color)ColorConverter.ConvertFromString("#FFC736"), new BitmapImage(new Uri("FreeJump.png")));
+            Ride = new ActivityType(0, "Jazda", (Color)ColorConverter.ConvertFromString("#FBDE15"));
+            Walk = new ActivityType(1, "Spacer", (Color)ColorConverter.ConvertFromString("#404E4D"));
+            Jump = new ActivityType(2, "Skoki", (Color)ColorConverter.ConvertFromString("#FF9D2B"));
+            Lounge = new ActivityType(3, "Lonża", (Color)ColorConverter.ConvertFromString("#A02323"));
+            HorsebackRiding = new ActivityType(4, "Teren", (Color)ColorConverter.ConvertFromString("#228B22"));
+            Carousel = new ActivityType(5, "Karuzela", (Color)ColorConverter.ConvertFromString("#3C8279"));
+            Grass = new ActivityType(6, "Padok", (Color)ColorConverter.ConvertFromString("#9BC53D"));
+            Competition = new ActivityType(7, "Zawody", (Color)ColorConverter.ConvertFromString("#61304B"));
+            Cross = new ActivityType(8, "Kros", (Color)ColorConverter.ConvertFromString("#C3423F"));
+            Dressage = new ActivityType(9, "Ujeżdżenie", (Color)ColorConverter.ConvertFromString("#8B4513"));
+            FreeJump = new ActivityType(10, "Skoki luzem", (Color)ColorConverter.ConvertFromString("#FFC736"));
 
             ListOfActivity = new List<ActivityType>
             {
