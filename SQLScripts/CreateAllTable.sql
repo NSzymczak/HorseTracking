@@ -1,5 +1,6 @@
 drop TABLE if exists HorseTracking.dbo.Shareds 
 drop TABLE if exists HorseTracking.dbo.Participations
+drop TABLE if exists HorseTracking.dbo.Contests
 drop TABLE if exists HorseTracking.dbo.Competitions
 drop TABLE if exists HorseTracking.dbo.Diets
 drop TABLE if exists HorseTracking.dbo.Portions 
@@ -12,13 +13,13 @@ drop TABLE if exists HorseTracking.dbo.Visits
 drop TABLE if exists HorseTracking.dbo.Professionals
 drop TABLE if exists HorseTracking.dbo.Specialisations
 drop TABLE if exists HorseTracking.dbo.Notifications
-drop TABLE if exists HorseTracking.dbo.UserAcounts
-drop TABLE if exists HorseTracking.dbo.UserTypes
-drop TABLE if exists HorseTracking.dbo.PeopleDetails
 drop TABLE if exists HorseTracking.dbo.Activities 
 drop TABLE if exists HorseTracking.dbo.Horses
 drop TABLE if exists HorseTracking.dbo.HorseGenders
 drop TABLE if exists HorseTracking.dbo.Status;
+drop TABLE if exists HorseTracking.dbo.UserAcounts
+drop TABLE if exists HorseTracking.dbo.UserTypes
+drop TABLE if exists HorseTracking.dbo.PeopleDetails
 
 --Create all table
 
@@ -125,14 +126,13 @@ FOREIGN KEY (unitID)
 REFERENCES UnitOfMeasures(unitID)
 )
 
-CREATE TABLE HorseTracking.dbo.CompetitionResult (
-resultID INT NOT NULL PRIMARY KEY,
-competitionID int NOT NULL,
+CREATE TABLE HorseTracking.dbo.Contests (
+contestID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 level varchar(50) NULL,
-result varchar(50) NULL,
-place int NULL,
+name varchar(50) NULL,
+competitionID INT NOT NULL,
 FOREIGN KEY (competitionID)
-REFERENCES Competition(competitionID)
+REFERENCES Competitions(competitionID)
 )
 
 CREATE TABLE HorseTracking.dbo.UserAcounts (
@@ -162,7 +162,6 @@ race varchar(50) NULL,
 breeder varchar(60) NULL,
 passport varchar(20) NULL,
 photo varchar(MAX),
-status bit NOT NULL,
 FOREIGN KEY (statusID)
 REFERENCES Status(statusID),
 FOREIGN KEY (genderID)
@@ -251,12 +250,11 @@ REFERENCES Horses(horseID)
 CREATE TABLE HorseTracking.dbo.Participations (
 participationID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 horseID int NOT NULL,
-competitionID int NOT NULL,
-level varchar(30) NULL,
+contestID int NOT NULL,
 result varchar(MAX) NULL,
 place int NULL,
 FOREIGN KEY (horseID)
 REFERENCES Horses(horseID),
-FOREIGN KEY (competitionID)
-REFERENCES Competitions(competitionID)
+FOREIGN KEY (contestID)
+REFERENCES Contests(contestID)
 )

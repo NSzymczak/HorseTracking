@@ -14,6 +14,7 @@ namespace HorseTrackingDesktop.Models
         public string Description { get; set; }
         public DateTime SendDate { get; set; }
         public DateTime CreatedDate { get; set; }
+        public bool TurnOn { get; set; }
 
         public virtual Horses Horse { get; set; }
         public virtual UserAcounts User { get; set; }

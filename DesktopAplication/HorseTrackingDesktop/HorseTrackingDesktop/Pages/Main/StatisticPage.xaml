@@ -8,8 +8,7 @@
       xmlns:viewmodel="clr-namespace:HorseTrackingDesktop.PageModel" d:DataContext="{d:DesignInstance Type=viewmodel:StatisticPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StatisticPage"
-      Loaded="Page_Loaded">
+      Title="StatisticPage">
 
     <Grid Background="White" Margin="50,30,0,0">
         <Label Content="Statystyki Twoich koni"

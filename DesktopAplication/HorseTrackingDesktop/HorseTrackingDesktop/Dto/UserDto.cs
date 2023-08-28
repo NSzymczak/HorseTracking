@@ -1,6 +1,7 @@
 ﻿using System;
+using HorseTrackingDesktop.Models;
 
-namespace HorseTrackingDesktop.Models.Dto
+namespace HorseTrackingDesktop.Dto
 {
     public class UserDto
     {

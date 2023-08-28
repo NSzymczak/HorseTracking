@@ -14,10 +14,5 @@ namespace HorseTrackingDesktop.Pages.MainPage
             // viewModel = new StatisticPageModel();
             DataContext = viewModel;
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            // viewModel.LoadData();
-        }
     }
 }
