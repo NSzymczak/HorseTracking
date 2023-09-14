@@ -32,7 +32,7 @@ CREATE TABLE HorseTracking.dbo.PeopleDetails (
 detailID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 name varchar(40) NULL,
 surname varchar(40) NOT NULL,
-phoneNumber varchar(20) NULL,
+phone varchar(20) NULL,
 email varchar(320) NULL,
 city varchar(200) NULL,
 street varchar(90) NULL,
@@ -40,12 +40,29 @@ number varchar(10) NULL,
 postalCode varchar(10) NULL,
 )
 
+CREATE TABLE HorseTracking.dbo.UserAcounts (
+userID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+typeID int NOT NULL,
+detailID int NOT NULL,
+login varchar(50) NOT NULL,
+hash varchar(50) NOT NULL,
+salt varchar(50) NOT NULL,
+createdDateTime datetime
+FOREIGN KEY (typeID)
+REFERENCES UserTypes(typeID),
+FOREIGN KEY (detailID)
+REFERENCES PeopleDetails(detailID)
+)
+
 CREATE TABLE HorseTracking.dbo.NutritionPlans (
 nutritionPlanID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+userID INT NOT NULL,
 title varchar(50) NOT NULL,
 description varchar(MAX) NULL,
 icon int NULL, 
-color varchar(7) NULL
+color varchar(7) NULL,
+FOREIGN KEY (userID)
+REFERENCES UserAcounts(userID),
 )
 
 CREATE TABLE HorseTracking.dbo.Status (
@@ -133,20 +150,6 @@ name varchar(50) NULL,
 competitionID INT NOT NULL,
 FOREIGN KEY (competitionID)
 REFERENCES Competitions(competitionID)
-)
-
-CREATE TABLE HorseTracking.dbo.UserAcounts (
-userID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-typeID int NOT NULL,
-detailID int NOT NULL,
-login varchar(50) NOT NULL,
-hash varchar(50) NOT NULL,
-salt varchar(50) NOT NULL,
-createdDateTime datetime
-FOREIGN KEY (typeID)
-REFERENCES UserTypes(typeID),
-FOREIGN KEY (detailID)
-REFERENCES PeopleDetails(detailID)
 )
 
 CREATE TABLE HorseTracking.dbo.Horses (
