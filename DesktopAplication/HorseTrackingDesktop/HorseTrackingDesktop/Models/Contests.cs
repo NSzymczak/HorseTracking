@@ -19,5 +19,6 @@ namespace HorseTrackingDesktop.Models
 
         public virtual Competitions Competition { get; set; }
         public virtual ICollection<Participations> Participations { get; set; }
+
     }
 }

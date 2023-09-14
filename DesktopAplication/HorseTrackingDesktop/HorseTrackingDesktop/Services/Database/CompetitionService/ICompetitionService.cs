@@ -14,5 +14,15 @@ namespace HorseTrackingDesktop.Services.Database.CompetitionService
         Task<List<Contests>> GetContestsForCompetition(int competitionID);
 
         Task RemoveCompetition(int competitionID);
+
+        Task AsignHorseForContest(int contestID, int horseID);
+
+        Task AddCompetiton(Competitions competitions);
+
+        Task AddContests(List<Contests> contests);
+
+        Task EditCompetition(Competitions competitions);
+
+        Task RemoveParticipation(int id);
     }
 }

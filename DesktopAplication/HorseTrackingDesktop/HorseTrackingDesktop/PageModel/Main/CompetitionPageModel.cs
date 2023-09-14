@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.Database.CompetitionService;
+using HorseTrackingDesktop.View;
 using HorseTrackingDesktop.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,6 @@ namespace HorseTrackingDesktop.PageModel.Main
         private readonly ICompetitionService _competitionService;
         public List<Competitions>? Competitions { get; set; }
         public List<Contests>? Contests { get; set; }
-
         public Competitions CurrentCompetition { get; set; }
 
         public CompetitionPageModel(ICompetitionService competitionService)
@@ -46,12 +46,39 @@ namespace HorseTrackingDesktop.PageModel.Main
             }
         }
 
-        public async Task AddCompetition()
+        [RelayCommand]
+        public async Task AsignHorse(Contests contest)
         {
+            var selectHorse = new SelectHorseView();
+            selectHorse.ShowDialog();
+            var horse = selectHorse?.viewModel?.SelectedHorse;
+            if (horse == null)
+            {
+                return;
+            }
+            await _competitionService.AsignHorseForContest(horse.HorseId, contest.ContestId);
+            await LoadContests(CurrentCompetition);
         }
 
+        [RelayCommand]
+        public async Task RemoveParticipation(Participations participation)
+        {
+            await _competitionService.RemoveParticipation(participation.ParticipationId);
+            await Refresh();
+        }
+
+        [RelayCommand]
+        public async Task AddCompetition()
+        {
+            new AddCompetitionView().ShowDialog();
+            await Refresh();
+        }
+
+        [RelayCommand]
         public async Task EditCompetition()
         {
+            new AddCompetitionView(CurrentCompetition).ShowDialog();
+            await Refresh();
         }
 
         public async Task RemoveCompetition()

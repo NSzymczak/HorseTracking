@@ -17,20 +17,18 @@ namespace HorseTrackingDesktop.Services.Database.CompetitionService
             _context = context;
         }
 
-        public Task<List<Competitions>> GetCompetitions()
+        public async Task<List<Competitions>> GetCompetitions()
         {
-            var competitionList = _context.Competitions.ToList();
-            return Task.FromResult(competitionList);
+            return await _context.Competitions.ToListAsync();
         }
 
-        public Task<List<Contests>> GetContestsForCompetition(int competitionID)
+        public async Task<List<Contests>> GetContestsForCompetition(int competitionID)
         {
-            var contestList = _context.Contests.Where(x => x.CompetitionId == competitionID)
-                .Include(x => x.Participations).ThenInclude(x => x.Horse).ToList();
-            return Task.FromResult(contestList);
+            return await _context.Contests.Where(x => x.CompetitionId == competitionID)
+                .Include(x => x.Participations).ThenInclude(x => x.Horse).ToListAsync();
         }
 
-        public Task RemoveCompetition(int competitionID)
+        public async Task RemoveCompetition(int competitionID)
         {
             var contests = _context.Contests.Where(x => x.CompetitionId == competitionID);
             foreach (var contest in contests)
@@ -39,18 +37,84 @@ namespace HorseTrackingDesktop.Services.Database.CompetitionService
                 foreach (var participation in participations)
                 {
                     _context.Participations.Remove(participation);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                 }
                 _context.Contests.Remove(contest);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
             var competition = _context.Competitions.FirstOrDefault(x => x.CompetitionId == competitionID);
             if (competition != null)
             {
                 _context.Competitions.Remove(competition);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
-            return Task.CompletedTask;
+        }
+
+        public async Task AsignHorseForContest(int horseID, int contestID)
+        {
+            var contest = _context.Contests.FirstOrDefault(contest => contest.ContestId == contestID);
+            var horse = _context.Horses.FirstOrDefault(x => x.HorseId == horseID);
+            if (horse == null || contest == null)
+            {
+                return;
+            }
+            var participation = new Participations()
+            {
+                Contest = contest,
+                Horse = horse
+            };
+            _context.Participations.Add(participation);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddCompetiton(Competitions competitions)
+        {
+            _context.Competitions.Add(competitions);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddContests(List<Contests> contests)
+        {
+            _context.Contests.AddRange(contests);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task EditCompetition(Competitions competitions)
+        {
+            var competitonEdit = _context.Competitions.FirstOrDefault(x => x.CompetitionId == competitions.CompetitionId);
+            if (competitonEdit == null)
+            {
+                return;
+            }
+            competitonEdit.Spot = competitions.Spot;
+            competitonEdit.Rank = competitions.Rank;
+            competitonEdit.Date = competitions.Date;
+            competitonEdit.Description = competitions.Description;
+
+            foreach (var con in competitions.Contests)
+            {
+                var contest = _context.Contests.FirstOrDefault(x => x.ContestId == con.CompetitionId);
+                if (contest == null)
+                {
+                    continue;
+                }
+                contest.Level = con.Level;
+                contest.Name = con.Name;
+                await _context.SaveChangesAsync();
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task RemoveParticipation(int id)
+        {
+            var participation = _context.Participations.FirstOrDefault(x => x.ParticipationId == id);
+            if (participation == null)
+            {
+                return;
+            }
+            _context.Participations.Remove(participation);
+            await _context.SaveChangesAsync();
         }
     }
 }

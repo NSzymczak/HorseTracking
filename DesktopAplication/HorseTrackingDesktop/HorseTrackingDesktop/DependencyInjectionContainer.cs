@@ -48,6 +48,7 @@ namespace HorseTrackingDesktop
             services.AddTransient<MainViewModel>();
             services.AddTransient<AcountPageModel>();
             services.AddTransient<CompetitionPageModel>();
+            services.AddTransient<AddCompetitionViewModel>();
             return services;
         }
     }

@@ -112,7 +112,7 @@ namespace HorseTrackingDesktop.ViewModel
         }
 
         [RelayCommand]
-        public void AddNutritionPlan(Window window)
+        public async Task AddNutritionPlan(Window window)
         {
             var nutritionPlan = new NutritionPlans()
             {
@@ -126,10 +126,33 @@ namespace HorseTrackingDesktop.ViewModel
 
             if (CheckNutritionPlan(nutritionPlan))
             {
-                _nutritionService.AddNutritionPlan(nutritionPlan);
+                await _nutritionService.AddNutritionPlan(nutritionPlan);
                 if (Horse == null)
                 {
-                    new SelectHorseView(false, nutritionPlan).ShowDialog();
+                    var selectHorse = new SelectHorseView();
+                    selectHorse.ShowDialog();
+                    var horses = selectHorse?.viewModel?.SelectedHorses;
+                    if (horses == null)
+                    {
+                        return;
+                    }
+                    foreach (var horse in horses)
+                    {
+                        var hasDiet = await _nutritionService.HorseHasDiet(horse);
+                        if (hasDiet)
+                        {
+                            var result = MessageBox.Show("Ten koń ma już ustaloną dietę. Czy chesz zmienić jego dietę?", "Uwaga", MessageBoxButton.YesNo);
+
+                            if (result == MessageBoxResult.Yes)
+                            {
+                                await _nutritionService.ChangeDiet(horse, nutritionPlan);
+                            }
+                        }
+                        else
+                        {
+                            await _nutritionService.ChangeDiet(horse, nutritionPlan);
+                        }
+                    }
                     window.Close();
                 }
                 else
