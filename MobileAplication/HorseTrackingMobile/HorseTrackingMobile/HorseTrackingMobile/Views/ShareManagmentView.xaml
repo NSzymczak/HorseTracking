@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+             x:DataType="viewmodels:ShareManagmentViewModel"
+             x:Class="HorseTrackingMobile.Views.ShareManagmentView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             Title="Udostępnianie">
+    <StackLayout Margin="20,60"
+                 Orientation="Vertical">
+        <Image Source="QR" Scale="0.9" />
+        <Label Text="Udostępnij konie !"
+               Style="{StaticResource CenterLabel}"
+               FontSize="30" Margin="0,0,0,30" TextColor="#95B17F" />
+        <Button Text="Udostępnij przez QR" Command="{Binding ShareQRCommand}"
+                CornerRadius="10" HeightRequest="50" Margin="40,10"
+                BackgroundColor="#95B17F" TextColor="White" />
+        <Button Text="Wyszukaj użytkownika" Command="{Binding ShareBySearchCommand}"
+                CornerRadius="10" HeightRequest="50" Margin="40,10"
+                BorderColor="#95B17F" BorderWidth="1" BackgroundColor="White"
+                TextColor="#95B17F" />
+        <Button Text="Zeskanuj QR" Command="{Binding ScanQRCommand}"
+                CornerRadius="10" HeightRequest="50" Margin="40,10"
+                BorderColor="#95B17F" BorderWidth="1" BackgroundColor="White"
+                TextColor="#95B17F" />
+        <Button Text="Wyczyść udostępnienia" Command="{Binding CleanShareCommand}"
+                CornerRadius="10" HeightRequest="50" Margin="40,10"
+                BorderColor="#95B17F" BorderWidth="1" BackgroundColor="White"
+                TextColor="#95B17F" />
+    </StackLayout>
+</ContentPage>

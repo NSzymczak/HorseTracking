@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HorseTrackingMobile.Views.ScanHorseView"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+             x:DataType="viewmodels:ScanHorseViewModel"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    <ContentPage.Content>
+        <StackLayout>
+            <zxing:ZXingScannerView OnScanResult='ZXingScannerView_OnScanResult'
+                                    IsScanning="{Binding IsScanning}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             x:DataType="viewmodels:ShareHorseViewModel"
+             x:Class="HorseTrackingMobile.Views.ShareHorseView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    <ContentPage.Content>
+        <StackLayout Margin="30,50">
+
+            <Label Text="Wybierz konia: " />
+            <Picker SelectedItem="{Binding SelectedHorse}"
+                    ItemsSource="{Binding Horses}"
+                    ItemDisplayBinding="{Binding Name, Mode=TwoWay}" />
+
+            <Label Text="Wybierz datę: " />
+            <DatePicker Date="{Binding EndDate, Mode=TwoWay}" MinimumDate="{Binding DateNow}" />
+
+            <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" BarcodeValue="{Binding BarcodeValue}" WidthRequest="500" HeightRequest="500">
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxingcommon:EncodingOptions Height="500" Width="500" />
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

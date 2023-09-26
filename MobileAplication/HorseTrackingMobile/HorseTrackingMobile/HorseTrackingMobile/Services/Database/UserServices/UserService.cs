@@ -14,12 +14,33 @@ namespace HorseTrackingMobile.Database.UserServices
     {
         private readonly IConnectionService _connectionService;
         private readonly IAppState _appState;
+
         public UserService(IConnectionService connectionServices, IAppState appState)
         {
             _connectionService = connectionServices;
-            _appState= appState;
+            _appState = appState;
             _appState.ListOfTrainer = GetTrainers();
+        }
 
+        public User GetHorseOwner(string horseID)
+        {
+            var query = $"SELECT * FROM Horses as h inner join UserAcounts as u " +
+                        $"on h.userID = u.userID Where horseID='{horseID}'";
+
+            var cmd = new SqlCommand(query, _connectionService.GetConnection());
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                return new User()
+                {
+                    Id = Convert.ToInt32(reader["userID"]),
+                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                    CreatedDate = (DateTime)reader["createdDateTime"]
+                };
+            }
+            return null;
         }
 
         public User GetUser(string login, string password)
@@ -115,6 +136,7 @@ namespace HorseTrackingMobile.Database.UserServices
             }
             return null;
         }
+
         public List<User> GetAllUsers()
         {
             var query = $"SELECT * FROM UserAcounts";
@@ -138,6 +160,7 @@ namespace HorseTrackingMobile.Database.UserServices
             }
             return userList;
         }
+
         public PeopleDetails GetDetails(int id)
         {
             var query = $"SELECT * FROM PeopleDetails WHERE detailID='{id}'";

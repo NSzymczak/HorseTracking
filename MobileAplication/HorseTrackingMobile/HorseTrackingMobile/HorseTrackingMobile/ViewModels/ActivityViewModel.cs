@@ -2,6 +2,7 @@
 using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database.ActivityServices;
+using HorseTrackingMobile.Services.Database.HorseServices;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace HorseTrackingMobile.ViewModels
 {
     public class ActivityViewModel : BaseViewModel
     {
-
         private readonly IActivityService _activityServices;
         private readonly IAppShellRoutingService _appShellRoutingService;
         private readonly IAppState _appState;
+        private readonly IHorseService _horseService;
 
         public ICommand PrevCommand { get; set; }
         public ICommand NextCommand { get; set; }
@@ -30,6 +31,7 @@ namespace HorseTrackingMobile.ViewModels
         public ObservableCollection<Horse> Horses { get; set; }
 
         private Horse currentHorse;
+
         public Horse CurrentHorse
         {
             get { return currentHorse; }
@@ -43,12 +45,13 @@ namespace HorseTrackingMobile.ViewModels
             }
         }
 
-        public ActivityViewModel( IActivityService activityServices, IAppShellRoutingService appShellRoutingService, 
-                                  IAppState appState)
+        public ActivityViewModel(IActivityService activityServices, IAppShellRoutingService appShellRoutingService,
+                                  IAppState appState, IHorseService horseService)
         {
             _activityServices = activityServices;
             _appShellRoutingService = appShellRoutingService;
             _appState = appState;
+            _horseService = horseService;
 
             Horses = new ObservableCollection<Horse>(_appState.HorseList);
 
@@ -84,6 +87,7 @@ namespace HorseTrackingMobile.ViewModels
         public void Load()
         {
             CurrentHorse = _appState.CurrentHorse;
+            _appState.HorseList = _horseService.GetHorsesForUser();
             LoadActivityUI();
         }
 
@@ -95,6 +99,7 @@ namespace HorseTrackingMobile.ViewModels
         }
 
         #region Load activity
+
         private void ChangeWeek()
         {
             DayOfActivities.Clear();
@@ -128,6 +133,7 @@ namespace HorseTrackingMobile.ViewModels
                 DayOfActivities.Add(dayOfActivity);
             }
         }
+
         private void GetActivity()
         {
             try
@@ -138,10 +144,9 @@ namespace HorseTrackingMobile.ViewModels
             {
 #if DEBUG
 
-                App.Current.MainPage.DisplayAlert(ex.Message, ex.StackTrace,"dupa");
+                App.Current.MainPage.DisplayAlert(ex.Message, ex.StackTrace, "dupa");
 #endif
-                App.Current.MainPage.DisplayAlert("Uwaga","Nie udało się pobrać aktywności z bazy danych","Dobrze");
-                 
+                App.Current.MainPage.DisplayAlert("Uwaga", "Nie udało się pobrać aktywności z bazy danych", "Dobrze");
             }
         }
 
@@ -166,7 +171,6 @@ namespace HorseTrackingMobile.ViewModels
             }
         }
 
-#endregion
-
+        #endregion Load activity
     }
 }
