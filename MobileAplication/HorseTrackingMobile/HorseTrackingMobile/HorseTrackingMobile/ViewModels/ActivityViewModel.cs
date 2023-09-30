@@ -52,9 +52,6 @@ namespace HorseTrackingMobile.ViewModels
             _appShellRoutingService = appShellRoutingService;
             _appState = appState;
             _horseService = horseService;
-
-            Horses = new ObservableCollection<Horse>(_appState.HorseList);
-
             SetMainDate();
 
             PrevCommand = new Command(() =>
@@ -86,8 +83,9 @@ namespace HorseTrackingMobile.ViewModels
 
         public void Load()
         {
-            CurrentHorse = _appState.CurrentHorse;
             _appState.HorseList = _horseService.GetHorsesForUser();
+            Horses = new ObservableCollection<Horse>(_appState.HorseList);
+            CurrentHorse = _appState.CurrentHorse;
             LoadActivityUI();
         }
 
