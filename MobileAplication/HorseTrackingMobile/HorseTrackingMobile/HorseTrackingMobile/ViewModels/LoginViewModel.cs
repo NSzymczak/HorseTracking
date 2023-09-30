@@ -13,6 +13,7 @@ using HorseTrackingMobile.Services.Database.UserServices;
 using HorseTrackingMobile.Services.Database.HorseServices;
 using System.Security.Cryptography;
 using HorseTrackingMobile.Services.AppState;
+using HorseTrackingMobile.Services.Database.ShareHorseServices;
 
 namespace HorseTrackingMobile.ViewModels
 {
@@ -21,7 +22,7 @@ namespace HorseTrackingMobile.ViewModels
         private readonly IUserService _userService;
         private readonly IAppState _appState;
         private readonly IHorseService _horseService;
-
+        private readonly IShareHorseServices _shareHorseServices;
         public ICommand LoginCommand { get; }
 
         public bool WrongData { get; set; }
@@ -42,11 +43,12 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref readedPassword, value);
         }
 
-        public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService)
+        public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService, IShareHorseServices shareHorseServices)
         {
             _userService = userService;
             _appState = appState;
             _horseService = horseService;
+            _shareHorseServices = shareHorseServices;
 
             LoginCommand = new Command(() =>
             {
@@ -102,16 +104,7 @@ namespace HorseTrackingMobile.ViewModels
         public void GoToTheApp()
         {
             Preferences.Set(PreferencesKeys.UserID, _appState.CurrentUser.Id);
-            var horseList = new List<Horse>();
-            if (_appState.CurrentUser.Type.Type == "horseOwner")
-            {
-                horseList = _horseService.GetHorses(_appState.CurrentUser);
-            }
-            else if (_appState.CurrentUser.Type.Type == "trainer")
-            {
-                horseList = _horseService.GetAllTrainedHorses(_appState.CurrentUser);
-            }
-
+            var horseList = _horseService.GetHorsesForUser();
             if (ListServices.IsAny(horseList))
             {
                 App.Current.MainPage.DisplayAlert("Uwaga", "Nie posiadasz żadnych koni! Poproś administratora o dodanie koni", "Dobrze");

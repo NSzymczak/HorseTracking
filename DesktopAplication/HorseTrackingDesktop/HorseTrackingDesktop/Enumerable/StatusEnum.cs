@@ -4,7 +4,6 @@
     {
         active,
         inactive,
-        sent,
         shared
     }
 }
