@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace HorseTrackingDesktop.PageModel.Main
 {
@@ -81,13 +82,19 @@ namespace HorseTrackingDesktop.PageModel.Main
             await Refresh();
         }
 
+        [RelayCommand]
         public async Task RemoveCompetition()
         {
-            if (CurrentCompetition != null)
+            var result = MessageBox.Show("Czy na pewno chcesz usunąć wybrane zawody?", "Uwaga", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
             {
-                await _competitionService.RemoveCompetition(CurrentCompetition.CompetitionId);
+                if (CurrentCompetition != null)
+                {
+                    await _competitionService.RemoveCompetition(CurrentCompetition.CompetitionId);
+                }
+                await Refresh();
             }
-            await Refresh();
         }
     }
 }
