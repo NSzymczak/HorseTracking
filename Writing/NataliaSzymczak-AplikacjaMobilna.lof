@@ -5,26 +5,34 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Architektura platformy Xamarin.Android}}{6}{}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Logo systemu NuGet}}{6}{}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Przepływ informacji}}{7}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces przepływ informacji}}{8}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Logo Figmy}}{7}{}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces przepływ informacji}}{8}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{16}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{17}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{15}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{16}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{45}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{64}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{65}{}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{41}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{60}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{62}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces \centering Logowanie do aplikacji.}}{69}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces \centering Błędne dane logowania.}}{69}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Ekran aktywności.}}{70}{}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces \centering Okno dodawania aktywności.}}{71}{}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Okno dodawania aktywności rozszerzone.}}{71}{}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces \centering Szczegóły aktywności.}}{72}{}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces \centering Okno wizyt.}}{73}{}%
-\contentsline {figure}{\numberline {8.8}{\ignorespaces \centering Szczegóły wizyty.}}{73}{}%
-\contentsline {figure}{\numberline {8.9}{\ignorespaces \centering Plany żywienia.}}{74}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Panel logowania}}{64}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Strona statystyk}}{65}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Strona wizyt}}{66}{}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Szczegóły wizyty}}{67}{}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Dodawanie wizyt}}{67}{}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Strona żywienia}}{68}{}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Dodawanie żywienia}}{69}{}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Edycja żywienia}}{69}{}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Strona zawodów}}{70}{}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces \centering Logowanie do aplikacji.}}{71}{}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces \centering Błędne dane logowania.}}{71}{}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Ekran aktywności.}}{72}{}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces \centering Okno dodawania aktywności.}}{73}{}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Okno dodawania aktywności rozszerzone.}}{73}{}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces \centering Szczegóły aktywności.}}{74}{}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces \centering Okno wizyt.}}{75}{}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces \centering Szczegóły wizyty.}}{75}{}%
+\contentsline {figure}{\numberline {7.18}{\ignorespaces \centering Plany żywienia.}}{76}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

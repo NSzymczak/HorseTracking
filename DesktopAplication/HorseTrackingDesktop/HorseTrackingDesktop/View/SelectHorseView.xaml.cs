@@ -1,4 +1,5 @@
-﻿using HorseTrackingDesktop.Models;
+﻿using HorseTrackingDesktop.Enumerable;
+using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
@@ -9,18 +10,15 @@ namespace HorseTrackingDesktop.View
 {
     public partial class SelectHorseView : Window
     {
-        private SelectHorseViewModel? viewModel;
+        public SelectHorseViewModel? viewModel;
 
-        public SelectHorseView(bool isEdit, NutritionPlans? nutritionPlans = null)
+        public SelectHorseView()
         {
             InitializeComponent();
             viewModel = StartUp.ServiceProvider?.GetService<SelectHorseViewModel>();
             DataContext = viewModel;
             if (viewModel != null)
             {
-                if (nutritionPlans != null)
-                    viewModel.Plans = nutritionPlans;
-                viewModel.isEdit = isEdit;
                 Loaded += async (s, e) => await viewModel.SetUP();
             }
         }

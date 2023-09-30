@@ -9,7 +9,7 @@ namespace HorseTrackingDesktop.Models
     {
         public Competitions()
         {
-            Participations = new HashSet<Participations>();
+            Contests = new HashSet<Contests>();
         }
 
         public int CompetitionId { get; set; }
@@ -18,6 +18,6 @@ namespace HorseTrackingDesktop.Models
         public DateTime Date { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<Participations> Participations { get; set; }
+        public virtual ICollection<Contests> Contests { get; set; }
     }
 }

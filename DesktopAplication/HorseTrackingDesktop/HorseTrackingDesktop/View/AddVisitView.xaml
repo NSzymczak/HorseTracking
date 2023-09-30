@@ -127,11 +127,11 @@
                     </Grid.RowDefinitions>
                     <Label Content="Opis (zalecenia, ważne informacje itp.)"
                            Margin="10,0,0,0" />
-                    <RichTextBox Height="180"
+                    <TextBox Height="180"
                                  Padding="20"
                                  Margin="15,5,15,15"
                                  Grid.Row="1"
-                                 DataContext="{Binding Description}" />
+                                 Text="{Binding Description}" />
                 </Grid>
             </Border>
             <Border Style="{StaticResource GrayBorder}"

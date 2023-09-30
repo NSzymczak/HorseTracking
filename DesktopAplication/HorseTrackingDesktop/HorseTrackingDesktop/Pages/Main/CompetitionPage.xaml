@@ -3,12 +3,162 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:main="clr-namespace:HorseTrackingDesktop.PageModel.Main"
+      xmlns:converter ="clr-namespace:HorseTrackingDesktop.Converters"
+      d:DataContext="{d:DesignInstance Type=main:CompetitionPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CompetitionPage">
-
+    <Page.Resources>
+        <converter:DataGridVisibilityConverter x:Key="DataGridVisibilityConverter" />
+    </Page.Resources>
     <Grid Background="White" Margin="50,30,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
         <Label Content="Zawody Twoich koni"
-               Style="{StaticResource TitleLabel}" />
+               Style="{StaticResource TitleLabel}"
+               Grid.Row="0" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ItemsControl ItemsSource="{Binding Competitions}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource GrayBorder}"
+                                    BorderBrush="Gray"
+                                    Margin="10,5">
+                                <Grid>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="{Binding Spot}"
+                                                   FontSize="16"
+                                                   FontWeight="DemiBold" />
+                                            <Label Content="{Binding Date}"
+                                                   FontSize="16"
+                                                   FontWeight="DemiBold" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Ranga zawodów:" />
+                                            <Label Content="{Binding Rank}" />
+                                        </StackPanel>
+                                        <Label Content="Opis" />
+                                        <Rectangle Width="200"
+                                   HorizontalAlignment="Left"
+                                   Fill="Black"
+                                   Height="0.5" />
+                                        <TextBlock Text="{Binding Description}"
+                                   Margin="10,5"
+                                   FontSize="10"
+                                   FontWeight="Light" />
+                                    </StackPanel>
+
+                                    <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}, Path=DataContext.LoadContestsCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button Content="Dodaj"
+                            Command="{Binding AddCompetitionCommand}"
+                            Style="{StaticResource SmallImportantButton}" />
+                    <Button Grid.Row="1"
+                        Content="Edytuj"
+                         Margin="15,0"
+                        Style="{StaticResource SmallNotImportantButton}"
+                            Command="{Binding EditCompetitionCommand}" />
+                    <Button Grid.Row="1"
+                        Content="Usuń"
+                        Style="{StaticResource SmallNotImportantButton}"
+                        Command="{Binding RemoveCompetitionCommand}" />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+                <Label Content="Konkursy: "
+                       Margin="30,0"
+                       FontSize="20"
+                       FontWeight="DemiBold" />
+                <Border Style="{StaticResource GrayBorder}"
+                    BorderBrush="Gray"
+                    Margin="20,0,20,20"
+                        Grid.Row="1">
+                    <ScrollViewer>
+                        <ItemsControl ItemsSource="{Binding Contests}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <Grid>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Label Content="{Binding Name}"
+                                                   FontWeight="DemiBold"
+                                                   FontSize="18" />
+                                                <Label Content="{Binding Level}"
+                                                   FontWeight="DemiBold"
+                                                   FontSize="18" />
+                                            </StackPanel>
+
+                                            <Button ClickMode="Press" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}, Path=DataContext.AsignHorseCommand}"
+                                        CommandParameter="{Binding .}" />
+                                        </Grid>
+                                        <ListBox ItemsSource="{Binding Participations}"
+                                                 Margin="10">
+                                            <ListBox.ItemContainerStyle>
+                                                <Style TargetType="ListBoxItem">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="{StaticResource MainGreenBrush}" />
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </ListBox.ItemContainerStyle>
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Label Content="{Binding Horse.Name}" />
+                                                            <Button Content="Usuń"
+                                                                    Style="{StaticResource SmallNotImportantButtonWithoutBorder}"
+                                                                    Command="{Binding RemoveParticipationCommand}"
+                                                                    CommandParameter="{Binding .}" />
+                                                        </StackPanel>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Label Content="Miejsce:" />
+                                                            <TextBox Text="{Binding Place}"
+                                                                     Width="50"
+                                                                     BorderThickness="0.5" />
+                                                            <Label Content="Wynik:" />
+                                                            <TextBox Text="{Binding Result}"
+                                                                     Width="50"
+                                                                     BorderThickness="0.5" />
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

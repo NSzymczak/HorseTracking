@@ -3,14 +3,6 @@
 --VALUES (value1, value2, value3, ...);
 
 
-INSERT INTO HorseTracking.dbo.UserTypes (typeName)
-VALUES ('admin')
-INSERT INTO HorseTracking.dbo.UserTypes (typeName)
-VALUES ('appOwner')
-INSERT INTO HorseTracking.dbo.UserTypes (typeName)
-VALUES ('horseOwner')
-INSERT INTO HorseTracking.dbo.UserTypes (typeName)
-VALUES ('trainer')
 
 INSERT INTO HorseTracking.dbo.PeopleDetails (name,surname,phoneNumber,email,city,street,number)
 VALUES ('Asia','Nowak','+48123890123','asianowak@gmail.com','Opole','Oleska','12')
@@ -32,46 +24,12 @@ VALUES ('Zdrowy brzuszek','Plan na zdrowy brzuch',2,'#00a000')
 INSERT INTO HorseTracking.dbo.NutritionPlans (title, description, icon, color)
 VALUES ('WysokoEnergetyczny','Plan na sezon sportowy',3,'#FF0000')
 
-INSERT INTO HorseTracking.dbo.Status (name)
-VALUES ('active')
-INSERT INTO HorseTracking.dbo.Status (name)
-VALUES ('inactive')
-INSERT INTO HorseTracking.dbo.Status (name)
-VALUES ('sent')
-INSERT INTO HorseTracking.dbo.Status (name)
-VALUES ('shared')
-
-INSERT INTO HorseTracking.dbo.HorseGenders (gender)
-VALUES ('klacz')
-INSERT INTO HorseTracking.dbo.HorseGenders (gender)
-VALUES ('ogier')
-INSERT INTO HorseTracking.dbo.HorseGenders (gender)
-VALUES ('wa³ach')
-
-
 INSERT INTO HorseTracking.dbo.MealNames(mealName)
 VALUES('Rano')
 INSERT INTO HorseTracking.dbo.MealNames(mealName)
 VALUES('Po³udnie')
 INSERT INTO HorseTracking.dbo.MealNames(mealName)
 VALUES('Wieczór')
-
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('kilogram')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('dekagram')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('gram')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('liter')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('mililiter')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('bala')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('sztuka')
-INSERT INTO HorseTracking.dbo.UnitOfMeasures(unitName)
-VALUES('miarka')
 
 INSERT INTO HorseTracking.dbo.Specialisations (name)
 VALUES('Kowal')
@@ -186,5 +144,9 @@ VALUES(1,1,4,1,'2023-03-03','',null,0,3)
 INSERT INTO HorseTracking.dbo.Activities (userID,activityType,trainerID,horseID,date,description,time,intensivity,satisfaction)
 VALUES(1,1,4,1,'2023-03-04','',null,4,5)
 
-INSERT INTO HorseTracking.dbo.Participations(horseID,competitionID,level,result,place)
-VALUES (1,1,'90cm','0pkt',1)
+INSERT INTO HorseTracking.dbo.Contests(level,name,competitionID)
+VALUES ('90cm','dok³adnoœci',1)
+
+INSERT INTO HorseTracking.dbo.Participations(horseID,contestID,result,place)
+VALUES (1,1,'0pkt',1)
+

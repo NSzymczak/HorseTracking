@@ -40,9 +40,9 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="3*" />
                             </Grid.RowDefinitions>
-                            <Image Source="{Binding Icon}"
+                            <!--<Image Source="{Binding Icon}"
                                    Grid.Column="1"
-                                   Grid.Row="0" />
+                                   Grid.Row="0" />-->
 
                             <Border BorderBrush="{Binding Color}"
                                     Padding="10"

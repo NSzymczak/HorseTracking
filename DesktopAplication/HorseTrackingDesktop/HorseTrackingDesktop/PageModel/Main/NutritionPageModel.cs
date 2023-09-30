@@ -45,7 +45,18 @@ namespace HorseTrackingDesktop.PageModel.Main
         [RelayCommand]
         public async Task EditPlan()
         {
-            new SelectHorseView(true).ShowDialog();
+            var selectHorse = new SelectHorseView();
+            selectHorse.ShowDialog();
+            var horse = selectHorse?.viewModel?.SelectedHorse;
+            if (horse == null)
+            {
+                return;
+            }
+            var nutritionPlan = (await _nutritionService.GetPlanForHorse(horse.HorseId)).FirstOrDefault();
+            if (nutritionPlan != null)
+            {
+                new AddNutritionView(nutritionPlan, horse).ShowDialog();
+            }
             await GetPlans();
         }
     }

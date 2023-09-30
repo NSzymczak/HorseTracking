@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside]{report}
+\documentclass[12pt,oneside]{report}
 \usepackage[margin=2.5cm]{geometry}
 \linespread{1.375}
 \usepackage[utf8]{inputenc}
@@ -173,8 +173,8 @@ Git, github, sourcetree
 Figma jest to narzędzie do projektowania i prototypowania interfejsów aplikacji. Dzięki narzędziom takim jak figma możemy zaplanować cały interfejs jeszcze przed jego implementacją.  Stworzony w ten sposób interfejs możemy przetestować dzięki funkcji prototypowania. Jeszcze przed implementacją może on zostać udostępniony kilku osobą w celu sprawdzenia czy wszystkie funkcje aplikacji są dla użytkownika jasne i intuicyjne. Dzięki temu implementować będziemy interfejs już sprawdzony, więc będzie wymagał on mniej poprawek.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.15]{FigmaLogo}
-	\caption{przepływ informacji}
+	\includegraphics[scale=0.10]{FigmaLogo}
+	\caption{Logo Figmy}
 	\textit{Źródło: \cite{FigmaIcon}}
 	\label{FigmaLogo}
 \end{figure}
@@ -201,7 +201,7 @@ Entity Framework to narzędzie do mapowania obiektowo-relacyjnego, który umożl
 Aplikacja przeznaczona jest dla klubów jeździeckich, czyli organizacji zrzeszających jeźdźców startujących w danej dziedzinie sportów konnych. Aplikacja skierowana jest do klubów, których zawodnicy startują w takich dziedzinach jak:
 \begin{itemize}
 	\item Skoki przez przeszkody,
-	\item WKKW (skrót od "Wszechstronny konkurs konia wierzchowego"),
+	\item WKKW (skrót od ,,Wszechstronny konkurs konia wierzchowego''),
 	\item Ujeżdżenie.
 \end{itemize}
 
@@ -432,13 +432,18 @@ Przedstawione wymagania zostały opracowane zgodnie ze standardem ISO 9126. Okre
 		\hline
 		7& Wydajność (Efficiency)&
 		Używanie aplikacji na sprzęcie o minimalnych wymaganiach powinno przebiegać w sposób płynny, to znaczy wyświetlanie, dodawanie, edytowanie, usuwanie danych powinno nie zajmować dłużej niż kilka sekund. \\	
+		\hline	
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{|l|l|p{8cm}|}
 		\hline
 		8& Łatwość konserwacji (Maintainability)&
 		Konserwacja aplikacji mobilnej będzie przebiegać analogicznie do desktopowej. \\	
 		\hline
 		9& Przenośność (Portability)&Aplikacja udostępniana w postaci pakietu instalacyjnego .apk oraz powinna spełniać wszystkie wymagania do umieszczenia jej w sklepie Google Play. \\
 		\hline
-		
 	\end{tabular}
 \end{table}
 
@@ -457,14 +462,7 @@ Proces tworzenia bazy danych zaczynamy od modelu konceptualnego. W pierwszej faz
 	
 \end{itemize}
 \newpage
-Po określeniu definicji poszczególnych pojęć używanych w projekcie możemy przystąpić do tworzenia kategorii.
-\subsubsection{Kategorie}
-Po przeanalizowaniu wycinku rzeczywistości możemy określić jakie dane chcemy zbierać i zapisywać do bazy danych. Dane te możemy podzielić na kategorie i opisać językiem naturalnym ich cechy charakterystyczne.
-\begin{enumerate}[start=1,label={\bfseries KAT:\arabic*}]
-	\item 
-\end{enumerate}
-\newpage
-Po określeniu kategorii możemy określić reguły funkcjonowania naszej aplikacja.
+Po określeniu definicji poszczególnych pojęć używanych w projekcie możemy określić reguły funkcjonowania naszej aplikacja.
 \subsubsection{Reguły funkcjonowania}
 Reguły funkcjonowania określają zasady, procedury i wytyczne jakie musi spełniać projektowana aplikacja. 
 \begin{enumerate}[start=1,label={\bfseries REG\textbackslash 00\arabic*}]
@@ -494,7 +492,6 @@ Reguły funkcjonowania określają zasady, procedury i wytyczne jakie musi speł
 	\item Użytkownik "trener" lub "administrator" może dodawać wyjazd na zawody dla całego klubu i zapraszać poszczególnych użytkowników.
 	\item Użytkownik "członek klubu" może dodawać swoje wyjazdy na zawody.
 \end{enumerate}
-\newpage
 \subsubsection{Ograniczenia dziedzinowe}
 Ograniczenia dziedzinowe to ograniczenia, które nakładane są na atrybuty w powyższych kategoriach. Wynikają one z analizy wycinka rzeczywistości i należy je uwzględnić podczas projektowania bazy danych oraz implementacji systemu.
 \begin{enumerate}[start=1,label={\bfseries OGR\textbackslash 00\arabic*}]
@@ -507,47 +504,6 @@ Ograniczenia dziedzinowe to ograniczenia, które nakładane są na atrybuty w po
 		\item dd - to numer identyfikacyjny konia w ramach hodowli.
 		\end{itemize}
 	\item Data wizyty konia jest wcześniejsza niż data jego urodzenia.
-	\item 
-\end{enumerate}
-\newpage
-\subsubsection{Transakcje}
-Transakcje są to operacje, które możemy wykonywać na danych. Mają one cztery własności, które w skrócie nazywamy ACID (ang. Atomicity, Consistency, Isolation, Durability). Transakcje mają więc następujące własności:
-\begin{itemize}
-	\item atomowość, inaczej niepodzielność oznacza, że transakcje muszą być wykonywane na bazie w całości. Jeśli transakcja nie zostanie poprawnie przeprowadzona należny przywrócić stan bazy z przed jej wykonania.
-	\item spójność, po wykonaniu transakcji baza powinna być nadal spójna.
-	\item izloacja, oznacza że tranzakcje nie mogą być od siebie zależne.
-	\item trwałość, oznacza że dane po transakcji zostają zapisane w bazie i są zachowane na stałe.
-\end{itemize}	
-Transakcje występujące w aplikacji:
-\begin{enumerate}[start=1,label={\bfseries TRA\textbackslash00\arabic*}]
-	
-	\item \textbf{Dodanie aktywności }\\
-	\textit{Opis}: Zadaniem transakcji jest dodanie danych o aktywności konia. Aktywności konia może dodać jedynie członek klubu, który jest jego właścicielem lub osoba której został on udostępniony.\\
-	\textit{Uwarunkowania}: Aktywność musi zawierać dane o tym kto ją wprowadził, jakiego konia ona dotyczy, w jakim dniu została wykonana, oraz czas jej trwania.\\
-	\textit{Wejście}:
-		\begin{itemize}
-			\item U - Dane nowej aktywności
-			\item BD - Dane aktywności
-		\end{itemize} 
-	\textit{Wyjście}:
-		\begin{itemize}
-			\item U - Komunikat
-			\item BD - Dane aktywności
-		\end{itemize} 
-	
-	\item \textbf{Edycja aktywności }\\
-	\textit{Opis}: \\
-	\textit{Uwarunkowania}: \\
-	\textit{Wejście}:
-	\begin{itemize}
-		\item U - 
-		\item BD -
-	\end{itemize} 
-	\textit{Wyjście}:
-	\begin{itemize}
-		\item U - 
-		\item BD -
-	\end{itemize} 
 \end{enumerate}
 \newpage
 %\renewcommand{\arraystretch}{1.2}
@@ -559,7 +515,7 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 %___________________________________________________________________________________________________________
 	\item \textbf{ACTIVITY} \\
 	\textit{Semantyka encji} - Encja zawierająca aktywności, które koń wykonuje w ciągu dnia. Każda aktywność oprócz typu, zawiera opis, czas trwania oraz ocenę satysfakcji i intensywności jej wykonania.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{ActivityAtribute}.
 	
 	\begin{table}[H]
@@ -578,7 +534,7 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 			\hline
 			\textit{description} & Opis aktywności & Typ znakowy & - \\
 			\hline
-			time &  Czas trwania aktywności & Czas & + \\
+			time &  Czas trwania aktywności & Czas & - \\
 			\hline
 			\textit{intensivity} & Intensywność wykonanej aktywności & Liczba naturalna & + \\
 			\hline
@@ -592,9 +548,9 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 	Klucz główny: activityID \\
 	Charakter encji: encja słaba \\
 %___________________________________________________________________________________________________________
-	\item \textbf{COMPETITION}\\ \\
+	\item \textbf{COMPETITION}\\
 	\textit{Semantyka encji} - encja zawierająca dane o zawodach jeździeckich. 
-	\\ \\
+	\\
 	Opis atrybutów znajduje się w tabeli \ref{competitionAtribute}.
 	
 	\begin{table}[H]
@@ -609,7 +565,8 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 			\hline
 			\textit{competitionID} & Numer identyfikujący zawody. & Liczba naturalna & + \\
 			\hline
-			\textit{spot} & Miejsce, w którym odbywają się zawody. & Max. znaków 200 & - \\
+			\textit{spot} & Miejsce, w którym odbywają się zawody. & Max. znaków 200 & - \\			\hline
+			\textit{date} & Data zawodów. & Data & + \\
 			\hline
 			\textit{description} & Opis zawodów. & Typ znakowy & - \\
 			\hline
@@ -619,14 +576,12 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 	\end{table}
 	Klucze kandydujące: competitionID \\
 	Klucz główny: competitionID \\
-	Charakter encji: encja silna \\
+	Charakter encji: encja silna 
 %___________________________________________________________________________________________________________
-	\item \textbf{NOTIFICATION}
-	
+	\item \textbf{NOTIFICATION}\\
 	\textit{Semantyka encji} - Encja zawierająca powiadomienia utworzone przez użytkowników.
-\\ \\
+\\
 Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
-
 	\begin{table}[H]
 		\caption{Wykaz atrybutów encji typu Notification }
 		\textit{Źródło: Opracowanie własne}
@@ -641,11 +596,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
 			\hline
 			\textit{title} &  Tytuł powiadomienia & Max. znaków 30 & + \\
 			\hline
-			\textit{description} & Opis powiadomienia & Typ znakowy & + \\
+			\textit{description} & Opis powiadomienia & Typ znakowy & - \\
 			\hline
 			\textit{sendDate} &  Data wysłania & Data & + \\
 			\hline
 			\textit{createdDate} &  Data stworzenia & Data & + \\
+			\hline			
+			\textit{turnOn} & Określenie, czy powiadomienie jest włączone & Prawda/Fałsz & + \\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -654,13 +611,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
 	Charakter encji: encja słaba \\
 	
 %___________________________________________________________________________________________________________
-	\item \textbf{PROFESSIONALS}\\ \\
+	\item \textbf{PROFESSIONAL}\\
 	\textit{Semantyka encji} - encja opisująca specjalistów przyjeżdżający do konia takich jak lekarze (np. gastrolog, kardiolog, lekarz ogólny), fizjoterapeuci, kowale itp.
-	\\ \\
+	\\
 Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 
 	\begin{table}[H]		
-		\caption{Wykaz atrybutów encji typu Doctor }
+		\caption{Wykaz atrybutów encji typu PROFESSIONAL }
 		\textit{Źródło: Opracowanie własne}
 		\label{ProfessionalsAtribute}
 		\centering
@@ -671,18 +628,18 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 			\hline
 			\textit{professionalsID} & Numer identyfikujący specjalistę & Liczba naturalna & + \\
 			\hline			
-			\textit{degree} & Stopień naukowy doktora & Liczba naturalna & + \\
+			\textit{degree} & Stopień naukowy doktora & Liczba naturalna & - \\
 			\hline
 		\end{tabular}
 
 	\end{table}
 	Klucze kandydujące: professionalsID \\
 	Klucz główny: professionalsID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba 
 %__________________________________________________________________________________________________________	
-	\item \textbf{SPECIALISATION}\\ \\
+	\item \textbf{SPECIALISATION}\\
 	\textit{Semantyka encji} - encja słownikowa zawiera nazwy specjalizacji specjalistów.
-	\\	\\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{SpecialisationAtribute}.
 	
 	\begin{table}[H]
@@ -704,11 +661,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	Klucze kandydujące: specializationID \\
 	Klucz główny: specializationID \\
 	Charakter encji: encja silna \\
-	
+	\newpage
 	\item \textbf{DIET}
 	
 		\textit{Semantyka encji} - Encja zawierająca informacje o aktywnej diecie konia. 
-		\\ \\
+		\\
 	Opis atrybutów encji znajduje się w tabeli \ref{DietAtribute}.
 	
 	\begin{table}[H]
@@ -721,7 +678,7 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
 			& & &  OPC(-) \\
 			\hline
-			\textit{dietID} & Numer identyfikujący jedzenie & Liczba naturalna & + \\
+			\textit{dietID} & Numer identyfikujący dietę & Liczba naturalna & + \\
 			\hline
 			\textit{isActive} & Określenie czy plan jest w użyciu & Prawda/Fałsz & + \\
 			\hline
@@ -730,12 +687,12 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: dietID \\
 	Klucz główny: dietID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba
 	
 	\item \textbf{PORTION}
 	
 	\textit{Semantyka encji} - Encja zawierająca informacje o porcji jedzenia.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{DietAtribute}.
 	
 	\begin{table}[H]
@@ -758,12 +715,12 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	Klucze kandydujące: portionID \\
 	Klucz główny: portionID \\
 	Charakter encji: encja słaba \\
-	
+	\newpage
 %___________________________________________________________________________________________________________
 	\item \textbf{FORAGE}
 	
 	\textit{Semantyka encji} - Encja zawierająca informacje o paszy dla koni.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{ForageAtribute}.
 	
 	\begin{table}[H]
@@ -788,12 +745,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: forageID \\
 	Klucz główny: forageID \\
-	Charakter encji: encja słaba \\
-	
+	Charakter encji: encja słaba
 	\item \textbf{HORSE}
 	
-	\textit{Semantyka encji} - Encja zawierająca informacje o koniach.
-	\\ \\
+	\textit{Semantyka encji} - Encja zawierająca wszystkie informacje o koniach.
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{HorseAtribute}.
 	
 	\begin{table}[H]
@@ -828,13 +784,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: horseID \\
 	Klucz główny: horseID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba
 \end{enumerate}
 
 \begin{enumerate}[start=10,label={\bfseries ENC$\backslash$\arabic*}]
 	\item \textbf{HORSEGENDER} \\
 	\textit{Semantyka encji} - Encja słownikowa zawierająca płeć koni.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{HorseGenderAtribute}.
 	
 	\begin{table}[H]
@@ -855,12 +811,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: genderID \\
 	Klucz główny: genderID \\
-	Charakter encji: encja silna \\
-	
+	Charakter encji: encja silna
 	\item \textbf{STATUS}
 	
 	\textit{Semantyka encji} - Encja słownikowa zawierająca statusy koni.
-		\\ \\
+		\\ 
 	Opis atrybutów encji znajduje się w tabeli \ref{StatusAtribute}.
 	
 	\begin{table}[H]
@@ -881,11 +836,10 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: statusID \\
 	Klucz główny: statusID \\
-	Charakter encji: encja silna \\
-
+	Charakter encji: encja silna
 	\item \textbf{MEALNAME} \\
 	\textit{Semantyka encji} - Encja słownikowa zawierająca nazwy posiłków.
-		\\ \\
+		\\ 
 Opis atrybutów encji znajduje się w tabeli \ref{MealNameAtribute}.
 	
 	\begin{table}[H]
@@ -907,11 +861,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{MealNameAtribute}.
 	Klucze kandydujące: mealNameID \\
 	Klucz główny: mealNameID \\
 	Charakter encji: encja słaba \\
-
+\newpage
 \item \textbf{NUTRITIONPLAN}
-
+\\ \\
 \textit{Semantyka encji} - Encja zawierająca informacje o planie żywienia koni.
-		\\ \\
+		\\
 Opis atrybutów encji znajduje się w tabeli \ref{NutritionPlanAtribute}.
 
 \begin{table}[H]
@@ -931,15 +885,17 @@ Opis atrybutów encji znajduje się w tabeli \ref{NutritionPlanAtribute}.
 		\textit{desctription} &  Ilość jedzenia w porcji & Typ znakowy & - \\
 		\hline
 		\textit{icon} &  Ikona dołączona do planu żywienia & Liczba naturalna & + \\
+		\hline		
+		\textit{color} &  Color dołączona do planu żywienia & Max. 7 znaków & + \\
 		\hline
 	\end{tabular}
 \end{table}
 Klucze kandydujące: nutritionPlanID \\
 Klucz główny: nutritionPlanID \\
-Charakter encji: encja silna \\
+Charakter encji: encja silna\\
 	\item \textbf{PEOPLEDETAILS}\\ \\
 	\textit{Semantyka encji} - encja zawiera szczegółowe dane użytkowników (członków klubu, trenerów i zarządu klubu) jak i lekarzy oraz kowali.
-			\\ \\
+			\\ 
 	Opis atrybutów encji znajduje się w tabeli \ref{PeopleDetailsAtribute}.
 	
 	\begin{table}[H]
@@ -972,11 +928,10 @@ Charakter encji: encja silna \\
 	\end{table}
 Klucze kandydujące: detailsID \\
 Klucz główny: detailsID \\
-Charakter encji: encja silna \\
-
-\item \textbf{PARTICIPATION}\\ \\
+Charakter encji: encja silna
+\item \textbf{PARTICIPATION}\\ 
 \textit{Semantyka encji} - encja zawierająca dane o uczestnictwie konia w zawodach.
-			\\ \\
+			\\ 
 Opis atrybutów encji znajduje się w tabeli \ref{ParticipationAtribute}.
 
 \begin{table}[H]
@@ -990,8 +945,6 @@ Opis atrybutów encji znajduje się w tabeli \ref{ParticipationAtribute}.
 		& & &  OPC(-) \\
 		\hline
 		\textit{participationID} & Numer identyfikujący udział w zawodach & Liczba naturalna & + \\
-		\hline
-		\textit{level} & Poziom konkursu & Max. znaków 30 & + \\
 		\hline
 		\textit{result} & Wynik zawodów & Typ znakowy & + \\
 		\hline
@@ -1134,7 +1087,7 @@ Opis atrybutów encji znajduje się w tabeli \ref{VisitAtribute}.
 		\hline
 		\textit{visitID} & Numer identyfikujący wizyte & Liczba naturalna & + \\
 		\hline
-		\textit{cost} & Cena wizyty & Liczba rzeczywista dodatnia & + \\
+		\textit{cost} & Cena wizyty & Liczba rzeczywista dodatnia & - \\
 		\hline
 		\textit{summary} & Opis podsumowujący wizytę & Typ znakowy & - \\
 		\hline
@@ -1172,13 +1125,40 @@ Opis atrybutów encji znajduje się w tabeli \ref{MealAtribute}.
 Klucze kandydujące: mealID \\
 Klucz główny: mealID \\
 Charakter encji: encja słaba \\
+
+\item \textbf{CONTEST} \\
+\textit{Semantyka encji} - Encja zawierająca konkursy z zawodów.
+\\ \\
+Opis atrybutów encji znajduje się w tabeli \ref{ContestAtribute}.
+
+\begin{table}[H]
+	\caption{Wykaz atrybutów encji typu Contest}
+	\textit{Źródło: Opracowanie własne}
+	\label{ContestAtribute}
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		\textit{contestID} & Numer identyfikujący posiłek & Liczba naturalna & + \\
+		\hline
+		\textit{level} & Poziom konkursu & Max. znaków 10 & - \\
+		\hline		
+		\textit{name} & Nazwa konkursu & Max. znaków 50 & - \\
+		\hline
+	\end{tabular}
+\end{table}
+Klucze kandydujące: contestID \\
+Klucz główny: contestID \\
+Charakter encji: encja słaba \\
 \end{enumerate}
 \newpage
 Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 \begin{enumerate}[start=1,label={\bfseries ENC$\backslash$0\arabic*}]
 	\item \textbf{ACTIVITY}(\textit{\underline{activityID}, date, description, time, intensivity, satisfaction, activityType})
-	\item \textbf{COMPETITION} (\textit{\underline{competitionID}, spot, description, rank})
-	\item \textbf{NOTIFICATION} (\textit{\underline{notificationID}, title, description, sendDate, createdDate})
+	\item \textbf{COMPETITION} (\textit{\underline{competitionID}, spot, description, rank, date})
+	\item \textbf{NOTIFICATION} (\textit{\underline{notificationID}, title, description, sendDate, createdDate, turnOn})
 	\item \textbf{PROFESTIONALS} (\textit{\underline{profesionalsID}}, degree)
 	\item \textbf{SPECIALISATION} (\textit{\underline{specialisationID}, name})
 	\item \textbf{DIET} (\textit{\underline{dietID}, isActive})
@@ -1190,15 +1170,16 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 	\item \textbf{HORSEGENDER} (\textit{\underline{genderID}, gender})
 	\item \textbf{STATUS} (\textit{\underline{statusID}, name})
 	\item \textbf{MEALNAME} (\textit{\underline{mealNameID}, mealName})
-	\item \textbf{NUTRITIONPLAN} (\underline{nutritionPlanID}, title, description, icon)
-	\item \textbf{PEOPLEDETIALS} (\underline{detailsID}, name, surname, phonNumber, email, city, street, number)
-	\item \textbf{PARTICIPATION} (\underline{participationID}, level, result, place)
+	\item \textbf{NUTRITIONPLAN} (\underline{nutritionPlanID}, title, description, icon, color)
+	\item \textbf{PEOPLEDETIALS} (\underline{detailsID}, name, surname, phone, email, city, street, number)
+	\item \textbf{PARTICIPATION} (\underline{participationID}, result, place)
 	\item \textbf{SHARED} (\underline{sharedID}, code, endDate, startDate)
 	\item \textbf{UNITOFMEASURE} (\underline{unitID}, unitName)
 	\item \textbf{USERACCOUNT} (\underline{userID}, accountLogin, hash, salt, createdDateTime)
 	\item \textbf{USERTYPE} (\underline{userTypeID}, typeName)
 	\item \textbf{VISIT} (\underline{careID}, cost, summary, artefactImage, visitDate)
-    \item \textbf{MEAL} (\textit{\underline{mealID}, hour})
+    \item \textbf{MEAL} (\textit{\underline{mealID}, hour})    
+    \item \textbf{CONTEST} (\textit{\underline{contestID}, level, name})
 \end{enumerate}
 \newpage
 	Predykatowe definicje związków encji:
@@ -1214,10 +1195,11 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 		\item \textbf{Performs} (HORSE(1,1) ACTIVITY(0,N))
 		\item \textbf{Train} (ACTIVITY(1,1) USERACOUNT(0,N))		
 		\item \textbf{Ride} (ACTIVITY(1,1) USERACOUNT(0,N))
-		\item \textbf{Refers to} (CUSTOMNOTIFICATION(0,N) USERACOUNT(1,1))
-		\item \textbf{Gets} (USERACOUNT(1,1) SHARE(0,N))
+		\item \textbf{Refers to} (NOTIFICATION(0,N) USERACOUNT(1,1))		
+		\item \textbf{Refers to} (NOTIFICATION(0,N) Horse(1,1))	
 	\end{enumerate}
-\begin{enumerate}[start=10,label={\bfseries ZWI$\backslash$\arabic*}]	
+	\begin{enumerate}[start=10,label={\bfseries ZWI$\backslash$\arabic*}]	
+		\item \textbf{Gets} (USERACOUNT(1,1) SHARE(0,N))
 		\item \textbf{Shares} (USERACCOUNT(1,1) SHARE(0,N))
 		\item \textbf{IsShared} (HORSE(1,1) SHARE(0,N))
 		\item \textbf{Has} (USERACCOUNT(0,N), USERTYPE(1,1))
@@ -1233,6 +1215,8 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 		\item \textbf{Contains} (PORTION(0,N) FORAGE(1,1))
 		\item \textbf{Has} (FORAGE(0,N) UNITOFMEASURE(1,1))
 		\item \textbf{Has} (PORTION(0,N) UNITOFMEASURE(1,1))
+		\item \textbf{Add} (NUTRITIONPLAN(0,N) USERACCOUNT(1,1))
+		\item \textbf{Has} (HORSE(0,N) USERACCOUNT(1,1))
 	\end{enumerate}
 
 Model konceptualny przedstawiony został na diagramie ERD, który został przedstawiony na rysunku \ref{DiagramERD}.
@@ -1267,7 +1251,7 @@ Po stworzeniu modelu konceptualnego, należy przetransformować go do modelu log
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{activityID} & Integer+ & & + & & & + & PR & &BD\\
+			\textit{activityID} & Integer+ & & + & & & + & PR & &SZBD\\
 			\hline
 			\textit{date} & Date & dd-mm-rrrr& + & & & & & &USER\\
 			\hline
@@ -1342,7 +1326,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{competitionID} & Integer+ & & + & & & + & PR & &BD\\
+		\textit{competitionID} & Integer+ & & + & & & + & PR & &SZBD\\
 		\hline
 		\textit{spot} & String & & - & & & & & &USER\\
 		\hline
@@ -1395,7 +1379,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-	\textit{notificationID} & Integer+& & + &&&+&PR&&BD\\
+	\textit{notificationID} & Integer+& & + &&&+&PR&&SZBD\\
 	\hline
 	\textit{title} & String& & + &&&&&&USER\\
 	\hline
@@ -1452,7 +1436,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{profesionalID}&Integer+&&+&&&+&PR&&BD\\
+		\textit{profesionalID}&Integer+&&+&&&+&PR&&SZBD\\
 		\hline
 		\textit{degree}&String&&-&&&&&&USER\\
 		\hline
@@ -1501,7 +1485,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{specialisationID}&Integer+&&+&&&+&PK&&BD\\
+		\textit{specialisationID}&Integer+&&+&&&+&PK&&SZBD\\
 		\hline
 		\textit{name}&String&&+&&&&&&USER\\
 		\hline
@@ -1591,7 +1575,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{portionID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{portionID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline
 		\textit{amount}&Float+&&+&1&0<&&&&USER\\
 		\hline
@@ -1613,6 +1597,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\hline
 	\end{tabular}
 \end{table}
+\newpage
 \item \textbf{Forges\textbackslash FORAGE} (\textit{\underline{forageID}, name, producent, capacity})
 \begin{table}[H]
 	\caption{Opis schematu relacji Forges}
@@ -1632,7 +1617,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{forageID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{forageID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline		
 		\textit{name}&String&&+&&&&&&USER\\		
 		\hline
@@ -1666,6 +1651,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\hline
 	\end{tabular}
 \end{table}
+\newpage
 \item \textbf{Horses\textbackslash HORSE} 
 \begin{table}[H]
 	\caption{Opis schematu relacji Horses}
@@ -1685,7 +1671,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{horseID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{horseID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline			
 		\textit{name}&Integer+&&+&&&&&&USER\\		
 		\hline			
@@ -1764,7 +1750,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{genderID}&Integer+&&+&&&+&PK&&USER\\	
+			\textit{genderID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{gender}&String&&&&&&&&USER\\
 			\hline		
@@ -1806,7 +1792,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{statusID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{statusID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{name}&String&&+&&&&&&USER\\	
 			\hline
@@ -1847,7 +1833,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{mealNameID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{mealNameID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{mealName}&String&&+&&&&&&USER\\	
 			\hline
@@ -1887,7 +1873,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{nutritionPlanID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{nutritionPlanID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{title}&String&&+&&&&&&USER\\	
 			\hline			
@@ -1917,6 +1903,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{PeopleDetails\textbackslash PEOPLEDETIALS}
 	 \begin{table}[H]
 		\caption{Opis schematu relacji PeopleDetails}
@@ -1936,7 +1923,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{detailsID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{detailsID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{name}&String&&+&&&&&&USER\\	
 			\hline			
@@ -1982,6 +1969,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{Participations\textbackslash PARTICIPATION} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Participations}
@@ -2001,9 +1989,9 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{ParticipationID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{ParticipationID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
-			\textit{level}&Integer+&&+&&&&&&BD\\	
+			\textit{level}&Integer+&&+&&&&&&USER\\	
 			\hline			
 			\textit{result}&String&&+&&&&&&USER\\	
 			\hline			
@@ -2039,6 +2027,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{Shareds\textbackslash SHARED} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Shareds}
@@ -2058,7 +2047,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{sharedID}&Integer+&&+&&&+&PK&&BD\\
+			\textit{sharedID}&Integer+&&+&&&+&PK&&SZBD\\
 			\hline			
 			\textit{code}&String&&+&&&&&&USER\\				
 			\hline			
@@ -2101,10 +2090,13 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{UnitOfmeasures\textbackslash UNITOFMEASURE}
 	 \begin{table}[H]
 		\caption{Opis schematu relacji UnitOfmeasures}
+		\centering
 		\textit{Źródło: Opracowanie własne}
+		\\
 		\label{UnitOfmeasuresRelationSchema}
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
@@ -2120,7 +2112,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{unitID}&Integer+&&+&&&+&&&BD\\	
+			\textit{unitID}&Integer+&&+&&&+&&&SZBD\\	
 			\hline
 			\textit{unitName}&String&&+&&&&&&USER\\	
 			\hline
@@ -2142,6 +2134,47 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\item \textbf{UserTypes\textbackslash USERTYPE}
+\begin{table}[H]
+	\caption{Opis schematu relacji UserTypes}
+	\textit{Źródło: Opracowanie własne}
+	\label{UserTypesRelationSchema}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\begin{sideways}Nazwa atrybutu\end{sideways}& 
+		\begin{sideways}Dziedzina \end{sideways}& 
+		\begin{sideways}Maska \end{sideways}& 
+		\begin{sideways}OBL(+) OPC(-)\end{sideways} & 
+		\begin{sideways}Wartość domyślna$\ $\end{sideways}& 
+		\begin{sideways}Ograniczenia\end{sideways} &
+		\begin{sideways}Unikalność \end{sideways}& 
+		\begin{sideways}Klucz \end{sideways}& 
+		\begin{sideways}Referencje \end{sideways}&
+		\begin{sideways}Źródło danych\end{sideways}\\
+		\hline
+		\textit{userTypeID}&Integer+&&+&&&+&PK&&SZBD\\	
+		\hline
+		\textit{typeName}&String&&+&&&&&&USER\\	
+		\hline			
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption{Opis atrybutów relacji UserTypes}
+	\textit{Źródło: Opracowanie własne}
+	\label{UserTypesAttributeDescription}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Nazwa atrybutu & Znaczenie \\
+		\hline
+		\textit{userTypeID}&Unikalny numer ID identyfikujący typ użytkownika\\	
+		\hline
+		\textit{typeName}& Nazwa typu użytkownika\\	
+		\hline	
+	\end{tabular}
+\end{table}
 	\item \textbf{UserAccounts\textbackslash USERACCOUNT}
 	\begin{table}[H]
 		\caption{Opis schematu relacji UserAccounts}
@@ -2161,7 +2194,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{userID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{userID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{accountLogin}&String&&+&&&+&&&USER\\	
 			\hline			
@@ -2203,47 +2236,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
-	\item \textbf{UserTypes\textbackslash USERTYPE}
-	\begin{table}[H]
-		\caption{Opis schematu relacji UserTypes}
-		\textit{Źródło: Opracowanie własne}
-		\label{UserTypesRelationSchema}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-			\hline
-			\begin{sideways}Nazwa atrybutu\end{sideways}& 
-			\begin{sideways}Dziedzina \end{sideways}& 
-			\begin{sideways}Maska \end{sideways}& 
-			\begin{sideways}OBL(+) OPC(-)\end{sideways} & 
-			\begin{sideways}Wartość domyślna$\ $\end{sideways}& 
-			\begin{sideways}Ograniczenia\end{sideways} &
-			\begin{sideways}Unikalność \end{sideways}& 
-			\begin{sideways}Klucz \end{sideways}& 
-			\begin{sideways}Referencje \end{sideways}&
-			\begin{sideways}Źródło danych\end{sideways}\\
-			\hline
-			\textit{userTypeID}&Integer+&&+&&&+&PK&&BD\\	
-			\hline
-			\textit{typeName}&String&&+&&&&&&USER\\	
-			\hline			
-		\end{tabular}
-	\end{table}
 	
-	\begin{table}[H]
-		\caption{Opis atrybutów relacji UserTypes}
-		\textit{Źródło: Opracowanie własne}
-		\label{UserTypesAttributeDescription}
-		\centering
-		\begin{tabular}{|c|c|}
-			\hline
-			Nazwa atrybutu & Znaczenie \\
-			\hline
-			\textit{userTypeID}&Unikalny numer ID identyfikujący typ użytkownika\\	
-			\hline
-			\textit{typeName}& Nazwa typu użytkownika\\	
-			\hline	
-		\end{tabular}
-	\end{table}
 	\item \textbf{Visits\textbackslash VISIT} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Visits}
@@ -2263,7 +2256,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{careID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{careID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{cost}&Float&&+&&&&&&USER\\	
 			\hline	
@@ -2324,7 +2317,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{mealID}&Integer+&&+&&&+&&&BD\\	
+			\textit{mealID}&Integer+&&+&&&+&&&SZBD\\	
 			\hline
 			\textit{hour}&String&&+&&&&&&USER\\	
 			\hline			
@@ -2365,11 +2358,37 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 \end{figure}
 \newpage
 \section{Model fizyczny}
-Po stworzeniu logicznego modelu bazy danych, możemy przetransformować go w model fizyczny. Model fizyczny składa się z plików i rekordów. Pilki bazy danych złożony jest z poszczególnych rekordów, przy czym rekordy te mają 
-// dokończyć na podstawie książki Sharon Allen
+Po stworzeniu logicznego modelu bazy danych, należy przetransformować go w model fizyczny. Model fizyczny jest to model bazy danych dostosowany do konkretnej bazy. Aby z relacji stworzyć tabele należy dostosować nazwy tabel i atrybutów oraz dopasować do atrybutów odpowiedni typy danych charakterystyczny dla wybranej bazy. Diagram fizyczny bazy danych znajduje się na rysunku rys. \ref{DiagramFizyczny}. Po zaprojektowaniu tabel można sporządzić skrypty tworzące bazę danych i tabele widoczne na listingu \ref{DatabaseCreate}.
+\begin{lstlisting}[ language=SQL, 
+					caption={Fragment skryptu tworzącego bazę danych i tabele},
+					label={DatabaseCreate}]				
+	-- Tworzenie bazy danych
+	CREATE DATABASE HorseTracking;
+	
+	-- Uzywanie nowo utworzonej bazy danych
+	USE HorseTracking;
+	
+	--Tworzenie tabel
+	CREATE TABLE UserTypes (
+	typeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	typeName varchar(20) NOT NULL)
+	
+	CREATE TABLE PeopleDetails (
+	detailID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	name varchar(40) NULL,
+	surname varchar(40) NOT NULL,
+	phone varchar(20) NULL,
+	email varchar(320) NULL,
+	city varchar(200) NULL,
+	street varchar(90) NULL,
+	number varchar(10) NULL,
+	postalCode varchar(10) NULL)
+\end{lstlisting}
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{DiagramFizyczny}
+	\includegraphics[scale=0.32, angle=-90]{DiagramFizyczny}
 	\caption{Fizyczny schemat bazy danych}
 	\textit{Źródło: Opracowanie własne}
 	\label{DiagramFizyczny}
@@ -2386,12 +2405,100 @@ Jaka baza jakie połączenie itp.
 \section{Wybrane aspekty implementacyjne}
 jeden viewmodel obsługuje dwa widoki (dodawanie aktywności i szczegóły aktywności) \\
 kontrolki\\
-\chapter{Testy aplikacji}
-\section{Unit testy}
-\section{Test case}
-\section{Baza błędów}
 \chapter{Dokumentacja użytkownika}
 \section{Aplikacja desktopowa}
+Aplikacja desktopowa "HorseTracking" służy do zarządzania wizytami, żywieniem i zawodami. Można w niej obejrzeć także statystyki z aktywności oraz zawodów. W aplikacji tej dostępny jest także kalendarz z zapisanymi wszystkimi wydarzeniami. Po uruchomieniu użytkownikowi wyświetlony zostaje panel logowania. Każdy użytkownik, posiadający konto w aplikacji może się zalogować. Stworzenie konta, samodzielnie przez użytkownika nie jest możliwe.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.32]{Logowanie}
+	\caption{Panel logowania}
+	\textit{Źródło: Opracowanie własne}
+	\label{Logowanie}
+\end{figure}
+Po zalogowaniu widoczna jest strona statystyk wraz z bocznym menu. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Statystyki}
+\caption{Strona statystyk}
+\textit{Źródło: Opracowanie własne}
+\label{Statystyki}
+\end{figure}
+Wśród statystyk w lewym górnym rogu widoczne jest miesięczne zestawienie aktywności jednego konia oraz w lewym dolnym wszystkich koni. .........(Dokończyć jak będzie więcej wiadomo)
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Wizyty}
+\caption{Strona wizyt}
+\textit{Źródło: Opracowanie własne}
+\label{Wizyty}
+\end{figure}
+Po wybraniu wizyt z menu bocznego można obejrzeć wizyty koni. Na górze ekranu widoczny jest pole, dzięki któremu możemy wybrać dla jakiego konia mają być wyświetlane wizyty. Wizyty wyświetlane są w tabeli, posegregowane według malejąco według daty jej odbycia. Na głównym ekranie występują jedynie skrócone informacje na temat wizyty. Dostępna jest data wizyty, imię konia który odbywał wizytę, nazwisko oraz specjalizacja lekarza lub kowala oraz cena wizyty. 
+
+Szczegóły konkretnej wizyty można obejrzeć klikając dwa razy na wiersz w tabeli z informacjami o niej. Po kliknięciu pojawi się nowe okno (patrz rys. \ref{WizytyDetale}) na którym znajduje się nie tylko szczegółowy opis przebiegu wizyty, ale także zdjęcie z wizyty, wszelkie szczegółowe informacje dotyczące konia oraz osoby przeprowadzającej. Po obejrzeniu szczegółów można powrócić do okna głównego klikając przycisk "Wróć".
+\begin{figure}
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.4]{wizytyDetale}
+			\caption{Szczegóły wizyty}
+			\textit{Źródło: Opracowanie własne}
+			\label{WizytyDetale}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.4]{dodajWizyte}
+			\caption{Dodawanie wizyt}
+			\textit{Źródło: Opracowanie własne}
+			\label{DodajWizyty}
+		\end{minipage}
+	\end{center}
+\end{figure}
+Na dole głównego ekranu znajdują się trzy przyciski pozwalające na zarządzanie wizytami. Po kliknięciu przycisku dodaj otworzy się nowe okno pozwalające dodać nową wizytę (patrz rys.\ref{DodajWizyty}). W oknie tym możemy wybrać konia, lekarza oraz dodać opis wizyty i zapisać koszta z nią związane. Data wizyty automatycznie ustawiona jest na dzisiejszą, jednakże można ją dowolnie modyfikować. Oprócz przycisku "dodaj" dostępny jest także przycisk "edytuj". Przycisk ten pozwala na edycje obecnie zaznaczonej wizyty. Otwiera on to samo okno co przy dodawaniu, jednakże tym razem widok jest już wypełniony danymi. Ostatni z przycisków, przycisk "usuń" pozwala na usunięcie obecnie zaznaczonej wizyty. Na oknie dodawania wizyt dostępny jest przycisk dodania zdjęcia. Przycisk ten przenosi użytkownika na nowe okno, w którym możliwe jest wgranie zdjęcia z komputera i zapisanie go do bazy danych.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{Zywienie}
+	\caption{Strona żywienia}
+	\textit{Źródło: Opracowanie własne}
+	\label{Zywienie}
+\end{figure}
+
+Na menu bocznym dostępna jest także zakładka "Żywienie" pozwalająca na zarządzanie planami żywienia. Po kliknięciu zostajemy przeniesieni na stronę widoczną na rysunku \ref{Zywienie}. Dla każdego z koni można ustawić jego indywidualny plan, poprzez kliknięcie przycisku ,,dodaj plan''. Jest on całkowicie modyfikowalny, może zawierać dowolną ilość posiłków podawanych o dowolnej porze dnia, każdy posiłek może zawierać wiele składników w różnych ilościach. \textcolor{red}{Pory posiłków oraz ich nazwy można ustawić po kliknięciu przycisku ustawienia. W tym miejscu można także dodać nowe rodzaje składników posiłku takich jak pasze, warzywa itp..} Wiele koni może być aktualnie na tej samej diecie i stosować ten sam plan żywienia. Na dole planu wypisane są imiona koni, które aktualnie są na tej diecie co pozwala na łatwą identyfikację. Każdy z planów ma swój kolor dzięki czemu użytkownik od razu wie na który plan spojrzeć. Pory posiłków zostały napisane wytłuszczoną czcionką, co poprawienia czytelności. Na tej stronie można zapisać dowolnie wiele planów żywienia, nie każdy z nich musi być obecnie używany. Jeśli zostanie zapisane więcej danych niż może zmieścić ekran pojawią się suwaki dzięki, którym można obserwować wszystkie zapisane informacje.
+
+Jak zostało wcześniej wspomniane, aby dodać kolejne plany należy kliknąć przycisk "dodaj plan". Kliknięcie go powoduje otwarcie nowego okna widocznego na rysunku \ref{DodajZywienie}. W oknie tym możemy nadać tytuł naszemu planu wybrać kolor, dodać opis oraz stworzyć plan poprzez dodawanie kolejnych składników oraz posiłków.  Każdy wybrany przez nas składnik musi podawany być w odpowiedniej ilości, aby konie zdrowo się odżywiały w tym celu przy każdej paszy którą mamy do wyboru dostępne jest pole do wpisania ilości oraz miejsce w którym możemy wybrać w jakiej miarze została podana ilość. 
+
+Możliwa jest także późniejsza edycja planów poprzez kliknięcie przycisku edytuj na stronie głównej. W tym przypadku otwiera się to samo okno co przy dodawaniu planu jednakże jest ono już uzupełnione danymi (patrz. rys \ref{EdytujZywienie}). Po dodaniu bądź edycji planu użytkownik zostanie przekierowany na stronę główną. Jeśli dodany plan go nie satysfakcjonuje można go usunąć klikając przycisk usuń.
+
+\begin{figure} [H]
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{dodajZywienie}
+			\caption{Dodawanie żywienia}
+			\textit{Źródło: Opracowanie własne}
+			\label{DodajZywienie}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{edytujZywienie}
+			\caption{Edycja żywienia}
+			\textit{Źródło: Opracowanie własne}
+			\label{EdytujZywienie}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
+Na menu bocznym dostępną mamy także zakładkę zawody. Po kliknięciu w nią użytkownik przeniesiony zostanie na stronę gdzie możliwe jest zarządzanie zawodami. Po wejściu widzimy listę zawodów oraz puste miejsce po prawej stronie. Kliknięciu w dowolne zawody dostępne na liście spowoduje pojawienie się po prawej stronie od listy, spisu konkursów dostępnych na tych zawodach. Jeśli jakiś koń jest już zapisany na te zawody jego imię pojawi się pod każdym z konkursów w których bierze udział. Jeśli zawody są już zakończone wyniki konia będą uzupełnione. 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{zawody}
+\caption{Strona zawodów}
+\textit{Źródło: Opracowanie własne}
+\label{StronaZawodow}
+\end{figure}
+Aby dodać nowego konia do zawodów należy kliknąć w nazwę konkursu. Poskutkuje to otwarciem nowego okna z wyborem konia, którego chcemy dodać. Po zakończonych zawodach możemy dodać wyniki naszego konia \textcolor{red}{po prostu uzupełniając tabele.}
 \newpage
 \section{Aplikacja mobilna}
 Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności koni, ich wizyt u lekarzy, kowali jak także do zarządzania zawodami.
@@ -2527,7 +2634,8 @@ Kolejną opcją dostępną w menu dolnym są plany żywienia. Po kliknięciu w i
 	
 	\bibitem{WPF} adegeo, ihsansfd, alexbuckgit, v-trisshores, DCtheGeek, \emph{Przewodnik dotyczący aplikacji klasycznych (WPF .NET)}\\ https://learn.microsoft.com/pl-pl/dotnet/desktop/wpf/overview/?view=netdesktop-7.0 
 	[Dostęp: 06.08.2023]
-
+	
+	\bibitem{bazadanychFizyczny}  Sharon Allen, Evan Terry, \emph{Beginning Relational Data Modeling}, Apress Berkeley, CA, 2005
 \end{thebibliography}
 \listoffigures
 \lstlistoflistings

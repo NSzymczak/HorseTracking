@@ -55,10 +55,10 @@ namespace HorseTrackingDesktop.ViewModel
                     await LogIn(user);
                     window.Close();
 
-                    if (_hasher.CheckPassword(UserPassword, user.Hash, user.Salt))
-                    {
-                        await LogIn(user);
-                    }
+                    //if (_hasher.CheckPassword(UserPassword, user.Hash, user.Salt))
+                    //{
+                    //    await LogIn(user);
+                    //}
                 }
             }
         }

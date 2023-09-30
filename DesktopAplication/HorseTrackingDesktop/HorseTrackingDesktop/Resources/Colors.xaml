@@ -5,6 +5,7 @@
     <Color x:Key="MainGreenColor">#95B17F</Color>
     <Brush x:Key="BackgroundBrush">White</Brush>
     <Brush x:Key="DarkWhite">#F0F0F0</Brush>
+    <Brush x:Key="NearWhite">#FAFAFA</Brush>
     <Brush x:Key="LightGrey">#B4B6B4</Brush>
     <Brush x:Key="FontColor">#202020</Brush>
 </ResourceDictionary>

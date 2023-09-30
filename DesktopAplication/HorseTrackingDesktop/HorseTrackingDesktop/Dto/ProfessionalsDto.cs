@@ -1,4 +1,6 @@
-﻿namespace HorseTrackingDesktop.Models.Dto
+﻿using HorseTrackingDesktop.Models;
+
+namespace HorseTrackingDesktop.Dto
 {
     public class ProfessionalsDto
     {

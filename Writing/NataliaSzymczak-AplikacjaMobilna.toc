@@ -13,41 +13,35 @@
 \contentsline {section}{\numberline {3.9}Git}{7}{}%
 \contentsline {section}{\numberline {3.10}Figma}{7}{}%
 \contentsline {section}{\numberline {3.11}Entity Framework}{8}{}%
-\contentsline {section}{\numberline {3.12}Ten do wykresów}{9}{}%
-\contentsline {section}{\numberline {3.13}MVVM Toolkit}{9}{}%
-\contentsline {section}{\numberline {3.14}Xamarin Community Toolkit}{9}{}%
-\contentsline {section}{\numberline {3.15}ZXing.Net.Mobile.Forms}{9}{}%
-\contentsline {section}{\numberline {3.16}Microsoft.Extensions.DependencyInjection}{9}{}%
-\contentsline {chapter}{\numberline {4}Specyfikacja wymagań}{10}{}%
-\contentsline {section}{\numberline {4.1}Opis wycinka rzeczywistości}{10}{}%
-\contentsline {section}{\numberline {4.2}Wymagania funkcjonalne}{11}{}%
-\contentsline {subsubsection}{Przypadki użycia}{16}{}%
-\contentsline {section}{\numberline {4.3}Wymagania niefunkcjonalne}{18}{}%
+\contentsline {section}{\numberline {3.12}Ten do wykresów}{8}{}%
+\contentsline {section}{\numberline {3.13}MVVM Toolkit}{8}{}%
+\contentsline {section}{\numberline {3.14}Xamarin Community Toolkit}{8}{}%
+\contentsline {section}{\numberline {3.15}ZXing.Net.Mobile.Forms}{8}{}%
+\contentsline {section}{\numberline {3.16}Microsoft.Extensions.DependencyInjection}{8}{}%
+\contentsline {chapter}{\numberline {4}Specyfikacja wymagań}{9}{}%
+\contentsline {section}{\numberline {4.1}Opis wycinka rzeczywistości}{9}{}%
+\contentsline {section}{\numberline {4.2}Wymagania funkcjonalne}{10}{}%
+\contentsline {subsubsection}{Przypadki użycia}{15}{}%
+\contentsline {section}{\numberline {4.3}Wymagania niefunkcjonalne}{17}{}%
 \contentsline {chapter}{\numberline {5}Baza danych}{22}{}%
 \contentsline {section}{\numberline {5.1}Model konceptualny}{22}{}%
 \contentsline {subsubsection}{Słownik pojęć}{22}{}%
-\contentsline {subsubsection}{Kategorie}{23}{}%
-\contentsline {subsubsection}{Reguły funkcjonowania}{24}{}%
-\contentsline {subsubsection}{Ograniczenia dziedzinowe}{26}{}%
-\contentsline {subsubsection}{Transakcje}{27}{}%
-\contentsline {subsubsection}{Encje}{29}{}%
-\contentsline {section}{\numberline {5.2}Model logiczny}{46}{}%
-\contentsline {section}{\numberline {5.3}Model fizyczny}{65}{}%
-\contentsline {chapter}{\numberline {6}Projekt systemu}{66}{}%
-\contentsline {section}{\numberline {6.1}Model projektowanego systemu}{66}{}%
-\contentsline {subsubsection}{Diagramy stanów}{66}{}%
-\contentsline {subsubsection}{Diagramy aktywności}{66}{}%
-\contentsline {subsubsection}{Diagram klas}{66}{}%
-\contentsline {subsubsection}{Architektura aplikacji}{66}{}%
-\contentsline {subsubsection}{Wykorzystane wzorce projektowe}{66}{}%
-\contentsline {subsubsection}{Model architektoniczny MVVM}{66}{}%
-\contentsline {section}{\numberline {6.2}Wybrane aspekty implementacyjne}{66}{}%
-\contentsline {chapter}{\numberline {7}Testy aplikacji}{67}{}%
-\contentsline {section}{\numberline {7.1}Unit testy}{67}{}%
-\contentsline {section}{\numberline {7.2}Test case}{67}{}%
-\contentsline {section}{\numberline {7.3}Baza błędów}{67}{}%
-\contentsline {chapter}{\numberline {8}Dokumentacja użytkownika}{68}{}%
-\contentsline {section}{\numberline {8.1}Aplikacja desktopowa}{68}{}%
-\contentsline {section}{\numberline {8.2}Aplikacja mobilna}{69}{}%
-\contentsline {chapter}{\numberline {9}Podsumowanie}{75}{}%
-\contentsline {chapter}{\numberline {10}Opis zawartości APD}{82}{}%
+\contentsline {subsubsection}{Reguły funkcjonowania}{23}{}%
+\contentsline {subsubsection}{Ograniczenia dziedzinowe}{24}{}%
+\contentsline {subsubsection}{Encje}{25}{}%
+\contentsline {section}{\numberline {5.2}Model logiczny}{42}{}%
+\contentsline {section}{\numberline {5.3}Model fizyczny}{61}{}%
+\contentsline {chapter}{\numberline {6}Projekt systemu}{63}{}%
+\contentsline {section}{\numberline {6.1}Model projektowanego systemu}{63}{}%
+\contentsline {subsubsection}{Diagramy stanów}{63}{}%
+\contentsline {subsubsection}{Diagramy aktywności}{63}{}%
+\contentsline {subsubsection}{Diagram klas}{63}{}%
+\contentsline {subsubsection}{Architektura aplikacji}{63}{}%
+\contentsline {subsubsection}{Wykorzystane wzorce projektowe}{63}{}%
+\contentsline {subsubsection}{Model architektoniczny MVVM}{63}{}%
+\contentsline {section}{\numberline {6.2}Wybrane aspekty implementacyjne}{63}{}%
+\contentsline {chapter}{\numberline {7}Dokumentacja użytkownika}{64}{}%
+\contentsline {section}{\numberline {7.1}Aplikacja desktopowa}{64}{}%
+\contentsline {section}{\numberline {7.2}Aplikacja mobilna}{71}{}%
+\contentsline {chapter}{\numberline {8}Podsumowanie}{77}{}%
+\contentsline {chapter}{\numberline {9}Opis zawartości APD}{85}{}%

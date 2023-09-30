@@ -3,6 +3,7 @@ using HorseTrackingDesktop.PageModel;
 using HorseTrackingDesktop.PageModel.Main;
 using HorseTrackingDesktop.PageModel.Management;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.CompetitionService;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.NutritionService;
 using HorseTrackingDesktop.Services.Database.UserService;
@@ -22,6 +23,7 @@ namespace HorseTrackingDesktop
             services.AddSingleton<IVisitService, VisitService>();
             services.AddSingleton<IHorseService, HorseService>();
             services.AddSingleton<INutritionService, NutritionService>();
+            services.AddSingleton<ICompetitionService, CompetitionService>();
             services.AddSingleton<IHasher, Hasher>();
             services.AddSingleton<HorseTrackingContext>();
             return services;
@@ -45,6 +47,8 @@ namespace HorseTrackingDesktop
             services.AddTransient<SelectHorseViewModel>();
             services.AddTransient<MainViewModel>();
             services.AddTransient<AcountPageModel>();
+            services.AddTransient<CompetitionPageModel>();
+            services.AddTransient<AddCompetitionViewModel>();
             return services;
         }
     }
