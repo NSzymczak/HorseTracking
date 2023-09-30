@@ -99,13 +99,14 @@ namespace HorseTrackingMobile.ViewModels
 
             EndDate = DateTime.Now;
 
-            Share = new Command(() =>
+            Share = new Command(async () =>
             {
                 var horseID = SelectedHorse.ID.ToString();
                 var shareUserID = _userService.GetHorseOwner(horseID).Id.ToString();
                 if (SelectedUser == null)
                     return;
                 _shareHorseServices.SaveShareFromQR(horseID, DateNow, EndDate, SelectedUser.Id.ToString(), shareUserID);
+                await Shell.Current.GoToAsync("..");
             });
         }
     }

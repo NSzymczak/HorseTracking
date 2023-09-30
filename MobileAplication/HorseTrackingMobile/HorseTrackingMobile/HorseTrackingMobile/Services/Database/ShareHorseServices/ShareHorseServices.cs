@@ -88,7 +88,7 @@ namespace HorseTrackingMobile.Services.Database.ShareHorseServices
         public void SetStatus(string horseShared)
         {
             var query = $"UPDATE Horses " +
-                $"SET statusID = statusID=(Select statusID from Status where name = '{StatusEnum.shared}')" +
+                $"SET statusID = (Select statusID from Status where name = '{StatusEnum.shared}')" +
                 $"WHERE horseID = {horseShared}";
             var cmd = new SqlCommand(query, _connectionService.GetConnection());
             cmd.ExecuteReader();

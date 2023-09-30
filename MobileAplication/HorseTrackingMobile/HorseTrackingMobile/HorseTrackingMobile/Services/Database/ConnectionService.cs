@@ -13,7 +13,7 @@ namespace HorseTrackingMobile.Services.Database
         //private static string serverName = "tcp:192.168.1.19,1433"; //Opole
 
         //private static string serverName = "tcp:10.1.1.107,1433"; //Studia
-        private static string serverName = "tcp:192.168.10.111,1433"; //Kondradów
+        private static string serverName = "tcp:192.168.0.107,1433"; //Kondradów
 
         //private static string serverName = "tcp:192.168.1.9,1433"; //Olesno
 
