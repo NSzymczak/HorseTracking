@@ -2,79 +2,78 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Wymagania funkcjonalne obu aplikacji}}{10}{}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Wymagania funkcjonalne aplikacji mobilnej}}{11}{}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Wymagania funkcjonalne aplikacji mobilnej}}{12}{}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Wymagania funkcjonalne aplikacji desktopowej}}{13}{}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Wymagania funkcjonalne aplikacji desktopowej}}{14}{}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Wymagania niefunkcjonalne aplikacji desktopowej }}{18}{}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Wymagania niefunkcjonalne aplikacji mobilnej }}{20}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Wymagania funkcjonalne obu aplikacji}}{14}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Wymagania funkcjonalne aplikacji mobilnej}}{15}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Wymagania funkcjonalne aplikacji mobilnej}}{16}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Wymagania funkcjonalne aplikacji desktopowej}}{17}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Wymagania funkcjonalne aplikacji desktopowej}}{18}{}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Wymagania niefunkcjonalne aplikacji desktopowej }}{21}{}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Wymagania niefunkcjonalne aplikacji mobilnej }}{23}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Wykaz atrybutów encji typu Activity }}{25}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Wykaz atrybutów encji typu Competition}}{26}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Wykaz atrybutów encji typu Notification }}{26}{}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Wykaz atrybutów encji typu PROFESSIONAL }}{27}{}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Wykaz atrybutów encji typu Specialization}}{27}{}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Wykaz atrybutów encji typu Diet }}{28}{}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Wykaz atrybutów encji typu Portion}}{28}{}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Wykaz atrybutów encji typu Forage }}{29}{}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Wykaz atrybutów encji typu Horse }}{30}{}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Wykaz atrybutów encji typu HorseGender }}{30}{}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Wykaz atrybutów encji typu Status}}{31}{}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces Wykaz atrybutów encji typu MealName }}{31}{}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces Wykaz atrybutów encji typu NutrtionPlan }}{32}{}%
-\contentsline {table}{\numberline {5.14}{\ignorespaces Wykaz atrybutów encji typu PeopleDetails }}{33}{}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces Wykaz atrybutów encji typu Participation }}{33}{}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Wykaz atrybutów encji typu Shared }}{34}{}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces Wykaz atrybutów encji typu UnitOfMeasure }}{34}{}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces Wykaz atrybutów encji typu UserAcount }}{35}{}%
-\contentsline {table}{\numberline {5.19}{\ignorespaces Wykaz atrybutów encji typu UserType }}{36}{}%
-\contentsline {table}{\numberline {5.20}{\ignorespaces Wykaz atrybutów encji typu Visit }}{36}{}%
-\contentsline {table}{\numberline {5.21}{\ignorespaces Wykaz atrybutów encji typu Meal}}{37}{}%
-\contentsline {table}{\numberline {5.22}{\ignorespaces Wykaz atrybutów encji typu Contest}}{37}{}%
-\contentsline {table}{\numberline {5.23}{\ignorespaces Opis schematu relacji Activities}}{42}{}%
-\contentsline {table}{\numberline {5.24}{\ignorespaces Opis atrybutów relacji Activities}}{43}{}%
-\contentsline {table}{\numberline {5.25}{\ignorespaces Opis schematu relacji Competitions}}{43}{}%
-\contentsline {table}{\numberline {5.26}{\ignorespaces Opis atrybutów relacji Competitions}}{44}{}%
-\contentsline {table}{\numberline {5.27}{\ignorespaces Opis schematu relacji Notifications}}{44}{}%
-\contentsline {table}{\numberline {5.28}{\ignorespaces Opis atrybutów relacji Notifiactions}}{45}{}%
-\contentsline {table}{\numberline {5.29}{\ignorespaces Opis schematu relacji Profesionals}}{45}{}%
-\contentsline {table}{\numberline {5.30}{\ignorespaces Opis atrybutów relacji Profesionals}}{45}{}%
-\contentsline {table}{\numberline {5.31}{\ignorespaces Opis schematu relacji Specialisations}}{46}{}%
-\contentsline {table}{\numberline {5.32}{\ignorespaces Opis atrybutów relacji Profesionals}}{46}{}%
-\contentsline {table}{\numberline {5.33}{\ignorespaces Opis schematu relacji Diets}}{46}{}%
-\contentsline {table}{\numberline {5.34}{\ignorespaces Opis atrybutów relacji Diets}}{47}{}%
-\contentsline {table}{\numberline {5.35}{\ignorespaces Opis schematu relacji Portions}}{47}{}%
-\contentsline {table}{\numberline {5.36}{\ignorespaces Opis atrybutów relacji Portions}}{47}{}%
-\contentsline {table}{\numberline {5.37}{\ignorespaces Opis schematu relacji Forges}}{48}{}%
-\contentsline {table}{\numberline {5.38}{\ignorespaces Opis atrybutów relacji Forges}}{48}{}%
-\contentsline {table}{\numberline {5.39}{\ignorespaces Opis schematu relacji Horses}}{49}{}%
-\contentsline {table}{\numberline {5.40}{\ignorespaces Opis atrybutów relacji Horses}}{50}{}%
-\contentsline {table}{\numberline {5.41}{\ignorespaces Opis schematu relacji HorseGenders}}{50}{}%
-\contentsline {table}{\numberline {5.42}{\ignorespaces Opis atrybutów relacji HorseGenders}}{50}{}%
-\contentsline {table}{\numberline {5.43}{\ignorespaces Opis schematu relacji Specialisations}}{51}{}%
-\contentsline {table}{\numberline {5.44}{\ignorespaces Opis atrybutów relacji Status}}{51}{}%
-\contentsline {table}{\numberline {5.45}{\ignorespaces Opis schematu relacji MealNames}}{51}{}%
-\contentsline {table}{\numberline {5.46}{\ignorespaces Opis atrybutów relacji MealNames}}{52}{}%
-\contentsline {table}{\numberline {5.47}{\ignorespaces Opis schematu relacji NutritionPlans}}{52}{}%
-\contentsline {table}{\numberline {5.48}{\ignorespaces Opis atrybutów relacji NutritionPlans}}{52}{}%
-\contentsline {table}{\numberline {5.49}{\ignorespaces Opis schematu relacji PeopleDetails}}{53}{}%
-\contentsline {table}{\numberline {5.50}{\ignorespaces Opis atrybutów relacji PeopleDetails}}{53}{}%
-\contentsline {table}{\numberline {5.51}{\ignorespaces Opis schematu relacji Participations}}{54}{}%
-\contentsline {table}{\numberline {5.52}{\ignorespaces Opis atrybutów relacji Participations}}{54}{}%
-\contentsline {table}{\numberline {5.53}{\ignorespaces Opis schematu relacji Shareds}}{55}{}%
-\contentsline {table}{\numberline {5.54}{\ignorespaces Opis atrybutów relacji Shareds}}{55}{}%
-\contentsline {table}{\numberline {5.55}{\ignorespaces Opis schematu relacji UnitOfmeasures}}{56}{}%
-\contentsline {table}{\numberline {5.56}{\ignorespaces Opis atrybutów relacji UnitOfmeasures}}{56}{}%
-\contentsline {table}{\numberline {5.57}{\ignorespaces Opis schematu relacji UserTypes}}{56}{}%
-\contentsline {table}{\numberline {5.58}{\ignorespaces Opis atrybutów relacji UserTypes}}{57}{}%
-\contentsline {table}{\numberline {5.59}{\ignorespaces Opis schematu relacji UserAccounts}}{57}{}%
-\contentsline {table}{\numberline {5.60}{\ignorespaces Opis atrybutów relacji UserAccounts}}{58}{}%
-\contentsline {table}{\numberline {5.61}{\ignorespaces Opis schematu relacji Visits}}{58}{}%
-\contentsline {table}{\numberline {5.62}{\ignorespaces Opis atrybutów relacji Visits}}{59}{}%
-\contentsline {table}{\numberline {5.63}{\ignorespaces Opis schematu relacji Meals}}{59}{}%
-\contentsline {table}{\numberline {5.64}{\ignorespaces Opis atrybutów relacji Meals}}{59}{}%
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Wykaz atrybutów encji typu Activity }}{28}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Wykaz atrybutów encji typu Competition}}{29}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Wykaz atrybutów encji typu Notification }}{29}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Wykaz atrybutów encji typu PROFESSIONAL }}{30}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Wykaz atrybutów encji typu Specialization}}{30}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Wykaz atrybutów encji typu Diet }}{31}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Wykaz atrybutów encji typu Portion}}{31}{}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Wykaz atrybutów encji typu Forage }}{32}{}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Wykaz atrybutów encji typu Horse }}{33}{}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Wykaz atrybutów encji typu HorseGender }}{33}{}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Wykaz atrybutów encji typu Status}}{34}{}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Wykaz atrybutów encji typu MealName }}{34}{}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Wykaz atrybutów encji typu NutrtionPlan }}{35}{}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Wykaz atrybutów encji typu PeopleDetails }}{36}{}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Wykaz atrybutów encji typu Participation }}{36}{}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Wykaz atrybutów encji typu Shared }}{37}{}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces Wykaz atrybutów encji typu UnitOfMeasure }}{37}{}%
+\contentsline {table}{\numberline {5.18}{\ignorespaces Wykaz atrybutów encji typu UserAcount }}{38}{}%
+\contentsline {table}{\numberline {5.19}{\ignorespaces Wykaz atrybutów encji typu UserType }}{39}{}%
+\contentsline {table}{\numberline {5.20}{\ignorespaces Wykaz atrybutów encji typu Visit }}{39}{}%
+\contentsline {table}{\numberline {5.21}{\ignorespaces Wykaz atrybutów encji typu Meal}}{40}{}%
+\contentsline {table}{\numberline {5.22}{\ignorespaces Wykaz atrybutów encji typu Contest}}{40}{}%
+\contentsline {table}{\numberline {5.23}{\ignorespaces Opis schematu relacji Activities}}{45}{}%
+\contentsline {table}{\numberline {5.24}{\ignorespaces Opis atrybutów relacji Activities}}{46}{}%
+\contentsline {table}{\numberline {5.25}{\ignorespaces Opis schematu relacji Competitions}}{46}{}%
+\contentsline {table}{\numberline {5.26}{\ignorespaces Opis atrybutów relacji Competitions}}{47}{}%
+\contentsline {table}{\numberline {5.27}{\ignorespaces Opis schematu relacji Notifications}}{47}{}%
+\contentsline {table}{\numberline {5.28}{\ignorespaces Opis atrybutów relacji Notifiactions}}{48}{}%
+\contentsline {table}{\numberline {5.29}{\ignorespaces Opis schematu relacji Profesionals}}{48}{}%
+\contentsline {table}{\numberline {5.30}{\ignorespaces Opis atrybutów relacji Profesionals}}{48}{}%
+\contentsline {table}{\numberline {5.31}{\ignorespaces Opis schematu relacji Specialisations}}{49}{}%
+\contentsline {table}{\numberline {5.32}{\ignorespaces Opis atrybutów relacji Profesionals}}{49}{}%
+\contentsline {table}{\numberline {5.33}{\ignorespaces Opis schematu relacji Diets}}{49}{}%
+\contentsline {table}{\numberline {5.34}{\ignorespaces Opis atrybutów relacji Diets}}{50}{}%
+\contentsline {table}{\numberline {5.35}{\ignorespaces Opis schematu relacji Portions}}{50}{}%
+\contentsline {table}{\numberline {5.36}{\ignorespaces Opis atrybutów relacji Portions}}{50}{}%
+\contentsline {table}{\numberline {5.37}{\ignorespaces Opis schematu relacji Forges}}{51}{}%
+\contentsline {table}{\numberline {5.38}{\ignorespaces Opis atrybutów relacji Forges}}{51}{}%
+\contentsline {table}{\numberline {5.39}{\ignorespaces Opis schematu relacji Horses}}{52}{}%
+\contentsline {table}{\numberline {5.40}{\ignorespaces Opis atrybutów relacji Horses}}{53}{}%
+\contentsline {table}{\numberline {5.41}{\ignorespaces Opis schematu relacji HorseGenders}}{53}{}%
+\contentsline {table}{\numberline {5.42}{\ignorespaces Opis atrybutów relacji HorseGenders}}{53}{}%
+\contentsline {table}{\numberline {5.43}{\ignorespaces Opis schematu relacji Specialisations}}{54}{}%
+\contentsline {table}{\numberline {5.44}{\ignorespaces Opis atrybutów relacji Status}}{54}{}%
+\contentsline {table}{\numberline {5.45}{\ignorespaces Opis schematu relacji MealNames}}{54}{}%
+\contentsline {table}{\numberline {5.46}{\ignorespaces Opis atrybutów relacji MealNames}}{55}{}%
+\contentsline {table}{\numberline {5.47}{\ignorespaces Opis schematu relacji NutritionPlans}}{55}{}%
+\contentsline {table}{\numberline {5.48}{\ignorespaces Opis atrybutów relacji NutritionPlans}}{55}{}%
+\contentsline {table}{\numberline {5.49}{\ignorespaces Opis schematu relacji PeopleDetails}}{56}{}%
+\contentsline {table}{\numberline {5.50}{\ignorespaces Opis atrybutów relacji PeopleDetails}}{56}{}%
+\contentsline {table}{\numberline {5.51}{\ignorespaces Opis schematu relacji Participations}}{57}{}%
+\contentsline {table}{\numberline {5.52}{\ignorespaces Opis atrybutów relacji Participations}}{57}{}%
+\contentsline {table}{\numberline {5.53}{\ignorespaces Opis schematu relacji Shareds}}{58}{}%
+\contentsline {table}{\numberline {5.54}{\ignorespaces Opis atrybutów relacji Shareds}}{58}{}%
+\contentsline {table}{\numberline {5.55}{\ignorespaces Opis schematu relacji UnitOfmeasures}}{59}{}%
+\contentsline {table}{\numberline {5.56}{\ignorespaces Opis atrybutów relacji UnitOfmeasures}}{59}{}%
+\contentsline {table}{\numberline {5.57}{\ignorespaces Opis schematu relacji UserTypes}}{59}{}%
+\contentsline {table}{\numberline {5.58}{\ignorespaces Opis atrybutów relacji UserTypes}}{60}{}%
+\contentsline {table}{\numberline {5.59}{\ignorespaces Opis schematu relacji UserAccounts}}{60}{}%
+\contentsline {table}{\numberline {5.60}{\ignorespaces Opis atrybutów relacji UserAccounts}}{61}{}%
+\contentsline {table}{\numberline {5.61}{\ignorespaces Opis schematu relacji Visits}}{61}{}%
+\contentsline {table}{\numberline {5.62}{\ignorespaces Opis atrybutów relacji Visits}}{62}{}%
+\contentsline {table}{\numberline {5.63}{\ignorespaces Opis schematu relacji Meals}}{62}{}%
+\contentsline {table}{\numberline {5.64}{\ignorespaces Opis atrybutów relacji Meals}}{62}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

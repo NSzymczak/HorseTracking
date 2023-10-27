@@ -4,6 +4,7 @@ using HorseTrackingMobile.Services;
 using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database;
 using HorseTrackingMobile.Services.Database.ActivityServices;
+using HorseTrackingMobile.Services.Database.CompetitionService;
 using HorseTrackingMobile.Services.Database.HorseServices;
 using HorseTrackingMobile.Services.Database.NutritionServices;
 using HorseTrackingMobile.Services.Database.ShareHorseServices;
@@ -29,7 +30,7 @@ namespace HorseTrackingMobile
             services.AddSingleton<INutritionService, NutritionService>();
             services.AddSingleton<IEncrypt, Encrypt>();
             services.AddSingleton<IShareHorseServices, ShareHorseServices>();
-
+            services.AddSingleton<ICompetitionService, CompetitionService>();
             return services;
         }
 
@@ -51,6 +52,8 @@ namespace HorseTrackingMobile
             services.AddTransient<ShareHorseViewModel>();
             services.AddTransient<ScanHorseViewModel>();
             services.AddTransient<ShareHorseSearchViewModel>();
+
+            services.AddTransient<CompetitionViewModel>();
             return services;
         }
     }

@@ -1,38 +1,52 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Widok główny aplikacji}}{2}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Widok kalendarza aplikacji}}{3}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Widok kalendarza aplikacji}}{4}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architektura platformy Xamarin}}{5}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Architektura platformy Xamarin.Android}}{6}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Logo systemu NuGet}}{6}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Przepływ informacji}}{7}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Logo Figmy}}{7}{}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces przepływ informacji}}{8}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architektura platformy Xamarin}}{7}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architektura platformy Xamarin.Android}}{8}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Logo systemu NuGet}}{8}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Przepływ informacji}}{9}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Logo git}}{9}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Logo github}}{10}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Logo sourcetree}}{10}{}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Logo Figmy}}{11}{}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces przepływ informacji}}{11}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{15}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{16}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Use Case dla aplikacji desktopowej}}{19}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Use Case dla aplikacji mobilnej}}{20}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{41}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{60}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{62}{}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram ERD}}{44}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Logiczny schemat bazy danych}}{63}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Fizyczny schemat bazy danych}}{65}{}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagram przedstawiający architekturę MVVM }}{67}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Diagram stanu - koń}}{69}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagram aktywności logowanie}}{69}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Fragment diagramu klas}}{69}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Diagram sekwencji - udostępnianie koni}}{70}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Panel logowania}}{64}{}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Strona statystyk}}{65}{}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Strona wizyt}}{66}{}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Szczegóły wizyty}}{67}{}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Dodawanie wizyt}}{67}{}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Strona żywienia}}{68}{}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Dodawanie żywienia}}{69}{}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Edycja żywienia}}{69}{}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Strona zawodów}}{70}{}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces \centering Logowanie do aplikacji.}}{71}{}%
-\contentsline {figure}{\numberline {7.11}{\ignorespaces \centering Błędne dane logowania.}}{71}{}%
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Ekran aktywności.}}{72}{}%
-\contentsline {figure}{\numberline {7.13}{\ignorespaces \centering Okno dodawania aktywności.}}{73}{}%
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Okno dodawania aktywności rozszerzone.}}{73}{}%
-\contentsline {figure}{\numberline {7.15}{\ignorespaces \centering Szczegóły aktywności.}}{74}{}%
-\contentsline {figure}{\numberline {7.16}{\ignorespaces \centering Okno wizyt.}}{75}{}%
-\contentsline {figure}{\numberline {7.17}{\ignorespaces \centering Szczegóły wizyty.}}{75}{}%
-\contentsline {figure}{\numberline {7.18}{\ignorespaces \centering Plany żywienia.}}{76}{}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Panel logowania}}{82}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Strona statystyk}}{83}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Strona wizyt}}{84}{}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Szczegóły wizyty}}{85}{}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Dodawanie wizyt}}{85}{}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Strona żywienia}}{86}{}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Dodawanie żywienia}}{87}{}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Edycja żywienia}}{87}{}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Strona zawodów}}{88}{}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces \centering Logowanie do aplikacji.}}{89}{}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces \centering Błędne dane logowania.}}{89}{}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Ekran aktywności.}}{90}{}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces \centering Okno dodawania aktywności.}}{91}{}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Okno dodawania aktywności rozszerzone.}}{91}{}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces \centering Szczegóły aktywności.}}{92}{}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces \centering Okno wizyt.}}{93}{}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces \centering Szczegóły wizyty.}}{93}{}%
+\contentsline {figure}{\numberline {7.18}{\ignorespaces \centering Plany żywienia.}}{94}{}%
+\contentsline {figure}{\numberline {7.19}{\ignorespaces \centering Okno przedstawiające starty w zawodach.}}{95}{}%
+\contentsline {figure}{\numberline {7.20}{\ignorespaces \centering Panel udostępniania.}}{96}{}%
+\contentsline {figure}{\numberline {7.21}{\ignorespaces \centering Udostępnianie koni przez QR.}}{97}{}%
+\contentsline {figure}{\numberline {7.22}{\ignorespaces \centering Udostępnianie koni przez wyszukiwarkę.}}{97}{}%
 \addvspace {10\p@ }

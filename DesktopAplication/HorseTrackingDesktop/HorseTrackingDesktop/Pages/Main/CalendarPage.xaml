@@ -4,12 +4,47 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:HorseTrackingDesktop.View"
+      xmlns:main="clr-namespace:HorseTrackingDesktop.PageModel.Main"
+      d:DataContext="{d:DesignInstance Type=main:CalendarPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CalendarPage">
 
     <Grid Background="White" Margin="50,30,0,0">
-        <Label Content="Kalendarz"
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+        <Label Content="Kalendarz najważniejszych wydarzeń"
                Style="{StaticResource TitleLabel}" />
+
+        <ItemsControl ItemsSource="{Binding ListOfEvents}"
+                      Grid.Row="1">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10" Width="350">
+                        <Grid Background="{StaticResource MainGreenBrush}" />
+                        <Border BorderBrush="{StaticResource MainGreenBrush}"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                MouseEnter="Border_MouseEnter"
+                                MouseLeave="Border_MouseLeave"
+                                Opacity="0.6">
+                            <StackPanel Margin="10">
+                                <Label Content="{Binding Data, StringFormat=dd.MM.yyyy}"
+                                       FontSize="20" />
+                                <Label Content="{Binding Name}"
+                                       FontSize="14" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Page>

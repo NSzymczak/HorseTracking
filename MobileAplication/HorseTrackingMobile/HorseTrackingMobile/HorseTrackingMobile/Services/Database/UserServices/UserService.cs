@@ -69,49 +69,63 @@ namespace HorseTrackingMobile.Database.UserServices
 
         public User GetLoggedUser(int id)
         {
-            var query = $"SELECT * FROM UserAcounts WHERE userID={id}";
-
-            var cmd = new SqlCommand(query, _connectionService.GetConnection());
-            var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                return new User()
+                var query = $"SELECT * FROM UserAcounts WHERE userID={id}";
+
+                var cmd = new SqlCommand(query, _connectionService.GetConnection());
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
                 {
-                    Id = Convert.ToInt32(reader["userID"]),
-                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
-                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
-                    Login = reader["login"].ToString(),
-                    Hash = reader["hash"].ToString(),
-                    Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDateTime"]
-                };
+                    return new User()
+                    {
+                        Id = Convert.ToInt32(reader["userID"]),
+                        Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                        Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                        Login = reader["login"].ToString(),
+                        Hash = reader["hash"].ToString(),
+                        Salt = reader["salt"].ToString(),
+                        CreatedDate = (DateTime)reader["createdDateTime"]
+                    };
+                }
+                return null;
             }
-            return null;
+            catch
+            {
+                return null;
+            }
         }
 
         public List<User> GetTrainers()
         {
-            var query = $"Select * from UserAcounts where typeID = 4";
-
-            var cmd = new SqlCommand(query, _connectionService.GetConnection());
-            var reader = cmd.ExecuteReader();
-
-            List<User> userList = new List<User>();
-            while (reader.Read())
+            try
             {
-                userList.Add(new User()
+                var query = $"Select * from UserAcounts where typeID = 4";
+
+                var cmd = new SqlCommand(query, _connectionService.GetConnection());
+                var reader = cmd.ExecuteReader();
+
+                List<User> userList = new List<User>();
+                while (reader.Read())
                 {
-                    Id = Convert.ToInt32(reader["userID"]),
-                    Type = GetUserType(Convert.ToInt32(reader["typeID"])),
-                    Details = GetDetails(Convert.ToInt32(reader["detailID"])),
-                    Login = reader["login"].ToString(),
-                    Hash = reader["hash"].ToString(),
-                    Salt = reader["salt"].ToString(),
-                    CreatedDate = (DateTime)reader["createdDateTime"]
-                });
+                    userList.Add(new User()
+                    {
+                        Id = Convert.ToInt32(reader["userID"]),
+                        Type = GetUserType(Convert.ToInt32(reader["typeID"])),
+                        Details = GetDetails(Convert.ToInt32(reader["detailID"])),
+                        Login = reader["login"].ToString(),
+                        Hash = reader["hash"].ToString(),
+                        Salt = reader["salt"].ToString(),
+                        CreatedDate = (DateTime)reader["createdDateTime"]
+                    });
+                }
+                return userList;
             }
-            return userList;
+            catch (Exception ex)
+            {
+                return new List<User> { };
+            }
         }
 
         public User GetTrainer(int id)

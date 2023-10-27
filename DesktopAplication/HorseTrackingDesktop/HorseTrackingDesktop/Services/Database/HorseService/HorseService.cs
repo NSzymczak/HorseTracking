@@ -45,7 +45,6 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
         {
             var horses = _context.Horses.Where(x => x.UserId == id &&
                                               (x.Status.Name == StatusEnum.active.ToString() ||
-                                               x.Status.Name == StatusEnum.sent.ToString() ||
                                                x.Status.Name == StatusEnum.shared.ToString())).ToList();
 
             foreach (var horse in horses)

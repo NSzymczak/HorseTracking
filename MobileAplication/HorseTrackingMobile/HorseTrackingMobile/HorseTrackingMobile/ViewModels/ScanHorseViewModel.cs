@@ -14,7 +14,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace HorseTrackingMobile.ViewModels
 {
-    internal class ScanHorseViewModel : BaseViewModel
+    public class ScanHorseViewModel : BaseViewModel
     {
         private readonly IEncrypt _encrypt;
         private readonly IHorseService _horseService;

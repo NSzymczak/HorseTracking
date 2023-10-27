@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseTrackingMobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,17 @@ namespace HorseTrackingMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CompetitionView : ContentPage
     {
+        private CompetitionViewModel viewModel;
+
         public CompetitionView()
         {
             InitializeComponent();
+            viewModel = Startup.ServiceProvider.GetService<CompetitionViewModel>();
+            BindingContext = viewModel;
+            Appearing += (s, e) =>
+            {
+                viewModel.Load();
+            };
         }
     }
 }
