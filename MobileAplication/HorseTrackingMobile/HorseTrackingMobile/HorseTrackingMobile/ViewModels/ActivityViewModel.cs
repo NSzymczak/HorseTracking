@@ -85,7 +85,9 @@ namespace HorseTrackingMobile.ViewModels
         {
             _appState.HorseList = _horseService.GetHorsesForUser();
             Horses = new ObservableCollection<Horse>(_appState.HorseList);
+            OnPropertyChanged(nameof(Horses));
             CurrentHorse = _appState.CurrentHorse;
+            OnPropertyChanged(nameof(CurrentHorse));
             LoadActivityUI();
         }
 
