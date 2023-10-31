@@ -54,6 +54,8 @@ namespace HorseTrackingMobile
             services.AddTransient<ShareHorseSearchViewModel>();
 
             services.AddTransient<CompetitionViewModel>();
+
+            services.AddTransient<ChangePasswordViewModel>();
             return services;
         }
     }

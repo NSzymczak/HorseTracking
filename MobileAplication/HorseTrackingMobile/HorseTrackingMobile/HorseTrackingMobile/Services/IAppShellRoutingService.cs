@@ -23,5 +23,7 @@ namespace HorseTrackingMobile.Services
         void GoToShareHorses();
 
         void GoToShareBySearch();
+
+        void GoToChangePassword();
     }
 }

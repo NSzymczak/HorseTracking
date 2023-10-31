@@ -27,6 +27,7 @@ namespace HorseTrackingMobile.Services
             Routing.RegisterRoute(nameof(ShareHorseView), typeof(ShareHorseView));
             Routing.RegisterRoute(nameof(ShareManagmentView), typeof(ShareManagmentView));
             Routing.RegisterRoute(nameof(ShareHorseSearchView), typeof(ShareHorseSearchView));
+            Routing.RegisterRoute(nameof(ChangePasswordView), typeof(ChangePasswordView));
         }
 
         public void GoToApplication()
@@ -82,6 +83,11 @@ namespace HorseTrackingMobile.Services
         public void GoToShareBySearch()
         {
             Shell.Current.GoToAsync(nameof(ShareHorseSearchView));
+        }
+
+        public void GoToChangePassword()
+        {
+            Shell.Current.GoToAsync(nameof(ChangePasswordView));
         }
     }
 }

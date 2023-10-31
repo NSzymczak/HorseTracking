@@ -31,5 +31,10 @@ namespace HorseTrackingMobile
         {
             RoutingServices.GoToShareManagment();
         }
+
+        private void ChangePassword(object sender, EventArgs e)
+        {
+            RoutingServices.GoToChangePassword();
+        }
     }
 }

@@ -450,10 +450,10 @@ namespace HorseTrackingDesktop.Models
                     .IsUnicode(false)
                     .HasColumnName("number");
 
-                entity.Property(e => e.PhoneNumber)
+                entity.Property(e => e.Phone)
                     .HasMaxLength(20)
                     .IsUnicode(false)
-                    .HasColumnName("phoneNumber");
+                    .HasColumnName("phone");
 
                 entity.Property(e => e.PostalCode)
                     .HasMaxLength(10)
@@ -644,12 +644,6 @@ namespace HorseTrackingDesktop.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("login");
-
-                entity.Property(e => e.Salt)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("salt");
 
                 entity.Property(e => e.TypeId).HasColumnName("typeID");
 
