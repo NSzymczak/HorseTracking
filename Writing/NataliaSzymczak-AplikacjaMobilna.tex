@@ -2568,7 +2568,7 @@ Diagram sekwencji pozwala na zaprezentowanie w sposób graficzny interakcji mię
 	\textit{Źródło: Opracowanie własne}
 	\label{DiagramSekwencjiUdostępnianie}
 \end{figure}
-
+\newpage
 \section{Wybrane aspekty implementacyjne}
 W tym rozdziale przedstawione zostały wybrane fragmenty implementacji aplikacji mobilnej oraz desktopowej. Zaprezentowana została implementacja architektury aplikacji oraz wzorce projektowe przedstawione wcześniej. Przedstawione zostaną także niektóre z nuggetów opisane wcześniej oraz inne ciekawe aspekty implementacji.
 \subsubsection{Implementacja architektury MVVM}
@@ -2894,6 +2894,48 @@ W aplikacji desktopowej zastosowano dwa konwertery dotyczące widoczności obiek
 	}
 \end{lstlisting}
 \subsubsection{Hash i salt}
+Aby bezpiecznie przechowywać hasła w bazie danych należy je zaszyfrować. Hasła powinny być zapisane w taki sposób, aby po ich wycieku nie dało się ich odszyfrować. Odpowiednim algorytmem jest algorytm hashujący, ponieważ po zakodowaniu nim nie da się już odszyfrować danych. Paczka wybrana do implementacji używa hash i salt, zapisuje je w jednej zmiennej, aby następnie móc sprawdzić czy podane przez użytkownika hasło jest prawidłowe. Hasło hashujemy po jego utworzeniu oraz po zmianie(patrz listing \ref{hash})
+\newline
+\begin{lstlisting} [ caption={Hashowanie po zmienie hasła}, label={hash}]	
+ public bool ChangePassword(int id, string newPassword, string oldPassword)
+{
+	var hashNew = PasswordHasher.Hash(newPassword);
+	var user = GetUser(id);
+	if (PasswordHasher.Validate(oldPassword, user.Hash))
+	{
+		var query = $"UPDATE UserAcounts " +
+		$"SET hash = '{hashNew}' " +
+		$"WHERE userID = {id}";
+		
+		var cmd = new SqlCommand(query, _connectionService.GetConnection());
+		cmd.ExecuteReader();
+		return true;
+	}
+	return false;
+}
+\end{lstlisting}
+Po za hasho'waniu haseł są one bezpieczne w bazie. Jednakże sprawdzenie poprawności logowania nie polega teraz jedynie na porównaniu dwóch stringów. Aby sprawdzić poprawność hasła używamy specjalnej metody pokazanej w linii 8 listingu \ref{validatePass}.
+\newline
+\begin{lstlisting} [ caption={Sprawdzenie poprawności hasła}, label={validatePass}]	
+LoginCommand = new Command(() =>
+{
+	if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
+		return;
+	var user = _userService.GetUser(ReadedLogin);
+	if (user != null)
+	{
+		if (PasswordHasher.Validate(ReadedPassword, user.Hash))
+		{
+			_appState.CurrentUser = user;
+			GoToTheApp();
+			return;
+		}
+	}
+	
+	IncorrectData();
+	return;
+});	
+\end{lstlisting}
 \newpage
 \chapter{Dokumentacja użytkownika}
 \section{Aplikacja desktopowa}
@@ -2944,7 +2986,15 @@ Szczegóły konkretnej wizyty można obejrzeć klikając dwa razy na wiersz w ta
 		\end{minipage}
 	\end{center}
 \end{figure}
-Na dole głównego ekranu znajdują się trzy przyciski pozwalające na zarządzanie wizytami. Po kliknięciu przycisku dodaj otworzy się nowe okno pozwalające dodać nową wizytę (patrz rys.\ref{DodajWizyty}). W oknie tym możemy wybrać konia, lekarza oraz dodać opis wizyty i zapisać koszta z nią związane. Data wizyty automatycznie ustawiona jest na dzisiejszą, jednakże można ją dowolnie modyfikować. Oprócz przycisku "dodaj" dostępny jest także przycisk "edytuj". Przycisk ten pozwala na edycje obecnie zaznaczonej wizyty. Otwiera on to samo okno co przy dodawaniu, jednakże tym razem widok jest już wypełniony danymi. Ostatni z przycisków, przycisk "usuń" pozwala na usunięcie obecnie zaznaczonej wizyty. Na oknie dodawania wizyt dostępny jest przycisk dodania zdjęcia. Przycisk ten przenosi użytkownika na nowe okno, w którym możliwe jest wgranie zdjęcia z komputera i zapisanie go do bazy danych.
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{zdjęcieWizyta}
+\caption{Dodawanie zdjęcia do wizyty}
+\textit{Źródło: Opracowanie własne}
+\label{Dodaj zdjęcie}
+\end{figure}
+
+Na dole głównego ekranu znajdują się trzy przyciski pozwalające na zarządzanie wizytami. Po kliknięciu przycisku dodaj otworzy się nowe okno pozwalające dodać nową wizytę (patrz rys.\ref{DodajWizyty}). W oknie tym możemy wybrać konia, lekarza oraz dodać opis wizyty i zapisać koszta z nią związane. Data wizyty automatycznie ustawiona jest na dzisiejszą, jednakże można ją dowolnie modyfikować. Oprócz przycisku "dodaj" dostępny jest także przycisk "edytuj". Przycisk ten pozwala na edycje obecnie zaznaczonej wizyty. Otwiera on to samo okno co przy dodawaniu, jednakże tym razem widok jest już wypełniony danymi. Ostatni z przycisków, przycisk "usuń" pozwala na usunięcie obecnie zaznaczonej wizyty. {\color{red}Na oknie dodawania wizyt dostępny jest przycisk dodania zdjęcia. Przycisk ten przenosi użytkownika na nowe okno, w którym możliwe jest wgranie zdjęcia z komputera i zapisanie go do bazy danych (patrz rys. \ref{Dodaj zdjęcie}).}
 
 \begin{figure}[h]
 	\centering
@@ -2955,10 +3005,6 @@ Na dole głównego ekranu znajdują się trzy przyciski pozwalające na zarządz
 \end{figure}
 
 Na menu bocznym dostępna jest także zakładka "Żywienie" pozwalająca na zarządzanie planami żywienia. Po kliknięciu zostajemy przeniesieni na stronę widoczną na rysunku \ref{Zywienie}. Dla każdego z koni można ustawić jego indywidualny plan, poprzez kliknięcie przycisku ,,dodaj plan''. Jest on całkowicie modyfikowalny, może zawierać dowolną ilość posiłków podawanych o dowolnej porze dnia, każdy posiłek może zawierać wiele składników w różnych ilościach. \textcolor{red}{Pory posiłków oraz ich nazwy można ustawić po kliknięciu przycisku ustawienia. W tym miejscu można także dodać nowe rodzaje składników posiłku takich jak pasze, warzywa itp..} Wiele koni może być aktualnie na tej samej diecie i stosować ten sam plan żywienia. Na dole planu wypisane są imiona koni, które aktualnie są na tej diecie co pozwala na łatwą identyfikację. Każdy z planów ma swój kolor dzięki czemu użytkownik od razu wie na który plan spojrzeć. Pory posiłków zostały napisane wytłuszczoną czcionką, co poprawienia czytelności. Na tej stronie można zapisać dowolnie wiele planów żywienia, nie każdy z nich musi być obecnie używany. Jeśli zostanie zapisane więcej danych niż może zmieścić ekran pojawią się suwaki dzięki, którym można obserwować wszystkie zapisane informacje.
-
-Jak zostało wcześniej wspomniane, aby dodać kolejne plany należy kliknąć przycisk "dodaj plan". Kliknięcie go powoduje otwarcie nowego okna widocznego na rysunku \ref{DodajZywienie}. W oknie tym możemy nadać tytuł naszemu planu wybrać kolor, dodać opis oraz stworzyć plan poprzez dodawanie kolejnych składników oraz posiłków.  Każdy wybrany przez nas składnik musi podawany być w odpowiedniej ilości, aby konie zdrowo się odżywiały w tym celu przy każdej paszy którą mamy do wyboru dostępne jest pole do wpisania ilości oraz miejsce w którym możemy wybrać w jakiej miarze została podana ilość. 
-
-Możliwa jest także późniejsza edycja planów poprzez kliknięcie przycisku edytuj na stronie głównej. W tym przypadku otwiera się to samo okno co przy dodawaniu planu jednakże jest ono już uzupełnione danymi (patrz. rys \ref{EdytujZywienie}). Po dodaniu bądź edycji planu użytkownik zostanie przekierowany na stronę główną. Jeśli dodany plan go nie satysfakcjonuje można go usunąć klikając przycisk usuń.
 
 \begin{figure} [H]
 	\begin{center}
@@ -2980,7 +3026,12 @@ Możliwa jest także późniejsza edycja planów poprzez kliknięcie przycisku e
 	\end{center}
 \end{figure}
 
-Na menu bocznym dostępną mamy także zakładkę zawody. Po kliknięciu w nią użytkownik przeniesiony zostanie na stronę gdzie możliwe jest zarządzanie zawodami. Po wejściu widzimy listę zawodów oraz puste miejsce po prawej stronie. Kliknięciu w dowolne zawody dostępne na liście spowoduje pojawienie się po prawej stronie od listy, spisu konkursów dostępnych na tych zawodach. Jeśli jakiś koń jest już zapisany na te zawody jego imię pojawi się pod każdym z konkursów w których bierze udział. Jeśli zawody są już zakończone wyniki konia będą uzupełnione. 
+Jak zostało wcześniej wspomniane, aby dodać kolejne plany należy kliknąć przycisk "dodaj plan". Kliknięcie go powoduje otwarcie nowego okna widocznego na rysunku \ref{DodajZywienie}. W oknie tym możemy nadać tytuł naszemu planu wybrać kolor, dodać opis oraz stworzyć plan poprzez dodawanie kolejnych składników oraz posiłków.  Każdy wybrany przez nas składnik musi podawany być w odpowiedniej ilości, aby konie zdrowo się odżywiały w tym celu przy każdej paszy którą mamy do wyboru dostępne jest pole do wpisania ilości oraz miejsce w którym możemy wybrać w jakiej miarze została podana ilość. 
+
+Możliwa jest także późniejsza edycja planów poprzez kliknięcie przycisku edytuj na stronie głównej. W tym przypadku otwiera się to samo okno co przy dodawaniu planu jednakże jest ono już uzupełnione danymi (patrz. rys \ref{EdytujZywienie}). Po dodaniu bądź edycji planu użytkownik zostanie przekierowany na stronę główną. Jeśli dodany plan go nie satysfakcjonuje można go usunąć klikając przycisk usuń.
+
+
+Na menu bocznym dostępną mamy także zakładkę zawody. Po kliknięciu w nią użytkownik przeniesiony zostanie na stronę gdzie możliwe jest zarządzanie zawodami. Po wejściu widoczna jest lista zawodów oraz puste miejsce po prawej stronie. Kliknięciu w dowolne zawody dostępne na liście spowoduje pojawienie się po prawej stronie od listy, spisu konkursów dostępnych na tych zawodach. Jeśli jakiś koń jest już zapisany na te zawody jego imię pojawi się pod każdym z konkursów w których bierze udział. Jeśli zawody są już zakończone wyniki konia powinny zostać uzupełnione. 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{zawody}
@@ -2988,11 +3039,67 @@ Na menu bocznym dostępną mamy także zakładkę zawody. Po kliknięciu w nią 
 \textit{Źródło: Opracowanie własne}
 \label{StronaZawodow}
 \end{figure}
-Aby dodać nowego konia do zawodów należy kliknąć w nazwę konkursu. Poskutkuje to otwarciem nowego okna z wyborem konia, którego chcemy dodać. Po zakończonych zawodach możemy dodać wyniki naszego konia uzupełniając odpowiednie pola. Możemy także usunąć start konia w zawodach klikając przycisk usuń.
+Aby dodać nowego konia do zawodów należy kliknąć w nazwę konkursu. Poskutkuje to otwarciem nowego okna z wyborem konia, którego do dodania. W oknie tym widoczne będą wszystkie konie danego użytkownika. Po zatwierdzeniu koń zostanie dodany do tych zawodów. Wyniki konia będą puste, ponieważ aplikacja umożliwia także planowanie przyszłych startów. Dopiero zakończonych zawodach można dodać wyniki dowolnego konia uzupełniając pola w wybranych konkursach przy imieniu odpowiedniego konia. W razie pomyłki i nieprawidłowego zapisania wystarczy edytować pole z błędem. Zmiany zapiszą  się w bazie automatycznie. aby usunąć start konia w zawodach wystarczy kliknąć przycisk usuń przy jego imieniu.
+
+\begin{figure} [H]
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{dodajZawody}
+			\caption{Dodawanie \newline \centering zawodów}
+			\textit{Źródło: Opracowanie własne}
+			\label{dodajZawody}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{edytujZawody}
+			\caption{Edycja zawodów}
+			\textit{Źródło: Opracowanie własne}
+			\label{edytujZawody}
+		\end{minipage}
+	\end{center}
+\end{figure}
+Możliwe jest także dodawanie, edytowanie oraz usuwanie całych zawodów. Dodawanie odbywa się poprzez nowe okno widoczne na rys.\ref{dodajZawody}. W oknie tym można uzupełnić wszystkie niezbędne informacje, dodać dowolną ilość konkursów oraz zapisać stworzone zawody. Okno edycji widoczne na rys. \ref{edytujZawody} jest praktycznie identyczne co okno dodawania zawodów jednakże przy edycji uzupełnione jest ono wcześniej podanymi danymi.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{kalendarz}
+\caption{Strona z kalendarzem}
+\textit{Źródło: Opracowanie własne}
+\label{Kalendarz}
+\end{figure}
+W menu bocznym dostępna jest także ikona kalendarza. Po kliknięciu tej ikony użytkownik zostaje przeniesiony na stronę z widokiem różnych wydarzeń wprowadzonych do aplikacji. W tym miejscu można spojrzeć kiedy koń miał ostatnio wizytę, jakie aktywności wykonywał kiedy są jakie zawody. Wszystkie informacje z różnych zakładek aplikacji dostępne w skróconej formie na jednym oknie. Kalendarz jest przejrzysty zawiera nie wiele szczegółów, a wydarzenia w nim dostępne posegregowane są od najnowszego do najstarszego. Po najechaniu myszką na konkretny kafelek z listy staje się on wyraźniejszy oraz jego tło zmienia się na zielone. Z tego widoku nie możemy edytować żadnych wizyty bądź aktywności. Jest to widok przeznaczony tylko i wyłącznie do wyświetlania informacji.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieUzytkownikami}
+\caption{Zarządzanie użytkownikami}
+\textit{Źródło: Opracowanie własne}
+\label{Uzytkownicy}
+\end{figure}
+Zakładka konta jest dostępna jedynie dla użytkownika o prawach administratora. Po wejściu w tą zakładkę możliwe jest zarządzanie użytkownikami (patrz rys.\ref{Uzytkownicy}). Dodawanie nowych użytkowników poprzez wpisanie ich danych do tabeli, edycja tych danych, bądź usunięcie poprzez naciśnięcie klawisza delete. Dostępny jest także przycisk pozwalający na zresetowanie hasła użytkownika widoczny poniżej tabeli.
+
+Z tej zakładki możemy także zarządzać końmi (patrz rys.\ref{Konie}) oraz lekarzami, kowalami (patrz rys.\ref{Specjalisci}) dostępnymi w naszej aplikacji. W przypadku koni usunięcie konia możliwe jest poprzez kliknięcie przycisku usuń po niżej tabeli. Obok tego przycisku dostępny jest także przycisk zmień właściciela, pozwalający na przypisanie konia do innego użytkownika poprzez małe okno dialogowe. W zarządzaniu specjalistami jakimi są lekarze oraz kowale także możliwe jest dodawanie, edytowanie oraz usuwanie danych. Dwie pierwsze dostępne są poprzez uzupełnienie tabeli, zaś usuwanie odbywa się po naciśnięciu przycisku. Możemy także dodawać nowe specjalizacje poprzez kliknięcie przycisku "dodaj specjalizacje".
+
+Wszystkie tabele są sformatowane i dostosowane do danych przechowywanych w aplikacji. Podczas dodawania nowych obiektów część pól tabeli jest zwykły polem tekstowym, a część jest dostępna jako rozwijane listy z predefiniowanymi elementami.
 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieKonmi}
+\caption{Zarządzanie końmi}
+\textit{Źródło: Opracowanie własne}
+\label{Konie}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieSpecjalistami}
+\caption{Zarządzanie lekarzami, kowalami itp}
+\textit{Źródło: Opracowanie własne}
+\label{Specjalisci}
+\end{figure}
 
-{\color{red} Ustawienia, Zarządzanie kontami, kalendarz}
+
+{\color{red} Ustawienia}
 \newpage
 \section{Aplikacja mobilna}
 Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności koni, ich wizyt u lekarzy, kowali jak także do zarządzania zawodami.
@@ -3013,7 +3120,7 @@ Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności k
 \end{wrapfigure}
 Po pierwszym otwarciu aplikacji użytkownikowi ukaże się okno logowania przedstawione na rysunku \ref{LoginView}. 
 
-Na tym ekranie użytkownik może zalogować się do aplikacji. \textcolor{red}{Możliwa jest także opcja zresetowania swojego hasła, w przypadku zapomnienia hasła}. Rejestracja do aplikacji nie jest możliwa, ponieważ ta funkcja jest dostępna jedynie dla administratora w aplikacji desktopowej. Po wprowadzeniu loginu i hasła, a następnie kliknięciu przycisku "Zaloguj" sprawdzana jest poprawność wprowadzonych danych. 
+Na tym ekranie użytkownik może zalogować się do aplikacji. Możliwa jest także opcja zresetowania swojego hasła, w przypadku zapomnienia hasła poprzez zgłoszenie tego administratorowi. Rejestracja do aplikacji nie jest możliwa, ponieważ ta funkcja jest dostępna jedynie dla administratora w aplikacji desktopowej. Po wprowadzeniu loginu i hasła, a następnie kliknięciu przycisku "Zaloguj" sprawdzana jest poprawność wprowadzonych danych. 
 
 Jeśli przy próbie zalogowania podane zostaną nieprawidłowe dane logowania, bądź użytkownika nie ma w systemie, zostanie on o tym poinformowany (patrz. rys \ref{LoginViewWrongPassword})
 Użytkownik nieposiadający koni (użytkownik typu appOwner) nie może zalogować się do aplikacji mobilnej, ponieważ służy ona tylko do wpisywania danych o swoich koniach.

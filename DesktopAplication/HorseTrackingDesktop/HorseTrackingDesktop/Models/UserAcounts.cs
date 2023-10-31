@@ -22,7 +22,6 @@ namespace HorseTrackingDesktop.Models
         public int DetailId { get; set; }
         public string Login { get; set; }
         public string Hash { get; set; }
-        public string Salt { get; set; }
         public DateTime? CreatedDateTime { get; set; }
 
         public virtual PeopleDetails Detail { get; set; }

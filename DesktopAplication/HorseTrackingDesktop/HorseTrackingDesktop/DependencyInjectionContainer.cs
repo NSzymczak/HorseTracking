@@ -9,7 +9,6 @@ using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.NutritionService;
 using HorseTrackingDesktop.Services.Database.UserService;
 using HorseTrackingDesktop.Services.Database.VisitService;
-using HorseTrackingDesktop.Services.Hasher;
 using HorseTrackingDesktop.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,7 +24,6 @@ namespace HorseTrackingDesktop
             services.AddSingleton<IHorseService, HorseService>();
             services.AddSingleton<INutritionService, NutritionService>();
             services.AddSingleton<ICompetitionService, CompetitionService>();
-            services.AddSingleton<IHasher, Hasher>();
             services.AddSingleton<ICalendarService, CalendarService>();
             services.AddSingleton<HorseTrackingContext>();
             return services;

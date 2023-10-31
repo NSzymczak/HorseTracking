@@ -13,6 +13,8 @@ namespace HorseTrackingMobile.Services.Database.UserServices
 
         User GetUser(string login, string password);
 
+        User GetUser(string login);
+
         List<User> GetTrainers();
 
         User GetTrainer(int id);
@@ -20,5 +22,7 @@ namespace HorseTrackingMobile.Services.Database.UserServices
         PeopleDetails GetDetails(int id);
 
         User GetHorseOwner(string horseID);
+
+        bool ChangePassword(int id, string newPassword, string oldPassword);
     }
 }

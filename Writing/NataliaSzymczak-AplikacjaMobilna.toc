@@ -47,17 +47,17 @@
 \contentsline {subsubsection}{Diagramy aktywności}{69}{}%
 \contentsline {subsubsection}{Diagram klas}{69}{}%
 \contentsline {subsubsection}{Diagram sekwencji}{69}{}%
-\contentsline {section}{\numberline {6.2}Wybrane aspekty implementacyjne}{70}{}%
+\contentsline {section}{\numberline {6.2}Wybrane aspekty implementacyjne}{71}{}%
 \contentsline {subsubsection}{Implementacja architektury MVVM}{71}{}%
 \contentsline {subsubsection}{INotifyPropertyChanged}{73}{}%
 \contentsline {subsubsection}{Dependency Injection}{74}{}%
 \contentsline {subsubsection}{Command i RelayCommand}{76}{}%
 \contentsline {subsubsection}{QRCode}{77}{}%
-\contentsline {subsubsection}{Kodowanie i odkodowanie}{78}{}%
+\contentsline {subsubsection}{Kodowanie i odkodowanie}{79}{}%
 \contentsline {subsubsection}{Własne kontrolki}{80}{}%
 \contentsline {subsubsection}{Konwertery}{81}{}%
-\contentsline {subsubsection}{Hash i salt}{81}{}%
-\contentsline {chapter}{\numberline {7}Dokumentacja użytkownika}{82}{}%
-\contentsline {section}{\numberline {7.1}Aplikacja desktopowa}{82}{}%
-\contentsline {section}{\numberline {7.2}Aplikacja mobilna}{89}{}%
-\contentsline {chapter}{\numberline {8}Podsumowanie}{98}{}%
+\contentsline {subsubsection}{Hash i salt}{82}{}%
+\contentsline {chapter}{\numberline {7}Dokumentacja użytkownika}{84}{}%
+\contentsline {section}{\numberline {7.1}Aplikacja desktopowa}{84}{}%
+\contentsline {section}{\numberline {7.2}Aplikacja mobilna}{96}{}%
+\contentsline {chapter}{\numberline {8}Podsumowanie}{105}{}%

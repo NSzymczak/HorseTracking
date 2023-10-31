@@ -8,7 +8,8 @@
       d:DataContext="{d:DesignInstance Type=main:CalendarPageModel}"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CalendarPage">
+      Title="CalendarPage"
+      Language="pl-PL">
 
     <Grid Background="White" Margin="50,30,0,0">
         <Grid.RowDefinitions>
@@ -36,8 +37,9 @@
                                 MouseLeave="Border_MouseLeave"
                                 Opacity="0.6">
                             <StackPanel Margin="10">
-                                <Label Content="{Binding Data, StringFormat=dd.MM.yyyy}"
-                                       FontSize="20" />
+                                <Label Content="{Binding Data, StringFormat='{}{0:dd.MM.yyyy}'}"
+       FontSize="20" />
+
                                 <Label Content="{Binding Name}"
                                        FontSize="14" />
                             </StackPanel>

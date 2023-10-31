@@ -27,7 +27,7 @@ namespace HorseTrackingDesktop.Dto
                 {
                     Name = professionalsDto.Name,
                     Surname = professionalsDto.Surname,
-                    PhoneNumber = professionalsDto.PhoneNumber,
+                    Phone = professionalsDto.PhoneNumber,
                     Email = professionalsDto.Email,
                     City = professionalsDto.City,
                     Street = professionalsDto.Street,
@@ -46,7 +46,7 @@ namespace HorseTrackingDesktop.Dto
                 Specialisation = professionals.Specialisation,
                 Name = professionals.Detail.Name,
                 Surname = professionals.Detail.Surname,
-                PhoneNumber = professionals.Detail.PhoneNumber,
+                PhoneNumber = professionals.Detail.Phone,
                 Email = professionals.Detail.Email,
                 City = professionals.Detail.City,
                 Street = professionals.Detail.Street,

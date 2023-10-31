@@ -11,6 +11,7 @@
             <StackLayout Orientation="Vertical" Grid.Column="1"
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
+                <Label Text="{Binding Title}" FontSize="30" />
                 <Label Text="Nieprawidłowy login lub hasło" TextColor="Red" IsVisible="{Binding WrongData}" />
                 <Label Text="Login" />
                 <Frame>
@@ -20,8 +21,8 @@
                 <Frame>
                     <Entry Text="{Binding ReadedPassword, Mode=TwoWay}" />
                 </Frame>
-                <Grid ColumnDefinitions="*">
-                    <Button Grid.Column="0"
+                <Grid RowDefinitions="*">
+                    <Button Grid.Row="0"
                         Text="Zaloguj"
                         Command="{Binding LoginCommand}" />
                 </Grid>

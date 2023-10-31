@@ -14,6 +14,7 @@ using HorseTrackingMobile.Services.Database.HorseServices;
 using System.Security.Cryptography;
 using HorseTrackingMobile.Services.AppState;
 using HorseTrackingMobile.Services.Database.ShareHorseServices;
+using PasswordHashing;
 
 namespace HorseTrackingMobile.ViewModels
 {
@@ -22,9 +23,9 @@ namespace HorseTrackingMobile.ViewModels
         private readonly IUserService _userService;
         private readonly IAppState _appState;
         private readonly IHorseService _horseService;
-        private readonly IShareHorseServices _shareHorseServices;
         public ICommand LoginCommand { get; }
 
+        public string Title { get; set; } = "Logowanie";
         public bool WrongData { get; set; }
 
         private string readedLogin;
@@ -43,35 +44,43 @@ namespace HorseTrackingMobile.ViewModels
             set => SetProperty(ref readedPassword, value);
         }
 
-        public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService, IShareHorseServices shareHorseServices)
+        public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService)
         {
             _userService = userService;
             _appState = appState;
             _horseService = horseService;
-            _shareHorseServices = shareHorseServices;
 
             LoginCommand = new Command(() =>
             {
                 if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
                     return;
-                var hashedPassword = ReadedPassword;
-                var user = _userService.GetUser(ReadedLogin, hashedPassword);
-                if (user == null)
+                var user = _userService.GetUser(ReadedLogin);
+                if (user != null)
                 {
-                    IncorrectData();
-                    return;
+                    if (PasswordHasher.Validate(ReadedPassword, user.Hash))
+                    {
+                        _appState.CurrentUser = user;
+                        GoToTheApp();
+                        return;
+                    }
                 }
-                _appState.CurrentUser = user;
-                GoToTheApp();
+
+                IncorrectData();
+                return;
             });
         }
 
         public void CheckLogin()
         {
-            if (Preferences.Get(PreferencesKeys.UserID, 0) != 0)
+            var id = Preferences.Get(PreferencesKeys.UserID, 0);
+            if (id != 0)
             {
-                _appState.CurrentUser = _userService.GetLoggedUser(Preferences.Get(PreferencesKeys.UserID, 0));
-                GoToTheApp();
+                var user = _userService.GetLoggedUser(id);
+                if (user != null)
+                {
+                    _appState.CurrentUser = user;
+                    GoToTheApp();
+                }
             }
         }
 
@@ -79,26 +88,6 @@ namespace HorseTrackingMobile.ViewModels
         {
             WrongData = true;
             OnPropertyChanged(nameof(WrongData));
-        }
-
-        private byte[] GenerateSalt(int length)
-        {
-            var bytes = new byte[length];
-
-            using (var rng = new RNGCryptoServiceProvider())
-            {
-                rng.GetBytes(bytes);
-            }
-
-            return bytes;
-        }
-
-        private byte[] GenerateHash(byte[] password, byte[] salt, int iterations, int length)
-        {
-            using (var deriveBytes = new Rfc2898DeriveBytes(password, salt, iterations))
-            {
-                return deriveBytes.GetBytes(length);
-            }
         }
 
         public void GoToTheApp()

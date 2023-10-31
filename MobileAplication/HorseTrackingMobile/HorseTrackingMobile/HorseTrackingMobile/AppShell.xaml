@@ -55,6 +55,8 @@
 
     <MenuItem Text="Udostępnianie koni" Clicked="ShareManagment">
     </MenuItem>
+    <MenuItem Text="Zmień hasło" Clicked="ChangePassword">
+    </MenuItem>
 
     <MenuItem Text="Logout" Clicked="Logout">
     </MenuItem>

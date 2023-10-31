@@ -45,8 +45,7 @@ userID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 typeID int NOT NULL,
 detailID int NOT NULL,
 login varchar(50) NOT NULL,
-hash varchar(50) NOT NULL,
-salt varchar(50) NOT NULL,
+hash varchar(MAX) NOT NULL,
 createdDateTime datetime
 FOREIGN KEY (typeID)
 REFERENCES UserTypes(typeID),

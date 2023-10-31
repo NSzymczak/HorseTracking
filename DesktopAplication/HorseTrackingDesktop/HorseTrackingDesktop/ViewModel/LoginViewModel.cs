@@ -2,8 +2,8 @@
 using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
 using HorseTrackingDesktop.Services.Database.UserService;
-using HorseTrackingDesktop.Services.Hasher;
 using HorseTrackingDesktop.View;
+using PasswordHashing;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,7 +14,6 @@ namespace HorseTrackingDesktop.ViewModel
     {
         private readonly IAppState _appState;
         private readonly IUserServices _userService;
-        private readonly IHasher _hasher;
 
         private string? _userLogin;
 
@@ -32,11 +31,10 @@ namespace HorseTrackingDesktop.ViewModel
             set => SetProperty(ref _userPassword, value);
         }
 
-        public LoginViewModel(IAppState appState, IUserServices userServices, IHasher hasher)
+        public LoginViewModel(IAppState appState, IUserServices userServices)
         {
             _appState = appState;
             _userService = userServices;
-            _hasher = hasher;
         }
 
         [RelayCommand]
@@ -52,13 +50,15 @@ namespace HorseTrackingDesktop.ViewModel
                 }
                 else
                 {
-                    await LogIn(user);
-                    window.Close();
-
-                    //if (_hasher.CheckPassword(UserPassword, user.Hash, user.Salt))
-                    //{
-                    //    await LogIn(user);
-                    //}
+                    if (PasswordHasher.Validate(UserPassword, user.Hash))
+                    {
+                        await LogIn(user);
+                        window.Close();
+                    }
+                    else
+                    {
+                        await IncorrectData();
+                    }
                 }
             }
         }
@@ -72,6 +72,7 @@ namespace HorseTrackingDesktop.ViewModel
 
         public Task IncorrectData()
         {
+            MessageBox.Show("Nieprawidłowe dane logowania");
             return Task.CompletedTask;
         }
     }

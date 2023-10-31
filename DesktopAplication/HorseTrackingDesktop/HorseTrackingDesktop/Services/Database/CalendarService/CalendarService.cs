@@ -36,7 +36,7 @@ namespace HorseTrackingDesktop.Services.Database.CalendarService
             {
                 listOfEvents.Add(new Events
                 {
-                    Data = visit.VisitDate,
+                    Data = visit.VisitDate.Date,
                     Name = $"{visit.Professional.Specialisation.Name}, {visit.Professional.Detail.Name} {visit.Professional.Detail.Surname} - {visit.Horse.Name}"
                 });
             }
@@ -62,7 +62,7 @@ namespace HorseTrackingDesktop.Services.Database.CalendarService
                     Name = $"Zawody - {competition.Rank} {competition.Spot}"
                 });
             }
-            return listOfEvents.OrderBy(x => x.Data);
+            return listOfEvents.OrderByDescending(x => x.Data);
         }
     }
 }
