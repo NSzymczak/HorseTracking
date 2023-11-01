@@ -1,5 +1,6 @@
 ﻿using HorseTrackingDesktop.Models;
 using HorseTrackingDesktop.Services.AppState;
+using HorseTrackingDesktop.Services.Database.CompetitionService;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.ViewModel;
 using LiveChartsCore;
@@ -12,6 +13,7 @@ using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +23,7 @@ namespace HorseTrackingDesktop.PageModel
     {
         private readonly IAppState _appState;
         private readonly IHorseService _horseService;
+        private readonly ICompetitionService _competitionService;
 
         private List<Activities> activities = new List<Activities>();
 
@@ -34,18 +37,20 @@ namespace HorseTrackingDesktop.PageModel
             {
                 _currentHorse = value;
                 _ = GetActivityTypeChartForHorse(CurrentHorse);
+                _ = GetCompetitionTypeChartForHorse(CurrentHorse);
             }
         }
 
-        public List<ISeries> ChartOneHorse { get; set; } = new List<ISeries>();
-        public List<ISeries> ChartAllHorses { get; set; } = new List<ISeries>();
-        public List<ISeries> Series { get; set; } = new List<ISeries>();
-        public List<ISeries> Series2 { get; set; } = new List<ISeries>();
+        public ObservableCollection<ISeries> ChartOneHorseActivity { get; set; } = new ObservableCollection<ISeries>();
+        public ObservableCollection<ISeries> ChartAllHorsesActivity { get; set; } = new ObservableCollection<ISeries>();
+        public ObservableCollection<ISeries> ChartOneHorseCompetition { get; set; } = new ObservableCollection<ISeries>();
+        public ObservableCollection<ISeries> ChartAllHorsesCompetition { get; set; } = new ObservableCollection<ISeries>();
 
-        public StatisticPageModel(IAppState appState, IHorseService horseService)
+        public StatisticPageModel(IAppState appState, IHorseService horseService, ICompetitionService competitionService)
         {
             _appState = appState;
             _horseService = horseService;
+            _competitionService = competitionService;
         }
 
         public async Task Load()
@@ -54,8 +59,11 @@ namespace HorseTrackingDesktop.PageModel
             if (Horses?.Count == 0)
                 return;
             CurrentHorse = Horses[0];
+
             await GetActivityTypeChartForHorse(CurrentHorse);
             await GetActivityTypeChartForAllHorses();
+            await GetCompetitionTypeChartForHorse(CurrentHorse);
+            await GetComprtitionTypeChartForAllHorses();
 
             OnPropertyChanged(nameof(CurrentHorse));
             OnPropertyChanged(nameof(Horses));
@@ -67,7 +75,7 @@ namespace HorseTrackingDesktop.PageModel
                 .Where(x => x.Date > DateTime.Now.AddDays(-300))
                 .GroupBy(x => x.ActivityType);
             if (data != null)
-                MakeChart(data, ChartOneHorse);
+                MakeChart(data, ChartOneHorseActivity);
         }
 
         private async Task GetActivityTypeChartForAllHorses()
@@ -83,10 +91,34 @@ namespace HorseTrackingDesktop.PageModel
             }
             var data = activities.Where(x => x.Date > DateTime.Now.AddDays(-300)).GroupBy(x => x.ActivityType);
             if (data != null)
-                MakeChart(data, ChartAllHorses);
+                MakeChart(data, ChartAllHorsesActivity);
         }
 
-        private void MakeChart(IEnumerable<IGrouping<int, Activities>> data, List<ISeries> series)
+        private async Task GetComprtitionTypeChartForAllHorses()
+        {
+            var participations = new List<Participations>();
+            foreach (var horses in Horses)
+            {
+                var horsesAct = await _competitionService.GetHorseParticipation(horses.HorseId);
+                foreach (var part in horsesAct)
+                {
+                    participations.Add(part);
+                }
+            }
+            var data = participations.GroupBy(x => x.Place);
+            if (data != null)
+                MakeChart(data, ChartAllHorsesCompetition);
+        }
+
+        public async Task GetCompetitionTypeChartForHorse(Horses horses)
+        {
+            var data = (await _competitionService.GetHorseParticipation(horses.HorseId))
+                .GroupBy(x => x.Place);
+            if (data != null)
+                MakeChart(data, ChartOneHorseCompetition);
+        }
+
+        private void MakeChart(IEnumerable<IGrouping<int, Activities>> data, ObservableCollection<ISeries> series)
         {
             series.Clear();
             foreach (var element in data)
@@ -99,7 +131,19 @@ namespace HorseTrackingDesktop.PageModel
                         Fill = new SolidColorPaint(new SKColor(activity.Color.R, activity.Color.G, activity.Color.B, activity.Color.A))
                     });
             }
-            OnPropertyChanged(nameof(ChartOneHorse));
+        }
+
+        private void MakeChart(IEnumerable<IGrouping<int?, Participations>> data, ObservableCollection<ISeries> series)
+        {
+            series.Clear();
+            foreach (var element in data)
+            {
+                series.Add(new PieSeries<int>
+                {
+                    Values = new int[] { element.Count() },
+                    Name = "Miejsce " + element.FirstOrDefault()?.Place.ToString() + ": "
+                });
+            }
         }
     }
 }
