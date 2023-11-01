@@ -19,5 +19,7 @@ namespace HorseTrackingDesktop.Services.Database.HorseService
         Task DeleteHorse(Horses horse);
 
         Task EditHorse(Horses horse);
+
+        Task<List<Activities>> GetHorseActivity(int horseID);
     }
 }

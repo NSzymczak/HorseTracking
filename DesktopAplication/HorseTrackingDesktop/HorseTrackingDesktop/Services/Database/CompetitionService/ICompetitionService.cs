@@ -24,5 +24,7 @@ namespace HorseTrackingDesktop.Services.Database.CompetitionService
         Task EditCompetition(Competitions competitions);
 
         Task RemoveParticipation(int id);
+
+        Task<List<Participations>> GetHorseParticipation(int horseId);
     }
 }

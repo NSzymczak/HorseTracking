@@ -116,5 +116,14 @@ namespace HorseTrackingDesktop.Services.Database.CompetitionService
             _context.Participations.Remove(participation);
             await _context.SaveChangesAsync();
         }
+
+        public Task<List<Participations>> GetHorseParticipation(int horseId)
+        {
+            var competiton = _context.Participations.Include(x => x.Contest)
+                                                    .ThenInclude(x => x.Competition)
+                                                    .Where(h => h.HorseId == horseId)
+                                                    .ToList();
+            return Task.FromResult(competiton);
+        }
     }
 }

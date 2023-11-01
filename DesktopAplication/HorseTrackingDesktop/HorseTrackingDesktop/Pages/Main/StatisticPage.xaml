@@ -11,10 +11,92 @@
       Title="StatisticPage">
 
     <Grid Background="White" Margin="50,30,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
         <Label Content="Statystyki Twoich koni"
-               Style="{StaticResource TitleLabel}" />
-        <lvc:PieChart x:Name="chart1"
-                      Series="{Binding Series}"
-                      AutoUpdateEnabled="true" />
+               Style="{StaticResource TitleLabel}"
+               Grid.Row="0" />
+        <ComboBox ItemsSource="{Binding Horses}"
+                          SelectedItem="{Binding CurrentHorse}"
+                          DisplayMemberPath="Name"
+                          Style="{StaticResource RoundedComboBox}"
+                          BorderBrush="Gray"
+                          HorizontalAlignment="Right"
+                          Width="200"
+                          Height="30"
+                          Grid.Column="1"
+                          Margin="40,0,65,0" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                  Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Label Content="Aktywności konia"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" />
+                <lvc:PieChart Series="{Binding ChartOneHorseActivity}"
+                              AutoUpdateEnabled="true"
+                              SourceUpdated="PieChart_SourceUpdated"
+                              Grid.Row="1" />
+            </Grid>
+
+            <Grid Grid.Row="0"
+                  Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Label Content="Aktywności twoich koni"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" />
+                <lvc:PieChart Series="{Binding ChartAllHorsesActivity}"
+                              AutoUpdateEnabled="true"
+                              Grid.Row="1" />
+            </Grid>
+            <Grid Grid.Row="2"
+                  Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Label Content="Zawody konia"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" />
+                <lvc:PieChart Series="{Binding ChartOneHorseCompetition}"
+                              AutoUpdateEnabled="true"
+                              Grid.Row="1" />
+            </Grid>
+
+            <Grid Grid.Row="2"
+                  Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Label Content="Zawody twoich koni"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" />
+                <lvc:PieChart Series="{Binding ChartAllHorsesCompetition}"
+                              AutoUpdateEnabled="true"
+                              Grid.Row="1" />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
