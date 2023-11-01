@@ -1,6 +1,7 @@
 ﻿using System;
+using HorseTrackingDesktop.Models;
 
-namespace HorseTrackingDesktop.Models.Dto
+namespace HorseTrackingDesktop.Dto
 {
     public class UserDto
     {
@@ -29,14 +30,13 @@ namespace HorseTrackingDesktop.Models.Dto
                 UserId = userDto.UserId,
                 Login = userDto.Login,
                 Hash = userDto.Hash,
-                Salt = userDto.Salt,
                 CreatedDateTime = userDto.CreatedDateTime,
                 Type = userDto.Type,
                 Detail = new PeopleDetails()
                 {
                     Name = userDto.Name,
                     Surname = userDto.Surname,
-                    PhoneNumber = userDto.PhoneNumber,
+                    Phone = userDto.PhoneNumber,
                     Email = userDto.Email,
                     City = userDto.City,
                     Street = userDto.Street,
@@ -53,13 +53,12 @@ namespace HorseTrackingDesktop.Models.Dto
                 UserId = user.UserId,
                 Login = user.Login,
                 Hash = user.Hash,
-                Salt = user.Salt,
                 CreatedDateTime = user.CreatedDateTime,
                 Type = user.Type,
 
                 Name = user.Detail.Name,
                 Surname = user.Detail.Surname,
-                PhoneNumber = user.Detail.PhoneNumber,
+                PhoneNumber = user.Detail.Phone,
                 Email = user.Detail.Email,
                 City = user.Detail.City,
                 Street = user.Detail.Street,

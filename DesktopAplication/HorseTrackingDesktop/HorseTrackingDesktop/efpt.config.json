@@ -1,121 +1,125 @@
 ﻿{
-  "CodeGenerationMode": 2,
-  "ContextClassName": "HorseTrackingContext",
-  "ContextNamespace": null,
-  "DefaultDacpacSchema": null,
-  "FilterSchemas": false,
-  "IncludeConnectionString": false,
-  "ModelNamespace": null,
-  "OutputContextPath": null,
-  "OutputPath": "Models",
-  "PreserveCasingWithRegex": true,
-  "ProjectRootNamespace": "HorseTrackingDesktop",
-  "Schemas": null,
-  "SelectedHandlebarsLanguage": 0,
-  "SelectedToBeGenerated": 0,
-  "Tables": [
-    {
-      "Name": "[dbo].[Activities]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Competitions]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Diets]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Forages]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[HorseGenders]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Horses]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[MealNames]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Meals]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Notifications]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[NutritionPlans]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Participations]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[PeopleDetails]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Portions]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Professionals]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Shareds]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Specialisations]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Status]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[UnitOfMeasures]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[UserAcounts]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[UserTypes]",
-      "ObjectType": 0
-    },
-    {
-      "Name": "[dbo].[Visits]",
-      "ObjectType": 0
-    }
-  ],
-  "UiHint": "msi.HorseTracking.dbo",
-  "UncountableWords": null,
-  "UseBoolPropertiesWithoutDefaultSql": false,
-  "UseDatabaseNames": false,
-  "UseDateOnlyTimeOnly": false,
-  "UseDbContextSplitting": false,
-  "UseFluentApiOnly": true,
-  "UseHandleBars": false,
-  "UseHierarchyId": false,
-  "UseInflector": false,
-  "UseLegacyPluralizer": false,
-  "UseManyToManyEntity": false,
-  "UseNoDefaultConstructor": false,
-  "UseNoObjectFilter": false,
-  "UseNodaTime": false,
-  "UseNullableReferences": false,
-  "UseSchemaFolders": false,
-  "UseSpatial": false,
-  "UseT4": false
+   "CodeGenerationMode": 2,
+   "ContextClassName": "HorseTrackingContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "HorseTrackingDesktop",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Activities]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Competitions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Diets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Forages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HorseGenders]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Horses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MealNames]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Meals]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NutritionPlans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Participations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PeopleDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Portions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Professionals]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Shareds]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Specialisations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UnitOfMeasures]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserAcounts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Visits]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "msi.HorseTracking.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
 }

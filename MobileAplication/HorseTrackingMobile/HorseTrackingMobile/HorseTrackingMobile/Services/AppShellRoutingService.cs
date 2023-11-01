@@ -11,7 +11,6 @@ namespace HorseTrackingMobile.Services
 {
     public class AppShellRoutingService : IAppShellRoutingService
     {
-
         public AppShellRoutingService()
         {
             //Routings
@@ -24,6 +23,11 @@ namespace HorseTrackingMobile.Services
             Routing.RegisterRoute(nameof(NutritionPlanView), typeof(NutritionPlanView));
             Routing.RegisterRoute(nameof(CompetitionView), typeof(CompetitionView));
             Routing.RegisterRoute(nameof(AddVisitView), typeof(AddVisitView));
+            Routing.RegisterRoute(nameof(ScanHorseView), typeof(ScanHorseView));
+            Routing.RegisterRoute(nameof(ShareHorseView), typeof(ShareHorseView));
+            Routing.RegisterRoute(nameof(ShareManagmentView), typeof(ShareManagmentView));
+            Routing.RegisterRoute(nameof(ShareHorseSearchView), typeof(ShareHorseSearchView));
+            Routing.RegisterRoute(nameof(ChangePasswordView), typeof(ChangePasswordView));
         }
 
         public void GoToApplication()
@@ -40,7 +44,7 @@ namespace HorseTrackingMobile.Services
         {
             await Shell.Current.GoToAsync("//LoginView");
         }
-        
+
         public void GoToActivityDetails(Activity activity)
         {
             Shell.Current.GoToAsync($"{nameof(ActivityDetailsView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
@@ -50,14 +54,40 @@ namespace HorseTrackingMobile.Services
         {
             Shell.Current.GoToAsync(nameof(AddActivityView));
         }
+
         public void GoToAddActivity(Activity activity)
         {
             Shell.Current.GoToAsync($"{nameof(AddActivityView)}?{nameof(ActivityDetailsViewModel.ActivityID)}={activity.ID}");
         }
+
         public void GoToAddVisit()
         {
             Shell.Current.GoToAsync(nameof(AddVisitView));
         }
 
+        public void GoToShareManagment()
+        {
+            Shell.Current.GoToAsync(nameof(ShareManagmentView));
+        }
+
+        public void GoToScanHorses()
+        {
+            Shell.Current.GoToAsync(nameof(ScanHorseView));
+        }
+
+        public void GoToShareHorses()
+        {
+            Shell.Current.GoToAsync(nameof(ShareHorseView));
+        }
+
+        public void GoToShareBySearch()
+        {
+            Shell.Current.GoToAsync(nameof(ShareHorseSearchView));
+        }
+
+        public void GoToChangePassword()
+        {
+            Shell.Current.GoToAsync(nameof(ChangePasswordView));
+        }
     }
 }

@@ -35,9 +35,18 @@ namespace HorseTrackingMobile.Services.Database.ActivityServices
                     ID = Convert.ToInt32(reader["activityID"]),
                     Type = ActivityType.ActivityTypeIdMap[Convert.ToInt32(reader["activityType"])],
                     Date = (DateTime)reader["date"],
-                    Time = Convert.ToInt32(reader["time"] != null ? reader["time"] : 0),
                     Description = reader["description"].ToString(),
                 };
+
+                if (int.TryParse(reader["time"].ToString(), out var time))
+                {
+                    activityToAdd.Time = time;
+                }
+                else
+                {
+                    activityToAdd.Time = 0;
+                }
+
                 if (ActivityType.IsActiveActivity(activityToAdd.Type))
                 {
                     activityToAdd.Trainer = _userService.GetTrainer(Convert.ToInt32(reader["trainerID"]));
@@ -76,7 +85,7 @@ namespace HorseTrackingMobile.Services.Database.ActivityServices
         {
             var query = $"UPDATE Activities " +
                 $"SET userID = {activity.User?.Id}, activityType = {activity.Type?.ID}," +
-                $"trainerID = {(activity.Trainer!=null? $"{activity.Trainer?.Id}":"NULL")}," +
+                $"trainerID = {(activity.Trainer != null ? $"{activity.Trainer?.Id}" : "NULL")}," +
                 $"horseID = {activity.Horse?.ID}, date='{activity.Date.Year}.{activity.Date.Month}.{activity.Date.Day}', " +
                 $"description = '{activity.Description}', time = {activity.Time}, " +
                 $"intensivity = {activity.Intensivity}, satisfaction = {activity.Satisfaction}" +

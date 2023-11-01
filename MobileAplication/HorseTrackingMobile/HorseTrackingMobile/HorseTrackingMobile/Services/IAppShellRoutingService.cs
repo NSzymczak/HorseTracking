@@ -9,9 +9,21 @@ namespace HorseTrackingMobile.Services
     public interface IAppShellRoutingService
     {
         void GoToLogin();
+
         void GoToActivityDetails(Activity activity);
+
         void GoToAddActivity();
+
         void GoToAddActivity(Activity activity);
+
         void GoToAddVisit();
+
+        void GoToScanHorses();
+
+        void GoToShareHorses();
+
+        void GoToShareBySearch();
+
+        void GoToChangePassword();
     }
 }

@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using HorseTrackingDesktop.Dto;
 using HorseTrackingDesktop.Models;
-using HorseTrackingDesktop.Models.Dto;
 using HorseTrackingDesktop.Services.Database.VisitService;
 using HorseTrackingDesktop.ViewModel;
 using System.Collections.Generic;

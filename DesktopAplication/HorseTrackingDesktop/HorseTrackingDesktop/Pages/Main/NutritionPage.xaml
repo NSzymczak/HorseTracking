@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:HorseTrackingDesktop.View"
       xmlns:main="clr-namespace:HorseTrackingDesktop.PageModel.Main"
       xmlns:converter ="clr-namespace:HorseTrackingDesktop.Converters"
       d:DataContext="{d:DesignInstance Type=main:NutritionPageModel}"
@@ -40,9 +39,9 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="3*" />
                             </Grid.RowDefinitions>
-                            <Image Source="{Binding Icon}"
+                            <!--<Image Source="{Binding Icon}"
                                    Grid.Column="1"
-                                   Grid.Row="0" />
+                                   Grid.Row="0" />-->
 
                             <Border BorderBrush="{Binding Color}"
                                     Padding="10"

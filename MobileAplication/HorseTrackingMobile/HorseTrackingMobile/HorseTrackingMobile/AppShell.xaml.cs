@@ -10,15 +10,13 @@ namespace HorseTrackingMobile
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
-
         public AppShellRoutingService RoutingServices { get; }
         public static ShellContent Activity { get; set; }
-
 
         public AppShell()
         {
             InitializeComponent();
-            RoutingServices=new AppShellRoutingService();
+            RoutingServices = new AppShellRoutingService();
             Activity = activity;
         }
 
@@ -29,5 +27,14 @@ namespace HorseTrackingMobile
             RoutingServices.GoToLogin();
         }
 
+        public void ShareManagment(object sender, EventArgs e)
+        {
+            RoutingServices.GoToShareManagment();
+        }
+
+        private void ChangePassword(object sender, EventArgs e)
+        {
+            RoutingServices.GoToChangePassword();
+        }
     }
 }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+             x:DataType="viewmodels:ShareHorseSearchViewModel"
+             x:Class="HorseTrackingMobile.Views.ShareHorseSearchView"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    <StackLayout Margin="30,50">
+        <Label Text="Wybierz konia: " />
+        <Picker SelectedItem="{Binding SelectedHorse}"
+                    ItemsSource="{Binding Horses}"
+                    ItemDisplayBinding="{Binding Name, Mode=TwoWay}" />
+
+        <Label Text="Wybierz datę końca udostępniania: " />
+        <DatePicker Date="{Binding EndDate, Mode=TwoWay}" MinimumDate="{Binding DateNow}" />
+
+        <Label Text="Wybierz użytkownika: " />
+        <Picker SelectedItem="{Binding SelectedUser}"
+                    ItemsSource="{Binding Users}"
+                    ItemDisplayBinding="{Binding Login, Mode=TwoWay}" />
+
+        <Button Text="Udostępnij" Command="{Binding Share}" />
+    </StackLayout>
+</ContentPage>

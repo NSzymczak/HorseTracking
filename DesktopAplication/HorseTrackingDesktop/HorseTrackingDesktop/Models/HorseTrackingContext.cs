@@ -20,6 +20,7 @@ namespace HorseTrackingDesktop.Models
 
         public virtual DbSet<Activities> Activities { get; set; }
         public virtual DbSet<Competitions> Competitions { get; set; }
+        public virtual DbSet<Contests> Contests { get; set; }
         public virtual DbSet<Diets> Diets { get; set; }
         public virtual DbSet<Forages> Forages { get; set; }
         public virtual DbSet<HorseGenders> HorseGenders { get; set; }
@@ -45,7 +46,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Activities>(entity =>
             {
                 entity.HasKey(e => e.ActivityId)
-                    .HasName("PK__Activiti__0FC9CBCC037FC2BA");
+                    .HasName("PK__Activiti__0FC9CBCC35F300D7");
 
                 entity.Property(e => e.ActivityId).HasColumnName("activityID");
 
@@ -75,24 +76,24 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Activities)
                     .HasForeignKey(d => d.HorseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Activitie__horse__326C5B6A");
+                    .HasConstraintName("FK__Activitie__horse__4DFF6746");
 
                 entity.HasOne(d => d.Trainer)
                     .WithMany(p => p.ActivitiesTrainer)
                     .HasForeignKey(d => d.TrainerId)
-                    .HasConstraintName("FK__Activitie__train__31783731");
+                    .HasConstraintName("FK__Activitie__train__4D0B430D");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.ActivitiesUser)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Activitie__satis__308412F8");
+                    .HasConstraintName("FK__Activitie__satis__4C171ED4");
             });
 
             modelBuilder.Entity<Competitions>(entity =>
             {
                 entity.HasKey(e => e.CompetitionId)
-                    .HasName("PK__Competit__3A6431DAB9A97ECD");
+                    .HasName("PK__Competit__3A6431DAE8AD16FE");
 
                 entity.Property(e => e.CompetitionId).HasColumnName("competitionID");
 
@@ -115,10 +116,36 @@ namespace HorseTrackingDesktop.Models
                     .HasColumnName("spot");
             });
 
+            modelBuilder.Entity<Contests>(entity =>
+            {
+                entity.HasKey(e => e.ContestId)
+                    .HasName("PK__Contests__C5A32706A0CD586A");
+
+                entity.Property(e => e.ContestId).HasColumnName("contestID");
+
+                entity.Property(e => e.CompetitionId).HasColumnName("competitionID");
+
+                entity.Property(e => e.Level)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("level");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("name");
+
+                entity.HasOne(d => d.Competition)
+                    .WithMany(p => p.Contests)
+                    .HasForeignKey(d => d.CompetitionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Contests__compet__306F045F");
+            });
+
             modelBuilder.Entity<Diets>(entity =>
             {
                 entity.HasKey(e => e.DietId)
-                    .HasName("PK__Diets__D9B41D08FDC4F7D9");
+                    .HasName("PK__Diets__D9B41D0845E2CD7E");
 
                 entity.Property(e => e.DietId).HasColumnName("dietID");
 
@@ -132,19 +159,19 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Diets)
                     .HasForeignKey(d => d.HorseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Diets__horseID__2CB38214");
+                    .HasConstraintName("FK__Diets__horseID__48468DF0");
 
                 entity.HasOne(d => d.NutritionPlan)
                     .WithMany(p => p.Diets)
                     .HasForeignKey(d => d.NutritionPlanId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Diets__nutrition__2DA7A64D");
+                    .HasConstraintName("FK__Diets__nutrition__493AB229");
             });
 
             modelBuilder.Entity<Forages>(entity =>
             {
                 entity.HasKey(e => e.ForageId)
-                    .HasName("PK__Forages__9A7B3BD34E50F96C");
+                    .HasName("PK__Forages__9A7B3BD3F85E5711");
 
                 entity.Property(e => e.ForageId).HasColumnName("forageID");
 
@@ -167,13 +194,13 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Forages)
                     .HasForeignKey(d => d.UnitId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Forages__capacit__0C46B282");
+                    .HasConstraintName("FK__Forages__capacit__24FD51B3");
             });
 
             modelBuilder.Entity<HorseGenders>(entity =>
             {
                 entity.HasKey(e => e.GenderId)
-                    .HasName("PK__HorseGen__306E222052C76505");
+                    .HasName("PK__HorseGen__306E2220FB6406EA");
 
                 entity.Property(e => e.GenderId).HasColumnName("genderID");
 
@@ -187,7 +214,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Horses>(entity =>
             {
                 entity.HasKey(e => e.HorseId)
-                    .HasName("PK__Horses__C26F5D924E217868");
+                    .HasName("PK__Horses__C26F5D922985C1F6");
 
                 entity.Property(e => e.HorseId).HasColumnName("horseID");
 
@@ -240,25 +267,25 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Horses)
                     .HasForeignKey(d => d.GenderId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Horses__genderID__1C7D1A4B");
+                    .HasConstraintName("FK__Horses__genderID__38102627");
 
                 entity.HasOne(d => d.Status)
                     .WithMany(p => p.Horses)
                     .HasForeignKey(d => d.StatusId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Horses__statusID__1B88F612");
+                    .HasConstraintName("FK__Horses__statusID__371C01EE");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Horses)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Horses__userID__1D713E84");
+                    .HasConstraintName("FK__Horses__userID__39044A60");
             });
 
             modelBuilder.Entity<MealNames>(entity =>
             {
                 entity.HasKey(e => e.MealNameId)
-                    .HasName("PK__MealName__40C60D924E577A17");
+                    .HasName("PK__MealName__40C60D922BB4E98F");
 
                 entity.Property(e => e.MealNameId).HasColumnName("mealNameID");
 
@@ -272,7 +299,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Meals>(entity =>
             {
                 entity.HasKey(e => e.MealId)
-                    .HasName("PK__Meals__0D609C9A1B9E8E8C");
+                    .HasName("PK__Meals__0D609C9A8ABA8BC5");
 
                 entity.Property(e => e.MealId).HasColumnName("mealID");
 
@@ -289,19 +316,19 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Meals)
                     .HasForeignKey(d => d.MealNameId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Meals__mealNameI__03B16C81");
+                    .HasConstraintName("FK__Meals__mealNameI__1C680BB2");
 
                 entity.HasOne(d => d.NutritionPlan)
                     .WithMany(p => p.Meals)
                     .HasForeignKey(d => d.NutritionPlanId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Meals__nutrition__02BD4848");
+                    .HasConstraintName("FK__Meals__nutrition__1B73E779");
             });
 
             modelBuilder.Entity<Notifications>(entity =>
             {
                 entity.HasKey(e => e.NotificationId)
-                    .HasName("PK__Notifica__4BA5CE894FB1D180");
+                    .HasName("PK__Notifica__4BA5CE89CC00422E");
 
                 entity.Property(e => e.NotificationId).HasColumnName("notificationID");
 
@@ -325,24 +352,26 @@ namespace HorseTrackingDesktop.Models
                     .IsUnicode(false)
                     .HasColumnName("title");
 
+                entity.Property(e => e.TurnOn).HasColumnName("turnOn");
+
                 entity.Property(e => e.UserId).HasColumnName("userID");
 
                 entity.HasOne(d => d.Horse)
                     .WithMany(p => p.Notifications)
                     .HasForeignKey(d => d.HorseId)
-                    .HasConstraintName("FK__Notificat__horse__2141CF68");
+                    .HasConstraintName("FK__Notificat__horse__3CD4DB44");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Notifications)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Notificat__userI__204DAB2F");
+                    .HasConstraintName("FK__Notificat__userI__3BE0B70B");
             });
 
             modelBuilder.Entity<NutritionPlans>(entity =>
             {
                 entity.HasKey(e => e.NutritionPlanId)
-                    .HasName("PK__Nutritio__BC9D3305EB307A7C");
+                    .HasName("PK__Nutritio__BC9D3305C661E648");
 
                 entity.Property(e => e.NutritionPlanId).HasColumnName("nutritionPlanID");
 
@@ -367,18 +396,13 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Participations>(entity =>
             {
                 entity.HasKey(e => e.ParticipationId)
-                    .HasName("PK__Particip__78B6F525F790C410");
+                    .HasName("PK__Particip__78B6F525FB8DE865");
 
                 entity.Property(e => e.ParticipationId).HasColumnName("participationID");
 
-                entity.Property(e => e.CompetitionId).HasColumnName("competitionID");
+                entity.Property(e => e.ContestId).HasColumnName("contestID");
 
                 entity.Property(e => e.HorseId).HasColumnName("horseID");
-
-                entity.Property(e => e.Level)
-                    .HasMaxLength(30)
-                    .IsUnicode(false)
-                    .HasColumnName("level");
 
                 entity.Property(e => e.Place).HasColumnName("place");
 
@@ -386,23 +410,23 @@ namespace HorseTrackingDesktop.Models
                     .IsUnicode(false)
                     .HasColumnName("result");
 
-                entity.HasOne(d => d.Competition)
+                entity.HasOne(d => d.Contest)
                     .WithMany(p => p.Participations)
-                    .HasForeignKey(d => d.CompetitionId)
+                    .HasForeignKey(d => d.ContestId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Participa__compe__363CEC4E");
+                    .HasConstraintName("FK__Participa__conte__51CFF82A");
 
                 entity.HasOne(d => d.Horse)
                     .WithMany(p => p.Participations)
                     .HasForeignKey(d => d.HorseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Participa__horse__3548C815");
+                    .HasConstraintName("FK__Participa__horse__50DBD3F1");
             });
 
             modelBuilder.Entity<PeopleDetails>(entity =>
             {
                 entity.HasKey(e => e.DetailId)
-                    .HasName("PK__PeopleDe__830778396266404F");
+                    .HasName("PK__PeopleDe__83077839179C4673");
 
                 entity.Property(e => e.DetailId).HasColumnName("detailID");
 
@@ -426,10 +450,10 @@ namespace HorseTrackingDesktop.Models
                     .IsUnicode(false)
                     .HasColumnName("number");
 
-                entity.Property(e => e.PhoneNumber)
+                entity.Property(e => e.Phone)
                     .HasMaxLength(20)
                     .IsUnicode(false)
-                    .HasColumnName("phoneNumber");
+                    .HasColumnName("phone");
 
                 entity.Property(e => e.PostalCode)
                     .HasMaxLength(10)
@@ -451,7 +475,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Portions>(entity =>
             {
                 entity.HasKey(e => e.PortionId)
-                    .HasName("PK__Portions__9B90049D9BD290EC");
+                    .HasName("PK__Portions__9B90049D5E90D919");
 
                 entity.Property(e => e.PortionId).HasColumnName("portionID");
 
@@ -467,25 +491,25 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Portions)
                     .HasForeignKey(d => d.ForageId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Portions__forage__13E7D44A");
+                    .HasConstraintName("FK__Portions__forage__2C9E737B");
 
                 entity.HasOne(d => d.Meal)
                     .WithMany(p => p.Portions)
                     .HasForeignKey(d => d.MealId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Portions__mealID__12F3B011");
+                    .HasConstraintName("FK__Portions__mealID__2BAA4F42");
 
                 entity.HasOne(d => d.Unit)
                     .WithMany(p => p.Portions)
                     .HasForeignKey(d => d.UnitId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Portions__unitID__14DBF883");
+                    .HasConstraintName("FK__Portions__unitID__2D9297B4");
             });
 
             modelBuilder.Entity<Professionals>(entity =>
             {
                 entity.HasKey(e => e.ProfessionalId)
-                    .HasName("PK__Professi__A734593F703CD823");
+                    .HasName("PK__Professi__A734593FB3B8767A");
 
                 entity.Property(e => e.ProfessionalId).HasColumnName("professionalID");
 
@@ -502,19 +526,19 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Professionals)
                     .HasForeignKey(d => d.DetailId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Professio__detai__10174366");
+                    .HasConstraintName("FK__Professio__detai__28CDE297");
 
                 entity.HasOne(d => d.Specialisation)
                     .WithMany(p => p.Professionals)
                     .HasForeignKey(d => d.SpecialisationId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Professio__speci__0F231F2D");
+                    .HasConstraintName("FK__Professio__speci__27D9BE5E");
             });
 
             modelBuilder.Entity<Shareds>(entity =>
             {
                 entity.HasKey(e => e.SharedId)
-                    .HasName("PK__Shareds__089ADB21F6E93A55");
+                    .HasName("PK__Shareds__089ADB21890D18E2");
 
                 entity.Property(e => e.SharedId).HasColumnName("sharedID");
 
@@ -542,25 +566,25 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Shareds)
                     .HasForeignKey(d => d.HorseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Shareds__horseID__27EECCF7");
+                    .HasConstraintName("FK__Shareds__horseID__4381D8D3");
 
                 entity.HasOne(d => d.UserScan)
                     .WithMany(p => p.SharedsUserScan)
                     .HasForeignKey(d => d.UserScanId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Shareds__userSca__29D71569");
+                    .HasConstraintName("FK__Shareds__userSca__456A2145");
 
                 entity.HasOne(d => d.UserShare)
                     .WithMany(p => p.SharedsUserShare)
                     .HasForeignKey(d => d.UserShareId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Shareds__userSha__28E2F130");
+                    .HasConstraintName("FK__Shareds__userSha__4475FD0C");
             });
 
             modelBuilder.Entity<Specialisations>(entity =>
             {
                 entity.HasKey(e => e.SpecialisationId)
-                    .HasName("PK__Speciali__0171ED123CD5C8B4");
+                    .HasName("PK__Speciali__0171ED123AA3E3EB");
 
                 entity.Property(e => e.SpecialisationId).HasColumnName("specialisationID");
 
@@ -585,7 +609,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<UnitOfMeasures>(entity =>
             {
                 entity.HasKey(e => e.UnitId)
-                    .HasName("PK__UnitOfMe__55D792158B70DB42");
+                    .HasName("PK__UnitOfMe__55D79215E11158ED");
 
                 entity.Property(e => e.UnitId).HasColumnName("unitID");
 
@@ -599,7 +623,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<UserAcounts>(entity =>
             {
                 entity.HasKey(e => e.UserId)
-                    .HasName("PK__UserAcou__CB9A1CDFEADCBBFF");
+                    .HasName("PK__UserAcou__CB9A1CDF9B6E811E");
 
                 entity.Property(e => e.UserId).HasColumnName("userID");
 
@@ -621,31 +645,25 @@ namespace HorseTrackingDesktop.Models
                     .IsUnicode(false)
                     .HasColumnName("login");
 
-                entity.Property(e => e.Salt)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("salt");
-
                 entity.Property(e => e.TypeId).HasColumnName("typeID");
 
                 entity.HasOne(d => d.Detail)
                     .WithMany(p => p.UserAcounts)
                     .HasForeignKey(d => d.DetailId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserAcoun__detai__18AC8967");
+                    .HasConstraintName("FK__UserAcoun__detai__343F9543");
 
                 entity.HasOne(d => d.Type)
                     .WithMany(p => p.UserAcounts)
                     .HasForeignKey(d => d.TypeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserAcoun__creat__17B8652E");
+                    .HasConstraintName("FK__UserAcoun__creat__334B710A");
             });
 
             modelBuilder.Entity<UserTypes>(entity =>
             {
                 entity.HasKey(e => e.TypeId)
-                    .HasName("PK__UserType__F04DF11AB734A7F2");
+                    .HasName("PK__UserType__F04DF11A6F65B76A");
 
                 entity.Property(e => e.TypeId).HasColumnName("typeID");
 
@@ -659,7 +677,7 @@ namespace HorseTrackingDesktop.Models
             modelBuilder.Entity<Visits>(entity =>
             {
                 entity.HasKey(e => e.VisitId)
-                    .HasName("PK__Visits__0D1361E8B6DC5093");
+                    .HasName("PK__Visits__0D1361E8B253868D");
 
                 entity.Property(e => e.VisitId).HasColumnName("visitID");
 
@@ -685,13 +703,13 @@ namespace HorseTrackingDesktop.Models
                     .WithMany(p => p.Visits)
                     .HasForeignKey(d => d.HorseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Visits__horseID__2512604C");
+                    .HasConstraintName("FK__Visits__horseID__40A56C28");
 
                 entity.HasOne(d => d.Professional)
                     .WithMany(p => p.Visits)
                     .HasForeignKey(d => d.ProfessionalId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Visits__professi__241E3C13");
+                    .HasConstraintName("FK__Visits__professi__3FB147EF");
             });
 
             OnModelCreatingPartial(modelBuilder);

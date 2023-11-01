@@ -1,12 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+             xmlns:model="clr-namespace:HorseTrackingMobile.Models"
+             x:DataType="viewmodels:CompetitionViewModel"
              x:Class="HorseTrackingMobile.Views.CompetitionView">
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="4*,*">
+            <Label Text="Zawody" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        </Grid>
+    </Shell.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <CollectionView ItemsSource="{Binding Participation}"
+                        Margin="30">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Participation">
+                    <Frame BorderColor="{StaticResource Gray}"
+                           CornerRadius="10">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Spot}" FontAttributes="Bold" />
+                                <Label Text="{Binding Rank}" FontAttributes="Bold" />
+                                <Label Text="{Binding Date, StringFormat='{0:MMMM d, yyyy}'}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding HorseName}" />
+                                <Label Text="{Binding Place}" />
+                                <Label Text="{Binding Result}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

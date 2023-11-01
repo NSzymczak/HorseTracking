@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside]{report}
+\documentclass[12pt,oneside]{report}
 \usepackage[margin=2.5cm]{geometry}
 \linespread{1.375}
 \usepackage[utf8]{inputenc}
@@ -16,13 +16,45 @@
 \usepackage{lmodern} %Czcionka
 \usepackage{wrapfig} %Tekst wokół obrazu
 \raggedbottom %zwalcza dziwne rozciąganie
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+	language=[Sharp]C,
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=1,                % start line enumeration with line 1000
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 \begin{document}
 	\begin{titlepage}
 		
 		\begin{center}
 			\begin{figure}[t]
 				\centering
-			%	\includegraphics[width=4.5cm,height=4.5cm]{LogoUO.jpg}
+				\includegraphics[width=4.5cm,height=4.5cm]{LogoUO.jpg}
 			\end{figure}
 		\end{center}
 		
@@ -61,11 +93,11 @@
 			{\large Praca wykonana pod kierunkiem\bigskip
 				
 				{\bf }} 
-			dr. Jacka Iwańskiego
+			dra Jacka Iwańskiego
 		\end{flushright}
 		\vspace{0.7cm}
 		\begin{center}
-			{\large OPOLE 2022}
+			{\large OPOLE 2024}
 		\end{center}
 	\end{titlepage}
 
@@ -113,6 +145,35 @@
 	\newpage
 \chapter{Wstęp}
 \chapter{Przegląd istniejących rozwiązań}
+\section{Ridely}
+\begin{wrapfigure}{r}{0.65\textwidth}
+	\centering
+	\includegraphics[scale=0.15]{ridely4}
+	\caption{Widok główny aplikacji}
+	\textit{Źródło opracowanie własne}
+	\label{RidelyKalendarz}
+\end{wrapfigure}
+Ridely to aplikacja pozwalająca na monitorowanie treningów. Dzięki niej możemy zapisać swoje treningi, oglądać poradniki i poprawiać swoje umiejętności jeździeckie. 
+Aplikacja ma wiele mocnych stron. Skupia się głównie na monitorowaniu treningów i ten aspekt ma dopracowany bardzo dobrze. O samych aktywnościach można zbierać bardzo dużo informacji, jak także śledzić trening na bieżąco. Jednakże ma także wady. Kalendarz, w którym zaznaczone są aktywności jest mało czytelny i na pierwszy rzut oka nie widzimy co koń robił w poprzednie dni (patrz. rys. \ref{RidelyKalendarz}).
+Z zalet można wymienić jeszcze dostępność wielu materiałów wideo pozwalających na doszkolenie się jednakże materiały te są jedynie w języku angielskim. Porównując do stworzonej aplikacji nie ma możliwości zapisu wizyt lekarzy, planów żywienia ani nie ma informacji o zawodach. Jest ona mniej kompleksowa i przez dużą zawartość plików jest dość spora i wolno działa. 
+\section{Equilab}
+\begin{wrapfigure}{r}{0.65\textwidth}
+	\centering
+	\includegraphics[scale=0.15]{equilab1}
+	\caption{Widok kalendarza aplikacji}
+	\textit{Źródło opracowanie własne}
+	\label{Equilab}
+\end{wrapfigure}
+Equilab także skupia się głównie na treningach. Nie ma na nim dostępnych materiałów wideo ani pouczających wpisów. Interfejs graficzny jest w miarę przyjazdy użytkownikowi, a sama aplikacja działa płynnie. Dzięki tej aplikacji można śledzić treningi i zapisywać ich trasy. Zapisywanie aktywności obejmuje także podstawowe wizyty lekarskie oraz kowali. Jednakże nie można o nich zapisać wielu informacji. Z minusów aplikacji można także wymienić mało przyjazdy UI w kalendarzu z zapisanymi aktywnościami. W porównaniu do stworzonej aplikacji nie ma możliwości zapisu planów żywienia. Minusem jest także połączenie w jednym widoku aktywności oraz wizyt przez co mamy mniej widocznych informacji i łatwiej się wśród nich zgubić (patrz rys. \ref{Equilab}). W odróżnieniu od naszej aplikacji można tutaj zawierać przyjaźnie między użytkownikami i brać udział w wyzwaniach. Jednakże nie ma kluczowej funkcji udostępniania koni, która po rozmowach z osobami ze środowiska okazała się kluczowa.
+\section{Happie Horse}
+\begin{wrapfigure}{r}{0.65\textwidth}
+	\centering
+	\includegraphics[scale=0.15]{happieHorse1}
+	\caption{Widok kalendarza aplikacji}
+	\textit{Źródło opracowanie własne}
+	\label{HappieHorse}
+\end{wrapfigure}
+Aplikacja Happie Horse posiada podobne funkcje do zaprojektowanego systemu. Na głównej stronie aplikacji mamy aktywności plan żywienia oraz wizyty u kowali i lekarzy. Aplikacja ma przyjazny chodź dość ciemny interfejs. Zapis aktywności podobnie jak w poprzednich aplikacjach jest mało czytelny i na pierwszy rzut oka nie widać co koń robił przez ostatnie dni. Nie dostępne są także statystki aktywności. W zamian za to aplikacja ma szereg kursów pozwalających na poprawę swoich umiejętności. To czego brakuje tej aplikacji to także funkcja udostępniania koni pomagająca kontrolować swoje konie w trakcie wyjazdów.
 \chapter{Technologie użyte w pracy}
 \section{Microsoft Visual Studio 2022}
 \textcolor{red} {Microsoft Visual Studio to środowisko IDE, za pomocą którego można edytować, debugować jak także kompilować kod. Po stworzeniu aplikacji można ja także opublikować w prost ze środowiska. Środowisko to zawiera wiele funkcji wzbogacających proces tworzenia takich jak narzędzia uzupełniania kodu (Intellisense). Dzięki temu środowisku możemy programować aplikacje na dowolną platformę oraz dowolne urządzenia. }
@@ -148,7 +209,7 @@ Xamarin.Android kompilowany jest z języka C\#, do języka pośredniego "just in
 \end{figure}
 
 \section{Android Device Menager}
-
+{\color{red} Dopisać }
 \section{NuGet}
 NuGet (logo systemu na rysunku \ref{nugetLogo})jest to mechanizm udostępniania kodu obsługiwany przez firmę Microsoft. 
 \begin{figure}[H]
@@ -166,15 +227,37 @@ Służy on do współdzielenia kodu. Pakiet NuGet obsługuje hosty prywatne oraz
 	\textit{Źródło: \cite{Nuget}}
 	\label{NugetFlow}
 \end{figure}
-\section{Git}
-Git, github, sourcetree
-
+\section{Git, Github, Sourcetree}
+Git (logo na rysunku \ref{GitLogo}) to darmowy rozproszony system kontroli wersji typu open source. Zaprojektowany został do obsługi małych oraz bardzo dużych projektów. Dzięki niemu możliwe jest tworzenie backupów oraz zarządzanie nimi. Jak także rozwijanie aplikacji w wiele osób jednocześnie.\cite{git}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{git}
+	\caption{Logo git}
+	\textit{Źródło: \cite{git}}
+	\label{GitLogo}
+\end{figure}
+Github (logo na rysunku \ref{GithubLogo}) jest to nakładka na git, dzięki której w łatwiejszy sposób możemy zakładać repozytorium oraz zarządzać kodem.\cite{github}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{githubLogo}
+	\caption{Logo github}
+	\textit{Źródło: \cite{github}}
+	\label{GithubLogo}
+\end{figure}
+Sourcetree (logo na rysunku \ref{SourcetreeLogo}) to także nakładka na git, która pozwala na łatwiejsze tworzenie branchy, stashów, oraz szybkie przełączaniem się między gałęziami. Dzięki niemu możemy zarządzać branchami z wielu projektów na raz w sposób przyjaźniejszy niż przez Visual Studio.\cite{sourcetree}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{sourcetree}
+	\caption{Logo sourcetree}
+	\textit{Źródło: \cite{sourcetree}}
+	\label{SourcetreeLogo}
+\end{figure}
 \section{Figma}
 Figma jest to narzędzie do projektowania i prototypowania interfejsów aplikacji. Dzięki narzędziom takim jak figma możemy zaplanować cały interfejs jeszcze przed jego implementacją.  Stworzony w ten sposób interfejs możemy przetestować dzięki funkcji prototypowania. Jeszcze przed implementacją może on zostać udostępniony kilku osobą w celu sprawdzenia czy wszystkie funkcje aplikacji są dla użytkownika jasne i intuicyjne. Dzięki temu implementować będziemy interfejs już sprawdzony, więc będzie wymagał on mniej poprawek.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.15]{FigmaLogo}
-	\caption{przepływ informacji}
+	\includegraphics[scale=0.10]{FigmaLogo}
+	\caption{Logo Figmy}
 	\textit{Źródło: \cite{FigmaIcon}}
 	\label{FigmaLogo}
 \end{figure}
@@ -187,21 +270,26 @@ Entity Framework to narzędzie do mapowania obiektowo-relacyjnego, który umożl
 	\textit{Źródło: \cite{Entity}}
 	\label{EntityArchitecture}
 \end{figure}
-\section{Ten do wykresów}
-
+{\color{red}
+\section{LiveChartsCore}
+LiveChartsCore to nugget pozwalający na łatwe i szybkie tworzenie wykresów.
+\section{ZXing}
 \section{MVVM Toolkit}
 
 \section{Xamarin Community Toolkit}
 
 \section{ZXing.Net.Mobile.Forms}
 
-\section{Microsoft.Extensions.DependencyInjection}
+\section{Xamarin.Essentials}
+\section{Microsoft.Extensions.DependencyInjection}}
+
+
 \chapter{Specyfikacja wymagań}
 \section{Opis wycinka rzeczywistości}
 Aplikacja przeznaczona jest dla klubów jeździeckich, czyli organizacji zrzeszających jeźdźców startujących w danej dziedzinie sportów konnych. Aplikacja skierowana jest do klubów, których zawodnicy startują w takich dziedzinach jak:
 \begin{itemize}
 	\item Skoki przez przeszkody,
-	\item WKKW (skrót od "Wszechstronny konkurs konia wierzchowego"),
+	\item WKKW (skrót od ,,Wszechstronny konkurs konia wierzchowego''),
 	\item Ujeżdżenie.
 \end{itemize}
 
@@ -241,51 +329,60 @@ Wymagania funkcjonalne dla aplikacji mobilnej zawierają poniższe tabele \ref{f
 %\renewcommand{\arraystretch}{1.8}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{6cm}|}			
+	\begin{tabular}{|p{0.5cm}|p{3cm}|p{3cm}|p{8cm}|}			
 		\hline
 	   \multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
 		\hline
-		Zarządzanie aktywnościami & Dodawanie aktywności & Członek klubu &  System umożliwia zapis danych wprowadzonych przez zalogowanego użytkownika do bazy danych.\\	
-		\hline	
-		Zarządzanie aktywnościami & Edytowanie aktywności & Członek klubu & System umożliwia edytowanie dodanych wcześniej danych o aktywnościach. \\	
-		\hline	
-		Zarządzanie aktywnościami& Usuwanie aktywności & Członek klubu & System pozwala na usuwanie dodanych wcześniej aktywności. \\
+		\multirow{3}{*}
+		{\begin{sideways} Zarządzanie aktywnościami $\qquad $\end{sideways}} & Dodawanie & Członek klubu &  System umożliwia zapis danych wprowadzonych przez zalogowanego użytkownika do bazy danych.\\	
+		\cline{2-4} & Edytowanie  & Członek klubu & System umożliwia edytowanie dodanych wcześniej danych o aktywnościach. \\	
+		\cline{2-4}
+		& Usuwanie & Członek klubu & System pozwala na usuwanie dodanych wcześniej aktywności. \\
+		\cline{2-4}
+		& Wyświetlanie & Trener, Członek klubu, Zarząd klubu& System umożliwia na przeglądanie wszystkich danych o aktywnościach danego konia zgromadzonych w bazie danych.\\
 		\hline
-		Zarządzanie aktywnościami& Wyświetlanie aktywności & Trener, Członek klubu, Zarząd klubu& System umożliwia na przeglądanie wszystkich danych o aktywnościach danego konia zgromadzonych w bazie danych.\\
+		& Dodawanie wizyt & Członek klubu& System pozwala na zapisanie danych z wizyty konia u lekarza/kowala do bazy danych.\\
+		\cline{2-4}
+		& Edytowanie wizyt & Członek klubu& System powinien umożliwić zapis zaktualizowanych danych o wizycie do bazy.\\
+		\cline{2-4}
+		\multirow{6}{*}
+		{\begin{sideways} Zarządzanie wizytami \end{sideways}} & Usuwanie wizyt & Członek klubu & System powinien umożliwiać usuwanie danych o dodanych wcześniej wizytach.\\
+		\cline{2-4}
+		& Wyświetlanie wizyt & Trener, Członek klubu, Zarząd klubu& System powinien umożliwić przeglądanie danych o wizytach zgromadzonych w bazie.\\
+		\cline{2-4}
+		& Planowanie wizyt & Członek klubu & System powinien pozawalać użytkownikom na dodanie do bazy danych o następnej wizycie, czyli umożliwić zapis wizyt jedynie z datą i opisem.\\
+		\cline{2-4}
+		& Zapisywanie zdjęcia z wizyty & Członek klubu&System powinien pozwalać na zapisywanie zdjęci z wizyt.\\
+		\cline{2-4}
+		& Przypomnienia o wizytach& Członek klubu & System powinien wysłać powiadomienie o zbliżającej się wizycie\\
 		\hline
-		Zarządzanie wizytami & Dodawanie wizyt & Członek klubu& System pozwala na zapisanie danych z wizyty konia u lekarza/kowala do bazy danych.\\
-		\hline
-		Zarządzanie wizytami & Edytowanie wizyt & Członek klubu& System powinien umożliwić zapis zaktualizowanych danych o wizycie do bazy.\\
-		\hline
-		Zarządzanie wizytami & Usuwanie wizyt & Członek klubu & System powinien umożliwiać usuwanie danych o dodanych wcześniej wizytach.\\
-		\hline 
-		Zarządzanie wizytami & Wyświetlanie wizyt & Trener, Członek klubu, Zarząd klubu& System powinien umożliwić przeglądanie danych o wizytach zgromadzonych w bazie.\\
-		\hline
-		Zarządzanie wizytami & Planowanie wizyt & Członek klubu & System powinien pozawalać użytkownikom na dodanie do bazy danych o następnej wizycie, czyli umożliwić zapis wizyt jedynie z datą i opisem.\\
-		\hline
-		Zarządzanie wizytami & Zapisywanie zdjęcia z wizyty & Członek klubu&System powinien pozwalać na zapisywanie zdjęci z wizyt.\\
-		\hline
-	\end{tabular}
+			\end{tabular}
 	\caption{Wymagania funkcjonalne aplikacji mobilnej}
-	\label{funkcjonalneMobilki1}
+\label{funkcjonalneMobilki1}
 \end{table}
 
 %\renewcommand{\arraystretch}{1.8}
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+\begin{table}[H]
+\centering
+	\begin{tabular}{|p{0.5cm}|p{3cm}|p{3cm}|p{8cm}|}			
+\hline
+\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
+\hline
+				\multirow{2}{*}
+		{\begin{sideways} Zarządzanie żywieniem $ \ $ \end{sideways}} & Przeglądanie planów żywienia & Członek klubu & System powinien umożliwiać przeglądanie planów żywienia umieszczonych w bazie.
+		\newline
+		\\
+		\cline{2-4}
+		 & Wybór planu żywienia & Członek klubu & System powinien umożliwiać wybór jednego z planów żywienia umieszczonych w bazie jako tego aktualnie używanego.
+		 \newline
+		 \\
 		\hline
-		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
-		\hline
-		Zarządzanie wizytami & Przypomnienia o wizytach& Członek klubu & System powinien wysłać powiadomienie o zbliżającej się wizycie\\
-		\hline
-		Zarządzanie żywieniem & Przeglądanie planów żywienia & Członek klubu & System powinien umożliwiać przeglądanie planów żywienia umieszczonych w bazie.\\
-		\hline
-		Zarządzanie żywieniem & Wybór planu żywienia & Członek klubu & System powinien umożliwiać wybór jednego z planów żywienia umieszczonych w bazie jako tego aktualnie używanego.\\
-		\hline
-		Zarządzanie zawodami & Wyświetlanie najbliższych zawodów & Członek klubu & System powinien umożliwić wyświetlanie dat najbliższych zawodów umieszczonych w bazie.\\
-		\hline
-		Zarządzanie zawodami & Potwierdzenie udziału w zawodach & Członek klubu & System powinien umożliwić użytkownikowi potwierdzenie swojego udziału w zawodach.\\
+			\multirow{2}{*}
+		{\begin{sideways} Zarządzanie zawodami $ \ $ \end{sideways}} & Wyświetlanie najbliższych zawodów & Członek klubu & System powinien umożliwić wyświetlanie dat najbliższych zawodów umieszczonych w bazie.
+		\newline
+		\\
+		\cline{2-4}
+		& Potwierdzenie udziału w zawodach & Członek klubu & System powinien umożliwić użytkownikowi potwierdzenie swojego udziału w zawodach.\\
 		\hline
 		\multicolumn{2}{|l|}{Udostępnianie koni}&Członek klubu& System powinien umożliwić udostępnianie koni między użytkownikami.\\
 		\hline
@@ -298,31 +395,43 @@ Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadający
 %\renewcommand{\arraystretch}{1.8}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+	\begin{tabular}{|p{0.5cm}|p{3cm}|p{3cm}|p{8cm}|}			
 		\hline
 		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
 		\hline
-		Zarządzanie planami żywienia & Tworzenie planów żywienia  & Członek klubu & System umożliwia użytkownikowi stworzenie planu żywienia i zapisanie go do bazy.\\		
+		\multirow{3}{*}
+		{\begin{sideways} Zarządzanie planami żywienia  $ \ $ \end{sideways}}& Tworzenie & Członek klubu & System umożliwia użytkownikowi stworzenie planu żywienia i zapisanie go do bazy.
+		\newline\\		
+		\cline{2-4}
+		 & Edytowanie & Członek klubu & System pozwala aktualizować stworzone wcześniej plany żywienia.
+		 \newline\\
+		\cline{2-4}
+		 & Usuwanie & Członek klubu & System umożliwia usuwanie danych o stworzonych wcześniej planach żywienia.
+		 \newline\\
 		\hline
-		Zarządzanie planami żywienia & Edytowanie planów żywienia  & Członek klubu & System pozwala aktualizować stworzone wcześniej plany żywienia.\\
+		\multirow{3}{*}
+		{\begin{sideways} Zarządzanie końmi $ \ $ \end{sideways}} & Dodawanie & Zarząd klubu & System umożliwia wprowadzenie danych o koniach i dodanie ich do konkretnego użytkownika\\ 		
+		\cline{2-4}
+		& Usuwanie & Zarząd klubu & System umożliwia usuwanie koni\\ 		
+		\cline{2-4}
+		& Edytowanie & Zarząd klubu & System umożliwia edycję danych o koniach zgromadzonych już w bazie.\\ 
 		\hline
-		Zarządzanie planami żywienia & Usuwanie planów żywienia  & Członek klubu & System umożliwia usuwanie danych o stworzonych wcześniej planach żywienia.\\
+		\multirow{4}{*}
+		{\begin{sideways} Zarządzanie użytkownikami $ \ $ \end{sideways}} & Dodawanie & Zarząd klubu & System umożliwia dodawanie danych o użytkownikach i tworzenie ich kont.\\		
+		\cline{2-4}
+		& Edytowanie & Zarząd klubu & System umożliwia edytowanie danych użytkownika\\		
+		\cline{2-4}
+		& Usuwanie & Zarząd klubu & System umożliwia usuwanie użytkowników\\
+		\cline{2-4}
+		& Zmiana hasła & Zarząd klubu,Członek klubu, Trener& System umożliwia zmianę hasła przez użytkownika.\\
 		\hline
-		Zarządzanie końmi& Dodawanie koni & Zarząd klubu & System umożliwia wprowadzenie danych o koniach i dodanie ich do konkretnego użytkownika\\ 		
+				\multirow{4}{*}
+		{\begin{sideways} Zarządzanie zawodami $ \ $ \end{sideways}}  & Dodawanie zawodów & Zarząd klubu& System pozwala na tworzenie zawodów, oraz zapraszanie do udziału w nich poszczególnych członków klubu\\	
+		\cline{2-4}	
+		& Edytowanie zawodów & Zarząd klubu& System pozwala na edycję danych o dodanych wcześniej zawodach\\
+		\cline{2-4}	
+		& Usuwanie zawodów & Zarząd klubu& System pozwala na usuwanie danych o dodanych wcześniej zawodach.\\
 		\hline
-		Zarządzanie końmi& Usuwanie koni & Zarząd klubu & System umożliwia usuwanie koni\\ 		
-		\hline
-		Zarządzanie końmi& Edytowanie koni & Zarząd klubu & System umożliwia edycję danych o koniach zgromadzonych już w bazie.\\ 
-		\hline
-		Zarządzanie użytkownikami & Dodawanie użytkowników & Zarząd klubu & System umożliwia dodawanie danych o użytkownikach i tworzenie ich kont.\\		
-		\hline
-		Zarządzanie użytkownikami & Edytowanie użytkowników & Zarząd klubu & System umożliwia edytowanie danych użytkownika\\		
-		\hline
-		Zarządzanie użytkownikami & Usuwanie użytkowników & Zarząd klubu & System umożliwia usuwanie użytkowników\\
-		\hline
-		Zarządzanie użytkownikami & Zmiana hasła & Zarząd klubu,Członek klubu, Trener& System umożliwia zmianę hasła przez użytkownika.\\
-		\hline
-		
 	\end{tabular}
 \caption{Wymagania funkcjonalne aplikacji desktopowej}
 \label{funkcjonalneDesktop1}
@@ -330,19 +439,13 @@ Aplikacja desktop-owa przeznaczona jest zarówno dla użytkowników posiadający
 %\renewcommand{\arraystretch}{1.8}
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{6cm}|}			
+	\begin{tabular}{|p{0.5cm}|p{3cm}|p{3cm}|p{8cm}|}			
 		\hline
 		\multicolumn{2}{|l|}{Wymaganie} & Aktor & Opis wymagania\\
 		\hline
-		Zarządzanie zawodami & Dodawanie zawodów & Zarząd klubu& System pozwala na tworzenie zawodów, oraz zapraszanie do udziału w nich poszczególnych członków klubu\\	
-		\hline	
-		Zarządzanie zawodami & Edytowanie zawodów & Zarząd klubu& System pozwala na edycję danych o dodanych wcześniej zawodach\\
+		\multicolumn{2}{|l|}{Przeglądanie histori wizyt}& Członek klubu, Trener, Zarząd klubu& {\color{red} DODAĆ OPIS}\\
 		\hline
-		Zarządzanie zawodami & Usuwanie zawodów & Zarząd klubu& System pozwala na usuwanie danych o dodanych wcześniej zawodach.\\
-		\hline
-		\multicolumn{2}{|l|}{Przeglądanie histori wizyt}& Członek klubu, Trener, Zarząd klubu&\\
-		\hline
-		\multicolumn{2}{|l|}{Przeglądanie statystyk}&Członek klubu, Trener, Zarząd klubu&\\
+		\multicolumn{2}{|l|}{Przeglądanie statystyk}&Członek klubu, Trener, Zarząd klubu&{\color{red} DODAĆ OPIS}\\
 		\hline
 	\end{tabular}
 	\caption{Wymagania funkcjonalne aplikacji desktopowej}
@@ -370,14 +473,14 @@ Wszystkie wymagania funkcjonalne zgromadzone w powyższych tabelach, możemy prz
 \end{figure}
 \newpage
 \section{Wymagania niefunkcjonalne}
-W tym rozdziale przedstawione zostana wymagania niefunkcjonalne projektowanego systemu. W osobnych tabelach przedstawione zostaną wymagania dla aplikacji mobilnej (tabela \ref{}) oraz desktopowej (tabela \ref{WymaganiaNFdesktop}). 
-Przedstawione wymagania zostały opracowane zgodnie ze standardem ISO 9126. Określone zostały atrybuty, takie jak: niezawodność (Reliability), obsługiwalność(Usability), wydajność(Efficiency), łatwość konserwacji (Maintainability) i przenośność(Portability).
+W tym rozdziale przedstawione zostana wymagania niefunkcjonalne projektowanego systemu. W osobnych tabelach przedstawione zostaną wymagania dla aplikacji mobilnej (tabela \ref{WymaganiaNFmobilne}) oraz desktopowej (tabela \ref{WymaganiaNFdesktop}). 
+Przedstawione wymagania zostały opracowane zgodnie ze standardem ISO 9126. Określone zostały atrybuty, takie jak: niezawodność (Reliability), obsługiwalność(Usability), wydajność(Efficiency), łatwość konserwacji (Maintainability) i przenośność(Portability). Na początek przedstawione zostały wymagania dla aplikacji desktopowej.
 	\begin{table}[H]
 	\caption{Wymagania niefunkcjonalne aplikacji desktopowej }
 	\textit{Źródło: Opracowanie własne}
 	\label{WymaganiaNFdesktop}
 	\centering
-	\begin{tabular}{|c|c|p{8cm}|}
+	\begin{tabular}{|c|p{6cm}|p{8cm}|}
 		\hline
 		Nr & Nazwa wymagania & Opis wymagania\\
 		\hline
@@ -388,32 +491,38 @@ Przedstawione wymagania zostały opracowane zgodnie ze standardem ISO 9126. Okre
 		3& Obsługiwaloność (Usability)& Aplikacja powinna mieć prosty i intuicyjny interfejs użytkownika. Interfejs powinien być dostosowany do pracy na monitorach o małej rozdzielczości i laptopach.\\		
 		\hline
 		4& Niezawodność (Reliability)& Aplikacja powinna walidować wszystkie pola, do których wprowadzane są dane. W przypadku błędnych danych powinny wyświetlać się komunikaty informujące o nieprawidłowościach w klarowny sposób.\\	
+						\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\begin{tabular}{|c|p{6cm}|p{8cm}|}
 		\hline
 		5& Język i narzędzia programowania& Aplikacja została napisana w C\# na silniku graficznym Windows Presentation Foundation przy użyciu środowiska  Microsoft Visual Studio Community 2022.
 		Baza danych została napisana w języku SQL, przy pomocy środowiska Microsoft SQL Server Management Studio 18 i zainstalowana na serwerze bazy danych Microsoft SQL Server 2019\\	
-		\hline
-	\end{tabular}
-\end{table}
-\begin{table}
-\begin{tabular}{|c|c|p{8cm}|}
+
 					\hline
 		6& Aspekty prawne& W bazie danych przechowywane będą dane członków klubu, zarządu, specjalistów oraz których korzystają. Poza danymi osobowymi tych osób przechowywane będą także dane o koniach, ich aktywnościach oraz stanie zdrowia. Aplikacja nie będzie przekazywać danych ososobowych poszczególnych członków innym użytkownikom.Dane specjalistów będą rozpowszechniane między użytkownikami, dlatego przed wpisaniem do bazy będą musieli wyrazić na to pisemną zgodę.\\	
 				\hline
 		7& Wydajność (Efficiency)& Używanie aplikacji na sprzęcie o minimalnych wymaganiach powinno przebiegać w sposób płynny, to znaczy wyświetlanie, dodawanie, edytowanie, usuwanie, kategoryzowanie i filtrowanie danych powinno nie zajmować dłużej niż kilka sekund.\\	
 		\hline
 		8& Łatwość konserwacji (Maintainability)& Działanie aplikacji będzie kontrolowane przy pomocy dziennika debugowania. Kolejne wersje systemu (kopie zapasowe) będą zapisywane za pomocą systemu kontroli wersji GIT.\\	
+								\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\begin{tabular}{|c|p{6cm}|p{8cm}|}
 		\hline
 		9& Przenośność (Portability)& Aplikacja udostępniana będzie w pliku wykonywalnym .exe. Baza danych musi zostać zainstalowana i skonfigurowana na serwerze w danym klubie jeździeckim. Po zainstalowaniu aplikacja i baza danych powinny zostać skonfigurowane ze sobą.\\
 		\hline
 	\end{tabular}
 \end{table}
-
+Następnie w tabeli \ref{WymaganiaNFmobilne} przedstawiono wymagania dla aplikacji mobilnej. Zostały one podzielone na takie same sekcje jak wymagania aplikacji desktopowej. Mimo to wymagania przedstawione zostały w oddzielnej tabeli, ponieważ dotyczą one aplikacji na całkowicie inny system.
 \begin{table}[H]
 	\caption{Wymagania niefunkcjonalne aplikacji mobilnej }
 	\textit{Źródło: Opracowanie własne}
 	\label{WymaganiaNFmobilne}
 	\centering
-	\begin{tabular}{|l|l|p{8cm}|}
+	\begin{tabular}{|c|p{6cm}|p{8cm}|}
 		\hline
 		Nr & Nazwa wymagania & Opis wymagania\\
 		\hline
@@ -426,19 +535,24 @@ Przedstawione wymagania zostały opracowane zgodnie ze standardem ISO 9126. Okre
 		\hline
 		4& Niezawodność (Reliability)&Aplikacja powinna walidować wszystkie pola, do których wprowadzane są dane. W przypadku błędnych danych powinny wyświetlać się komunikaty informujące o nieprawidłowościach w klarowny sposób. \\	
 		\hline
+						\end{tabular}
+	\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|c|p{6cm}|p{8cm}|}
+\hline
 		5& Język i narzędzia programowania& Aplikacja została napisana na platformie Xamarin przy użyciu środowiska  Microsoft Visual Studio Community 2022. Używa tej samej bazy co aplikacja desktopowa. \\	
 		\hline
 		6& Aspekty prawne& Aspekty prawne aplikacji mobilnej i desktopowej pokrywają się, ponieważ korzystają one z tych samych danych.\\	
 		\hline
 		7& Wydajność (Efficiency)&
 		Używanie aplikacji na sprzęcie o minimalnych wymaganiach powinno przebiegać w sposób płynny, to znaczy wyświetlanie, dodawanie, edytowanie, usuwanie danych powinno nie zajmować dłużej niż kilka sekund. \\	
-		\hline
+		\hline	
 		8& Łatwość konserwacji (Maintainability)&
 		Konserwacja aplikacji mobilnej będzie przebiegać analogicznie do desktopowej. \\	
 		\hline
 		9& Przenośność (Portability)&Aplikacja udostępniana w postaci pakietu instalacyjnego .apk oraz powinna spełniać wszystkie wymagania do umieszczenia jej w sklepie Google Play. \\
 		\hline
-		
 	\end{tabular}
 \end{table}
 
@@ -457,14 +571,7 @@ Proces tworzenia bazy danych zaczynamy od modelu konceptualnego. W pierwszej faz
 	
 \end{itemize}
 \newpage
-Po określeniu definicji poszczególnych pojęć używanych w projekcie możemy przystąpić do tworzenia kategorii.
-\subsubsection{Kategorie}
-Po przeanalizowaniu wycinku rzeczywistości możemy określić jakie dane chcemy zbierać i zapisywać do bazy danych. Dane te możemy podzielić na kategorie i opisać językiem naturalnym ich cechy charakterystyczne.
-\begin{enumerate}[start=1,label={\bfseries KAT:\arabic*}]
-	\item 
-\end{enumerate}
-\newpage
-Po określeniu kategorii możemy określić reguły funkcjonowania naszej aplikacja.
+Po określeniu definicji poszczególnych pojęć używanych w projekcie możemy określić reguły funkcjonowania naszej aplikacja.
 \subsubsection{Reguły funkcjonowania}
 Reguły funkcjonowania określają zasady, procedury i wytyczne jakie musi spełniać projektowana aplikacja. 
 \begin{enumerate}[start=1,label={\bfseries REG\textbackslash 00\arabic*}]
@@ -494,7 +601,6 @@ Reguły funkcjonowania określają zasady, procedury i wytyczne jakie musi speł
 	\item Użytkownik "trener" lub "administrator" może dodawać wyjazd na zawody dla całego klubu i zapraszać poszczególnych użytkowników.
 	\item Użytkownik "członek klubu" może dodawać swoje wyjazdy na zawody.
 \end{enumerate}
-\newpage
 \subsubsection{Ograniczenia dziedzinowe}
 Ograniczenia dziedzinowe to ograniczenia, które nakładane są na atrybuty w powyższych kategoriach. Wynikają one z analizy wycinka rzeczywistości i należy je uwzględnić podczas projektowania bazy danych oraz implementacji systemu.
 \begin{enumerate}[start=1,label={\bfseries OGR\textbackslash 00\arabic*}]
@@ -507,47 +613,6 @@ Ograniczenia dziedzinowe to ograniczenia, które nakładane są na atrybuty w po
 		\item dd - to numer identyfikacyjny konia w ramach hodowli.
 		\end{itemize}
 	\item Data wizyty konia jest wcześniejsza niż data jego urodzenia.
-	\item 
-\end{enumerate}
-\newpage
-\subsubsection{Transakcje}
-Transakcje są to operacje, które możemy wykonywać na danych. Mają one cztery własności, które w skrócie nazywamy ACID (ang. Atomicity, Consistency, Isolation, Durability). Transakcje mają więc następujące własności:
-\begin{itemize}
-	\item atomowość, inaczej niepodzielność oznacza, że transakcje muszą być wykonywane na bazie w całości. Jeśli transakcja nie zostanie poprawnie przeprowadzona należny przywrócić stan bazy z przed jej wykonania.
-	\item spójność, po wykonaniu transakcji baza powinna być nadal spójna.
-	\item izloacja, oznacza że tranzakcje nie mogą być od siebie zależne.
-	\item trwałość, oznacza że dane po transakcji zostają zapisane w bazie i są zachowane na stałe.
-\end{itemize}	
-Transakcje występujące w aplikacji:
-\begin{enumerate}[start=1,label={\bfseries TRA\textbackslash00\arabic*}]
-	
-	\item \textbf{Dodanie aktywności }\\
-	\textit{Opis}: Zadaniem transakcji jest dodanie danych o aktywności konia. Aktywności konia może dodać jedynie członek klubu, który jest jego właścicielem lub osoba której został on udostępniony.\\
-	\textit{Uwarunkowania}: Aktywność musi zawierać dane o tym kto ją wprowadził, jakiego konia ona dotyczy, w jakim dniu została wykonana, oraz czas jej trwania.\\
-	\textit{Wejście}:
-		\begin{itemize}
-			\item U - Dane nowej aktywności
-			\item BD - Dane aktywności
-		\end{itemize} 
-	\textit{Wyjście}:
-		\begin{itemize}
-			\item U - Komunikat
-			\item BD - Dane aktywności
-		\end{itemize} 
-	
-	\item \textbf{Edycja aktywności }\\
-	\textit{Opis}: \\
-	\textit{Uwarunkowania}: \\
-	\textit{Wejście}:
-	\begin{itemize}
-		\item U - 
-		\item BD -
-	\end{itemize} 
-	\textit{Wyjście}:
-	\begin{itemize}
-		\item U - 
-		\item BD -
-	\end{itemize} 
 \end{enumerate}
 \newpage
 %\renewcommand{\arraystretch}{1.2}
@@ -559,7 +624,7 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 %___________________________________________________________________________________________________________
 	\item \textbf{ACTIVITY} \\
 	\textit{Semantyka encji} - Encja zawierająca aktywności, które koń wykonuje w ciągu dnia. Każda aktywność oprócz typu, zawiera opis, czas trwania oraz ocenę satysfakcji i intensywności jej wykonania.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{ActivityAtribute}.
 	
 	\begin{table}[H]
@@ -578,7 +643,7 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 			\hline
 			\textit{description} & Opis aktywności & Typ znakowy & - \\
 			\hline
-			time &  Czas trwania aktywności & Czas & + \\
+			time &  Czas trwania aktywności & Czas & - \\
 			\hline
 			\textit{intensivity} & Intensywność wykonanej aktywności & Liczba naturalna & + \\
 			\hline
@@ -592,9 +657,9 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 	Klucz główny: activityID \\
 	Charakter encji: encja słaba \\
 %___________________________________________________________________________________________________________
-	\item \textbf{COMPETITION}\\ \\
+	\item \textbf{COMPETITION}\\
 	\textit{Semantyka encji} - encja zawierająca dane o zawodach jeździeckich. 
-	\\ \\
+	\\
 	Opis atrybutów znajduje się w tabeli \ref{competitionAtribute}.
 	
 	\begin{table}[H]
@@ -609,7 +674,8 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 			\hline
 			\textit{competitionID} & Numer identyfikujący zawody. & Liczba naturalna & + \\
 			\hline
-			\textit{spot} & Miejsce, w którym odbywają się zawody. & Max. znaków 200 & - \\
+			\textit{spot} & Miejsce, w którym odbywają się zawody. & Max. znaków 200 & - \\			\hline
+			\textit{date} & Data zawodów. & Data & + \\
 			\hline
 			\textit{description} & Opis zawodów. & Typ znakowy & - \\
 			\hline
@@ -619,14 +685,12 @@ Po określeniu kategorii, reguł funkcjonowania, ograniczeń dziedzinowych i tra
 	\end{table}
 	Klucze kandydujące: competitionID \\
 	Klucz główny: competitionID \\
-	Charakter encji: encja silna \\
+	Charakter encji: encja silna 
 %___________________________________________________________________________________________________________
-	\item \textbf{NOTIFICATION}
-	
+	\item \textbf{NOTIFICATION}\\
 	\textit{Semantyka encji} - Encja zawierająca powiadomienia utworzone przez użytkowników.
-\\ \\
+\\
 Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
-
 	\begin{table}[H]
 		\caption{Wykaz atrybutów encji typu Notification }
 		\textit{Źródło: Opracowanie własne}
@@ -641,11 +705,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
 			\hline
 			\textit{title} &  Tytuł powiadomienia & Max. znaków 30 & + \\
 			\hline
-			\textit{description} & Opis powiadomienia & Typ znakowy & + \\
+			\textit{description} & Opis powiadomienia & Typ znakowy & - \\
 			\hline
 			\textit{sendDate} &  Data wysłania & Data & + \\
 			\hline
 			\textit{createdDate} &  Data stworzenia & Data & + \\
+			\hline			
+			\textit{turnOn} & Określenie, czy powiadomienie jest włączone & Prawda/Fałsz & + \\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -654,13 +720,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{NotificationAtribute}.
 	Charakter encji: encja słaba \\
 	
 %___________________________________________________________________________________________________________
-	\item \textbf{PROFESSIONALS}\\ \\
+	\item \textbf{PROFESSIONAL}\\
 	\textit{Semantyka encji} - encja opisująca specjalistów przyjeżdżający do konia takich jak lekarze (np. gastrolog, kardiolog, lekarz ogólny), fizjoterapeuci, kowale itp.
-	\\ \\
+	\\
 Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 
 	\begin{table}[H]		
-		\caption{Wykaz atrybutów encji typu Doctor }
+		\caption{Wykaz atrybutów encji typu PROFESSIONAL }
 		\textit{Źródło: Opracowanie własne}
 		\label{ProfessionalsAtribute}
 		\centering
@@ -671,18 +737,18 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 			\hline
 			\textit{professionalsID} & Numer identyfikujący specjalistę & Liczba naturalna & + \\
 			\hline			
-			\textit{degree} & Stopień naukowy doktora & Liczba naturalna & + \\
+			\textit{degree} & Stopień naukowy doktora & Liczba naturalna & - \\
 			\hline
 		\end{tabular}
 
 	\end{table}
 	Klucze kandydujące: professionalsID \\
 	Klucz główny: professionalsID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba 
 %__________________________________________________________________________________________________________	
-	\item \textbf{SPECIALISATION}\\ \\
+	\item \textbf{SPECIALISATION}\\
 	\textit{Semantyka encji} - encja słownikowa zawiera nazwy specjalizacji specjalistów.
-	\\	\\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{SpecialisationAtribute}.
 	
 	\begin{table}[H]
@@ -704,11 +770,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	Klucze kandydujące: specializationID \\
 	Klucz główny: specializationID \\
 	Charakter encji: encja silna \\
-	
+	\newpage
 	\item \textbf{DIET}
 	
 		\textit{Semantyka encji} - Encja zawierająca informacje o aktywnej diecie konia. 
-		\\ \\
+		\\
 	Opis atrybutów encji znajduje się w tabeli \ref{DietAtribute}.
 	
 	\begin{table}[H]
@@ -721,7 +787,7 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 			Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
 			& & &  OPC(-) \\
 			\hline
-			\textit{dietID} & Numer identyfikujący jedzenie & Liczba naturalna & + \\
+			\textit{dietID} & Numer identyfikujący dietę & Liczba naturalna & + \\
 			\hline
 			\textit{isActive} & Określenie czy plan jest w użyciu & Prawda/Fałsz & + \\
 			\hline
@@ -730,12 +796,12 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: dietID \\
 	Klucz główny: dietID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba
 	
 	\item \textbf{PORTION}
 	
 	\textit{Semantyka encji} - Encja zawierająca informacje o porcji jedzenia.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{DietAtribute}.
 	
 	\begin{table}[H]
@@ -758,12 +824,12 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	Klucze kandydujące: portionID \\
 	Klucz główny: portionID \\
 	Charakter encji: encja słaba \\
-	
+	\newpage
 %___________________________________________________________________________________________________________
 	\item \textbf{FORAGE}
 	
 	\textit{Semantyka encji} - Encja zawierająca informacje o paszy dla koni.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{ForageAtribute}.
 	
 	\begin{table}[H]
@@ -788,12 +854,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: forageID \\
 	Klucz główny: forageID \\
-	Charakter encji: encja słaba \\
-	
+	Charakter encji: encja słaba
 	\item \textbf{HORSE}
 	
-	\textit{Semantyka encji} - Encja zawierająca informacje o koniach.
-	\\ \\
+	\textit{Semantyka encji} - Encja zawierająca wszystkie informacje o koniach.
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{HorseAtribute}.
 	
 	\begin{table}[H]
@@ -828,13 +893,13 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: horseID \\
 	Klucz główny: horseID \\
-	Charakter encji: encja słaba \\
+	Charakter encji: encja słaba
 \end{enumerate}
 
 \begin{enumerate}[start=10,label={\bfseries ENC$\backslash$\arabic*}]
 	\item \textbf{HORSEGENDER} \\
 	\textit{Semantyka encji} - Encja słownikowa zawierająca płeć koni.
-	\\ \\
+	\\
 	Opis atrybutów encji znajduje się w tabeli \ref{HorseGenderAtribute}.
 	
 	\begin{table}[H]
@@ -855,12 +920,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: genderID \\
 	Klucz główny: genderID \\
-	Charakter encji: encja silna \\
-	
+	Charakter encji: encja silna
 	\item \textbf{STATUS}
 	
 	\textit{Semantyka encji} - Encja słownikowa zawierająca statusy koni.
-		\\ \\
+		\\ 
 	Opis atrybutów encji znajduje się w tabeli \ref{StatusAtribute}.
 	
 	\begin{table}[H]
@@ -881,11 +945,10 @@ Opis atrybutów encji znajduje się w tabeli \ref{ProfessionalsAtribute}.
 	\end{table}
 	Klucze kandydujące: statusID \\
 	Klucz główny: statusID \\
-	Charakter encji: encja silna \\
-
+	Charakter encji: encja silna
 	\item \textbf{MEALNAME} \\
 	\textit{Semantyka encji} - Encja słownikowa zawierająca nazwy posiłków.
-		\\ \\
+		\\ 
 Opis atrybutów encji znajduje się w tabeli \ref{MealNameAtribute}.
 	
 	\begin{table}[H]
@@ -907,11 +970,11 @@ Opis atrybutów encji znajduje się w tabeli \ref{MealNameAtribute}.
 	Klucze kandydujące: mealNameID \\
 	Klucz główny: mealNameID \\
 	Charakter encji: encja słaba \\
-
+\newpage
 \item \textbf{NUTRITIONPLAN}
-
+\\ \\
 \textit{Semantyka encji} - Encja zawierająca informacje o planie żywienia koni.
-		\\ \\
+		\\
 Opis atrybutów encji znajduje się w tabeli \ref{NutritionPlanAtribute}.
 
 \begin{table}[H]
@@ -931,15 +994,17 @@ Opis atrybutów encji znajduje się w tabeli \ref{NutritionPlanAtribute}.
 		\textit{desctription} &  Ilość jedzenia w porcji & Typ znakowy & - \\
 		\hline
 		\textit{icon} &  Ikona dołączona do planu żywienia & Liczba naturalna & + \\
+		\hline		
+		\textit{color} &  Color dołączona do planu żywienia & Max. 7 znaków & + \\
 		\hline
 	\end{tabular}
 \end{table}
 Klucze kandydujące: nutritionPlanID \\
 Klucz główny: nutritionPlanID \\
-Charakter encji: encja silna \\
+Charakter encji: encja silna\\
 	\item \textbf{PEOPLEDETAILS}\\ \\
 	\textit{Semantyka encji} - encja zawiera szczegółowe dane użytkowników (członków klubu, trenerów i zarządu klubu) jak i lekarzy oraz kowali.
-			\\ \\
+			\\ 
 	Opis atrybutów encji znajduje się w tabeli \ref{PeopleDetailsAtribute}.
 	
 	\begin{table}[H]
@@ -972,11 +1037,10 @@ Charakter encji: encja silna \\
 	\end{table}
 Klucze kandydujące: detailsID \\
 Klucz główny: detailsID \\
-Charakter encji: encja silna \\
-
-\item \textbf{PARTICIPATION}\\ \\
+Charakter encji: encja silna
+\item \textbf{PARTICIPATION}\\ 
 \textit{Semantyka encji} - encja zawierająca dane o uczestnictwie konia w zawodach.
-			\\ \\
+			\\ 
 Opis atrybutów encji znajduje się w tabeli \ref{ParticipationAtribute}.
 
 \begin{table}[H]
@@ -990,8 +1054,6 @@ Opis atrybutów encji znajduje się w tabeli \ref{ParticipationAtribute}.
 		& & &  OPC(-) \\
 		\hline
 		\textit{participationID} & Numer identyfikujący udział w zawodach & Liczba naturalna & + \\
-		\hline
-		\textit{level} & Poziom konkursu & Max. znaków 30 & + \\
 		\hline
 		\textit{result} & Wynik zawodów & Typ znakowy & + \\
 		\hline
@@ -1134,7 +1196,7 @@ Opis atrybutów encji znajduje się w tabeli \ref{VisitAtribute}.
 		\hline
 		\textit{visitID} & Numer identyfikujący wizyte & Liczba naturalna & + \\
 		\hline
-		\textit{cost} & Cena wizyty & Liczba rzeczywista dodatnia & + \\
+		\textit{cost} & Cena wizyty & Liczba rzeczywista dodatnia & - \\
 		\hline
 		\textit{summary} & Opis podsumowujący wizytę & Typ znakowy & - \\
 		\hline
@@ -1172,13 +1234,40 @@ Opis atrybutów encji znajduje się w tabeli \ref{MealAtribute}.
 Klucze kandydujące: mealID \\
 Klucz główny: mealID \\
 Charakter encji: encja słaba \\
+
+\item \textbf{CONTEST} \\
+\textit{Semantyka encji} - Encja zawierająca konkursy z zawodów.
+\\ \\
+Opis atrybutów encji znajduje się w tabeli \ref{ContestAtribute}.
+
+\begin{table}[H]
+	\caption{Wykaz atrybutów encji typu Contest}
+	\textit{Źródło: Opracowanie własne}
+	\label{ContestAtribute}
+	\centering
+	\begin{tabular}{|l|l|l|c|}
+		\hline
+		Nazwa atrybutu & Opis atrybutu & Typ & OBL(+) \\
+		& & &  OPC(-) \\
+		\hline
+		\textit{contestID} & Numer identyfikujący posiłek & Liczba naturalna & + \\
+		\hline
+		\textit{level} & Poziom konkursu & Max. znaków 10 & - \\
+		\hline		
+		\textit{name} & Nazwa konkursu & Max. znaków 50 & - \\
+		\hline
+	\end{tabular}
+\end{table}
+Klucze kandydujące: contestID \\
+Klucz główny: contestID \\
+Charakter encji: encja słaba \\
 \end{enumerate}
 \newpage
 Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 \begin{enumerate}[start=1,label={\bfseries ENC$\backslash$0\arabic*}]
 	\item \textbf{ACTIVITY}(\textit{\underline{activityID}, date, description, time, intensivity, satisfaction, activityType})
-	\item \textbf{COMPETITION} (\textit{\underline{competitionID}, spot, description, rank})
-	\item \textbf{NOTIFICATION} (\textit{\underline{notificationID}, title, description, sendDate, createdDate})
+	\item \textbf{COMPETITION} (\textit{\underline{competitionID}, spot, description, rank, date})
+	\item \textbf{NOTIFICATION} (\textit{\underline{notificationID}, title, description, sendDate, createdDate, turnOn})
 	\item \textbf{PROFESTIONALS} (\textit{\underline{profesionalsID}}, degree)
 	\item \textbf{SPECIALISATION} (\textit{\underline{specialisationID}, name})
 	\item \textbf{DIET} (\textit{\underline{dietID}, isActive})
@@ -1190,15 +1279,16 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 	\item \textbf{HORSEGENDER} (\textit{\underline{genderID}, gender})
 	\item \textbf{STATUS} (\textit{\underline{statusID}, name})
 	\item \textbf{MEALNAME} (\textit{\underline{mealNameID}, mealName})
-	\item \textbf{NUTRITIONPLAN} (\underline{nutritionPlanID}, title, description, icon)
-	\item \textbf{PEOPLEDETIALS} (\underline{detailsID}, name, surname, phonNumber, email, city, street, number)
-	\item \textbf{PARTICIPATION} (\underline{participationID}, level, result, place)
+	\item \textbf{NUTRITIONPLAN} (\underline{nutritionPlanID}, title, description, icon, color)
+	\item \textbf{PEOPLEDETIALS} (\underline{detailsID}, name, surname, phone, email, city, street, number)
+	\item \textbf{PARTICIPATION} (\underline{participationID}, result, place)
 	\item \textbf{SHARED} (\underline{sharedID}, code, endDate, startDate)
 	\item \textbf{UNITOFMEASURE} (\underline{unitID}, unitName)
 	\item \textbf{USERACCOUNT} (\underline{userID}, accountLogin, hash, salt, createdDateTime)
 	\item \textbf{USERTYPE} (\underline{userTypeID}, typeName)
 	\item \textbf{VISIT} (\underline{careID}, cost, summary, artefactImage, visitDate)
-    \item \textbf{MEAL} (\textit{\underline{mealID}, hour})
+    \item \textbf{MEAL} (\textit{\underline{mealID}, hour})    
+    \item \textbf{CONTEST} (\textit{\underline{contestID}, level, name})
 \end{enumerate}
 \newpage
 	Predykatowe definicje związków encji:
@@ -1214,10 +1304,11 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 		\item \textbf{Performs} (HORSE(1,1) ACTIVITY(0,N))
 		\item \textbf{Train} (ACTIVITY(1,1) USERACOUNT(0,N))		
 		\item \textbf{Ride} (ACTIVITY(1,1) USERACOUNT(0,N))
-		\item \textbf{Refers to} (CUSTOMNOTIFICATION(0,N) USERACOUNT(1,1))
-		\item \textbf{Gets} (USERACOUNT(1,1) SHARE(0,N))
+		\item \textbf{Refers to} (NOTIFICATION(0,N) USERACOUNT(1,1))		
+		\item \textbf{Refers to} (NOTIFICATION(0,N) Horse(1,1))	
 	\end{enumerate}
-\begin{enumerate}[start=10,label={\bfseries ZWI$\backslash$\arabic*}]	
+	\begin{enumerate}[start=10,label={\bfseries ZWI$\backslash$\arabic*}]	
+		\item \textbf{Gets} (USERACOUNT(1,1) SHARE(0,N))
 		\item \textbf{Shares} (USERACCOUNT(1,1) SHARE(0,N))
 		\item \textbf{IsShared} (HORSE(1,1) SHARE(0,N))
 		\item \textbf{Has} (USERACCOUNT(0,N), USERTYPE(1,1))
@@ -1233,6 +1324,8 @@ Po zaprojektowaniu encji możemy zapisać predykatowe definicje typów encji:
 		\item \textbf{Contains} (PORTION(0,N) FORAGE(1,1))
 		\item \textbf{Has} (FORAGE(0,N) UNITOFMEASURE(1,1))
 		\item \textbf{Has} (PORTION(0,N) UNITOFMEASURE(1,1))
+		\item \textbf{Add} (NUTRITIONPLAN(0,N) USERACCOUNT(1,1))
+		\item \textbf{Has} (HORSE(0,N) USERACCOUNT(1,1))
 	\end{enumerate}
 
 Model konceptualny przedstawiony został na diagramie ERD, który został przedstawiony na rysunku \ref{DiagramERD}.
@@ -1267,7 +1360,7 @@ Po stworzeniu modelu konceptualnego, należy przetransformować go do modelu log
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{activityID} & Integer+ & & + & & & + & PR & &BD\\
+			\textit{activityID} & Integer+ & & + & & & + & PR & &SZBD\\
 			\hline
 			\textit{date} & Date & dd-mm-rrrr& + & & & & & &USER\\
 			\hline
@@ -1342,7 +1435,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{competitionID} & Integer+ & & + & & & + & PR & &BD\\
+		\textit{competitionID} & Integer+ & & + & & & + & PR & &SZBD\\
 		\hline
 		\textit{spot} & String & & - & & & & & &USER\\
 		\hline
@@ -1395,7 +1488,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-	\textit{notificationID} & Integer+& & + &&&+&PR&&BD\\
+	\textit{notificationID} & Integer+& & + &&&+&PR&&SZBD\\
 	\hline
 	\textit{title} & String& & + &&&&&&USER\\
 	\hline
@@ -1452,7 +1545,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{profesionalID}&Integer+&&+&&&+&PR&&BD\\
+		\textit{profesionalID}&Integer+&&+&&&+&PR&&SZBD\\
 		\hline
 		\textit{degree}&String&&-&&&&&&USER\\
 		\hline
@@ -1501,7 +1594,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{specialisationID}&Integer+&&+&&&+&PK&&BD\\
+		\textit{specialisationID}&Integer+&&+&&&+&PK&&SZBD\\
 		\hline
 		\textit{name}&String&&+&&&&&&USER\\
 		\hline
@@ -1591,7 +1684,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{portionID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{portionID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline
 		\textit{amount}&Float+&&+&1&0<&&&&USER\\
 		\hline
@@ -1613,6 +1706,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\hline
 	\end{tabular}
 \end{table}
+\newpage
 \item \textbf{Forges\textbackslash FORAGE} (\textit{\underline{forageID}, name, producent, capacity})
 \begin{table}[H]
 	\caption{Opis schematu relacji Forges}
@@ -1632,7 +1726,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{forageID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{forageID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline		
 		\textit{name}&String&&+&&&&&&USER\\		
 		\hline
@@ -1666,6 +1760,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\hline
 	\end{tabular}
 \end{table}
+\newpage
 \item \textbf{Horses\textbackslash HORSE} 
 \begin{table}[H]
 	\caption{Opis schematu relacji Horses}
@@ -1685,7 +1780,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 		\begin{sideways}Referencje \end{sideways}&
 		\begin{sideways}Źródło danych\end{sideways}\\
 		\hline
-		\textit{horseID}&Integer+&&+&&&+&PR&&BD\\		
+		\textit{horseID}&Integer+&&+&&&+&PR&&SZBD\\		
 		\hline			
 		\textit{name}&Integer+&&+&&&&&&USER\\		
 		\hline			
@@ -1764,7 +1859,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{genderID}&Integer+&&+&&&+&PK&&USER\\	
+			\textit{genderID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{gender}&String&&&&&&&&USER\\
 			\hline		
@@ -1806,7 +1901,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{statusID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{statusID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{name}&String&&+&&&&&&USER\\	
 			\hline
@@ -1847,7 +1942,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{mealNameID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{mealNameID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{mealName}&String&&+&&&&&&USER\\	
 			\hline
@@ -1887,7 +1982,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{nutritionPlanID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{nutritionPlanID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{title}&String&&+&&&&&&USER\\	
 			\hline			
@@ -1917,6 +2012,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{PeopleDetails\textbackslash PEOPLEDETIALS}
 	 \begin{table}[H]
 		\caption{Opis schematu relacji PeopleDetails}
@@ -1936,7 +2032,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{detailsID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{detailsID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
 			\textit{name}&String&&+&&&&&&USER\\	
 			\hline			
@@ -1982,6 +2078,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{Participations\textbackslash PARTICIPATION} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Participations}
@@ -2001,9 +2098,9 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{ParticipationID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{ParticipationID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline			
-			\textit{level}&Integer+&&+&&&&&&BD\\	
+			\textit{level}&Integer+&&+&&&&&&USER\\	
 			\hline			
 			\textit{result}&String&&+&&&&&&USER\\	
 			\hline			
@@ -2039,6 +2136,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{Shareds\textbackslash SHARED} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Shareds}
@@ -2058,7 +2156,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline			
-			\textit{sharedID}&Integer+&&+&&&+&PK&&BD\\
+			\textit{sharedID}&Integer+&&+&&&+&PK&&SZBD\\
 			\hline			
 			\textit{code}&String&&+&&&&&&USER\\				
 			\hline			
@@ -2101,10 +2199,13 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\newpage
 	\item \textbf{UnitOfmeasures\textbackslash UNITOFMEASURE}
 	 \begin{table}[H]
 		\caption{Opis schematu relacji UnitOfmeasures}
+		\centering
 		\textit{Źródło: Opracowanie własne}
+		\\
 		\label{UnitOfmeasuresRelationSchema}
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
@@ -2120,7 +2221,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{unitID}&Integer+&&+&&&+&&&BD\\	
+			\textit{unitID}&Integer+&&+&&&+&&&SZBD\\	
 			\hline
 			\textit{unitName}&String&&+&&&&&&USER\\	
 			\hline
@@ -2142,6 +2243,47 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
+\item \textbf{UserTypes\textbackslash USERTYPE}
+\begin{table}[H]
+	\caption{Opis schematu relacji UserTypes}
+	\textit{Źródło: Opracowanie własne}
+	\label{UserTypesRelationSchema}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\begin{sideways}Nazwa atrybutu\end{sideways}& 
+		\begin{sideways}Dziedzina \end{sideways}& 
+		\begin{sideways}Maska \end{sideways}& 
+		\begin{sideways}OBL(+) OPC(-)\end{sideways} & 
+		\begin{sideways}Wartość domyślna$\ $\end{sideways}& 
+		\begin{sideways}Ograniczenia\end{sideways} &
+		\begin{sideways}Unikalność \end{sideways}& 
+		\begin{sideways}Klucz \end{sideways}& 
+		\begin{sideways}Referencje \end{sideways}&
+		\begin{sideways}Źródło danych\end{sideways}\\
+		\hline
+		\textit{userTypeID}&Integer+&&+&&&+&PK&&SZBD\\	
+		\hline
+		\textit{typeName}&String&&+&&&&&&USER\\	
+		\hline			
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption{Opis atrybutów relacji UserTypes}
+	\textit{Źródło: Opracowanie własne}
+	\label{UserTypesAttributeDescription}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Nazwa atrybutu & Znaczenie \\
+		\hline
+		\textit{userTypeID}&Unikalny numer ID identyfikujący typ użytkownika\\	
+		\hline
+		\textit{typeName}& Nazwa typu użytkownika\\	
+		\hline	
+	\end{tabular}
+\end{table}
 	\item \textbf{UserAccounts\textbackslash USERACCOUNT}
 	\begin{table}[H]
 		\caption{Opis schematu relacji UserAccounts}
@@ -2161,7 +2303,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{userID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{userID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{accountLogin}&String&&+&&&+&&&USER\\	
 			\hline			
@@ -2203,47 +2345,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\hline
 		\end{tabular}
 	\end{table}
-	\item \textbf{UserTypes\textbackslash USERTYPE}
-	\begin{table}[H]
-		\caption{Opis schematu relacji UserTypes}
-		\textit{Źródło: Opracowanie własne}
-		\label{UserTypesRelationSchema}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-			\hline
-			\begin{sideways}Nazwa atrybutu\end{sideways}& 
-			\begin{sideways}Dziedzina \end{sideways}& 
-			\begin{sideways}Maska \end{sideways}& 
-			\begin{sideways}OBL(+) OPC(-)\end{sideways} & 
-			\begin{sideways}Wartość domyślna$\ $\end{sideways}& 
-			\begin{sideways}Ograniczenia\end{sideways} &
-			\begin{sideways}Unikalność \end{sideways}& 
-			\begin{sideways}Klucz \end{sideways}& 
-			\begin{sideways}Referencje \end{sideways}&
-			\begin{sideways}Źródło danych\end{sideways}\\
-			\hline
-			\textit{userTypeID}&Integer+&&+&&&+&PK&&BD\\	
-			\hline
-			\textit{typeName}&String&&+&&&&&&USER\\	
-			\hline			
-		\end{tabular}
-	\end{table}
 	
-	\begin{table}[H]
-		\caption{Opis atrybutów relacji UserTypes}
-		\textit{Źródło: Opracowanie własne}
-		\label{UserTypesAttributeDescription}
-		\centering
-		\begin{tabular}{|c|c|}
-			\hline
-			Nazwa atrybutu & Znaczenie \\
-			\hline
-			\textit{userTypeID}&Unikalny numer ID identyfikujący typ użytkownika\\	
-			\hline
-			\textit{typeName}& Nazwa typu użytkownika\\	
-			\hline	
-		\end{tabular}
-	\end{table}
 	\item \textbf{Visits\textbackslash VISIT} 
 	\begin{table}[H]
 		\caption{Opis schematu relacji Visits}
@@ -2263,7 +2365,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{careID}&Integer+&&+&&&+&PK&&BD\\	
+			\textit{careID}&Integer+&&+&&&+&PK&&SZBD\\	
 			\hline
 			\textit{cost}&Float&&+&&&&&&USER\\	
 			\hline	
@@ -2324,7 +2426,7 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 			\begin{sideways}Referencje \end{sideways}&
 			\begin{sideways}Źródło danych\end{sideways}\\
 			\hline
-			\textit{mealID}&Integer+&&+&&&+&&&BD\\	
+			\textit{mealID}&Integer+&&+&&&+&&&SZBD\\	
 			\hline
 			\textit{hour}&String&&+&&&&&&USER\\	
 			\hline			
@@ -2365,33 +2467,639 @@ Opis schematu relacji znajduje się w tabeli \ref{CompetitionsRelationSchema}.
 \end{figure}
 \newpage
 \section{Model fizyczny}
-Po stworzeniu logicznego modelu bazy danych, możemy przetransformować go w model fizyczny. Model fizyczny składa się z plików i rekordów. Pilki bazy danych złożony jest z poszczególnych rekordów, przy czym rekordy te mają 
-// dokończyć na podstawie książki Sharon Allen
+Po stworzeniu logicznego modelu bazy danych, należy przetransformować go w model fizyczny. Model fizyczny jest to model bazy danych dostosowany do konkretnej bazy. Aby z relacji stworzyć tabele należy dostosować nazwy tabel i atrybutów oraz dopasować do atrybutów odpowiedni typy danych charakterystyczny dla wybranej bazy. Diagram fizyczny bazy danych znajduje się na rysunku rys. \ref{DiagramFizyczny}. Po zaprojektowaniu tabel można sporządzić skrypty tworzące bazę danych i tabele widoczne na listingu \ref{DatabaseCreate}.
+\begin{lstlisting}[ language=SQL, 
+					caption={Fragment skryptu tworzącego bazę danych i tabele},
+					label={DatabaseCreate}]				
+	-- Tworzenie bazy danych
+	CREATE DATABASE HorseTracking;
+	
+	-- Uzywanie nowo utworzonej bazy danych
+	USE HorseTracking;
+	
+	--Tworzenie tabel
+	CREATE TABLE UserTypes (
+	typeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	typeName varchar(20) NOT NULL)
+	
+	CREATE TABLE PeopleDetails (
+	detailID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	name varchar(40) NULL,
+	surname varchar(40) NOT NULL,
+	phone varchar(20) NULL,
+	email varchar(320) NULL,
+	city varchar(200) NULL,
+	street varchar(90) NULL,
+	number varchar(10) NULL,
+	postalCode varchar(10) NULL)
+\end{lstlisting}
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{DiagramFizyczny}
+	\includegraphics[scale=0.32, angle=-90]{DiagramFizyczny}
 	\caption{Fizyczny schemat bazy danych}
 	\textit{Źródło: Opracowanie własne}
 	\label{DiagramFizyczny}
 \end{figure}
 \chapter{Projekt systemu}
 \section{Model projektowanego systemu}
-\subsubsection{Diagramy stanów}
-\subsubsection{Diagramy aktywności}
-\subsubsection{Diagram klas}
-\subsubsection{Architektura aplikacji}
+W tym rozdziale przedstawiony zostanie model projektowanego systemu. Zaprezentowane zostaną przykładowe diagramy aktywności, stanu, klas oraz sekwencji. Przedstawiona zostanie także architektura aplikacji oraz wykorzystane wzorce projektowe.
+
+\subsection{Architektura aplikacji}
 Jaka baza jakie połączenie itp.
-\subsubsection{Wykorzystane wzorce projektowe}
 \subsubsection{Model architektoniczny MVVM}
+Jako model architektoniczny aplikacji mobilnej wybrano model MVVM, ponieważ jest on dedykowany aplikacją tego typu. W aplikacji desktopowej również został wybrany ten model ze względu na łatwość jego obsługi oraz wygodną implementacje w WPF, który wspiera data binding.
+ 
+Wzorzec Model-View-ViewModel (MVVM) oddziela logikę i prezentacje aplikacji od interfejsu przeznaczonego dla użytkownika. Dzięki tej separacji można rozwiązać wiele problemów z zaprogramowaniem aplikacji. Pomaga ona także w testowaniu, konserwacji oraz rozwoju.\cite{MVVMmicLearn}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{MVVMPattern}
+	\caption{Diagram przedstawiający architekturę MVVM }
+	\textit{Źródło: \cite{mvvmpattern}}
+	\label{MVVM}
+\end{figure}
+Jak można zobaczyć na rysunku \ref{MVVM} "View", czyli widok naszej aplikacji odpowiada za to co widzi użytkownik, za wszelkie struktury, układ elementów na ekranie oraz ich wygląd. "ViewModel", czyli model naszego widoku odpowiada za logikę aplikacji. To w nim zapisane są wszystkie komendy oraz metody. "ViewModel" powiadamia widok o wszelkich zmianach jest on odpowiedzialny za aktualizacje modeli. "Model" to klasa, która hermetyzuje dane aplikacji. Zawiera on dane reproezentujące logikę biznesową oraz obiekty transferu danych (DTO). Dzięki zastosowaniu MVVM model i widok są od siebie całkowicie niezależne. \cite{MVVMmicLearn}
+Zalety korzystania z MVVM:
+\begin{itemize}
+	\item ułatwia tworzenie testów jednostkowych niezależnych od widoku. 
+	\item interfejs użytkownika może być implementowany niezależnie od modelu. 
+	\item wiele programistów może pracować na jednej aplikacji niezależnie. Widok możne być tworzony niezależnie od modelów i modelów widoku.
+\end{itemize}
+\subsubsection{Wykorzystane wzorce projektowe}
+Podczas implementacji aplikacji desktopowej oraz mobilnej wykorzystano wzorce projektowe:
+\begin{itemize}
+\item \textbf{Dependency injection} - jest to wzorzec opierający się na paradygmacie "Odwróconego Sterowania". Polega on na tym, że zamiast wywoływania bibliotek przez kod programisty, to framoworki wywołują kod. Przez to że zachowanie między bibliotekami a kodem zostało odwrócone paradygmat nosi nazwę "Odwróconego sterowani".
+Dzięki wzorcu projektowemu dependency injection możemy uniknąć ciągłego tworzenia nowych instancji serwisów oraz ciągłych zmian kodu w przypadku zmian w serwisach. Zajmuje się on wstrzykiwaniem potrzebnych zależności dzięki specjalnemu serwisowi.\cite{DI}
+\item \textbf{Singleton} - jest to wzorzec dzięki któremu wiemy, że istnieje tylko jeden obiekt z danego rodzaju. Korzystając z tego wzorca wiemy, że np. dany serwis ma tylko jedną instancje z której stale korzystamy. Wzorzec ten ma zalety ale także wady, ponieważ ogranicza nam tworzenie testów jednostkowych oraz modularność kodu.
+\end{itemize}
+\subsubsection{Entity Framework}
+Entity Framework to maper relacji obiektów, dzięki któremu można utworzyć warstwę dostępu do danych za pomocą .Net i dowolnej bazy danych działającej lokalnie bądź w chmurze. Obsługuje ono zapytania LINQ, aktualizacje, migracje oraz śledzenie zmian. Dzięki niemu możemy z łatwością łączyć aplikację z bazą danych i wykonywać na niej wszelkie operacje. \cite{EntityFramework}
+\subsection{Diagramy UML}
+Diagramy UML stanowią kluczowy element procesu projektowania aplikacji, pozwalając na graficzną reprezentację struktury, zachowań oraz relacji między różnymi częściami systemu.
+\subsubsection{Diagramy stanów}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{DiagramStanuKoń}
+	\caption{Diagram stanu - koń}
+	\textit{Źródło: Opracowanie własne}
+	\label{DiagramStanuKoń}
+\end{figure}
+\subsubsection{Diagramy aktywności}
+\begin{figure}[H]
+	\centering
+	\caption{Diagram aktywności logowanie}
+	\textit{Źródło: Opracowanie własne}
+	\label{DiagramAktywnościLogowanie}
+\end{figure}
+\subsubsection{Diagram klas}
+\begin{figure}[H]
+	\centering
+	\caption{Fragment diagramu klas}
+	\textit{Źródło: Opracowanie własne}
+	\label{DiagramKlas}
+\end{figure}
+\subsubsection{Diagram sekwencji}
+Diagram sekwencji pozwala na zaprezentowanie w sposób graficzny interakcji między obiektami, przy czym każda interakcja jest umieszczona w czasie. W aplikacji wiele interakcji można zobrazować za pomocą diagramu sekwencji. Jako przykład na poniższym diagramie (rys. \ref{DiagramSekwencjiUdostępnianie}) przedstawione zostało udostępnianie konia. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{DiagramSekwencjiUdostępnianie}
+	\caption{Diagram sekwencji - udostępnianie koni}
+	\textit{Źródło: Opracowanie własne}
+	\label{DiagramSekwencjiUdostępnianie}
+\end{figure}
+\newpage
 \section{Wybrane aspekty implementacyjne}
-jeden viewmodel obsługuje dwa widoki (dodawanie aktywności i szczegóły aktywności) \\
-kontrolki\\
-\chapter{Testy aplikacji}
-\section{Unit testy}
-\section{Test case}
-\section{Baza błędów}
+W tym rozdziale przedstawione zostały wybrane fragmenty implementacji aplikacji mobilnej oraz desktopowej. Zaprezentowana została implementacja architektury aplikacji oraz wzorce projektowe przedstawione wcześniej. Przedstawione zostaną także niektóre z nuggetów opisane wcześniej oraz inne ciekawe aspekty implementacji.
+\subsubsection{Implementacja architektury MVVM}
+W aplikacji mobilnej oraz desktopowej zastosowano model architektoniczny MVVM. Implementacja modelu odbywa się poprzez zdefiniowanie DataContext jako odpowiedni view model co możemy zauważyć w listingu \ref{XamlFragmentMVVM}. Listing ten przedstawia fragment pliku xaml, w którym definiujemy paczki i zależności. W 8 linii listingu widzimy zdefiniowanie DataContext jako NutritionPageModel. \\
+\begin{lstlisting}[language=C, caption={Fragment kodu xaml},
+	label={XamlFragmentMVVM}]		
+<Page x:Class="HorseTrackingDesktop.Pages.MainPage.NutritionPage"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:main="clr-namespace:HorseTrackingDesktop.PageModel.Main"
+xmlns:converter ="clr-namespace:HorseTrackingDesktop.Converters"
+d:DataContext="{d:DesignInstance Type=main:NutritionPageModel}"
+mc:Ignorable="d"
+d:DesignHeight="450" d:DesignWidth="800"
+Title="NutritionPage">
+\end{lstlisting}
+Dodatkowo, aby przypisać odpowiednie metody do eventu ładowania podpięto także DataContext w pliku .cs widoku (patrz listing \ref{CSFragmentMVVM}).  View model został wstrzyknięty za pomocą Dependency Incjection, a następnie przypisany pod DataContext. \\
+\begin{lstlisting}[ caption={Podpięcie DataContext w pliku .cs},
+	label={CSFragmentMVVM}]	
+namespace HorseTrackingDesktop.Pages.MainPage
+{
+	public partial class NutritionPage : Page
+	{
+		private NutritionPageModel? pageModel;
+			
+		public NutritionPage()
+		{
+			InitializeComponent();
+			pageModel = StartUp.ServiceProvider?.GetService<NutritionPageModel>();
+			DataContext = pageModel;
+			if (pageModel != null)
+			{
+				Loaded += async (s, e) => await pageModel.GetPlans();
+			}
+		}
+	}
+}
+\end{lstlisting}
+Można zauważyć, że w pliku widocznym na listingu \ref{CSFragmentMVVM} nie ma żadnych metod dotyczących funkcjonalności aplikacji jest to część implementacji MVVM. Dzięki temu, że podpięty został ViewModel możemy tam umieścić wszystkie te metody a tym samy oddzielić je od widoku. \\
+\begin{lstlisting}[ caption={Podpięcie DataContext w pliku .cs},
+	label={CSFragmentMVVM}]	
+	namespace HorseTrackingDesktop.Pages.MainPage
+	{
+		public partial class NutritionPage : Page
+		{
+			private NutritionPageModel? pageModel;
+			
+			public NutritionPage()
+			{
+				InitializeComponent();
+				pageModel = StartUp.ServiceProvider?.GetService<NutritionPageModel>();
+				DataContext = pageModel;
+				if (pageModel != null)
+				{
+					Loaded += async (s, e) => await pageModel.GetPlans();
+				}
+			}
+		}
+	}
+\end{lstlisting}
+Dzięki użyciu tej architektury można uniknąć powtarzania tego samego kodu. Możemy używać jednego ViewModelu do obsługi wielu widoków. W aplikacji zostało to użyte wiele razy, większość widoków dodawania, edytowania oraz szczegółów danego komponentu implementują ten sam ViewModel.
+\subsubsection{INotifyPropertyChanged}
+ViewModel musi informować widok o zmianach w różnych zmiennych w nim zaimplementowanych, aby mógł to robić zaimplementowany został interfejs INotifyPropertyChanged. Każdy ViewModel musi implementować ten interfejs, dlatego utworzono klasę bazową (patrz listnig \ref{BaseClass}), w której został on zaimplementowany, a wszystkie view modele mogą po niej dziedziczyć. \\
+\begin{lstlisting}[ caption={Klasa bazowa view modeli},
+	label={BaseClass}]	
+ public class BaseViewModel : INotifyPropertyChanged
+{
+	protected bool SetProperty<T>(ref T backingStore, T value,
+	[CallerMemberName] string propertyName = "",
+	Action onChanged = null)
+	{
+		if (EqualityComparer<T>.Default.Equals(backingStore, value))
+		return false;
+		
+		backingStore = value;
+		onChanged?.Invoke();
+		OnPropertyChanged(propertyName);
+		return true;
+	}
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+	{
+		var changed = PropertyChanged;
+		if (changed == null)
+		return;
+		
+		changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+	}
+}
+\end{lstlisting}
+W klasie tej zaimplementowano łatwiejszy dostęp do wywołania eventu \textbf{PropertyChangedEventArgs} poprzez wywołanie metody \textbf{OnPropertyChanged}(argument), gdzie jako argument podajemy nazwę zmiennej. Zaimplementowano także metodę SetProperty która pozwala na łatwe przypisywanie wartości do zmiennych z jednoczesną aktualizacją ich w widoku użytkownika.
+\subsubsection{Dependency Injection}
+W aplikacji użyto Dependency Injection do wstrzykiwania zależności do viewModeli i serwisów. W celu implementacji użyty został nugget Microsoft.Extensions.DependencyInjection w aplikacji mobilnej oraz desktopowej. Utworzono klasę statyczną StartUp.cs (patrz listing \ref{StartUp}) w której zaimplementowano serwis obsługujący wstrzykiwanie.\\
+\begin{lstlisting} [ caption={Klasa StartUp},
+	label={StartUp}]	
+public static class Startup
+{
+	public static IServiceProvider ServiceProvider { get; set; }
+	
+	public static IServiceProvider Init()
+	{
+		var serviceProvider = new ServiceCollection()
+		.ConfigureServices()
+		.ConfigureViewModels()
+		.BuildServiceProvider();
+		
+		ServiceProvider = serviceProvider;
+		
+		return serviceProvider;
+	}
+}
+\end{lstlisting}	
+Metody konfigurujące serwisy oraz view modele zostały zaimplementowane w klasie DependencyInjectionContainer widoczną na listingu \ref{DependencyInjectionContainer}.\\
+\begin{lstlisting} [ caption={Klasa DependencyInjectionContainer}, label={DependencyInjectionContainer}]	
+ public static class DependencyInjectionContainer
+{
+	public static IServiceCollection ConfigureServices(this IServiceCollection services)
+	{
+		services.AddSingleton<IUserService, UserService>();
+		services.AddSingleton<IAppState, AppState>();
+		:
+		return services;
+	}
+	
+	public static IServiceCollection ConfigureViewModels(this IServiceCollection services)
+	{
+		services.AddTransient<LoginViewModel>();
+		services.AddSingleton<BaseViewModel>();
+		:
+		return services;
+	}
+}
+\end{lstlisting}
+Można zauważyć, że serwisy zostały zainicjowane jako Singletony, ponieważ potrzebujemy tylko jedną ich instancje, natomiast viewModele jako transient, ponieważ przy każdym ich użyciu chcemy mieć ich nową instancje.
+Dzięki dependency injection nie trzeba ręcznie tworzyć wszystkich zależności i zależności do ich zależności. Można w łatwy sposób w konstruktorze wstrzyknąć wszystko co jest potrzebne (patrz. listing \ref{DIConstruktor}).
+\begin{lstlisting} [ caption={Wstrzykiwanie zależności w konstruktorze}, label={DIConstruktor}]	
+public ActivityViewModel(IActivityService activityServices, IAppShellRoutingService appShellRoutingService,
+IAppState appState, IHorseService horseService)
+{
+	_activityServices = activityServices;
+	_appShellRoutingService = appShellRoutingService;
+	_appState = appState;
+	_horseService = horseService;
+	:
+}
+\end{lstlisting}
+\subsubsection{Command i RelayCommand}
+Większość funkcjonalności z aplikacji mobilnej została zaimplementowana jako komendy używając klasy Command, co można zobaczyć na poniższym listingu \ref{Command}.
+\begin{lstlisting} [ caption={Użycie komend}, label={Command}]	
+public LoginViewModel(IUserService userService, IAppState appState, IHorseService horseService, IShareHorseServices shareHorseServices)
+{
+	_userService = userService;
+	_appState = appState;
+	_horseService = horseService;
+	_shareHorseServices = shareHorseServices;
+	
+	LoginCommand = new Command(() =>
+	{
+		if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
+		return;
+		var hashedPassword = ReadedPassword;
+		var user = _userService.GetUser(ReadedLogin, hashedPassword);
+		if (user == null)
+		{
+			IncorrectData();
+			return;
+		}
+		_appState.CurrentUser = user;
+		GoToTheApp();
+	});
+}
+\end{lstlisting}
+Zaś w aplikacji desktopowej użyto RelayCommand z paczki nuggetowej (patrz listing \ref{RelayCommand})
+\begin{lstlisting} [ caption={Użycie RelayCommand}, label={RelayCommand}]	
+[RelayCommand]
+public async Task GoToAddPlan()
+{
+	new AddNutritionView().ShowDialog();
+	await GetPlans();
+}
+\end{lstlisting}
+\subsubsection{QRCode}
+W aplikacji jest możliwość udostępniania koni między użytkownikami. Można to zrobić przez zwykłą wyszukiwarkę lub szybciej za pomocą kodu QR. Do udostępniania przez QR zaprojektowano dwa widoki, jeden ze skanerem (patrz listing \ref{QRScan}), oraz drugi umożliwiający generacje kodu. 
+
+Scanner zdefiniowany jest w 12 linijce listingu \ref{QRScan}. Skaner skanuje tylko jeśli zmienna IsScanning ustalona jest na true. Po zeskanowaniu odpala się event \textbf{OnScanResult}, gdzie dostępny jest zeskanowany tekst. \\
+\begin{lstlisting} [ caption={Skaner kodów QR}, label={QRScan}]	
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="HorseTrackingMobile.Views.ScanHorseView"
+xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+x:DataType="viewmodels:ScanHorseViewModel"
+Shell.TabBarIsVisible="False"
+Shell.FlyoutBehavior="Disabled">
+<ContentPage.Content>
+	<StackLayout>
+		<zxing:ZXingScannerView OnScanResult='ZXingScannerView_OnScanResult'
+								IsScanning="{Binding IsScanning}" />
+	</StackLayout>
+</ContentPage.Content>
+</ContentPage>
+\end{lstlisting}
+Aby użytkownik mógł zeskanować kod QR, wcześniej inny osoba musi wygenerować go w aplikacji. Aby to zrobić przygotowany został widok z generatorem kodów QR przedstawiony na listingu \ref{QRGen}. W widoku tym możliwe jest nie tylko same generowanie, lecz także wybranie udostępnianego konia oraz daty ważności udostępnienia. Po wybraniu obu tych wartości widoczny jest QR kod gotowy do zeskanowania przez innych użytkowników. Generator kodów QR podobnie jak skaner pochodzi z paczki ZXing, zadeklarowanej w 3 linijce listingu \ref{QRGen}. Koń na raz może być udostępniony tylko jednej osobie, więc po zeskanowaniu kod staje nie ważny. \\
+\begin{lstlisting} [ caption={Wyświetlanie kodów QR}, label={QRGen}]	
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+xmlns:viewmodels="clr-namespace:HorseTrackingMobile.ViewModels"
+xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+x:DataType="viewmodels:ShareHorseViewModel"
+x:Class="HorseTrackingMobile.Views.ShareHorseView"
+Shell.TabBarIsVisible="False"
+Shell.FlyoutBehavior="Disabled">
+<ContentPage.Content>
+<StackLayout Margin="30,50">
+<Label Text="Wybierz konia: " />
+<Picker SelectedItem="{Binding SelectedHorse}"
+ItemsSource="{Binding Horses}"
+ItemDisplayBinding="{Binding Name, Mode=TwoWay}" />
+<Label Text="Wybierz date:" />
+<DatePicker Date="{Binding EndDate, Mode=TwoWay}" MinimumDate="{Binding DateNow}" />
+<zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE" BarcodeValue="{Binding BarcodeValue}" WidthRequest="500" HeightRequest="500">
+<zxing:ZXingBarcodeImageView.BarcodeOptions>
+<zxingcommon:EncodingOptions Height="500" Width="500" />
+</zxing:ZXingBarcodeImageView.BarcodeOptions>
+</zxing:ZXingBarcodeImageView>
+</StackLayout>
+</ContentPage.Content>
+</ContentPage>
+\end{lstlisting}
+\subsubsection{Kodowanie i odkodowanie}
+Informacje o udostępnieniu przekazywane w kodach QR są szyfrowane, aby nie możliwe było podrobienie kodu i przejęcie czyiś koni. Informacja przekazywana w kodzie zawiera id konia oraz datę ważności udostępnienia. Gdyby nie była ona zaszyfrowana inny użytkownik mógłby z łatwością wygenerować kody QR pozwalające na udostępnianie różnych koni. Aby zapobiec takiemu nie pożądanemu zjawisku wprowadzono szyfrowanie i odszyfrowanie tekstu z kodu QR (patrz listing \ref{EncodeDecode}). \\
+\begin{lstlisting} [ caption={Kodowanie i odkodowanie}, label={EncodeDecode}]	
+ private byte[] EncryptStringToBytes_Aes(string text, byte[] key, byte[] iv)
+{
+	using (var aesAlg = Aes.Create())
+	{
+		aesAlg.Key = key;		aesAlg.IV = iv;
+		var encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+		using (var msEncrypt = new MemoryStream())
+		{
+			using (var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+			{
+				using (var swEncrypt = new StreamWriter(csEncrypt))
+				{
+					swEncrypt.Write(text);
+				}
+			}
+			return msEncrypt.ToArray();
+}}}
+private string DecryptStringFromBytes_Aes(byte[] text, byte[] key, byte[] iv)
+{
+	using (var aesAlg = Aes.Create())
+	{
+		aesAlg.Key = key;		aesAlg.IV = iv;
+		var decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+		using (var msDecrypt = new MemoryStream(text))
+		{
+			using (var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+			{
+				using (var srDecrypt = new StreamReader(csDecrypt))
+				{
+					return srDecrypt.ReadToEnd();
+}}}}}
+\end{lstlisting}
+\subsubsection{Własne kontrolki}
+Menu boczne dostępne w aplikacji desktopowej zostało stworzone z customowych kontrolek. Przyciski dostępne w menu to przyciski zapewniające dodatkowy routing do określonej strony oraz obrazek. Klasa w której została stworzona kontrolka (patrz listing \ref{navButton}) dziedziczy po klasie Button i wykorzystuje wiele jego funkcjonalności.\\
+
+\begin{lstlisting} [ caption={Kontrolka NavigationButton}, label={navButton}]	
+public class NavigationButton : Button
+{
+	static NavigationButton()	{
+		DefaultStyleKeyProperty.OverrideMetadata(typeof(NavigationButton), new FrameworkPropertyMetadata(typeof(NavigationButton)));	}
+	
+	public NavigationButton()	{
+		this.Template = (ControlTemplate)Application.Current.Resources["Template"];}
+	
+	public ImageSource ImageSource	{
+		get { return (ImageSource)GetValue(ImageSourceProperty); }
+		set { SetValue(ImageSourceProperty, value); }	}
+	
+	public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.Register("ImageSource", typeof(ImageSource), typeof(NavigationButton), new PropertyMetadata(null));
+	
+	public Brush Highlight	{
+		get { return (Brush)GetValue(HighlightProperty); }
+		set { SetValue(HighlightProperty, value); }	}
+	
+	public static readonly DependencyProperty HighlightProperty = DependencyProperty.Register("Highlight", typeof(Brush), typeof(NavigationButton), new PropertyMetadata(null));
+	
+	public Uri Routing	{
+		get { return (Uri)GetValue(RoutingProperty); }
+		set { SetValue(RoutingProperty, value); }	}
+	
+	public static readonly DependencyProperty RoutingProperty = DependencyProperty.Register("Routing", typeof(Uri), typeof(NavigationButton), new PropertyMetadata(null));
+}
+\end{lstlisting}
+\subsubsection{Konwertery}
+W aplikacji desktopowej zastosowano dwa konwertery dotyczące widoczności obiektów w UI użytkownika. Jeden z nich konwertuje zmienną boolowską prawda/fałsz na odpowiedni enumerator widoczności, zaś drugi datę. Pierwszy z nich został przedstawiony na listingu \ref{converter}. \\
+\begin{lstlisting} [ caption={Konwerter}, label={converter}]	
+	public class BoolToVisibilityConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			if (value is bool boolValue && boolValue)
+			{
+				return Visibility.Visible;
+			}
+			else
+			{
+				return Visibility.Collapsed;
+			}
+		}
+		
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotSupportedException();
+		}
+	}
+\end{lstlisting}
+\subsubsection{Hash i salt}
+Aby bezpiecznie przechowywać hasła w bazie danych należy je zaszyfrować. Hasła powinny być zapisane w taki sposób, aby po ich wycieku nie dało się ich odszyfrować. Odpowiednim algorytmem jest algorytm hashujący, ponieważ po zakodowaniu nim nie da się już odszyfrować danych. Paczka wybrana do implementacji używa hash i salt, zapisuje je w jednej zmiennej, aby następnie móc sprawdzić czy podane przez użytkownika hasło jest prawidłowe. Hasło hashujemy po jego utworzeniu oraz po zmianie(patrz listing \ref{hash})
+\newline
+\begin{lstlisting} [ caption={Hashowanie po zmienie hasła}, label={hash}]	
+ public bool ChangePassword(int id, string newPassword, string oldPassword)
+{
+	var hashNew = PasswordHasher.Hash(newPassword);
+	var user = GetUser(id);
+	if (PasswordHasher.Validate(oldPassword, user.Hash))
+	{
+		var query = $"UPDATE UserAcounts " +
+		$"SET hash = '{hashNew}' " +
+		$"WHERE userID = {id}";
+		
+		var cmd = new SqlCommand(query, _connectionService.GetConnection());
+		cmd.ExecuteReader();
+		return true;
+	}
+	return false;
+}
+\end{lstlisting}
+Po za hasho'waniu haseł są one bezpieczne w bazie. Jednakże sprawdzenie poprawności logowania nie polega teraz jedynie na porównaniu dwóch stringów. Aby sprawdzić poprawność hasła używamy specjalnej metody pokazanej w linii 8 listingu \ref{validatePass}.
+\newline
+\begin{lstlisting} [ caption={Sprawdzenie poprawności hasła}, label={validatePass}]	
+LoginCommand = new Command(() =>
+{
+	if (string.IsNullOrWhiteSpace(ReadedLogin) && string.IsNullOrWhiteSpace(ReadedPassword))
+		return;
+	var user = _userService.GetUser(ReadedLogin);
+	if (user != null)
+	{
+		if (PasswordHasher.Validate(ReadedPassword, user.Hash))
+		{
+			_appState.CurrentUser = user;
+			GoToTheApp();
+			return;
+		}
+	}
+	
+	IncorrectData();
+	return;
+});	
+\end{lstlisting}
+\newpage
 \chapter{Dokumentacja użytkownika}
 \section{Aplikacja desktopowa}
+Aplikacja desktopowa "HorseTracking" służy do zarządzania wizytami, żywieniem i zawodami. Można w niej obejrzeć także statystyki z aktywności oraz zawodów. W aplikacji tej dostępny jest także kalendarz z zapisanymi wszystkimi wydarzeniami. Po uruchomieniu użytkownikowi wyświetlony zostaje panel logowania. Każdy użytkownik, posiadający konto w aplikacji może się zalogować. Stworzenie konta, samodzielnie przez użytkownika nie jest możliwe.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.32]{Logowanie}
+	\caption{Panel logowania}
+	\textit{Źródło: Opracowanie własne}
+	\label{Logowanie}
+\end{figure}
+Po zalogowaniu widoczna jest strona statystyk wraz z bocznym menu. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Statystyki}
+\caption{Strona statystyk}
+\textit{Źródło: Opracowanie własne}
+\label{Statystyki}
+\end{figure}
+Wśród statystyk w lewym górnym rogu widoczne jest miesięczne zestawienie aktywności jednego konia oraz w lewym dolnym wszystkich koni. .........(Dokończyć jak będzie więcej wiadomo)
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Wizyty}
+\caption{Strona wizyt}
+\textit{Źródło: Opracowanie własne}
+\label{Wizyty}
+\end{figure}
+Po wybraniu wizyt z menu bocznego można obejrzeć wizyty koni. Na górze ekranu widoczny jest pole, dzięki któremu możemy wybrać dla jakiego konia mają być wyświetlane wizyty. Wizyty wyświetlane są w tabeli, posegregowane według malejąco według daty jej odbycia. Na głównym ekranie występują jedynie skrócone informacje na temat wizyty. Dostępna jest data wizyty, imię konia który odbywał wizytę, nazwisko oraz specjalizacja lekarza lub kowala oraz cena wizyty. 
+
+Szczegóły konkretnej wizyty można obejrzeć klikając dwa razy na wiersz w tabeli z informacjami o niej. Po kliknięciu pojawi się nowe okno (patrz rys. \ref{WizytyDetale}) na którym znajduje się nie tylko szczegółowy opis przebiegu wizyty, ale także zdjęcie z wizyty, wszelkie szczegółowe informacje dotyczące konia oraz osoby przeprowadzającej. Po obejrzeniu szczegółów można powrócić do okna głównego klikając przycisk "Wróć".
+\begin{figure}
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.4]{wizytyDetale}
+			\caption{Szczegóły wizyty}
+			\textit{Źródło: Opracowanie własne}
+			\label{WizytyDetale}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.4]{dodajWizyte}
+			\caption{Dodawanie wizyt}
+			\textit{Źródło: Opracowanie własne}
+			\label{DodajWizyty}
+		\end{minipage}
+	\end{center}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{zdjęcieWizyta}
+\caption{Dodawanie zdjęcia do wizyty}
+\textit{Źródło: Opracowanie własne}
+\label{Dodaj zdjęcie}
+\end{figure}
+
+Na dole głównego ekranu znajdują się trzy przyciski pozwalające na zarządzanie wizytami. Po kliknięciu przycisku dodaj otworzy się nowe okno pozwalające dodać nową wizytę (patrz rys.\ref{DodajWizyty}). W oknie tym możemy wybrać konia, lekarza oraz dodać opis wizyty i zapisać koszta z nią związane. Data wizyty automatycznie ustawiona jest na dzisiejszą, jednakże można ją dowolnie modyfikować. Oprócz przycisku "dodaj" dostępny jest także przycisk "edytuj". Przycisk ten pozwala na edycje obecnie zaznaczonej wizyty. Otwiera on to samo okno co przy dodawaniu, jednakże tym razem widok jest już wypełniony danymi. Ostatni z przycisków, przycisk "usuń" pozwala na usunięcie obecnie zaznaczonej wizyty. {\color{red}Na oknie dodawania wizyt dostępny jest przycisk dodania zdjęcia. Przycisk ten przenosi użytkownika na nowe okno, w którym możliwe jest wgranie zdjęcia z komputera i zapisanie go do bazy danych (patrz rys. \ref{Dodaj zdjęcie}).}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{Zywienie}
+	\caption{Strona żywienia}
+	\textit{Źródło: Opracowanie własne}
+	\label{Zywienie}
+\end{figure}
+
+Na menu bocznym dostępna jest także zakładka "Żywienie" pozwalająca na zarządzanie planami żywienia. Po kliknięciu zostajemy przeniesieni na stronę widoczną na rysunku \ref{Zywienie}. Dla każdego z koni można ustawić jego indywidualny plan, poprzez kliknięcie przycisku ,,dodaj plan''. Jest on całkowicie modyfikowalny, może zawierać dowolną ilość posiłków podawanych o dowolnej porze dnia, każdy posiłek może zawierać wiele składników w różnych ilościach. \textcolor{red}{Pory posiłków oraz ich nazwy można ustawić po kliknięciu przycisku ustawienia. W tym miejscu można także dodać nowe rodzaje składników posiłku takich jak pasze, warzywa itp..} Wiele koni może być aktualnie na tej samej diecie i stosować ten sam plan żywienia. Na dole planu wypisane są imiona koni, które aktualnie są na tej diecie co pozwala na łatwą identyfikację. Każdy z planów ma swój kolor dzięki czemu użytkownik od razu wie na który plan spojrzeć. Pory posiłków zostały napisane wytłuszczoną czcionką, co poprawienia czytelności. Na tej stronie można zapisać dowolnie wiele planów żywienia, nie każdy z nich musi być obecnie używany. Jeśli zostanie zapisane więcej danych niż może zmieścić ekran pojawią się suwaki dzięki, którym można obserwować wszystkie zapisane informacje.
+
+\begin{figure} [H]
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{dodajZywienie}
+			\caption{Dodawanie żywienia}
+			\textit{Źródło: Opracowanie własne}
+			\label{DodajZywienie}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{edytujZywienie}
+			\caption{Edycja żywienia}
+			\textit{Źródło: Opracowanie własne}
+			\label{EdytujZywienie}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
+Jak zostało wcześniej wspomniane, aby dodać kolejne plany należy kliknąć przycisk "dodaj plan". Kliknięcie go powoduje otwarcie nowego okna widocznego na rysunku \ref{DodajZywienie}. W oknie tym możemy nadać tytuł naszemu planu wybrać kolor, dodać opis oraz stworzyć plan poprzez dodawanie kolejnych składników oraz posiłków.  Każdy wybrany przez nas składnik musi podawany być w odpowiedniej ilości, aby konie zdrowo się odżywiały w tym celu przy każdej paszy którą mamy do wyboru dostępne jest pole do wpisania ilości oraz miejsce w którym możemy wybrać w jakiej miarze została podana ilość. 
+
+Możliwa jest także późniejsza edycja planów poprzez kliknięcie przycisku edytuj na stronie głównej. W tym przypadku otwiera się to samo okno co przy dodawaniu planu jednakże jest ono już uzupełnione danymi (patrz. rys \ref{EdytujZywienie}). Po dodaniu bądź edycji planu użytkownik zostanie przekierowany na stronę główną. Jeśli dodany plan go nie satysfakcjonuje można go usunąć klikając przycisk usuń.
+
+
+Na menu bocznym dostępną mamy także zakładkę zawody. Po kliknięciu w nią użytkownik przeniesiony zostanie na stronę gdzie możliwe jest zarządzanie zawodami. Po wejściu widoczna jest lista zawodów oraz puste miejsce po prawej stronie. Kliknięciu w dowolne zawody dostępne na liście spowoduje pojawienie się po prawej stronie od listy, spisu konkursów dostępnych na tych zawodach. Jeśli jakiś koń jest już zapisany na te zawody jego imię pojawi się pod każdym z konkursów w których bierze udział. Jeśli zawody są już zakończone wyniki konia powinny zostać uzupełnione. 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{zawody}
+\caption{Strona zawodów}
+\textit{Źródło: Opracowanie własne}
+\label{StronaZawodow}
+\end{figure}
+Aby dodać nowego konia do zawodów należy kliknąć w nazwę konkursu. Poskutkuje to otwarciem nowego okna z wyborem konia, którego do dodania. W oknie tym widoczne będą wszystkie konie danego użytkownika. Po zatwierdzeniu koń zostanie dodany do tych zawodów. Wyniki konia będą puste, ponieważ aplikacja umożliwia także planowanie przyszłych startów. Dopiero zakończonych zawodach można dodać wyniki dowolnego konia uzupełniając pola w wybranych konkursach przy imieniu odpowiedniego konia. W razie pomyłki i nieprawidłowego zapisania wystarczy edytować pole z błędem. Zmiany zapiszą  się w bazie automatycznie. aby usunąć start konia w zawodach wystarczy kliknąć przycisk usuń przy jego imieniu.
+
+\begin{figure} [H]
+	\begin{center}
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{dodajZawody}
+			\caption{Dodawanie \newline \centering zawodów}
+			\textit{Źródło: Opracowanie własne}
+			\label{dodajZawody}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{6cm}
+			\centering
+			\includegraphics[scale=0.7]{edytujZawody}
+			\caption{Edycja zawodów}
+			\textit{Źródło: Opracowanie własne}
+			\label{edytujZawody}
+		\end{minipage}
+	\end{center}
+\end{figure}
+Możliwe jest także dodawanie, edytowanie oraz usuwanie całych zawodów. Dodawanie odbywa się poprzez nowe okno widoczne na rys.\ref{dodajZawody}. W oknie tym można uzupełnić wszystkie niezbędne informacje, dodać dowolną ilość konkursów oraz zapisać stworzone zawody. Okno edycji widoczne na rys. \ref{edytujZawody} jest praktycznie identyczne co okno dodawania zawodów jednakże przy edycji uzupełnione jest ono wcześniej podanymi danymi.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{kalendarz}
+\caption{Strona z kalendarzem}
+\textit{Źródło: Opracowanie własne}
+\label{Kalendarz}
+\end{figure}
+W menu bocznym dostępna jest także ikona kalendarza. Po kliknięciu tej ikony użytkownik zostaje przeniesiony na stronę z widokiem różnych wydarzeń wprowadzonych do aplikacji. W tym miejscu można spojrzeć kiedy koń miał ostatnio wizytę, jakie aktywności wykonywał kiedy są jakie zawody. Wszystkie informacje z różnych zakładek aplikacji dostępne w skróconej formie na jednym oknie. Kalendarz jest przejrzysty zawiera nie wiele szczegółów, a wydarzenia w nim dostępne posegregowane są od najnowszego do najstarszego. Po najechaniu myszką na konkretny kafelek z listy staje się on wyraźniejszy oraz jego tło zmienia się na zielone. Z tego widoku nie możemy edytować żadnych wizyty bądź aktywności. Jest to widok przeznaczony tylko i wyłącznie do wyświetlania informacji.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieUzytkownikami}
+\caption{Zarządzanie użytkownikami}
+\textit{Źródło: Opracowanie własne}
+\label{Uzytkownicy}
+\end{figure}
+Zakładka konta jest dostępna jedynie dla użytkownika o prawach administratora. Po wejściu w tą zakładkę możliwe jest zarządzanie użytkownikami (patrz rys.\ref{Uzytkownicy}). Dodawanie nowych użytkowników poprzez wpisanie ich danych do tabeli, edycja tych danych, bądź usunięcie poprzez naciśnięcie klawisza delete. Dostępny jest także przycisk pozwalający na zresetowanie hasła użytkownika widoczny poniżej tabeli.
+
+Z tej zakładki możemy także zarządzać końmi (patrz rys.\ref{Konie}) oraz lekarzami, kowalami (patrz rys.\ref{Specjalisci}) dostępnymi w naszej aplikacji. W przypadku koni usunięcie konia możliwe jest poprzez kliknięcie przycisku usuń po niżej tabeli. Obok tego przycisku dostępny jest także przycisk zmień właściciela, pozwalający na przypisanie konia do innego użytkownika poprzez małe okno dialogowe. W zarządzaniu specjalistami jakimi są lekarze oraz kowale także możliwe jest dodawanie, edytowanie oraz usuwanie danych. Dwie pierwsze dostępne są poprzez uzupełnienie tabeli, zaś usuwanie odbywa się po naciśnięciu przycisku. Możemy także dodawać nowe specjalizacje poprzez kliknięcie przycisku "dodaj specjalizacje".
+
+Wszystkie tabele są sformatowane i dostosowane do danych przechowywanych w aplikacji. Podczas dodawania nowych obiektów część pól tabeli jest zwykły polem tekstowym, a część jest dostępna jako rozwijane listy z predefiniowanymi elementami.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieKonmi}
+\caption{Zarządzanie końmi}
+\textit{Źródło: Opracowanie własne}
+\label{Konie}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ZarzadzanieSpecjalistami}
+\caption{Zarządzanie lekarzami, kowalami itp}
+\textit{Źródło: Opracowanie własne}
+\label{Specjalisci}
+\end{figure}
+
+
+{\color{red} Ustawienia}
 \newpage
 \section{Aplikacja mobilna}
 Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności koni, ich wizyt u lekarzy, kowali jak także do zarządzania zawodami.
@@ -2412,7 +3120,7 @@ Aplikacja mobilna "HorseTracking" służy do zapisywania dziennych aktywności k
 \end{wrapfigure}
 Po pierwszym otwarciu aplikacji użytkownikowi ukaże się okno logowania przedstawione na rysunku \ref{LoginView}. 
 
-Na tym ekranie użytkownik może zalogować się do aplikacji. \textcolor{red}{Możliwa jest także opcja zresetowania swojego hasła, w przypadku zapomnienia hasła}. Rejestracja do aplikacji nie jest możliwa, ponieważ ta funkcja jest dostępna jedynie dla administratora w aplikacji desktopowej. Po wprowadzeniu loginu i hasła, a następnie kliknięciu przycisku "Zaloguj" sprawdzana jest poprawność wprowadzonych danych. 
+Na tym ekranie użytkownik może zalogować się do aplikacji. Możliwa jest także opcja zresetowania swojego hasła, w przypadku zapomnienia hasła poprzez zgłoszenie tego administratorowi. Rejestracja do aplikacji nie jest możliwa, ponieważ ta funkcja jest dostępna jedynie dla administratora w aplikacji desktopowej. Po wprowadzeniu loginu i hasła, a następnie kliknięciu przycisku "Zaloguj" sprawdzana jest poprawność wprowadzonych danych. 
 
 Jeśli przy próbie zalogowania podane zostaną nieprawidłowe dane logowania, bądź użytkownika nie ma w systemie, zostanie on o tym poinformowany (patrz. rys \ref{LoginViewWrongPassword})
 Użytkownik nieposiadający koni (użytkownik typu appOwner) nie może zalogować się do aplikacji mobilnej, ponieważ służy ona tylko do wpisywania danych o swoich koniach.
@@ -2496,8 +3204,47 @@ Na rysunku \ref{VisitView} widzimy listę wizyt wybranego konia. Po kliknięciu 
 	\textit{Źródło: Opracowanie własne}
 	\label{NutritionPlan}
 \end{wrapfigure}
-Kolejną opcją dostępną w menu dolnym są plany żywienia. Po kliknięciu w ikonę "jabłka" użytkownik zostanie przeniesiony na stronę z planami żywienia wszystkich jego koni. W widoku tym można jedynie obejrzeć plan żywienia (patrz \ref{NutritionPlan}), nie jest możliwe ich dodanie, edycja bądź usunięcie. Całość zarządzania planami żywnienia została zaimplementowana w aplikacji desktopowej.
+Kolejną opcją dostępną w menu dolnym są plany żywienia. Po kliknięciu w ikonę jabłka użytkownik zostanie przeniesiony na stronę z planami żywienia wszystkich jego koni. Plany żywienia przedstawione zostały na liście, którą możemy scrollować, aby zobaczyć wszystkie plany dotyczące naszych koni. W widoku tym można jedynie obejrzeć plany żywienia (patrz \ref{NutritionPlan}), nie jest możliwe ich dodanie, edycja bądź usunięcie. Całość zarządzania planami żywienia została zaimplementowana w aplikacji desktopowej. Dzięki tej zakładce użytkownicy przebywający w stajni mogą sprawdzić dietę konia i przygotować dla niego posiłki. Plany zostały przedstawione w przejrzysty sposób, gwarantujący możliwość szybkiego sprawdzenia diety konia. Kolory oraz tytuły zastosowane w poszczególnych planach są ściśle z nimi związane i można je ustalić przy tworzeniu planu, dzięki nim po jednym spojrzeniu wiemy, który plan dotyczy którego konia. 
 
+Ostatnia zakładka dostępna w menu dolnym z ikoną nagrody "flo" rozety rozdawanej na zawodach, przenosi nas do strony, na której możemy obejrzeć informacje dotyczące zawodów. Na tej stronie widzimy listę startów naszych koni w różnych zawodach. Starty te zostały posegregowane według daty od najwcześniejszego do najbardziej odległego w czasie. Jeśli zawody już się zakończyły i uzupełnione zostały wyniki z tych zawodów to one także pojawią się na tej liście. Okno zawodów można zobaczyć na rysunku \ref{Competition}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{CompetitionView}
+	\caption{\centering Okno przedstawiające starty w zawodach.}
+	\textit{Źródło: Opracowanie własne}
+	\label{Competition}
+\end{figure}
+
+W aplikacji mobilnej oprócz menu dolnego, które prowadzi nas przez najważniejsze funkcjonalności aplikacji mamy także menu boczne. W menu bocznym mamy możliwość wylogowania się z aplikacji. Wyjście z aplikacji nie powoduje wylogowania, użytkownik po wpisaniu swoich danych zostaje zapamiętany i po wejściu do aplikacji będzie już zalogowany na swoje konto. Dlatego w menu bocznym dodany został przycisk powodujący wylogowanie, dzięki czemu inna osoba może zalogować się na swoje konto. Oprócz tego w menu bocznym znajduję się przycisk pozwalający na przejście do panelu udostępniania (patrz rys. \ref{Share}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{ShareView}
+	\caption{\centering Panel udostępniania.}
+	\textit{Źródło: Opracowanie własne}
+	\label{Share}
+\end{figure}
+
+ W tym miejscu można przejść do udostępniania przez kod QR. Gdzie po wybraniu konia do udostępnienia oraz daty do której ma być udostępniony możemy wygenerować kod QR (patrz rys. \ref{ShareQR}). Dzięki któremu inna osoba posiadająca aplikację będzie mogła go zeskanować i dodać do swojej puli koni. Można także udostępnić konia danemu użytkownikowi poprzez wyszukanie go na liście wszystkich użytkowników (patrz rys. \ref{ShareSearch}). Po udostępnieniu koń znika z listy koni właściciela, powróci na nią dopiero po zakończeniu daty udostępniania, bądź po kliknięciu przycisku "Usuń udostępnienia". Osoba która dostała konia nie może go usunąć samodzielnie ze swojej listy. 
+\begin{figure}[H]
+	\begin{center}
+		\begin{minipage}{5cm}
+			\centering
+			\includegraphics[scale=0.6]{ShareQR}
+			\caption{\centering Udostępnianie koni przez QR.}
+			\textit{Źródło: Opracowanie własne}
+			\label{ShareQR}
+		\end{minipage}
+		\hfil
+		\begin{minipage}{5cm}
+			\centering
+			\includegraphics[scale=0.6]{SharebySearch}
+			\caption{\centering Udostępnianie koni przez wyszukiwarkę.}
+			\textit{Źródło: Opracowanie własne}
+			\label{ShareSearch}
+		\end{minipage}
+	\end{center}
+
+\end{figure}
 \chapter{Podsumowanie}
 \begin{thebibliography}{9}
 	
@@ -2527,12 +3274,30 @@ Kolejną opcją dostępną w menu dolnym są plany żywienia. Po kliknięciu w i
 	
 	\bibitem{WPF} adegeo, ihsansfd, alexbuckgit, v-trisshores, DCtheGeek, \emph{Przewodnik dotyczący aplikacji klasycznych (WPF .NET)}\\ https://learn.microsoft.com/pl-pl/dotnet/desktop/wpf/overview/?view=netdesktop-7.0 
 	[Dostęp: 06.08.2023]
-
+	
+	\bibitem{bazadanychFizyczny}  Sharon Allen, Evan Terry, \emph{Beginning Relational Data Modeling}, Apress Berkeley, CA, 2005
+	
+	\bibitem{git} GIT \emph{Git --local-branching-on-the-cheap} https://git-scm.com/ [Dostęp 10.10.2023]
+	
+	\bibitem{github} GitHub - https://github.com/ [Dostęp 10.10.2023]
+	
+	\bibitem{sourcetree} Sourcetree - https://www.sourcetreeapp.com/ [Dostęp 10.10.2023]
+	
+	\bibitem{mvvmpattern} MVVM Pattern https://en.wikipedia.org/wiki/Model-view-viewmodel [Dostęp 12.10.2023]
+	
+	\bibitem{MVVMmicLearn} davidbritch, nschonni, conceptdev, JohnCOsborne \emph{The Model-View-ViewModel Pattern} https://learn.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm
+	[Dostęp 14.10.2023]
+	
+	\bibitem{DI} Michał Miszczyszyn \emph{Wzorce Projektowe: Dependency Injection} https://typeofweb.com/wzorce-projektowe-dependency-injection
+	[Dostęp 14.10.2023]
+	
+	\bibitem{EntityFramework} Microsoft Learn \emph{Dokumentacja EnitiyFramework} https://learn.microsoft.com/pl-pl/ef/
+	[Dostęp 14.10.2023]
 \end{thebibliography}
 \listoffigures
 \lstlistoflistings
 \listoftables
-\chapter{Opis zawartości APD}
+\chapter*{Opis zawartości APD}
 
 
 \end{document}

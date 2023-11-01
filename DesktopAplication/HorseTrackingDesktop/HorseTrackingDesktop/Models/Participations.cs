@@ -9,12 +9,11 @@ namespace HorseTrackingDesktop.Models
     {
         public int ParticipationId { get; set; }
         public int HorseId { get; set; }
-        public int CompetitionId { get; set; }
-        public string Level { get; set; }
+        public int ContestId { get; set; }
         public string Result { get; set; }
         public int? Place { get; set; }
 
-        public virtual Competitions Competition { get; set; }
+        public virtual Contests Contest { get; set; }
         public virtual Horses Horse { get; set; }
     }
 }

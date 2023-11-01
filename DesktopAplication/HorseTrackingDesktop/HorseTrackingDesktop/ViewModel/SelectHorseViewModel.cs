@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using HorseTrackingDesktop.Enumerable;
 using HorseTrackingDesktop.Models;
+using HorseTrackingDesktop.Services.Database.CompetitionService;
 using HorseTrackingDesktop.Services.Database.HorseService;
 using HorseTrackingDesktop.Services.Database.NutritionService;
 using HorseTrackingDesktop.View;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace HorseTrackingDesktop.ViewModel
 {
@@ -15,8 +18,9 @@ namespace HorseTrackingDesktop.ViewModel
     {
         private readonly IHorseService _horseService;
         private readonly INutritionService _nutritionService;
+        private readonly ICompetitionService _competitionService;
 
-        public bool isEdit = false;
+        public PageName pageFrom;
         public string ButtonTitle;
         public SelectionMode SelectedType;
         public List<Horses> Horses { get; set; }
@@ -24,62 +28,26 @@ namespace HorseTrackingDesktop.ViewModel
         public Horses SelectedHorse { get; set; }
         public NutritionPlans Plans { get; set; }
 
-        public SelectHorseViewModel(IHorseService horseService, INutritionService nutritionService)
+        public SelectHorseViewModel(IHorseService horseService, INutritionService nutritionService,
+                                    ICompetitionService competitionService)
         {
             _horseService = horseService;
             _nutritionService = nutritionService;
+            _competitionService = competitionService;
         }
 
         public async Task SetUP()
         {
             Horses = await _horseService.GetHorses();
-            SelectedType = isEdit ? SelectionMode.Single : SelectionMode.Multiple;
+            SelectedType = pageFrom == PageName.NutritionAdd ? SelectionMode.Multiple : SelectionMode.Single;
             OnPropertyChanged(nameof(SelectedType));
             OnPropertyChanged(nameof(Horses));
         }
 
         [RelayCommand]
-        public async Task ButtonClick(Window window)
+        public void ButtonClick(Window window)
         {
-            if (isEdit)
-            {
-                await EditPlan(window);
-            }
-            else
-            {
-                await AddPlan(window);
-            }
             window.Close();
-        }
-
-        public async Task AddPlan(Window window)
-        {
-            foreach (var horse in SelectedHorses)
-            {
-                var hasDiet = await _nutritionService.HorseHasDiet(horse);
-                if (hasDiet)
-                {
-                    var result = MessageBox.Show("Ten koń ma już ustaloną dietę. Czy chesz zmienić jego dietę?", "Uwaga", MessageBoxButton.YesNo);
-
-                    if (result == MessageBoxResult.Yes)
-                    {
-                        await _nutritionService.ChangeDiet(horse, Plans);
-                    }
-                }
-                else
-                {
-                    await _nutritionService.ChangeDiet(horse, Plans);
-                }
-            }
-        }
-
-        public async Task EditPlan(Window window)
-        {
-            var nutritionPlan = (await _nutritionService.GetPlanForHorse(SelectedHorse.HorseId)).FirstOrDefault();
-            if (nutritionPlan != null)
-            {
-                new AddNutritionView(nutritionPlan, SelectedHorse).ShowDialog();
-            }
         }
     }
 }

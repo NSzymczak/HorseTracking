@@ -56,7 +56,6 @@ namespace HorseTrackingDesktop.Models
         public int ID { get; }
         public string Name { get; }
         public Color Color { get; set; }
-        public ImageSource Image { get; set; }
 
         public static ActivityType Ride { get; set; }
         public static ActivityType Walk { get; set; }
